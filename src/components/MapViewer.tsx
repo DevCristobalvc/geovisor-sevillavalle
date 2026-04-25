@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react'
-import { MapContainer, TileLayer, GeoJSON, WMSTileLayer, useMap, useMapEvents } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+import { useEffect, useRef, useState } from 'react'
+import { MapContainer, TileLayer, GeoJSON as LeafletGeoJSON, WMSTileLayer, useMap, useMapEvents } from 'react-leaflet'
+import type { LeafletMouseEvent } from 'leaflet'
 import { useMapContext } from '../context/MapContext'
 import { useMapLayers } from '../hooks/useMapLayers'
 import {
@@ -50,7 +50,6 @@ function MapBaseLayer({ base }: { base: 'osm' | 'esri' | 'topo' | 'dark' }) {
 
 function ActiveLayers({ onFeatureClick }: { onFeatureClick?: (f: GeoJSON.Feature, l: LayerConfig) => void }) {
   const { activeLayers } = useMapLayers()
-  const geoJsonData = useRef<Record<string, GeoJSON.FeatureCollection>>({})
 
   return (
     <>
@@ -74,8 +73,6 @@ function ActiveLayers({ onFeatureClick }: { onFeatureClick?: (f: GeoJSON.Feature
             <GeoJSONLayer
               key={layer.id}
               layer={layer}
-              data={geoJsonData.current[layer.id]}
-              onDataLoaded={(data) => { geoJsonData.current[layer.id] = data }}
               onFeatureClick={onFeatureClick}
             />
           )
@@ -89,36 +86,27 @@ function ActiveLayers({ onFeatureClick }: { onFeatureClick?: (f: GeoJSON.Feature
 
 function GeoJSONLayer({
   layer,
-  data,
-  onDataLoaded,
   onFeatureClick,
 }: {
   layer: LayerConfig
-  data?: GeoJSON.FeatureCollection
-  onDataLoaded: (data: GeoJSON.FeatureCollection) => void
   onFeatureClick?: (f: GeoJSON.Feature, l: LayerConfig) => void
 }) {
-  const dataRef = useRef(data)
+  const [data, setData] = useState<GeoJSON.FeatureCollection | null>(null)
 
   useEffect(() => {
-    if (dataRef.current) return
     fetch(layer.url)
       .then(r => r.json())
-      .then((json: GeoJSON.FeatureCollection) => {
-        dataRef.current = json
-        onDataLoaded(json)
-      })
+      .then((json: GeoJSON.FeatureCollection) => setData(json))
       .catch(err => console.warn(`Error cargando ${layer.url}:`, err))
-  }, [layer.url, onDataLoaded])
+  }, [layer.url])
 
-  if (!dataRef.current) return null
+  if (!data) return null
 
   const style = layer.estilo ?? {}
 
   return (
-    <GeoJSON
-      key={layer.id + JSON.stringify(dataRef.current)}
-      data={dataRef.current}
+    <LeafletGeoJSON
+      data={data}
       style={() => ({
         color: style.color ?? '#2D6A4F',
         weight: style.weight ?? 1.5,
@@ -151,8 +139,7 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
       ${rows ? `<table class="w-full">${rows}</table>` : ''}
       <button
         onclick="window.dispatchEvent(new CustomEvent('openFicha', { detail: '${layer.fichaId}' }))"
-        class="mt-2 w-full text-xs bg-verde-bosque text-white rounded px-2 py-1 hover:bg-verde-claro transition-colors"
-        style="background:#2D6A4F;color:white;border:none;cursor:pointer;padding:4px 8px;border-radius:4px;width:100%"
+        style="background:#2D6A4F;color:white;border:none;cursor:pointer;padding:4px 8px;border-radius:4px;width:100%;margin-top:8px;font-size:12px"
       >
         Ver ficha pedagógica →
       </button>
@@ -177,7 +164,7 @@ function CoordinatesDisplay() {
   const map = useMap()
 
   useEffect(() => {
-    const onMove = (e: L.LeafletMouseEvent) => {
+    const onMove = (e: LeafletMouseEvent) => {
       if (coordsRef.current) {
         coordsRef.current.textContent =
           `${e.latlng.lat.toFixed(4)}, ${e.latlng.lng.toFixed(4)}`

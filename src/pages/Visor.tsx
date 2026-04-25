@@ -25,8 +25,7 @@ export default function Visor() {
 
   return (
     <div
-      className="relative flex overflow-hidden bg-gris-claro"
-      style={{ height: 'calc(100vh - var(--header-height) - var(--footer-height))' }}
+      className="relative flex overflow-hidden bg-gris-claro h-full"
     >
       {/* Panel de capas */}
       <LayerPanel
@@ -37,7 +36,7 @@ export default function Visor() {
       {/* Área del mapa */}
       <div
         className="flex-1 relative transition-all duration-300"
-        style={{ marginLeft: panelCollapsed ? 0 : 'var(--panel-width)' }}
+        style={{ marginLeft: panelCollapsed ? 0 : 'var(--panel-width)', height: '100%' }}
       >
         <MapViewer
           onFeatureClick={(_feature, layer) => setFichaAbierta(layer.fichaId)}

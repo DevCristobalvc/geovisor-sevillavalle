@@ -83,5 +83,5 @@ export interface MapState {
   center: [number, number]
   zoom: number
   capasActivas: string[]
-  mapaBase: 'osm' | 'esri' | 'topo'
+  mapaBase: 'osm' | 'esri' | 'topo' | 'dark'
 }

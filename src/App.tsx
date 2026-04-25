@@ -13,13 +13,15 @@ export default function App() {
     <MapProvider>
       <div className="flex flex-col h-screen overflow-hidden">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/visor" element={<Visor />} />
-          <Route path="/glosario" element={<Glosario />} />
-          <Route path="/recorridos" element={<Recorridos />} />
-          <Route path="/guia" element={<Guia />} />
-        </Routes>
+        <div className="flex-1 min-h-0 overflow-hidden">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/visor" element={<Visor />} />
+            <Route path="/glosario" element={<Glosario />} />
+            <Route path="/recorridos" element={<Recorridos />} />
+            <Route path="/guia" element={<Guia />} />
+          </Routes>
+        </div>
         <Footer />
       </div>
     </MapProvider>
