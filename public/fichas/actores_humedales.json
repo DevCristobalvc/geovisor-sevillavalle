@@ -1,0 +1,23 @@
+{
+  "id": "actores_humedales",
+  "titulo": "Actores Sociales en los Humedales",
+  "categoria": "actores",
+  "descripcion": "Los humedales de Sevilla son ecosistemas estratégicos que albergan una gran biodiversidad y regulan el agua. Comunidades locales, ONGs ambientalistas y líderes comunitarios tienen un papel activo en su conservación. Esta capa muestra los actores que trabajan directamente en la protección y gestión de los humedales del municipio.",
+  "importancia": "Conocer quiénes son los actores que intervienen en los humedales permite entender las tensiones y acuerdos alrededor de estos ecosistemas. La participación comunitaria es fundamental para la gestión ambiental sostenible.",
+  "preguntas_reflexivas": [
+    "¿Conoces alguna organización ambiental en tu municipio? ¿Qué hace?",
+    "¿Cómo pueden las comunidades proteger los humedales de su región?",
+    "¿Qué conflictos pueden surgir entre los diferentes actores que usan los humedales?",
+    "¿De qué manera los jóvenes pueden participar en la conservación de estos ecosistemas?"
+  ],
+  "vocabulario": [
+    { "termino": "Actor social", "definicion": "Persona, grupo u organización que tiene intereses, conocimientos o acciones sobre un territorio o recurso natural." },
+    { "termino": "Humedal", "definicion": "Ecosistema donde el suelo está saturado de agua permanente o temporalmente, como pantanos, lagunas y ciénagas." },
+    { "termino": "ONG ambiental", "definicion": "Organización No Gubernamental dedicada a la conservación del medio ambiente, sin fines de lucro." },
+    { "termino": "Gestión ambiental participativa", "definicion": "Forma de tomar decisiones sobre el uso y conservación de recursos naturales involucrando a todas las comunidades afectadas." }
+  ],
+  "galeria": [],
+  "videos": [],
+  "fuente_datos": "CVC / Alcaldía de Sevilla — Actores ambientales Valle del Cauca",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "biodiversidad_paramos",
+  "titulo": "Páramos de Sevilla: Chili-Barragán y Las Hermosas",
+  "categoria": "biodiversidad",
+  "descripcion": "Los páramos son ecosistemas de alta montaña, únicos en el mundo, que se encuentran entre los 3000 y 4500 metros sobre el nivel del mar. En Sevilla existen dos complejos de páramo: Chili-Barragán y Las Hermosas. Son reconocidos como 'fábricas de agua' porque captan la humedad de las nubes y la filtran lentamente hacia los ríos y acuíferos que abastecen a las comunidades del municipio.",
+  "importancia": "El páramo regula el ciclo del agua de toda la región. Sin los páramos, los ríos de Sevilla se secarían en verano. Además, albergan especies de flora y fauna que no existen en ningún otro lugar del planeta, como el frailejón (Espeletia spp.), símbolo del páramo andino.",
+  "preguntas_reflexivas": [
+    "¿Por qué se dice que los páramos son 'fábricas de agua'?",
+    "¿Qué actividades humanas amenazan los páramos de Sevilla?",
+    "¿Cómo afecta el cambio climático a los ecosistemas de páramo?",
+    "¿Qué medidas podría tomar tu comunidad para proteger los páramos?"
+  ],
+  "vocabulario": [
+    { "termino": "Páramo", "definicion": "Ecosistema de alta montaña (3000-4500 msnm) con clima frío y húmedo, especializado en captar y regular el agua de ríos y acuíferos." },
+    { "termino": "Frailejón", "definicion": "Planta característica del páramo (Espeletia spp.) con hojas cubiertas de pelillos que captan la humedad de la niebla." },
+    { "termino": "Acuífero", "definicion": "Depósito subterráneo de agua que se recarga lentamente a partir del agua filtrada por el suelo del páramo." },
+    { "termino": "Delimitación de páramos", "definicion": "Proceso legal por el cual el Instituto Humboldt define los límites exactos de un páramo para protegerlo de actividades extractivas." },
+    { "termino": "IAvH", "definicion": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt, entidad colombiana que estudia y delimita los páramos del país." }
+  ],
+  "galeria": [],
+  "videos": [],
+  "fuente_datos": "Instituto Humboldt — Delimitación de páramos Colombia",
+  "nivel_educativo": "Básica secundaria (grados 8–11)"
+}

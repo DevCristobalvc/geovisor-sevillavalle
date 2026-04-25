@@ -1,0 +1,23 @@
+{
+  "id": "territorio_pcc",
+  "titulo": "Paisaje Cultural Cafetero — Sevilla",
+  "categoria": "territorio",
+  "descripcion": "El Paisaje Cultural Cafetero (PCC) fue declarado Patrimonio Cultural de la Humanidad por la UNESCO en 2011. Reconoce la cultura, el esfuerzo humano y la tradición centenaria de los cultivadores de café en seis departamentos colombianos, incluyendo el norte del Valle del Cauca. Sevilla es uno de los municipios nucleares de este patrimonio.",
+  "importancia": "La declaratoria del PCC protege no solo el paisaje natural, sino también la identidad cultural de las familias cafeteras: sus técnicas de cultivo, su arquitectura de bahareque, sus tradiciones y sus formas de vida. Sevilla, conocida como la 'Ciudad de las Araucarias', es un ejemplo vivo de este patrimonio.",
+  "preguntas_reflexivas": [
+    "¿Qué hace especial al café de Sevilla frente al de otros municipios?",
+    "¿Cómo influye la crisis cafetera en la identidad cultural del municipio?",
+    "¿Qué elementos de tu cotidianidad son parte del Paisaje Cultural Cafetero?",
+    "¿De qué manera el turismo puede ser una oportunidad para Sevilla?"
+  ],
+  "vocabulario": [
+    { "termino": "Patrimonio Cultural de la Humanidad", "definicion": "Reconocimiento de la UNESCO a lugares, tradiciones y expresiones culturales de valor universal excepcional que deben ser conservados." },
+    { "termino": "Bahareque", "definicion": "Técnica constructiva tradicional de la región cafetera que usa madera, guadua y barro. Presente en la arquitectura típica de Sevilla." },
+    { "termino": "Araucaria", "definicion": "Árbol símbolo de Sevilla, de gran altura y copa piramidal, plantado históricamente en parques y calles del municipio." },
+    { "termino": "Zona buffer", "definicion": "Área de amortiguación alrededor de la zona núcleo del PCC, con restricciones de uso para proteger el paisaje declarado." }
+  ],
+  "galeria": [],
+  "videos": [],
+  "fuente_datos": "MinCultura / Federación Nacional de Cafeteros — PCC Colombia",
+  "nivel_educativo": "Básica secundaria (grados 6–11)"
+}

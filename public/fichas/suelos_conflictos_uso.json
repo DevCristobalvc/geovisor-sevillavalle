@@ -1,0 +1,24 @@
+{
+  "id": "suelos_conflictos_uso",
+  "titulo": "Conflictos de Uso del Suelo en Sevilla",
+  "categoria": "suelos",
+  "descripcion": "El conflicto de uso del suelo ocurre cuando la actividad humana en un terreno no corresponde con su vocación natural o potencial. En Sevilla, zonas de alto valor ambiental (laderas con bosque, páramos, cuencas) son usadas para ganadería extensiva o cultivos en pendientes pronunciadas, generando erosión, pérdida de suelo fértil y contaminación de fuentes de agua.",
+  "importancia": "Entender los conflictos de uso del suelo es clave para planificar el territorio de manera sostenible. Un suelo mal usado pierde su fertilidad en pocos años, afectando directamente la economía cafetera de Sevilla. La capa de conflictos usa la escala CORINE 1:50.000 del IGAC.",
+  "preguntas_reflexivas": [
+    "¿Qué cultivos o usos del suelo conoces en tu vereda? ¿Son apropiados para la zona?",
+    "¿Cómo se relaciona la deforestación con la erosión del suelo?",
+    "¿Qué ocurre con los cafetales cuando el suelo pierde nutrientes?",
+    "¿Qué alternativas productivas reducirían los conflictos de uso en Sevilla?"
+  ],
+  "vocabulario": [
+    { "termino": "Vocación del suelo", "definicion": "Uso más apropiado para un terreno según sus características físicas, climáticas y ecológicas naturales." },
+    { "termino": "Erosión", "definicion": "Desgaste y arrastre de las capas superficiales del suelo por el agua o el viento, acelerado por la deforestación." },
+    { "termino": "CORINE Land Cover", "definicion": "Sistema de clasificación de coberturas del suelo adoptado en Colombia para mapear y monitorizar los cambios en el uso de la tierra." },
+    { "termino": "Uso potencial", "definicion": "El uso que maximiza la productividad de un terreno sin degradarlo, según sus condiciones naturales." },
+    { "termino": "IGAC", "definicion": "Instituto Geográfico Agustín Codazzi, entidad colombiana responsable de la cartografía y el catastro nacional." }
+  ],
+  "galeria": [],
+  "videos": [],
+  "fuente_datos": "IGAC / UPRA — Conflictos de uso del suelo 1:50.000",
+  "nivel_educativo": "Básica secundaria (grados 8–11)"
+}

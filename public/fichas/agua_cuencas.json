@@ -1,0 +1,32 @@
+{
+  "id": "agua_cuencas",
+  "titulo": "Cuencas Hidrográficas de Sevilla",
+  "categoria": "agua",
+  "descripcion": "Las cuencas hidrográficas son territorios delimitados por las montañas y cerros, por donde fluyen todas las aguas de lluvia hacia un mismo río. En Sevilla, las cuatro cuencas principales son el Río Bugalagrande, el Río La Paila, el Río La Vieja y la Quebrada Las Cañas. Cada cuenca es como el tazón que recoge el agua de toda una zona del municipio.",
+  "importancia": "En Sevilla, las cuencas del Río Bugalagrande y sus afluentes abastecen de agua potable a miles de familias cafeteras. Los cambios en el uso del suelo — como la deforestación para ganadería o cultivos — reducen la cantidad y calidad del agua que llega a los ríos. Proteger las cuencas es proteger la vida del municipio.",
+  "preguntas_reflexivas": [
+    "¿Qué actividades humanas afectan la calidad del agua en tu vereda?",
+    "¿Por qué proteger las cuencas es también proteger la economía cafetera?",
+    "¿Cómo se conecta el agua de tu escuela con el Río Bugalagrande?",
+    "¿Qué pasaría si los páramos que alimentan estas cuencas desaparecieran?"
+  ],
+  "vocabulario": [
+    { "termino": "Cuenca hidrográfica", "definicion": "Territorio que drena sus aguas hacia un mismo río, delimitado por divisorias de aguas como montañas y cerros." },
+    { "termino": "Afluente", "definicion": "Río o quebrada que desemboca en otro río más grande, aportando su caudal de agua." },
+    { "termino": "Caudal", "definicion": "Volumen de agua que pasa por un punto de un río en una unidad de tiempo, expresado en metros cúbicos por segundo (m³/s)." },
+    { "termino": "Divisoria de aguas", "definicion": "Línea imaginaria que separa dos cuencas hidrográficas, generalmente coincide con las cimas de montañas." },
+    { "termino": "Deforestación", "definicion": "Eliminación de bosques para convertir el suelo en zonas agrícolas, ganaderas o urbanas, reduciendo la captación de agua." }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/R%C3%ADo_Bugalagrande.jpg/1280px-R%C3%ADo_Bugalagrande.jpg",
+      "titulo": "Río Bugalagrande",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    { "youtube_id": "dQw4w9WgXcQ", "titulo": "El ciclo del agua en el Valle del Cauca" }
+  ],
+  "fuente_datos": "IDEAM / CVC — Servicio WMS público",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

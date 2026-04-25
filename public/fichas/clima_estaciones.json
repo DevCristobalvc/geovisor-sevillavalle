@@ -1,0 +1,24 @@
+{
+  "id": "clima_estaciones",
+  "titulo": "Estaciones Hidroclimatológicas de Sevilla",
+  "categoria": "clima",
+  "descripcion": "Las estaciones hidroclimatológicas son puntos de monitoreo donde se miden variables del clima y del agua: temperatura, lluvia, humedad y nivel de los ríos. En Sevilla, la red de monitoreo del IDEAM y la CVC permite conocer cómo cambian estas variables a lo largo del tiempo, alertar sobre crecidas y planificar el uso del agua.",
+  "importancia": "Los datos de las estaciones son esenciales para entender el cambio climático local. En Sevilla, los registros históricos muestran cambios en los patrones de lluvia que afectan directamente los cultivos de café y la disponibilidad de agua para las comunidades.",
+  "preguntas_reflexivas": [
+    "¿Cómo afecta la falta de lluvia a los cafetales de tu región?",
+    "¿Por qué es importante monitorear el nivel de los ríos?",
+    "¿Qué diferencia hay entre el clima de la zona cálida y la zona fría de Sevilla?",
+    "¿Cómo usarías los datos de temperatura para planificar una cosecha de café?"
+  ],
+  "vocabulario": [
+    { "termino": "Estación pluviométrica", "definicion": "Punto de monitoreo que solo mide la cantidad de lluvia que cae en un lugar (pluviómetro)." },
+    { "termino": "Estación limnigráfica", "definicion": "Punto de monitoreo que mide el nivel y caudal de un río continuamente mediante sensores automatizados." },
+    { "termino": "Isoyeta", "definicion": "Línea en un mapa que une puntos con igual cantidad de lluvia en un período determinado." },
+    { "termino": "Anomalía climática", "definicion": "Desviación del valor de una variable climática respecto a su promedio histórico, indicador de cambio climático." },
+    { "termino": "IDEAM", "definicion": "Instituto de Hidrología, Meteorología y Estudios Ambientales de Colombia, responsable del monitoreo del clima y el agua." }
+  ],
+  "galeria": [],
+  "videos": [],
+  "fuente_datos": "IDEAM / CVC — Red hidroclimatológica nacional",
+  "nivel_educativo": "Básica secundaria (grados 7–11)"
+}
