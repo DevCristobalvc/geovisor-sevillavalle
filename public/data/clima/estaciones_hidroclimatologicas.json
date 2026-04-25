@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "name": "Estaciones Hidroclimatologicas Sevilla",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "codigo": "26135010",
+        "nombre": "Sevilla",
+        "tipo": "Climatológica Principal",
+        "entidad": "IDEAM",
+        "series_hist": "1970-2024",
+        "altitud_msnm": 1611
+      },
+      "geometry": { "type": "Point", "coordinates": [-75.9366, 4.2710] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "codigo": "26185020",
+        "nombre": "La Paila",
+        "tipo": "Pluviométrica",
+        "entidad": "IDEAM",
+        "series_hist": "1985-2024",
+        "altitud_msnm": 945
+      },
+      "geometry": { "type": "Point", "coordinates": [-75.9820, 4.1580] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "codigo": "26180040",
+        "nombre": "Chili Alto",
+        "tipo": "Pluviográfica",
+        "entidad": "CVC",
+        "series_hist": "1990-2024",
+        "altitud_msnm": 3350
+      },
+      "geometry": { "type": "Point", "coordinates": [-75.8500, 4.3900] }
+    }
+  ]
+}

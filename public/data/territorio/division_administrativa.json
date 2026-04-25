@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "name": "Division Administrativa Sevilla",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre_vereda": "Casco Urbano Sevilla",
+        "codigo_dane": "76736000",
+        "area_km2": 1.8,
+        "tipo": "urbano"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-75.9420, 4.2650], [-75.9310, 4.2650],
+          [-75.9310, 4.2770], [-75.9420, 4.2770],
+          [-75.9420, 4.2650]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre_vereda": "Límite municipal Sevilla",
+        "codigo_dane": "76736",
+        "area_km2": 920,
+        "tipo": "municipio"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-76.05, 4.12], [-75.80, 4.12], [-75.80, 4.42],
+          [-76.05, 4.42], [-76.05, 4.12]
+        ]]
+      }
+    }
+  ]
+}

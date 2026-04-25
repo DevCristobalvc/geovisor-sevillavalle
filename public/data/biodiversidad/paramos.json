@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "name": "Paramos Sevilla",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre_complejo": "Páramo Chili-Barragán",
+        "area_ha": 58200,
+        "altitud_rango": "3200-4600 msnm",
+        "departamento": "Valle del Cauca - Tolima"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-75.88, 4.35], [-75.82, 4.35], [-75.80, 4.40],
+          [-75.83, 4.44], [-75.89, 4.43], [-75.92, 4.40],
+          [-75.90, 4.37], [-75.88, 4.35]
+        ]]
+      }
+    }
+  ]
+}
