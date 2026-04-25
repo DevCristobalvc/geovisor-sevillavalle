@@ -17,8 +17,27 @@
     { "termino": "Delimitación de páramos", "definicion": "Proceso legal por el cual el Instituto Humboldt define los límites exactos de un páramo para protegerlo de actividades extractivas." },
     { "termino": "IAvH", "definicion": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt, entidad colombiana que estudia y delimita los páramos del país." }
   ],
-  "galeria": [],
-  "videos": [],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Paramo_de_Belmira.jpg/1200px-Paramo_de_Belmira.jpg",
+      "titulo": "Páramo de Belmira, Antioquia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Espeletia_frailejones_p%C3%A1ramo.jpg/1200px-Espeletia_frailejones_p%C3%A1ramo.jpg",
+      "titulo": "Frailejones (Espeletia spp.) en el páramo andino",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg/1200px-Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg",
+      "titulo": "Bosque andino en los Andes colombianos",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    { "youtube_id": "kvHxbdj1Rw4", "titulo": "Los páramos de Colombia — Instituto Humboldt" },
+    { "youtube_id": "7Qk3pFVbOiU", "titulo": "Biodiversidad y conservación de páramos en el Valle del Cauca" }
+  ],
   "fuente_datos": "Instituto Humboldt — Delimitación de páramos Colombia",
   "nivel_educativo": "Básica secundaria (grados 8–11)"
 }

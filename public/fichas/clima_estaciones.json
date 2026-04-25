@@ -17,8 +17,21 @@
     { "termino": "Anomalía climática", "definicion": "Desviación del valor de una variable climática respecto a su promedio histórico, indicador de cambio climático." },
     { "termino": "IDEAM", "definicion": "Instituto de Hidrología, Meteorología y Estudios Ambientales de Colombia, responsable del monitoreo del clima y el agua." }
   ],
-  "galeria": [],
-  "videos": [],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Weather_station_Brasschaat.jpg/1200px-Weather_station_Brasschaat.jpg",
+      "titulo": "Estación meteorológica de monitoreo climático",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Paramo_de_Belmira.jpg/1200px-Paramo_de_Belmira.jpg",
+      "titulo": "Páramo andino — zona de recarga hídrica monitoreada",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    { "youtube_id": "sMBBTHDJ3Ek", "titulo": "Red de monitoreo hidroclimatológico IDEAM — Colombia" }
+  ],
   "fuente_datos": "IDEAM / CVC — Red hidroclimatológica nacional",
   "nivel_educativo": "Básica secundaria (grados 7–11)"
 }

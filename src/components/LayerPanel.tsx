@@ -5,13 +5,14 @@ import type { Categoria, LayerConfig } from '../types'
 interface LayerPanelProps {
   collapsed: boolean
   onToggleCollapse: () => void
+  highlightCategoria?: string | null
 }
 
 const CATEGORIA_ORDER: Categoria[] = [
   'actores', 'agua', 'biodiversidad', 'clima', 'suelos', 'territorio',
 ]
 
-export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelProps) {
+export default function LayerPanel({ collapsed, onToggleCollapse, highlightCategoria }: LayerPanelProps) {
   const {
     categorias,
     layersByCategory,
@@ -24,7 +25,12 @@ export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelPr
     setLayerOpacity,
     getLayerOpacity,
   } = useMapLayers()
-  const [expanded, setExpanded] = useState<Set<Categoria>>(new Set(['agua', 'territorio']))
+
+  const defaultExpanded = new Set<Categoria>(['agua', 'territorio'])
+  if (highlightCategoria && CATEGORIA_ORDER.includes(highlightCategoria as Categoria)) {
+    defaultExpanded.add(highlightCategoria as Categoria)
+  }
+  const [expanded, setExpanded] = useState<Set<Categoria>>(defaultExpanded)
 
   const toggleAccordion = (cat: Categoria) => {
     setExpanded(prev => {
@@ -68,7 +74,7 @@ export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelPr
 
             return (
               <div key={cat} className="border-b border-gray-100">
-                <div className="flex items-center">
+                <div className={`flex items-center ${cat === highlightCategoria ? 'bg-yellow-50' : ''}`}>
                   {/* Category-level toggle */}
                   <div className="pl-3 pr-1 flex-shrink-0">
                     <input

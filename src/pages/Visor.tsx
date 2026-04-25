@@ -60,6 +60,7 @@ export default function Visor() {
       <LayerPanel
         collapsed={panelCollapsed}
         onToggleCollapse={() => setPanelCollapsed(v => !v)}
+        highlightCategoria={searchParams.get('categoria')}
       />
 
       {/* Área del mapa */}

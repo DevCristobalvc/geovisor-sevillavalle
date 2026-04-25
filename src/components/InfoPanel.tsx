@@ -144,8 +144,11 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
                       <img
                         src={img.url}
                         alt={img.titulo}
-                        className="w-full h-40 object-cover"
+                        className="w-full h-40 object-cover bg-gray-100"
                         loading="lazy"
+                        onError={e => {
+                          (e.currentTarget as HTMLImageElement).style.display = 'none'
+                        }}
                       />
                       <div className="px-2 py-1.5">
                         <div className="text-xs font-medium text-gris-texto">{img.titulo}</div>

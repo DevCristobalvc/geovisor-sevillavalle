@@ -16,8 +16,21 @@
     { "termino": "ONG ambiental", "definicion": "Organización No Gubernamental dedicada a la conservación del medio ambiente, sin fines de lucro." },
     { "termino": "Gestión ambiental participativa", "definicion": "Forma de tomar decisiones sobre el uso y conservación de recursos naturales involucrando a todas las comunidades afectadas." }
   ],
-  "galeria": [],
-  "videos": [],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Humedal_La_Conejera_-_Bogota.jpg/1200px-Humedal_La_Conejera_-_Bogota.jpg",
+      "titulo": "Humedal La Conejera, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ember%C3%A1_woman.jpg/800px-Ember%C3%A1_woman.jpg",
+      "titulo": "Comunidades indígenas guardianas del agua",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    { "youtube_id": "7Qk3pFVbOiU", "titulo": "Conservación de humedales en el Valle del Cauca — CVC" }
+  ],
   "fuente_datos": "CVC / Alcaldía de Sevilla — Actores ambientales Valle del Cauca",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }
