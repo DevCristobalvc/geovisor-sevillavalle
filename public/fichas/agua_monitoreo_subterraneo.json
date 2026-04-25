@@ -1,0 +1,64 @@
+{
+  "id": "agua_monitoreo_subterraneo",
+  "titulo": "Aguas Subterráneas",
+  "categoria": "agua",
+  "descripcion": "Las aguas subterráneas son aquellas que se encuentran bajo la superficie del suelo, almacenadas en formaciones geológicas porosas llamadas acuíferos. En Sevilla, el pozo de monitoreo identificado como VS-PM-1 es uno de los puntos de observación del sistema de aguas subterráneas del municipio. Este tipo de pozo no se usa para extraer agua, sino para medir el nivel freático (profundidad a la que se encuentra el agua), la temperatura, la conductividad eléctrica y la calidad del agua subterránea a lo largo del tiempo. Los acuíferos de Sevilla se recargan principalmente por la infiltración del agua lluvia y de los ríos y quebradas en las zonas de alta permeabilidad del suelo, especialmente en las áreas con bosque o con suelos poco compactados. El agua subterránea fluye lentamente a través de las rocas y sedimentos, llegando eventualmente a surgir en manantiales o a ser captada por pozos para el consumo humano y el riego. Sin embargo, los acuíferos son vulnerables a la sobreexplotación (cuando se extrae más agua de la que se recarga naturalmente) y a la contaminación por agroquímicos, combustibles y aguas residuales que se filtran desde la superficie. El monitoreo constante del pozo VS-PM-1 y de otros puntos de la red subterránea es esencial para garantizar que este recurso vital esté disponible para las generaciones actuales y futuras de Sevilla.",
+  "importancia": "Las aguas subterráneas son una fuente de abastecimiento estratégica, especialmente en épocas de sequía cuando los ríos y quebradas reducen drásticamente su caudal. En muchas veredas de Sevilla, los pozos y manantiales son la única fuente de agua para consumo doméstico y riego. Proteger los acuíferos significa proteger la seguridad hídrica del municipio frente a los efectos del cambio climático. La contaminación de un acuífero es un problema muy grave porque el agua subterránea se mueve muy lentamente y los contaminantes pueden persistir por décadas. Por esto, el monitoreo preventivo y el uso responsable de agroquímicos son acciones indispensables para salvaguardar este recurso invisible pero vital.",
+  "preguntas_reflexivas": [
+    "¿Por qué es importante monitorear el nivel del agua en los pozos subterráneos aunque no se vea a simple vista?",
+    "¿Qué actividades humanas pueden contaminar los acuíferos de Sevilla y cómo podrían prevenirse?",
+    "¿Cómo se relaciona la conservación de los bosques con la recarga de los acuíferos subterráneos?",
+    "¿Por qué es más difícil limpiar un acuífero contaminado que un río contaminado?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Acuífero",
+      "definicion": "Formación geológica subterránea (roca, grava o arena porosa) que almacena y transmite agua en cantidades suficientes para ser aprovechada por pozos o manantiales."
+    },
+    {
+      "termino": "Nivel freático",
+      "definicion": "Profundidad a la que se encuentra la superficie del agua subterránea en un punto determinado. Varía según las lluvias, la extracción de agua y las características del suelo."
+    },
+    {
+      "termino": "Zona de recarga",
+      "definicion": "Área geográfica donde el agua de lluvia o de los ríos se infiltra en el suelo y recarga los acuíferos subterráneos. Generalmente corresponde a zonas con suelos permeables y cobertura vegetal."
+    },
+    {
+      "termino": "Conductividad eléctrica",
+      "definicion": "Capacidad del agua para conducir electricidad, relacionada con la cantidad de sales y minerales disueltos. Una conductividad muy alta puede indicar contaminación o mineralización excesiva del agua."
+    },
+    {
+      "termino": "Manantial",
+      "definicion": "Lugar donde el agua subterránea emerge naturalmente a la superficie del terreno, formando un flujo de agua que puede alimentar quebradas, fuentes o bebederos."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Groundwater_conceptual_model.jpg/1200px-Groundwater_conceptual_model.jpg",
+      "titulo": "Esquema conceptual de acuífero y aguas subterráneas",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Pozo_monitoreo_agua_subterranea.jpg/1200px-Pozo_monitoreo_agua_subterranea.jpg",
+      "titulo": "Pozo de monitoreo de aguas subterráneas",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Spring_water_Colombia_Andes.jpg/1200px-Spring_water_Colombia_Andes.jpg",
+      "titulo": "Manantial de agua en zona andina colombiana",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "oNMnSXGlMPw",
+      "titulo": "Las aguas subterráneas en Colombia: recursos y desafíos – IDEAM"
+    },
+    {
+      "youtube_id": "hxJdLlXcP2U",
+      "titulo": "Gestión de acuíferos y agua subterránea en el Valle del Cauca – CVC"
+    }
+  ],
+  "fuente_datos": "IDEAM – Sistema de Monitoreo de Aguas Subterráneas Colombia; CVC – Red de Pozos de Monitoreo Valle del Cauca; Municipio de Sevilla – Plan de Ordenación y Manejo de Cuencas (POMCA)",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

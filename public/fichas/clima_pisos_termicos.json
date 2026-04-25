@@ -1,0 +1,64 @@
+{
+  "id": "clima_pisos_termicos",
+  "titulo": "Pisos Térmicos de Sevilla",
+  "categoria": "clima",
+  "descripcion": "Los pisos térmicos son las franjas climáticas que se definen por la temperatura promedio del aire, la cual disminuye a medida que se asciende en altitud: aproximadamente 6°C por cada 1.000 metros de altura. Gracias a su posición en la cordillera Central de los Andes y a su variado relieve, el municipio de Sevilla alberga cuatro pisos térmicos distintos, cada uno con características climáticas, ecosistemas y usos agrícolas particulares. El piso cálido (por debajo de 1.000 m.s.n.m., temperatura mayor de 24°C) ocupa las zonas más bajas hacia el valle del río Cauca y alberga cultivos como el plátano, la caña de azúcar y el maíz, así como remanentes de bosque seco tropical. El piso templado (entre 1.000 y 2.000 m.s.n.m., temperatura entre 17°C y 24°C) es la franja donde predominan los cultivos de café, el corazón productivo del municipio, con sus veredas cafeteras más activas. El piso frío (entre 2.000 y 3.000 m.s.n.m., temperatura entre 12°C y 17°C) alberga bosques andinos, cultivos de mora, papa y pastos para ganadería lechera. Por encima de los 3.000 m.s.n.m. se encuentra el piso muy frío o de páramo, con temperaturas inferiores a 12°C, donde dominan los frailejones, los pastos naturales y las turberas. Esta gradiente altitudinal hace de Sevilla un municipio de una diversidad agroclimática extraordinaria, con posibilidades productivas que van desde los cultivos tropicales hasta las papa y la ganadería de clima frío.",
+  "importancia": "La diversidad de pisos térmicos es una de las grandes riquezas del municipio de Sevilla y de Colombia en general: permite que en un territorio relativamente pequeño coexistan ecosistemas y cultivos completamente diferentes. Sin embargo, esta diversidad también genera complejidad en la planificación: cada piso tiene vulnerabilidades específicas frente al cambio climático. El calentamiento global está desplazando los pisos térmicos hacia arriba, comprimiendo los ecosistemas de mayor altitud como el páramo y el bosque andino frío. Comprender los pisos térmicos ayuda a los estudiantes a entender por qué Colombia es tan biodiversa y qué está en juego con el cambio climático.",
+  "preguntas_reflexivas": [
+    "¿Por qué el café se cultiva principalmente en el piso templado de Sevilla y no en el piso cálido ni en el frío?",
+    "¿Qué efecto tendría el calentamiento global sobre el piso térmico del páramo de Sevilla y los ecosistemas y cultivos de cada zona?",
+    "¿Cómo la diversidad de pisos térmicos de Sevilla contribuye a la seguridad alimentaria del municipio y la región?",
+    "¿Por qué los animales y plantas de cada piso térmico están especialmente adaptados a ese rango de temperatura y no pueden sobrevivir fácilmente en otros pisos?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Piso térmico",
+      "definicion": "Franja climática definida por un rango de temperatura promedio del aire, determinada principalmente por la altitud. En los Andes colombianos se distinguen piso cálido, templado, frío y muy frío (páramo)."
+    },
+    {
+      "termino": "Gradiente altitudinal",
+      "definicion": "Cambio gradual en las condiciones climáticas, ecológicas y de biodiversidad a medida que se asciende en altitud en una montaña. En los Andes, este gradiente es uno de los más ricos en biodiversidad del mundo."
+    },
+    {
+      "termino": "m.s.n.m.",
+      "definicion": "Metros sobre el nivel del mar. Unidad de medida de la altitud de un punto con respecto a la superficie del mar. Es el parámetro fundamental para determinar el piso térmico de un lugar."
+    },
+    {
+      "termino": "Turbera",
+      "definicion": "Ecosistema de páramo o zona muy fría y húmeda donde se acumula materia vegetal muerta (turba) durante siglos porque no se descompone por la baja temperatura y escasez de oxígeno. Son grandes almacenes de agua y carbono."
+    },
+    {
+      "termino": "Cambio climático",
+      "definicion": "Alteración a largo plazo de los patrones de temperatura, precipitación y otros parámetros climáticos del planeta, causada principalmente por las emisiones de gases de efecto invernadero producto de actividades humanas."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Pisos_termicos_colombia_diagram.png/1200px-Pisos_termicos_colombia_diagram.png",
+      "titulo": "Diagrama de pisos térmicos de los Andes colombianos",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Coffee_plantation_Colombia_temperate.jpg/1200px-Coffee_plantation_Colombia_temperate.jpg",
+      "titulo": "Cultivo de café en piso templado de los Andes colombianos",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Paramo_Colombia_frailejones_cold_floor.jpg/1200px-Paramo_Colombia_frailejones_cold_floor.jpg",
+      "titulo": "Ecosistema de páramo, el piso térmico más alto de Sevilla",
+      "credito": "Wikimedia Commons / CC BY"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "3OTi0WDIrRg",
+      "titulo": "Pisos térmicos de Colombia: del trópico al páramo – IDEAM"
+    },
+    {
+      "youtube_id": "9bsOCzrk1Rc",
+      "titulo": "El café colombiano y su clima ideal: la zona de vida del Eje Cafetero – Federación de Cafeteros"
+    }
+  ],
+  "fuente_datos": "IDEAM – Atlas Climatológico de Colombia; IGAC – Clasificación Climática de Colombia; CVC – Caracterización bioclimática Valle del Cauca",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

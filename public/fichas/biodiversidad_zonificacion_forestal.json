@@ -1,0 +1,64 @@
+{
+  "id": "biodiversidad_zonificacion_forestal",
+  "titulo": "Zonificación Forestal",
+  "categoria": "biodiversidad",
+  "descripcion": "La zonificación forestal es una herramienta técnica y legal que clasifica el territorio de acuerdo con la aptitud y el uso potencial de sus bosques y suelos de vocación forestal. En Colombia, el IGAC y la CVC elaboran mapas de zonificación forestal a escalas de 1:50.000 y 1:100.000 que dividen el territorio en diferentes categorías según las características del suelo, la pendiente, el clima y la cobertura vegetal actual. Las principales categorías de zonificación forestal son: las áreas de bosque de protección, donde la vegetación boscosa debe mantenerse o restaurarse para proteger el suelo, el agua y la biodiversidad, y donde no se permite el aprovechamiento forestal comercial; las áreas de bosque de producción, donde existen condiciones para manejar el bosque de forma sostenible para obtener madera, resinas, frutos u otros productos forestales, siempre dentro de límites que garanticen la regeneración del bosque; y las áreas de uso múltiple, donde se pueden combinar usos forestales y agropecuarios sostenibles bajo normas específicas. También existen restricciones particulares para zonas de alta pendiente (más de 45°), suelos altamente erosionables o corredores riparios (franjas de bosque a lo largo de ríos y quebradas) donde cualquier tipo de aprovechamiento está prohibido. La zonificación forestal es fundamental para orientar las decisiones de los propietarios, la planificación del ordenamiento territorial y la identificación de los conflictos entre el uso actual del suelo y su aptitud real.",
+  "importancia": "Muchas de las crisis ambientales que enfrenta Sevilla —erosión del suelo, reducción del caudal de los ríos, pérdida de biodiversidad— tienen como causa de fondo el uso inadecuado del suelo: sembrar cultivos o pastorear ganado en zonas que debían permanecer como bosque de protección. La zonificación forestal ofrece una guía técnica basada en la ciencia para que los propietarios, las comunidades y las autoridades sepan qué puede hacerse en cada parte del territorio sin comprometer los recursos naturales del futuro. Respetar la zonificación forestal es respetar los límites que la naturaleza misma impone para garantizar su propia sostenibilidad.",
+  "preguntas_reflexivas": [
+    "¿Por qué los suelos con pendientes muy pronunciadas deberían mantenerse con cobertura forestal y no usarse para agricultura?",
+    "¿Cuál es la diferencia entre un bosque de protección y un bosque de producción, y por qué es importante distinguirlos?",
+    "¿Qué problemas ambientales podría causar talar los bosques que crecen a lo largo de las quebradas y ríos?",
+    "¿Cómo puede la zonificación forestal ayudar a resolver conflictos entre los dueños de tierras y las entidades ambientales?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Zonificación forestal",
+      "definicion": "Clasificación técnica del territorio basada en las características del suelo, la pendiente y el clima, que determina el uso más adecuado para cada zona: bosque de protección, bosque de producción o uso múltiple."
+    },
+    {
+      "termino": "Bosque de producción",
+      "definicion": "Área forestal donde se permite el aprovechamiento controlado y sostenible de productos del bosque (madera, resinas, frutos) bajo planes de manejo que garantizan la regeneración del ecosistema."
+    },
+    {
+      "termino": "Corredor ripario",
+      "definicion": "Franja de vegetación natural que se mantiene a lo largo de las orillas de ríos, quebradas y humedales. Protege las riberas de la erosión, filtra contaminantes y provee hábitat a numerosas especies acuáticas y terrestres."
+    },
+    {
+      "termino": "Aptitud del suelo",
+      "definicion": "Capacidad natural de un suelo para soportar un uso determinado sin degradarse. Un suelo con aptitud forestal puede mantener bosques sin erosión, pero se degrada rápidamente si se usa para agricultura intensiva."
+    },
+    {
+      "termino": "Erosión",
+      "definicion": "Proceso de desgaste y transporte del suelo por el agua de lluvia o el viento. Ocurre principalmente cuando el suelo pierde su cobertura vegetal, especialmente en zonas de alta pendiente."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Reforestation_Andean_forest_Colombia.jpg/1200px-Reforestation_Andean_forest_Colombia.jpg",
+      "titulo": "Reforestación con especies nativas en zona de bosque de protección",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Riparian_corridor_Colombia_river.jpg/1200px-Riparian_corridor_Colombia_river.jpg",
+      "titulo": "Corredor ripario con bosque nativo en orillas de río colombiano",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Soil_erosion_Colombia_Andes.jpg/1200px-Soil_erosion_Colombia_Andes.jpg",
+      "titulo": "Erosión en ladera andina sin cobertura forestal",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "szHdJHCkGHk",
+      "titulo": "Zonificación forestal y ordenamiento territorial en Colombia – IGAC"
+    },
+    {
+      "youtube_id": "Q1VkFBqMUAE",
+      "titulo": "Bosques protectores y bosques productores: diferencias y manejo sostenible"
+    }
+  ],
+  "fuente_datos": "IGAC – Zonificación Forestal Colombia 1:100.000; CVC – Zonificación de Bosques Valle del Cauca 1:50.000; MADS – Manual de Clasificación de Tierras de Colombia",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

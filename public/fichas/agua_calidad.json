@@ -1,0 +1,65 @@
+{
+  "id": "agua_calidad",
+  "titulo": "Calidad del Agua en Sevilla",
+  "categoria": "agua",
+  "descripcion": "El monitoreo de la calidad del agua es una herramienta fundamental para conocer el estado de salud de los ríos y quebradas. En Sevilla, la Quebrada San José es uno de los cuerpos de agua más importantes para el abastecimiento del casco urbano y veredas cercanas. La CVC y el municipio operan estaciones de monitoreo de calidad del agua donde se miden periódicamente parámetros físicoquímicos y biológicos. Entre los parámetros físicoquímicos más importantes se encuentran: el pH (nivel de acidez o alcalinidad del agua), la temperatura (un aumento puede indicar descarga de aguas calientes), los sólidos suspendidos totales (partículas en el agua que enturbian su aspecto), la demanda bioquímica de oxígeno (DBO, que indica la cantidad de materia orgánica en descomposición), el oxígeno disuelto (fundamental para la vida de los peces y otros organismos acuáticos), los nitratos y fosfatos (que pueden provenir de fertilizantes agrícolas e indicar eutrofización), y los coliformes fecales (bacterias que señalan contaminación con aguas residuales humanas o animales). Las principales fuentes de contaminación de la Quebrada San José incluyen los vertimientos de aguas residuales domésticas sin tratar del casco urbano, el lavado de pulpa de café en las fincas durante la cosecha, el escurrimiento de agroquímicos de los cultivos y el depósito inadecuado de residuos sólidos en sus orillas. El monitoreo continuo de estos parámetros permite tomar decisiones oportunas para proteger la salud de la población y los ecosistemas.",
+  "importancia": "La calidad del agua que consumimos es directamente proporcional a la salud de nuestros ríos y quebradas. Una quebrada contaminada puede transmitir enfermedades gastrointestinales graves, afectar el desarrollo de niños y niñas, y eliminar la vida acuática que es parte del patrimonio natural de Sevilla. El monitoreo permanente de la calidad del agua permite detectar a tiempo problemas de contaminación antes de que se conviertan en emergencias sanitarias. También permite evaluar si las medidas de saneamiento y las restricciones a ciertas prácticas agrícolas están funcionando. Para un municipio cafetero como Sevilla, mantener quebradas limpias es además esencial para cumplir con los estándares ambientales exigidos por los mercados internacionales de café sostenible.",
+  "preguntas_reflexivas": [
+    "¿Cómo afecta el lavado de pulpa de café a la calidad del agua de las quebradas de Sevilla?",
+    "¿Qué parámetros de calidad del agua crees que son más importantes monitorear y por qué?",
+    "¿Qué medidas podría tomar tu familia o comunidad para reducir la contaminación de la Quebrada San José?",
+    "¿Por qué es importante que los datos de calidad del agua sean públicos y accesibles para toda la comunidad?",
+    "¿Cómo se relaciona la calidad del agua con la salud de los peces y otros animales que viven en la quebrada?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "pH",
+      "definicion": "Escala que mide la acidez o alcalinidad de una solución, de 0 a 14. El agua pura tiene un pH de 7 (neutro). Valores muy bajos indican acidez y valores muy altos indican alcalinidad, ambos dañinos para la vida acuática."
+    },
+    {
+      "termino": "Oxígeno disuelto",
+      "definicion": "Cantidad de oxígeno (O₂) que se encuentra disuelto en el agua. Los peces y otros organismos acuáticos necesitan niveles adecuados de oxígeno disuelto para sobrevivir. La contaminación orgánica reduce el oxígeno disuelto."
+    },
+    {
+      "termino": "Eutrofización",
+      "definicion": "Proceso de exceso de nutrientes (nitratos y fosfatos) en un cuerpo de agua, que provoca el crecimiento masivo de algas y la disminución del oxígeno, causando la muerte de peces y otros organismos acuáticos."
+    },
+    {
+      "termino": "Coliformes fecales",
+      "definicion": "Bacterias presentes en los intestinos de humanos y animales que, cuando se detectan en el agua, indican contaminación con heces y posible presencia de patógenos que pueden causar enfermedades."
+    },
+    {
+      "termino": "DBO (Demanda Bioquímica de Oxígeno)",
+      "definicion": "Cantidad de oxígeno que los microorganismos consumen para descomponer la materia orgánica en el agua. Una DBO alta indica alta contaminación orgánica y poca disponibilidad de oxígeno para los seres vivos acuáticos."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Water_quality_monitoring_Colombia.jpg/1200px-Water_quality_monitoring_Colombia.jpg",
+      "titulo": "Monitoreo de calidad del agua en quebrada andina",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Coffee_pulp_Colombia_water.jpg/1200px-Coffee_pulp_Colombia_water.jpg",
+      "titulo": "Procesamiento de café y riesgo de contaminación hídrica",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Quebrada_contaminada_Colombia.jpg/1200px-Quebrada_contaminada_Colombia.jpg",
+      "titulo": "Quebrada con presencia de residuos y sedimentos",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "WKLaRm9kRq4",
+      "titulo": "Monitoreo de calidad del agua en Colombia – IDEAM"
+    },
+    {
+      "youtube_id": "RYhTRmgEnp8",
+      "titulo": "Contaminación hídrica en zonas cafeteras y soluciones sostenibles"
+    }
+  ],
+  "fuente_datos": "CVC – Red de Calidad Hídrica Valle del Cauca; IDEAM – Estudio Nacional del Agua 2022; Municipio de Sevilla – Plan de Saneamiento y Manejo de Vertimientos (PSMV)",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

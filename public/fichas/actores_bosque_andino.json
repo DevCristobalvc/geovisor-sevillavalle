@@ -1,0 +1,64 @@
+{
+  "id": "actores_bosque_andino",
+  "titulo": "Guardianes del Bosque Andino",
+  "categoria": "actores",
+  "descripcion": "El bosque andino de Sevilla, Valle del Cauca, es uno de los ecosistemas más biodiversos y amenazados del planeta. Su protección y estudio involucra a una gran variedad de actores sociales que trabajan desde diferentes perspectivas. La academia, representada por universidades como la Universidad Santiago de Cali (USC) y la Universidad del Valle, realiza investigaciones científicas sobre biodiversidad, flora, fauna y servicios ecosistémicos, generando el conocimiento necesario para tomar decisiones de conservación bien fundamentadas. Las Organizaciones No Gubernamentales (ONGs) como la Fundación Ecohabitats y la Federación Colombiana de Reservas Naturales de la Sociedad Civil (Resnatur) trabajan en la creación y gestión de reservas naturales privadas, donde propietarios de predios deciden voluntariamente proteger sus bosques y abrirlos a procesos de educación ambiental y ecoturismo. Los dueños de reservas son actores clave: son ciudadanos comprometidos que renuncian a usos económicos más lucrativos de sus tierras para mantener la cobertura boscosa. Finalmente, los agricultores de la zona, especialmente los cafeteros, son fundamentales porque sus decisiones de manejo del paisaje —usar sombrío arbóreo, mantener cercas vivas, respetar las quebradas— determinan en gran medida la conectividad del bosque andino a escala de paisaje. La suma de estos esfuerzos colectivos es lo que mantiene vivo el bosque andino sevillano.",
+  "importancia": "El bosque andino alberga una riqueza biológica excepcional: cientos de especies de aves, mamíferos, anfibios y plantas que no existen en ningún otro lugar del mundo. Además, regula el ciclo del agua, protege los suelos de la erosión y captura carbono, contribuyendo así a mitigar el cambio climático. Los actores que lo protegen —investigadores, ONGs, reservistas y agricultores comprometidos— forman una red de cuidado que es indispensable para la supervivencia de este ecosistema. Sin su trabajo coordinado, la fragmentación del bosque avanzaría rápidamente, aislando poblaciones de animales y plantas hasta llevarlas a la extinción local. La educación ambiental y la investigación científica que estos actores impulsan también permiten que las futuras generaciones conozcan y valoren su patrimonio natural.",
+  "preguntas_reflexivas": [
+    "¿Qué ventajas tiene que los dueños de predios decidan voluntariamente proteger sus bosques en lugar de ser obligados por la ley?",
+    "¿Cómo puede la investigación científica de las universidades ayudar a mejorar las decisiones de las comunidades sobre el bosque?",
+    "¿De qué manera los caficultores pueden convertirse en guardianes del bosque andino a través de sus prácticas agrícolas?",
+    "¿Qué papel pueden jugar los jóvenes estudiantes de Sevilla en la protección del bosque andino?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Bosque andino",
+      "definicion": "Ecosistema forestal ubicado en las laderas de los Andes entre los 1.000 y 3.500 metros de altitud, caracterizado por su alta humedad, gran diversidad de especies y presencia de niebla frecuente."
+    },
+    {
+      "termino": "Reserva natural de la sociedad civil",
+      "definicion": "Área protegida ubicada en un predio privado cuyos dueños deciden voluntariamente conservar y manejar de forma sostenible para proteger la biodiversidad y los servicios ecosistémicos."
+    },
+    {
+      "termino": "Servicios ecosistémicos",
+      "definicion": "Beneficios que los ecosistemas proveen gratuitamente a las personas: agua limpia, aire puro, suelo fértil, regulación del clima, polinización de cultivos, entre otros."
+    },
+    {
+      "termino": "Conectividad ecológica",
+      "definicion": "Capacidad del paisaje para permitir el movimiento de animales, plantas (por dispersión de semillas) y flujos ecológicos entre diferentes fragmentos de hábitat."
+    },
+    {
+      "termino": "Sombrío",
+      "definicion": "En el cultivo de café, se refiere a los árboles que se siembran sobre el cafetal para protegerlo del sol directo; estos árboles también proporcionan hábitat para aves y otros animales del bosque."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg/1200px-Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg",
+      "titulo": "Bosque andino con palmas de cera en Colombia",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Coffee_region_Colombia.jpg/1200px-Coffee_region_Colombia.jpg",
+      "titulo": "Paisaje cafetero en los Andes colombianos",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Cerro_de_las_tres_cruces_cali.jpg/1200px-Cerro_de_las_tres_cruces_cali.jpg",
+      "titulo": "Bosque andino en la cordillera Occidental, Valle del Cauca",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "sMBBTHDJ3Ek",
+      "titulo": "Biodiversidad del bosque andino colombiano – Instituto Humboldt"
+    },
+    {
+      "youtube_id": "zEZkj2wFCNw",
+      "titulo": "Reservas naturales de la sociedad civil en Colombia – Resnatur"
+    }
+  ],
+  "fuente_datos": "Instituto Humboldt – Catálogo Biodiversidad Colombia; CVC – Plan de Gestión Ambiental Regional 2015–2036; Resnatur – Registro reservas privadas Valle del Cauca",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

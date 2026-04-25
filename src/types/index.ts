@@ -64,7 +64,7 @@ export interface FichaPedagogica {
 }
 
 export interface RecorridoParada {
-  feature_id: string
+  id: number
   titulo: string
   narracion: string
   lat: number
@@ -83,5 +83,6 @@ export interface MapState {
   center: [number, number]
   zoom: number
   capasActivas: string[]
+  capasOpacidad: Record<string, number>
   mapaBase: 'osm' | 'esri' | 'topo' | 'dark'
 }

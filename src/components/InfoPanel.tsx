@@ -64,10 +64,14 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           </div>
 
           {/* Tabs */}
-          <div className="flex border-b border-gray-100 mt-3 px-2">
+          <div className="flex border-b border-gray-100 mt-3 px-2" role="tablist" aria-label="Secciones de la ficha">
             {(['descripcion', 'galeria', 'vocabulario'] as const).map(tab => (
               <button
                 key={tab}
+                role="tab"
+                aria-selected={activeTab === tab}
+                aria-controls={`tab-panel-${tab}`}
+                id={`tab-${tab}`}
                 onClick={() => setActiveTab(tab)}
                 className={`px-3 py-2 text-xs font-medium transition-colors capitalize ${
                   activeTab === tab
@@ -81,7 +85,7 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           </div>
 
           {activeTab === 'descripcion' && (
-            <div className="px-4 pt-4 font-pedagogica">
+            <div id="tab-panel-descripcion" role="tabpanel" aria-labelledby="tab-descripcion" className="px-4 pt-4 font-pedagogica">
               <p className="text-sm text-gris-texto leading-relaxed">{ficha.descripcion}</p>
 
               <h3 className="text-sm font-bold text-verde-bosque mt-4 mb-2">
@@ -111,9 +115,10 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
                         href={`https://www.youtube.com/watch?v=${v.youtube_id}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${v.titulo} (abre en YouTube)`}
                         className="flex items-center gap-2 text-sm text-azul-medio hover:underline"
                       >
-                        <span>▶</span>
+                        <span aria-hidden="true">▶</span>
                         <span>{v.titulo}</span>
                       </a>
                     ))}
@@ -129,7 +134,7 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           )}
 
           {activeTab === 'galeria' && (
-            <div className="px-4 pt-4">
+            <div id="tab-panel-galeria" role="tabpanel" aria-labelledby="tab-galeria" className="px-4 pt-4">
               {ficha.galeria.length === 0 ? (
                 <p className="text-sm text-gray-400">Sin imágenes disponibles.</p>
               ) : (
@@ -154,7 +159,7 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           )}
 
           {activeTab === 'vocabulario' && (
-            <div className="px-4 pt-4">
+            <div id="tab-panel-vocabulario" role="tabpanel" aria-labelledby="tab-vocabulario" className="px-4 pt-4">
               <div className="space-y-3">
                 {ficha.vocabulario.map((v, i) => (
                   <div key={i} className="border-l-2 pl-3" style={{ borderColor: CATEGORIAS[ficha.categoria].color }}>

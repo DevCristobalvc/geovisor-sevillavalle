@@ -1,0 +1,64 @@
+{
+  "id": "agua_predios_art111",
+  "titulo": "Predios de Protección Hídrica",
+  "categoria": "agua",
+  "descripcion": "En Colombia, el Artículo 111 de la Ley 99 de 1993 establece una obligación muy importante para los municipios y departamentos: deben destinar el 1% de su presupuesto de ingresos corrientes a la adquisición de terrenos en las zonas que abastecen de agua al municipio, con el fin de proteger y conservar esas fuentes hídricas. Esta disposición legal reconoce que la mejor forma de garantizar el agua para una comunidad es proteger los bosques y ecosistemas que regulan su flujo. En el municipio de Sevilla, los predios adquiridos bajo este artículo se ubican principalmente en las partes altas de las microcuencas que abastecen los acueductos veredales y el acueducto municipal. Al adquirir estos predios, el municipio puede restaurar la vegetación nativa, controlar las actividades incompatibles con la protección del agua (como la tala o el uso de agroquímicos) y garantizar que estas tierras estratégicas permanezcan como bosques protectores a perpetuidad. Los predios de protección hídrica también funcionan como refugios de biodiversidad en el paisaje cafetero, conectando fragmentos de bosque y permitiendo el movimiento de animales silvestres. El inventario y la georreferenciación de estos predios es fundamental para la planificación territorial del municipio y para demostrar ante la ciudadanía el uso transparente de los recursos invertidos en la conservación del agua.",
+  "importancia": "El Artículo 111 de la Ley 99/1993 es una de las herramientas legales más poderosas que tienen los municipios colombianos para financiar la conservación del agua. Gracias a esta norma, Sevilla puede invertir año tras año en la compra y restauración de tierras estratégicas para el abastecimiento de agua de toda su población. Sin agua limpia y abundante no hay salud, no hay agricultura, no hay desarrollo. Cada predio adquirido bajo este artículo es una inversión permanente en el bienestar presente y futuro de todos los sevillanos. Además, estos predios representan un importante activo ambiental municipal que debe ser gestionado con transparencia y rigor técnico.",
+  "preguntas_reflexivas": [
+    "¿Por qué crees que la ley obliga a los municipios a gastar el 1% de su presupuesto en proteger las fuentes de agua?",
+    "¿Qué tipo de actividades se deberían prohibir en los predios de protección hídrica y por qué?",
+    "¿Cómo puedes saber si tu municipio está cumpliendo con la obligación del Artículo 111 de la Ley 99/1993?",
+    "¿Qué relación existe entre proteger los bosques de las cuencas altas y tener agua limpia en las casas del casco urbano?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Microcuenca",
+      "definicion": "Área pequeña de terreno que drena hacia una quebrada o afluente de menor tamaño. Es la unidad básica de planificación del agua en los municipios colombianos."
+    },
+    {
+      "termino": "Ley 99 de 1993",
+      "definicion": "Ley colombiana que creó el Sistema Nacional Ambiental (SINA), el Ministerio del Medio Ambiente y estableció los principios y normas para la gestión y protección del medio ambiente en el país."
+    },
+    {
+      "termino": "Bosque protector",
+      "definicion": "Área forestal cuya función principal es la protección del suelo, el agua, la biodiversidad y el clima, en la que no se permite el aprovechamiento comercial de la madera ni actividades que alteren el ecosistema."
+    },
+    {
+      "termino": "Georreferenciación",
+      "definicion": "Proceso de asignar coordenadas geográficas (latitud y longitud) a un objeto, predio o fenómeno para poder ubicarlo con precisión en un mapa o sistema de información geográfica."
+    },
+    {
+      "termino": "Acueducto veredal",
+      "definicion": "Sistema comunitario de captación, tratamiento y distribución de agua potable administrado por las comunidades rurales de una o varias veredas para satisfacer sus necesidades de agua doméstica."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Nacimiento_agua_bosque_andino_colombia.jpg/1200px-Nacimiento_agua_bosque_andino_colombia.jpg",
+      "titulo": "Nacimiento de agua protegido por bosque nativo en los Andes colombianos",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Reforestation_Colombia_water_source.jpg/1200px-Reforestation_Colombia_water_source.jpg",
+      "titulo": "Reforestación de predio de protección hídrica en Colombia",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Quebrada_bosque_protector_colombia.jpg/1200px-Quebrada_bosque_protector_colombia.jpg",
+      "titulo": "Quebrada rodeada de bosque protector en zona cafetera",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "v_J1n_cVjHM",
+      "titulo": "Artículo 111 Ley 99: inversión municipal en fuentes de agua – MADS Colombia"
+    },
+    {
+      "youtube_id": "hIlWoPoIleM",
+      "titulo": "Protección de cuencas abastecedoras en municipios colombianos – CVC"
+    }
+  ],
+  "fuente_datos": "Ley 99 de 1993 – Art. 111; Municipio de Sevilla – Informe de predios adquiridos Art. 111; CVC – Sistema de Información Ambiental (SIA) Valle del Cauca",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

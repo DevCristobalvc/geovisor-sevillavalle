@@ -7,6 +7,8 @@ import Visor from './pages/Visor'
 import Glosario from './pages/Glosario'
 import Recorridos from './pages/Recorridos'
 import Guia from './pages/Guia'
+import Privacidad from './pages/Privacidad'
+import Creditos from './pages/Creditos'
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
             <Route path="/glosario" element={<Glosario />} />
             <Route path="/recorridos" element={<Recorridos />} />
             <Route path="/guia" element={<Guia />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="/creditos" element={<Creditos />} />
           </Routes>
         </div>
         <Footer />

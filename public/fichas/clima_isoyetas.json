@@ -1,0 +1,64 @@
+{
+  "id": "clima_isoyetas",
+  "titulo": "Precipitación e Isoyetas",
+  "categoria": "clima",
+  "descripcion": "Las isoyetas son líneas que unen puntos con igual cantidad de precipitación (lluvia) en un mapa, de manera similar a como las curvas de nivel unen puntos con la misma altitud. El mapa de isoyetas multianuales de Sevilla (elaborado con datos hasta el año 2016) permite visualizar la distribución espacial de las lluvias en el territorio municipal y entender cómo varía la disponibilidad de agua en función de la altitud y la exposición a los vientos cargados de humedad. En Sevilla, la precipitación varía enormemente de un lugar a otro: las zonas más altas cercanas al páramo pueden recibir hasta 2.500 milímetros de agua por año, mientras que las zonas más bajas, orientadas hacia el valle geográfico del río Cauca, pueden recibir apenas 800 milímetros anuales. Esta diferencia determina qué cultivos, ecosistemas y actividades son posibles en cada parte del municipio. El régimen de lluvias en Sevilla es bimodal, lo que significa que tiene dos temporadas de lluvias al año (los períodos de mayor lluvia se presentan aproximadamente entre marzo-mayo y septiembre-noviembre) y dos períodos de menor lluvia o sequías relativas (enero-febrero y junio-agosto). Este patrón bimodal es determinante para la planificación de la cosecha de café y otras actividades agrícolas, para el manejo del riesgo de incendios forestales en las épocas secas y para la gestión del agua en el municipio a lo largo del año.",
+  "importancia": "La precipitación es el motor del ciclo hidrológico local: sin lluvia no hay ríos, no hay agua subterránea, no hay cultivos ni vida. Entender cómo se distribuye la lluvia en el espacio y en el tiempo es fundamental para planificar el uso del agua, anticipar períodos de escasez y diseñar sistemas de riego o captación de agua lluvia. El cambio climático está alterando los patrones de precipitación en Colombia: hay indicios de que las temporadas secas son más largas e intensas y las lluvias más concentradas e irregulares. Monitorear y analizar la precipitación en Sevilla permite preparar al municipio frente a estos cambios y reducir la vulnerabilidad de las comunidades y los ecosistemas.",
+  "preguntas_reflexivas": [
+    "¿Por qué las zonas altas de Sevilla reciben más lluvia que las zonas bajas y cómo afecta esto a los ecosistemas de cada zona?",
+    "¿Cómo influye el régimen bimodal de lluvias en las actividades agrícolas de los caficultores de Sevilla?",
+    "¿Qué riesgos se presentan en las épocas secas y en las épocas de más lluvias en el municipio?",
+    "¿Cómo podría el cambio climático alterar el régimen de lluvias de Sevilla y qué consecuencias tendría para el agua y los cultivos?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Isoyeta",
+      "definicion": "Línea en un mapa que une puntos con la misma cantidad de precipitación registrada en un período de tiempo determinado (un año, varios años). Sirven para visualizar la distribución espacial de las lluvias."
+    },
+    {
+      "termino": "Precipitación",
+      "definicion": "Cualquier forma de agua líquida o sólida (lluvia, llovizna, granizo, nieve) que cae desde la atmósfera hasta la superficie terrestre. Se mide en milímetros (mm), que equivalen a litros por metro cuadrado."
+    },
+    {
+      "termino": "Régimen bimodal",
+      "definicion": "Patrón de lluvias con dos temporadas de mayor precipitación y dos temporadas de menor precipitación al año, característico de las zonas andinas de Colombia por la influencia de la Zona de Convergencia Intertropical (ZCIT)."
+    },
+    {
+      "termino": "ZCIT (Zona de Convergencia Intertropical)",
+      "definicion": "Franja atmosférica ecuatorial donde los vientos del norte y del sur se encuentran, generando grandes acumulaciones de nubes y lluvias intensas. Su desplazamiento norte-sur a lo largo del año determina las temporadas de lluvia en Colombia."
+    },
+    {
+      "termino": "Pluviómetro",
+      "definicion": "Instrumento para medir la cantidad de lluvia caída en un lugar durante un período de tiempo. Los datos de cientos de pluviómetros distribuidos por el territorio son la base para construir los mapas de isoyetas."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Rain_gauge_Colombia_IDEAM.jpg/1200px-Rain_gauge_Colombia_IDEAM.jpg",
+      "titulo": "Estación pluviométrica del IDEAM en zona andina colombiana",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Valle_del_Cauca_clouds_rain.jpg/1200px-Valle_del_Cauca_clouds_rain.jpg",
+      "titulo": "Nubes de lluvia sobre el Valle del Cauca y la cordillera",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cafetal_Colombia_rain_season.jpg/1200px-Cafetal_Colombia_rain_season.jpg",
+      "titulo": "Cultivos de café bajo la lluvia en zona andina",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "sFTaUyoezg0",
+      "titulo": "El régimen de lluvias en Colombia y su relación con la ZCIT – IDEAM"
+    },
+    {
+      "youtube_id": "XpMv-hMFT4U",
+      "titulo": "Clima y agua en el Valle del Cauca: variabilidad y cambio climático – CVC"
+    }
+  ],
+  "fuente_datos": "IDEAM – Atlas Climatológico de Colombia 2005; IDEAM – Isoyetas Multianuales Colombia 2016; CVC – Red Hidrometeorológica del Valle del Cauca",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

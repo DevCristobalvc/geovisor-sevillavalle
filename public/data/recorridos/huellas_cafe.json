@@ -1,0 +1,39 @@
+{
+  "id": "huellas_cafe",
+  "titulo": "Las huellas del café",
+  "descripcion": "Un recorrido por la identidad cafetera de Sevilla, Valle del Cauca. Desde el centro histórico declarado Patrimonio de la Humanidad como parte del Paisaje Cultural Cafetero, hasta las fincas y cooperativas que sostienen la economía y cultura del municipio.",
+  "paradas": [
+    {
+      "id": 1,
+      "titulo": "Centro histórico de Sevilla",
+      "narracion": "Sevilla fue fundada en 1903 en plena colonización antioqueña del norte del Valle del Cauca. Su trazado urbano, su arquitectura en bahareque y sus costumbres culturales son expresión viva del Paisaje Cultural Cafetero (PCC), declarado Patrimonio Mundial de la UNESCO en 2011. Cada calle, cada fachada de guadua y colores vibrantes, narra la historia de generaciones de familias que construyeron su vida alrededor del cultivo del café. El parque principal, la iglesia y el mercado local siguen siendo el corazón de una comunidad que se enorgullece de su herencia cafetera.",
+      "lat": 4.2710,
+      "lng": -75.9366,
+      "zoom": 15
+    },
+    {
+      "id": 2,
+      "titulo": "Finca cafetera La Esperanza",
+      "narracion": "En las laderas de la cordillera central, entre los 1.400 y 1.800 metros de altitud, la familia Restrepo cultiva café variedad Castillo y Cenicafé 1 bajo sombra de plátano y guamo. El proceso del café —desde la recolección selectiva del grano cereza, pasando por el beneficio húmedo, el secado en marquesinas y la trilla— es aquí un ritual que se hereda de padres a hijos. La finca es también ejemplo de agricultura sostenible: compostaje, manejo integrado de plagas y conservación de nacimientos de agua hacen de La Esperanza un modelo de caficultura responsable.",
+      "lat": 4.285,
+      "lng": -75.955,
+      "zoom": 16
+    },
+    {
+      "id": 3,
+      "titulo": "Mirador El Cerro",
+      "narracion": "Desde este mirador a 1.650 metros de altitud, el paisaje cafetero se despliega en toda su dimensión estética y cultural. Las montañas cubiertas de cafetales, intercalados con guaduales y manchas de bosque nativo, conforman el mosaico que enamoró a los evaluadores de la UNESCO. Al fondo, los farallones nevados del complejo de páramos Las Hermosas recuerdan que el café de Sevilla no existiría sin el agua que desciende desde esas alturas. Este es uno de los puntos de observación de aves más ricos del municipio: tangaras, colibríes y tucanes andinos anidan en los cafetales con sombra.",
+      "lat": 4.295,
+      "lng": -75.963,
+      "zoom": 15
+    },
+    {
+      "id": 4,
+      "titulo": "Cooperativa de Caficultores del Norte del Valle",
+      "narracion": "La Cooperativa de Caficultores agrupa a más de 1.200 familias productoras de Sevilla y municipios vecinos. Aquí el café pasa de ser producto agrícola a convertirse en motor económico: clasificación, torrefacción, exportación y ahora turismo cafetero son los pilares de una organización que lleva más de 60 años apoyando al caficultor sevillano. La tienda de la cooperativa ofrece el 'Café de Sevilla', una marca de origen que busca posicionar en mercados internacionales la calidad excepcional de los granos cultivados en las laderas del PCC.",
+      "lat": 4.265,
+      "lng": -75.930,
+      "zoom": 16
+    }
+  ]
+}

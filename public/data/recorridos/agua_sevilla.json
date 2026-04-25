@@ -1,0 +1,47 @@
+{
+  "id": "agua_sevilla",
+  "titulo": "El agua en Sevilla",
+  "descripcion": "Un viaje por el ciclo del agua en el municipio de Sevilla: desde los nacimientos en los páramos y bosques altoandinos, pasando por las cuencas medias y los sistemas de abastecimiento, hasta los humedales urbanos y las estaciones de monitoreo de calidad. El agua es el hilo conductor que conecta todos los ecosistemas del territorio.",
+  "paradas": [
+    {
+      "id": 1,
+      "titulo": "Nacimiento del Río Bugalagrande",
+      "narracion": "A más de 3.800 metros de altitud, en el corazón del complejo de páramos Chili-Barragán, nace el Río Bugalagrande. Las aguas que aquí emergen han sido filtradas durante décadas a través de las turberas y suelos esponjosos del páramo, acumulando minerales y nutrientes que las hacen especialmente aptas para el consumo humano y el riego. Este nacimiento abastece directamente a más de 80.000 personas en el norte del Valle del Cauca. Protegerlo es proteger la vida de todo el municipio.",
+      "lat": 4.38,
+      "lng": -76.01,
+      "zoom": 14
+    },
+    {
+      "id": 2,
+      "titulo": "Cuenca Alta - El páramo como fábrica de agua",
+      "narracion": "Los páramos de Las Hermosas son la verdadera 'fábrica de agua' del municipio. Los frailejones (Espeletia spp.) capturan la humedad de las nubes y la niebla a través de sus hojas velludas, liberándola lentamente hacia el suelo. Las turberas almacenan el agua como una esponja gigante, regulando los caudales en épocas secas. Se estima que este ecosistema regula más del 70% del agua dulce que abastece los acueductos municipales. Sin embargo, la ganadería extensiva y el cambio climático amenazan su capacidad de regulación hídrica.",
+      "lat": 4.35,
+      "lng": -75.99,
+      "zoom": 14
+    },
+    {
+      "id": 3,
+      "titulo": "Embalse La Paila",
+      "narracion": "El sistema de almacenamiento hídrico en la cuenca media del Río Bugalagrande representa uno de los puntos clave de la infraestructura de agua del municipio. Aquí confluyen las aguas de varias quebradas provenientes de los bosques andinos para ser reguladas antes de su distribución hacia zonas agrícolas y urbanas. Este sector es también un corredor importante para aves migratorias y espacio de pesca artesanal para las comunidades ribeireñas. La gestión integrada del recurso hídrico en este punto es fundamental para garantizar el suministro en épocas de sequía.",
+      "lat": 4.28,
+      "lng": -75.96,
+      "zoom": 14
+    },
+    {
+      "id": 4,
+      "titulo": "Estación de monitoreo - Quebrada San José",
+      "narracion": "Esta estación de monitoreo de la CVC y el municipio registra en tiempo real los principales parámetros fisicoquímicos y bacteriológicos del agua de la Quebrada San José, que atraviesa la zona urbana de Sevilla. Los datos muestran un deterioro significativo de la calidad del agua en su paso por el casco urbano: el índice de calidad del agua (ICA) cae de 'aceptable' en la parte alta a 'crítico' en la parte baja, evidenciando el impacto de las aguas residuales domésticas no tratadas. Esta información es insumo clave para la Alcaldía en la gestión del Plan de Saneamiento y Manejo de Vertimientos (PSMV).",
+      "lat": 4.271,
+      "lng": -75.937,
+      "zoom": 15
+    },
+    {
+      "id": 5,
+      "titulo": "Humedal La Cristalina",
+      "narracion": "En la periferia urbana de Sevilla, el Humedal La Cristalina es un ecosistema de 12 hectáreas que cumple funciones vitales frecuentemente ignoradas: retiene las aguas lluvias evitando inundaciones en el casco urbano, depura naturalmente los contaminantes mediante sus plantas acuáticas, y es refugio de aves acuáticas y anfibios. A pesar de estar en estado de conservación regular por la invasión de especies foráneas y el vertimiento de residuos sólidos, este humedal es sujeto de un plan de restauración liderado por la comunidad y la Fundación Río Vivo. Su recuperación es un ejemplo de educación ambiental en acción.",
+      "lat": 4.248,
+      "lng": -75.961,
+      "zoom": 15
+    }
+  ]
+}

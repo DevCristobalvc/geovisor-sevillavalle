@@ -65,11 +65,13 @@ export default function Home() {
             <Link
               key={key}
               to={`/visor?categoria=${key}`}
+              aria-label={`Explorar ${info.label} en el visor`}
               className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow flex items-start gap-3"
             >
               <div
                 className="w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-sm"
                 style={{ backgroundColor: info.color }}
+                aria-hidden="true"
               >
                 {info.label.charAt(0)}
               </div>

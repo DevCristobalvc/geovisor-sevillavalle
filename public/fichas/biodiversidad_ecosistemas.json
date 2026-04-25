@@ -1,0 +1,64 @@
+{
+  "id": "biodiversidad_ecosistemas",
+  "titulo": "Ecosistemas y Fragmentación",
+  "categoria": "biodiversidad",
+  "descripcion": "Un ecosistema es la unidad funcional de la naturaleza formada por la comunidad de seres vivos (plantas, animales, hongos, microorganismos) y el ambiente físico (suelo, agua, clima, luz) en el que viven, y las relaciones que existen entre todos ellos. En Sevilla, el territorio alberga tres grandes tipos de ecosistemas determinados principalmente por la altitud: el páramo (por encima de los 3.000 metros), el bosque andino (entre 1.500 y 3.000 metros) y el bosque seco tropical (por debajo de los 1.000 metros en las zonas más bajas). Cada uno de estos ecosistemas tiene una composición de especies, condiciones climáticas y funciones ecológicas particulares e irremplazables. Sin embargo, todos estos ecosistemas han sufrido un proceso de fragmentación severa: es decir, la acción humana (principalmente la agricultura, la ganadería y la urbanización) los ha reducido y dividido en parches o fragmentos más pequeños y aislados entre sí. El índice de fragmentación mide cuán dividido y aislado está un ecosistema, en una escala de 1 a 5, donde 1 indica poco fragmentado (ecosistema bien conservado y continuo) y 5 indica altamente fragmentado (parches pequeños y muy aislados). Un bosque altamente fragmentado no puede mantener las mismas poblaciones de animales y plantas que un bosque continuo: las especies grandes como el jaguar, el oso de anteojos y el águila de cresta necesitan grandes extensiones de hábitat para sobrevivir. Los corredores de conectividad son franjas de vegetación que unen los fragmentos y permiten el movimiento de los animales entre ellos.",
+  "importancia": "La fragmentación de los ecosistemas es una de las principales causas de pérdida de biodiversidad en Colombia y en el mundo. Cuando un bosque se divide en parches aislados, las poblaciones de animales quedan atrapadas en espacios cada vez más pequeños, con menos alimento, menos individuos para reproducirse y mayor riesgo de enfermedades. Con el tiempo, estas poblaciones pequeñas se extinguen localmente, empobreciendo irreversiblemente el ecosistema. Los corredores de conectividad son una solución fundamental: permiten que los animales se muevan entre fragmentos, busquen pareja, colonicen nuevos hábitats y que las plantas intercambien semillas, manteniendo vivos los procesos ecológicos esenciales. Entender la fragmentación y actuar para reducirla es uno de los mayores retos ambientales de Sevilla.",
+  "preguntas_reflexivas": [
+    "¿Por qué un animal grande como el oso de anteojos no puede sobrevivir en un parche de bosque muy pequeño?",
+    "¿Cómo pueden las cercas vivas y los árboles en los potreros funcionar como corredores de conectividad para las aves?",
+    "¿Cuál de los tres ecosistemas de Sevilla (páramo, bosque andino o bosque seco) crees que está más fragmentado y por qué?",
+    "¿Qué medidas concretas podrías tomar en tu finca o vereda para reducir la fragmentación del bosque?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Ecosistema",
+      "definicion": "Sistema formado por todos los seres vivos de un lugar (biocenosis) y el ambiente físico que los rodea (biotopo), incluyendo todas las interacciones entre ellos como la cadena alimentaria, la polinización y la descomposición."
+    },
+    {
+      "termino": "Fragmentación",
+      "definicion": "Proceso por el cual un ecosistema continuo es dividido en partes más pequeñas y aisladas por actividades humanas como la deforestación, la construcción de carreteras o la expansión agrícola."
+    },
+    {
+      "termino": "Corredor de conectividad",
+      "definicion": "Franja de vegetación nativa que conecta dos fragmentos de hábitat, permitiendo el movimiento de animales y el flujo de genes entre poblaciones de plantas y animales que de otro modo quedarían aisladas."
+    },
+    {
+      "termino": "Índice de fragmentación",
+      "definicion": "Medida numérica (en escala 1-5) que cuantifica el grado de división y aislamiento de un ecosistema. Un índice 1 corresponde a un ecosistema poco fragmentado y 5 a uno muy fragmentado y degradado."
+    },
+    {
+      "termino": "Extinción local",
+      "definicion": "Desaparición de una especie de un área geográfica específica (como un municipio o una cuenca) aunque la especie siga existiendo en otras partes del mundo. También llamada extirpación."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Forest_fragmentation_Colombia.jpg/1200px-Forest_fragmentation_Colombia.jpg",
+      "titulo": "Fragmentación del bosque andino en el paisaje colombiano",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Paramo_bosque_andino_transition_Colombia.jpg/1200px-Paramo_bosque_andino_transition_Colombia.jpg",
+      "titulo": "Transición entre páramo y bosque andino en los Andes colombianos",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Wildlife_corridor_Colombia_Andes.jpg/1200px-Wildlife_corridor_Colombia_Andes.jpg",
+      "titulo": "Corredor de conectividad ecológica entre fragmentos de bosque",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "OT8PBcJvfm8",
+      "titulo": "Ecosistemas de Colombia: diversidad y amenazas – Instituto Humboldt"
+    },
+    {
+      "youtube_id": "6gPrJCiakYE",
+      "titulo": "Fragmentación y conectividad ecológica en los Andes colombianos"
+    }
+  ],
+  "fuente_datos": "Instituto Humboldt – Mapa de Ecosistemas Continentales Costeros y Marinos de Colombia 2017; IDEAM – Análisis de Fragmentación de Ecosistemas; CVC – Plan de Gestión Ambiental Regional 2015–2036",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

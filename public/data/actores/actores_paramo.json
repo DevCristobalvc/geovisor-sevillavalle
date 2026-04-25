@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "Actores Páramo",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.018, 4.362]
+      },
+      "properties": {
+        "nombre": "Comunidad Indígena Alto Chili",
+        "vereda": "Alto Chili",
+        "tipo_actor": "Comunidad",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.043, 4.388]
+      },
+      "properties": {
+        "nombre": "Carmen Lucía Patiño",
+        "vereda": "Las Hermosas",
+        "tipo_actor": "Líder",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.007, 4.415]
+      },
+      "properties": {
+        "nombre": "Asociación Ganadera del Páramo Barragán",
+        "vereda": "Barragán",
+        "tipo_actor": "Empresa",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.058, 4.401]
+      },
+      "properties": {
+        "nombre": "Colectivo Guardianes del Páramo",
+        "vereda": "Las Hermosas",
+        "tipo_actor": "Comunidad",
+        "municipio": "Sevilla"
+      }
+    }
+  ]
+}

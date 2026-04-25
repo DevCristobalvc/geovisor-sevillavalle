@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "name": "Predios Adquiridos Artículo 111 - Ley 99/1993",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-76.0182, 4.3762],
+            [-76.0141, 4.3748],
+            [-76.0108, 4.3761],
+            [-76.0094, 4.3792],
+            [-76.0103, 4.3828],
+            [-76.0139, 4.3847],
+            [-76.0178, 4.3841],
+            [-76.0204, 4.3814],
+            [-76.0207, 4.3781],
+            [-76.0192, 4.3764],
+            [-76.0182, 4.3762]
+          ]
+        ]
+      },
+      "properties": {
+        "predio": "El Nacimiento",
+        "area_ha": 98.3,
+        "fuente_hidrica_protegida": "Nacimiento Río Bugalagrande",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.9748, 4.3468],
+            [-75.9712, 4.3451],
+            [-75.9681, 4.3462],
+            [-75.9668, 4.3491],
+            [-75.9674, 4.3524],
+            [-75.9704, 4.3541],
+            [-75.9739, 4.3537],
+            [-75.9762, 4.3514],
+            [-75.9763, 4.3484],
+            [-75.9748, 4.3468]
+          ]
+        ]
+      },
+      "properties": {
+        "predio": "La Pradera",
+        "area_ha": 74.6,
+        "fuente_hidrica_protegida": "Quebrada La Pradera - afluente Río Bugalagrande",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-76.0452, 4.4072],
+            [-76.0411, 4.4058],
+            [-76.0377, 4.4069],
+            [-76.0361, 4.4098],
+            [-76.0368, 4.4131],
+            [-76.0401, 4.4152],
+            [-76.0440, 4.4148],
+            [-76.0465, 4.4126],
+            [-76.0468, 4.4093],
+            [-76.0452, 4.4072]
+          ]
+        ]
+      },
+      "properties": {
+        "predio": "Alto del Silencio",
+        "area_ha": 112.8,
+        "fuente_hidrica_protegida": "Nacimiento Quebrada El Silencio y microcuencas páramo Las Hermosas",
+        "municipio": "Sevilla"
+      }
+    }
+  ]
+}

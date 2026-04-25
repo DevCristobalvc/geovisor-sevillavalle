@@ -1,0 +1,31 @@
+{
+  "id": "paramo_vida",
+  "titulo": "El páramo: fábrica de agua",
+  "descripcion": "Recorrido por los complejos de páramo Chili-Barragán y Las Hermosas en el municipio de Sevilla. Este ecosistema, el más amenazado del planeta, es el origen del agua que beben miles de personas. Conoce su biodiversidad única, sus comunidades guardianas y los desafíos que enfrenta ante el cambio climático.",
+  "paradas": [
+    {
+      "id": 1,
+      "titulo": "Complejo de Páramos Chili-Barragán",
+      "narracion": "El complejo de páramos Chili-Barragán, parte del sistema de páramos Las Hermosas, fue delimitado por el IDEAM y el MADS en 2016 como una de las áreas prioritarias de conservación de Colombia. Se extiende entre los 3.200 y 4.200 metros de altitud y abarca territorios de los departamentos del Valle del Cauca y Tolima. En Sevilla, este páramo regula las cuencas del Río Bugalagrande y sus afluentes. Desde este punto, en días despejados, es posible observar la línea donde el bosque altoandino cede paso a la vegetación paramuna: frailejonales, chuscales y pajonales que dominan el horizonte.",
+      "lat": 4.40,
+      "lng": -76.03,
+      "zoom": 13
+    },
+    {
+      "id": 2,
+      "titulo": "Frailejonales y flora del páramo",
+      "narracion": "Los frailejones (Espeletia spp.) son el símbolo del páramo colombiano. En las alturas de Sevilla, estas plantas con aspecto de palmera enana pueden alcanzar hasta 5 metros de altura y tienen más de 100 años de antigüedad: crecen apenas 1 cm por año. Sus hojas plateadas y velludas atrapan la humedad de las nubes, aportando hasta 40 litros de agua por planta cada día. Junto a ellos crecen plantas únicas como el musgo Sphagnum (esponja viva del páramo), la uva de monte (Vaccinium spp.), y diversas orquídeas de alta montaña. La biodiversidad del páramo de Las Hermosas incluye más de 800 especies de plantas, muchas de ellas endémicas.",
+      "lat": 4.42,
+      "lng": -76.06,
+      "zoom": 14
+    },
+    {
+      "id": 3,
+      "titulo": "Comunidades guardianas del páramo",
+      "narracion": "Las veredas de la parte alta de Sevilla, como Barragán y Las Hermosas, albergan comunidades campesinas e indígenas que llevan generaciones conviviendo con el páramo. Históricamente, la ganadería extensiva ha sido su principal fuente de sustento, pero esta actividad es también la mayor amenaza para el ecosistema paramuno. Hoy, gracias a programas de reconversión productiva de la CVC y el municipio, algunas familias han transitado hacia modelos de ganadería sostenible y ecoturismo. Los 'guardianes del páramo' —líderes y lideresas comunitarias— son los verdaderos custodios de este patrimonio natural. Sin sus conocimientos tradicionales y su compromiso, la conservación del páramo sería imposible.",
+      "lat": 4.37,
+      "lng": -76.00,
+      "zoom": 14
+    }
+  ]
+}

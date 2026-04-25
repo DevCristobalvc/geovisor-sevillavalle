@@ -1,0 +1,65 @@
+{
+  "id": "territorio_resguardos",
+  "titulo": "Resguardo Indígena Ancore Drua",
+  "categoria": "territorio",
+  "descripcion": "El Resguardo Indígena Ancore Drua es el territorio colectivo del pueblo Embera Chamí asentado en el municipio de Sevilla, Valle del Cauca. Los Embera son uno de los pueblos indígenas más numerosos de Colombia, con presencia en los departamentos de Chocó, Valle del Cauca, Risaralda, Caldas, Antioquia y otras regiones del país. En Sevilla, la comunidad Embera Chamí ha habitado ancestralmente las zonas de bosque andino y las zonas de transición hacia el páramo, con una profunda relación espiritual y práctica con el territorio, los ríos, los bosques y sus recursos. El resguardo es una figura jurídica reconocida por la Constitución Política de Colombia de 1991, que otorga a las comunidades indígenas derechos colectivos sobre su territorio: el derecho a la propiedad colectiva de la tierra, el derecho a la consulta previa ante proyectos que afecten su territorio, el derecho al gobierno propio a través del cabildo indígena, y el derecho a preservar y transmitir su cultura, lengua (Embera), medicina tradicional y cosmovisión. La relación de los Embera con los ecosistemas de Sevilla es profunda: su cosmología reconoce a los animales, las plantas, los ríos y las montañas como seres con vida propia y con quienes los humanos deben mantener relaciones de respeto y reciprocidad. Sus prácticas de manejo del bosque, la caza y la pesca sostenibles, y su conocimiento de las plantas medicinales son un patrimonio biocultural invaluable que debe protegerse y revitalizarse.",
+  "importancia": "Los territorios indígenas como el Resguardo Ancore Drua son fundamentales para la conservación de la biodiversidad y los ecosistemas de Sevilla. Las investigaciones muestran que los territorios bajo manejo indígena tienen, en promedio, mayor cobertura boscosa y mayor biodiversidad que áreas comparables fuera de territorios indígenas. Esto demuestra que los saberes y las prácticas ancestrales de los Embera son formas altamente efectivas de gestión del territorio. Además, la supervivencia cultural del pueblo Embera —su idioma, sus ceremonias, su medicina, su arte— es un bien colectivo de toda la humanidad. Proteger el resguardo significa proteger tanto la naturaleza como la diversidad cultural que hace única a Colombia.",
+  "preguntas_reflexivas": [
+    "¿Por qué la Constitución de 1991 reconoció a los pueblos indígenas derechos especiales sobre sus territorios ancestrales?",
+    "¿Cómo la cosmovisión Embera, que considera a la naturaleza como un ser vivo y sagrado, puede contribuir a la conservación del bosque andino de Sevilla?",
+    "¿Qué significa el derecho a la consulta previa y por qué es importante para comunidades como los Embera de Ancore Drua?",
+    "¿Cómo podría establecerse un diálogo de saberes entre los conocimientos indígenas Embera y la ciencia occidental para proteger mejor los ecosistemas de Sevilla?",
+    "¿Qué puedes hacer tú para valorar y respetar la cultura y los derechos del pueblo Embera de tu municipio?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Resguardo indígena",
+      "definicion": "Territorio colectivo reconocido legalmente por el Estado colombiano como propiedad de una comunidad indígena, con derechos de autonomía, gobierno propio y manejo de los recursos naturales según sus usos y costumbres."
+    },
+    {
+      "termino": "Embera Chamí",
+      "definicion": "Subgrupo del pueblo indígena Embera que habita principalmente en las estribaciones de las cordilleras andinas de Colombia. Chamí significa 'el de la montaña' en la lengua Embera."
+    },
+    {
+      "termino": "Consulta previa",
+      "definicion": "Derecho fundamental de los pueblos indígenas y afrocolombianos a ser consultados de manera libre, previa e informada antes de la adopción de medidas legislativas, administrativas o proyectos que puedan afectar su territorio y forma de vida."
+    },
+    {
+      "termino": "Cosmovisión",
+      "definicion": "Conjunto de creencias, valores y principios con los que una cultura interpreta el mundo, la naturaleza y las relaciones entre los seres humanos y su entorno. La cosmovisión Embera reconoce la sacralidad de la naturaleza."
+    },
+    {
+      "termino": "Patrimonio biocultural",
+      "definicion": "Conjunto integrado de la diversidad biológica y la diversidad cultural de un territorio, que incluye los conocimientos, prácticas y creencias de las comunidades indígenas y locales sobre la naturaleza y sus formas de manejarla."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ember%C3%A1_woman.jpg/800px-Ember%C3%A1_woman.jpg",
+      "titulo": "Mujer Embera con vestimenta y artesanías tradicionales",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Embera_community_Colombia.jpg/1200px-Embera_community_Colombia.jpg",
+      "titulo": "Comunidad Embera en zona de bosque andino de Colombia",
+      "credito": "Wikimedia Commons / CC BY"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Embera_handicrafts_Colombia.jpg/1200px-Embera_handicrafts_Colombia.jpg",
+      "titulo": "Artesanías Embera: canastos y collares de chaquiras",
+      "credito": "Wikimedia Commons / CC BY-SA"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "XfEd_lpXAo0",
+      "titulo": "Pueblo Embera: territorio, cultura y resistencia en Colombia"
+    },
+    {
+      "youtube_id": "h9wQWYuDFlo",
+      "titulo": "Territorios indígenas y conservación de la biodiversidad en Colombia – Instituto Humboldt"
+    }
+  ],
+  "fuente_datos": "Constitución Política de Colombia 1991 – Art. 63, 246, 329, 330; DANE – Pueblos Indígenas de Colombia 2018; Ministerio del Interior – Registro de Resguardos Indígenas Colombia; CVC – Territorio y Ambiente en Resguardos Indígenas Valle del Cauca",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

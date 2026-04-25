@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "Actores Bosque Andino",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.981, 4.318]
+      },
+      "properties": {
+        "nombre": "Universidad del Valle - Grupo GEMA",
+        "rol": "Academia",
+        "predio": "Bosque de Investigación El Robledal",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.012, 4.347]
+      },
+      "properties": {
+        "nombre": "Reserva Natural La Montañita",
+        "rol": "Propietario de Reserva",
+        "predio": "La Montañita",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.998, 4.332]
+      },
+      "properties": {
+        "nombre": "Maderas del Pacífico Ltda.",
+        "rol": "Maderero",
+        "predio": "Zona de Aprovechamiento Forestal Norte",
+        "municipio": "Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.024, 4.308]
+      },
+      "properties": {
+        "nombre": "Asociación de Productores Agroforestales Sevilla",
+        "rol": "Agricultor",
+        "predio": "Fincas Agroforestales Vereda El Pomo",
+        "municipio": "Sevilla"
+      }
+    }
+  ]
+}

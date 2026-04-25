@@ -1,0 +1,45 @@
+{
+  "type": "FeatureCollection",
+  "name": "Calidad del Agua - Quebrada San José",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.948, 4.285]
+      },
+      "properties": {
+        "codigo": "QSJ-001",
+        "parametros": "pH: 7.1, OD: 8.2 mg/L, DBO5: 2.1 mg/L, Coliformes fecales: 120 UFC/100mL, Turbidez: 3.4 NTU, Conductividad: 142 µS/cm",
+        "fecha_muestreo": "2024-09-15",
+        "resultado": "aceptable"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.937, 4.271]
+      },
+      "properties": {
+        "codigo": "QSJ-002",
+        "parametros": "pH: 6.8, OD: 5.4 mg/L, DBO5: 12.7 mg/L, Coliformes fecales: 2400 UFC/100mL, Turbidez: 18.2 NTU, Conductividad: 387 µS/cm",
+        "fecha_muestreo": "2024-09-15",
+        "resultado": "alerta"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.929, 4.255]
+      },
+      "properties": {
+        "codigo": "QSJ-003",
+        "parametros": "pH: 6.5, OD: 3.8 mg/L, DBO5: 28.3 mg/L, Coliformes fecales: 8200 UFC/100mL, Turbidez: 34.7 NTU, Conductividad: 521 µS/cm",
+        "fecha_muestreo": "2024-09-15",
+        "resultado": "crítico"
+      }
+    }
+  ]
+}

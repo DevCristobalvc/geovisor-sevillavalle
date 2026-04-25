@@ -12,10 +12,21 @@ const CATEGORIA_ORDER: Categoria[] = [
 ]
 
 export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelProps) {
-  const { categorias, layersByCategory, isLayerActive, toggleLayer, countByCategory } = useMapLayers()
+  const {
+    categorias,
+    layersByCategory,
+    isLayerActive,
+    toggleLayer,
+    toggleCategory,
+    isCategoryFullyActive,
+    isCategoryPartiallyActive,
+    countByCategory,
+    setLayerOpacity,
+    getLayerOpacity,
+  } = useMapLayers()
   const [expanded, setExpanded] = useState<Set<Categoria>>(new Set(['agua', 'territorio']))
 
-  const toggleCategoria = (cat: Categoria) => {
+  const toggleAccordion = (cat: Categoria) => {
     setExpanded(prev => {
       const next = new Set(prev)
       next.has(cat) ? next.delete(cat) : next.add(cat)
@@ -25,11 +36,10 @@ export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelPr
 
   return (
     <>
-      {/* Botón colapsar */}
       <button
         onClick={onToggleCollapse}
         aria-label={collapsed ? 'Expandir panel de capas' : 'Colapsar panel de capas'}
-        className="absolute top-3 left-3 z-10 bg-white border border-gray-200 rounded p-1.5 shadow hover:bg-gray-50 transition-colors"
+        className="absolute top-3 z-10 bg-white border border-gray-200 rounded p-1.5 shadow hover:bg-gray-50 transition-colors"
         style={{ left: collapsed ? '8px' : 'calc(var(--panel-width) + 8px)' }}
       >
         <span className="text-gris-texto text-xs font-mono">
@@ -53,31 +63,50 @@ export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelPr
             const layers = layersByCategory(cat)
             const count = countByCategory(cat)
             const open = expanded.has(cat)
+            const fullyActive = isCategoryFullyActive(cat)
+            const partiallyActive = isCategoryPartiallyActive(cat)
 
             return (
               <div key={cat} className="border-b border-gray-100">
-                <button
-                  onClick={() => toggleCategoria(cat)}
-                  className="w-full flex items-center justify-between px-4 py-3 hover:bg-gray-50 transition-colors"
-                  aria-expanded={open}
-                >
-                  <div className="flex items-center gap-2">
-                    <div
-                      className="w-3 h-3 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: info.color }}
+                <div className="flex items-center">
+                  {/* Category-level toggle */}
+                  <div className="pl-3 pr-1 flex-shrink-0">
+                    <input
+                      type="checkbox"
+                      checked={fullyActive}
+                      ref={el => { if (el) el.indeterminate = partiallyActive }}
+                      onChange={e => { e.stopPropagation(); toggleCategory(cat) }}
+                      onClick={e => e.stopPropagation()}
+                      aria-label={`Activar todas las capas de ${info.label}`}
+                      style={{ accentColor: info.color }}
+                      className="cursor-pointer"
                     />
-                    <span className="text-sm font-semibold text-gris-texto">{info.label}</span>
-                    {count > 0 && (
-                      <span
-                        className="text-xs text-white px-1.5 py-0.5 rounded-full leading-none"
-                        style={{ backgroundColor: info.color }}
-                      >
-                        {count}
-                      </span>
-                    )}
                   </div>
-                  <span className="text-gray-400 text-xs">{open ? '▲' : '▼'}</span>
-                </button>
+
+                  {/* Accordion toggle */}
+                  <button
+                    onClick={() => toggleAccordion(cat)}
+                    className="flex-1 flex items-center justify-between px-2 py-3 hover:bg-gray-50 transition-colors"
+                    aria-expanded={open}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div
+                        className="w-3 h-3 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: info.color }}
+                      />
+                      <span className="text-sm font-semibold text-gris-texto">{info.label}</span>
+                      {count > 0 && (
+                        <span
+                          className="text-xs text-white px-1.5 py-0.5 rounded-full leading-none"
+                          style={{ backgroundColor: info.color }}
+                        >
+                          {count}
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-gray-400 text-xs mr-2">{open ? '▲' : '▼'}</span>
+                  </button>
+                </div>
 
                 {open && (
                   <div className="pb-2">
@@ -88,6 +117,8 @@ export default function LayerPanel({ collapsed, onToggleCollapse }: LayerPanelPr
                         active={isLayerActive(layer.id)}
                         onToggle={() => toggleLayer(layer.id)}
                         color={info.color}
+                        opacity={getLayerOpacity(layer.id)}
+                        onOpacityChange={v => setLayerOpacity(layer.id, v)}
                       />
                     ))}
                   </div>
@@ -110,29 +141,83 @@ function LayerItem({
   active,
   onToggle,
   color,
+  opacity,
+  onOpacityChange,
 }: {
   layer: LayerConfig
   active: boolean
   onToggle: () => void
   color: string
+  opacity: number
+  onOpacityChange: (v: number) => void
 }) {
+  const isPoint = (layer.estilo?.radius ?? 0) > 0
+  const isGeoJSON = layer.tipo === 'geojson'
+
   return (
-    <label className="flex items-start gap-3 px-4 py-2 hover:bg-gray-50 cursor-pointer group">
-      <input
-        type="checkbox"
-        checked={active}
-        onChange={onToggle}
-        className="mt-0.5 flex-shrink-0 rounded"
-        style={{ accentColor: color }}
-        aria-label={`Activar capa ${layer.nombre}`}
-      />
-      <div className="flex-1 min-w-0">
-        <div className="text-sm text-gris-texto font-medium leading-tight">{layer.nombre}</div>
-        {layer.descripcionBreve && (
-          <div className="text-xs text-gray-400 mt-0.5 leading-tight">{layer.descripcionBreve}</div>
+    <div className="px-4 py-2 hover:bg-gray-50">
+      <div className="flex items-start gap-3">
+        <input
+          type="checkbox"
+          checked={active}
+          onChange={onToggle}
+          className="mt-1 flex-shrink-0 rounded cursor-pointer"
+          style={{ accentColor: color }}
+          aria-label={`Activar capa ${layer.nombre}`}
+        />
+        {/* Legend swatch */}
+        <div className="mt-0.5 flex-shrink-0" aria-hidden="true">
+          {isPoint ? (
+            <div
+              className="w-3 h-3 rounded-full border border-white shadow-sm"
+              style={{ backgroundColor: layer.estilo?.fillColor ?? color, opacity: active ? 1 : 0.4 }}
+            />
+          ) : (
+            <div
+              className="w-4 h-3 rounded-sm border shadow-sm"
+              style={{
+                backgroundColor: layer.estilo?.fillColor ?? color,
+                borderColor: layer.estilo?.color ?? color,
+                opacity: active ? 1 : 0.4,
+              }}
+            />
+          )}
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="text-sm text-gris-texto font-medium leading-tight">{layer.nombre}</div>
+          {layer.descripcionBreve && (
+            <div className="text-xs text-gray-400 mt-0.5 leading-tight">{layer.descripcionBreve}</div>
+          )}
+        </div>
+        {active && isGeoJSON && (
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent(`zoomToLayer:${layer.id}`))}
+            aria-label={`Zoom a extensión de ${layer.nombre}`}
+            title="Zoom a extensión"
+            className="flex-shrink-0 text-gray-400 hover:text-verde-bosque transition-colors text-xs mt-0.5"
+          >
+            ⊕
+          </button>
         )}
-        <div className="text-xs text-gray-300 mt-0.5 uppercase tracking-wide">{layer.tipo}</div>
       </div>
-    </label>
+
+      {active && (
+        <div className="mt-1.5 flex items-center gap-2 pl-7">
+          <span className="text-xs text-gray-400 w-14">Opacidad</span>
+          <input
+            type="range"
+            min={0.1}
+            max={1}
+            step={0.05}
+            value={opacity}
+            onChange={e => onOpacityChange(Number(e.target.value))}
+            className="flex-1 h-1"
+            style={{ accentColor: color }}
+            aria-label={`Opacidad de ${layer.nombre}`}
+          />
+          <span className="text-xs text-gray-400 w-8 text-right">{Math.round(opacity * 100)}%</span>
+        </div>
+      )}
+    </div>
   )
 }

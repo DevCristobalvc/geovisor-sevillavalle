@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "Actores Bosque Seco Tropical",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.921, 4.213]
+      },
+      "properties": {
+        "nombre": "CVC - Corporación Autónoma Regional del Valle",
+        "sector": "Gubernamental",
+        "municipio": "Sevilla",
+        "tipo_actor": "Ente Gubernamental"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.948, 4.238]
+      },
+      "properties": {
+        "nombre": "Asociación Avícola del Norte del Valle",
+        "sector": "Sector Productivo",
+        "municipio": "Sevilla",
+        "tipo_actor": "Empresa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.883, 4.225]
+      },
+      "properties": {
+        "nombre": "JAC Vereda El Bosque Seco",
+        "sector": "Comunitario",
+        "municipio": "Sevilla",
+        "tipo_actor": "Comunidad"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.937, 4.251]
+      },
+      "properties": {
+        "nombre": "Fundación Semillas de Agua",
+        "sector": "ONG Ambiental",
+        "municipio": "Sevilla",
+        "tipo_actor": "ONG"
+      }
+    }
+  ]
+}
