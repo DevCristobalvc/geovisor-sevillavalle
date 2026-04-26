@@ -10,10 +10,15 @@ interface InfoPanelProps {
 export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
   const [ficha, setFicha] = useState<FichaPedagogica | null>(null)
   const [loading, setLoading] = useState(false)
-  const [activeTab, setActiveTab] = useState<'descripcion' | 'galeria' | 'vocabulario'>('descripcion')
+  const [activeTab, setActiveTab] = useState<'descripcion' | 'galeria' | 'vocabulario'>(
+    'descripcion'
+  )
 
   useEffect(() => {
-    if (!fichaId) { setFicha(null); return }
+    if (!fichaId) {
+      setFicha(null)
+      return
+    }
     setLoading(true)
     setActiveTab('descripcion')
     fetch(`/fichas/${fichaId}.json`)
@@ -24,6 +29,15 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
   }, [fichaId])
 
   const isOpen = !!fichaId
+
+  useEffect(() => {
+    if (!isOpen) return
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    document.addEventListener('keydown', handler)
+    return () => document.removeEventListener('keydown', handler)
+  }, [isOpen, onClose])
 
   return (
     <div
@@ -39,7 +53,7 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
         <button
           onClick={onClose}
           aria-label="Cerrar ficha pedagógica"
-          className="text-gray-400 hover:text-gris-texto transition-colors p-1"
+          className="text-gray-400 hover:text-gris-texto transition-colors p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
         >
           ✕
         </button>
@@ -64,7 +78,11 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           </div>
 
           {/* Tabs */}
-          <div className="flex border-b border-gray-100 mt-3 px-2" role="tablist" aria-label="Secciones de la ficha">
+          <div
+            className="flex border-b border-gray-100 mt-3 px-2"
+            role="tablist"
+            aria-label="Secciones de la ficha"
+          >
             {(['descripcion', 'galeria', 'vocabulario'] as const).map(tab => (
               <button
                 key={tab}
@@ -85,7 +103,12 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           </div>
 
           {activeTab === 'descripcion' && (
-            <div id="tab-panel-descripcion" role="tabpanel" aria-labelledby="tab-descripcion" className="px-4 pt-4 font-pedagogica">
+            <div
+              id="tab-panel-descripcion"
+              role="tabpanel"
+              aria-labelledby="tab-descripcion"
+              className="px-4 pt-4 font-pedagogica"
+            >
               <p className="text-sm text-gris-texto leading-relaxed">{ficha.descripcion}</p>
 
               <h3 className="text-sm font-bold text-verde-bosque mt-4 mb-2">
@@ -127,14 +150,20 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
               )}
 
               <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-400">
-                <strong>Fuente:</strong> {ficha.fuente_datos}<br />
+                <strong>Fuente:</strong> {ficha.fuente_datos}
+                <br />
                 <strong>Nivel:</strong> {ficha.nivel_educativo}
               </div>
             </div>
           )}
 
           {activeTab === 'galeria' && (
-            <div id="tab-panel-galeria" role="tabpanel" aria-labelledby="tab-galeria" className="px-4 pt-4">
+            <div
+              id="tab-panel-galeria"
+              role="tabpanel"
+              aria-labelledby="tab-galeria"
+              className="px-4 pt-4"
+            >
               {ficha.galeria.length === 0 ? (
                 <p className="text-sm text-gray-400">Sin imágenes disponibles.</p>
               ) : (
@@ -147,7 +176,7 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
                         className="w-full h-40 object-cover bg-gray-100"
                         loading="lazy"
                         onError={e => {
-                          (e.currentTarget as HTMLImageElement).style.display = 'none'
+                          ;(e.currentTarget as HTMLImageElement).style.display = 'none'
                         }}
                       />
                       <div className="px-2 py-1.5">
@@ -162,12 +191,23 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           )}
 
           {activeTab === 'vocabulario' && (
-            <div id="tab-panel-vocabulario" role="tabpanel" aria-labelledby="tab-vocabulario" className="px-4 pt-4">
+            <div
+              id="tab-panel-vocabulario"
+              role="tabpanel"
+              aria-labelledby="tab-vocabulario"
+              className="px-4 pt-4"
+            >
               <div className="space-y-3">
                 {ficha.vocabulario.map((v, i) => (
-                  <div key={i} className="border-l-2 pl-3" style={{ borderColor: CATEGORIAS[ficha.categoria].color }}>
+                  <div
+                    key={i}
+                    className="border-l-2 pl-3"
+                    style={{ borderColor: CATEGORIAS[ficha.categoria].color }}
+                  >
                     <div className="text-sm font-bold text-gris-texto">{v.termino}</div>
-                    <div className="text-sm text-gray-500 font-pedagogica leading-relaxed">{v.definicion}</div>
+                    <div className="text-sm text-gray-500 font-pedagogica leading-relaxed">
+                      {v.definicion}
+                    </div>
                   </div>
                 ))}
               </div>

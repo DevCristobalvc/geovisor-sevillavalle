@@ -1,7 +1,15 @@
-import { useEffect, useRef, useState } from 'react'
-import { MapContainer, TileLayer, GeoJSON as LeafletGeoJSON, WMSTileLayer, useMap, useMapEvents } from 'react-leaflet'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import {
+  MapContainer,
+  TileLayer,
+  GeoJSON as LeafletGeoJSON,
+  WMSTileLayer,
+  useMap,
+  useMapEvents,
+} from 'react-leaflet'
 import L from 'leaflet'
 import type { LeafletMouseEvent } from 'leaflet'
+import * as turf from '@turf/turf'
 import { useMapContext } from '../context/MapContext'
 import { useMapLayers } from '../hooks/useMapLayers'
 import {
@@ -17,9 +25,16 @@ import type { LayerConfig } from '../types'
 interface MapViewerProps {
   onFeatureClick?: (feature: GeoJSON.Feature, layer: LayerConfig) => void
   flyTarget?: { lat: number; lng: number; zoom: number } | null
+  isMeasuring?: boolean
+  onMeasureClear?: () => void
 }
 
-export default function MapViewer({ onFeatureClick, flyTarget }: MapViewerProps) {
+export default function MapViewer({
+  onFeatureClick,
+  flyTarget,
+  isMeasuring = false,
+  onMeasureClear,
+}: MapViewerProps) {
   const { state } = useMapContext()
 
   return (
@@ -36,8 +51,10 @@ export default function MapViewer({ onFeatureClick, flyTarget }: MapViewerProps)
       <ActiveLayers onFeatureClick={onFeatureClick} />
       <MapEventSync />
       <CoordinatesDisplay />
+      <PopupEscapeController />
       {flyTarget && <FlyController target={flyTarget} />}
       <SearchController />
+      <MeasurementController active={isMeasuring} onClear={onMeasureClear ?? (() => {})} />
     </MapContainer>
   )
 }
@@ -52,7 +69,11 @@ function MapBaseLayer({ base }: { base: 'osm' | 'esri' | 'topo' | 'dark' }) {
   )
 }
 
-function ActiveLayers({ onFeatureClick }: { onFeatureClick?: (f: GeoJSON.Feature, l: LayerConfig) => void }) {
+function ActiveLayers({
+  onFeatureClick,
+}: {
+  onFeatureClick?: (f: GeoJSON.Feature, l: LayerConfig) => void
+}) {
   const { activeLayers, getLayerOpacity } = useMapLayers()
 
   return (
@@ -162,7 +183,10 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
   const atributos = layer.atributosPopup ?? Object.keys(props).slice(0, 4)
   const rows = atributos
     .filter(k => props[k] != null)
-    .map(k => `<tr><td class="text-gray-500 pr-2 text-xs">${k}</td><td class="text-xs font-medium">${props[k]}</td></tr>`)
+    .map(
+      k =>
+        `<tr><td class="text-gray-500 pr-2 text-xs">${k}</td><td class="text-xs font-medium">${props[k]}</td></tr>`
+    )
     .join('')
 
   const thumbnail = layer.miniatura
@@ -188,8 +212,8 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
 function MapEventSync() {
   const { dispatch } = useMapContext()
   useMapEvents({
-    zoomend: (e) => dispatch({ type: 'SET_ZOOM', zoom: e.target.getZoom() }),
-    moveend: (e) => {
+    zoomend: e => dispatch({ type: 'SET_ZOOM', zoom: e.target.getZoom() }),
+    moveend: e => {
       const c = e.target.getCenter()
       dispatch({ type: 'SET_CENTER', center: [c.lat, c.lng] })
     },
@@ -209,13 +233,137 @@ function SearchController() {
   const map = useMap()
   useEffect(() => {
     const handler = (e: Event) => {
-      const { lat, lng, zoom } = (e as CustomEvent<{ lat: number; lng: number; zoom: number }>).detail
+      const { lat, lng, zoom } = (e as CustomEvent<{ lat: number; lng: number; zoom: number }>)
+        .detail
       map.flyTo([lat, lng], zoom, { duration: 1.2 })
     }
     window.addEventListener('geocoderFlyTo', handler)
     return () => window.removeEventListener('geocoderFlyTo', handler)
   }, [map])
   return null
+}
+
+function PopupEscapeController() {
+  const map = useMap()
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') map.closePopup()
+    }
+    document.addEventListener('keydown', handler)
+    return () => document.removeEventListener('keydown', handler)
+  }, [map])
+  return null
+}
+
+function MeasurementController({ active, onClear }: { active: boolean; onClear: () => void }) {
+  const map = useMap()
+  const groupRef = useRef<L.LayerGroup | null>(null)
+  const [points, setPoints] = useState<L.LatLng[]>([])
+  const [stats, setStats] = useState('')
+  const pendingRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    const g = L.layerGroup().addTo(map)
+    groupRef.current = g
+    return () => {
+      g.remove()
+    }
+  }, [map])
+
+  const redraw = useCallback((pts: L.LatLng[]) => {
+    const g = groupRef.current
+    if (!g) return
+    g.clearLayers()
+    pts.forEach(p =>
+      L.circleMarker(p, {
+        radius: 5,
+        color: '#e74c3c',
+        fillColor: '#e74c3c',
+        fillOpacity: 1,
+        weight: 2,
+      }).addTo(g)
+    )
+    if (pts.length >= 2) L.polyline(pts, { color: '#e74c3c', weight: 2, dashArray: '6,4' }).addTo(g)
+  }, [])
+
+  const computeStats = useCallback((pts: L.LatLng[]): string => {
+    if (pts.length < 2) return ''
+    const coords = pts.map(p => [p.lng, p.lat] as [number, number])
+    const dist = turf.length(turf.lineString(coords), { units: 'kilometers' })
+    if (pts.length >= 3) {
+      const area = turf.area(turf.polygon([[...coords, coords[0]]])) / 10000
+      return `${dist.toFixed(2)} km · ${area.toFixed(1)} ha`
+    }
+    return `${dist.toFixed(2)} km`
+  }, [])
+
+  const clearAll = useCallback(() => {
+    if (pendingRef.current) {
+      clearTimeout(pendingRef.current)
+      pendingRef.current = null
+    }
+    groupRef.current?.clearLayers()
+    setPoints([])
+    setStats('')
+  }, [])
+
+  useEffect(() => {
+    const container = map.getContainer()
+    if (active) {
+      container.style.cursor = 'crosshair'
+      map.doubleClickZoom.disable()
+    } else {
+      container.style.cursor = ''
+      map.doubleClickZoom.enable()
+      clearAll()
+    }
+  }, [active, map, clearAll])
+
+  useMapEvents({
+    click: active
+      ? e => {
+          if (pendingRef.current) {
+            clearTimeout(pendingRef.current)
+            pendingRef.current = null
+            return
+          }
+          pendingRef.current = setTimeout(() => {
+            pendingRef.current = null
+            setPoints(prev => {
+              const next = [...prev, e.latlng]
+              redraw(next)
+              setStats(computeStats(next))
+              return next
+            })
+          }, 220)
+        }
+      : () => {},
+  })
+
+  if (!active) return null
+
+  return (
+    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-[1001] pointer-events-auto">
+      <div className="bg-white/95 rounded-lg shadow-lg border border-gray-200 px-4 py-2 flex items-center gap-4 text-sm whitespace-nowrap">
+        <span className="text-gris-texto">
+          {stats ||
+            (points.length === 0
+              ? 'Haz clic para agregar puntos'
+              : `${points.length} punto${points.length > 1 ? 's' : ''}`)}
+        </span>
+        <button
+          onClick={() => {
+            clearAll()
+            onClear()
+          }}
+          className="text-red-500 hover:text-red-700 font-medium text-xs focus-visible:ring-2 focus-visible:ring-red-500 rounded"
+          aria-label="Limpiar medición y salir"
+        >
+          Limpiar ✕
+        </button>
+      </div>
+    </div>
+  )
 }
 
 function CoordinatesDisplay() {
@@ -225,12 +373,13 @@ function CoordinatesDisplay() {
   useEffect(() => {
     const onMove = (e: LeafletMouseEvent) => {
       if (coordsRef.current) {
-        coordsRef.current.textContent =
-          `${e.latlng.lat.toFixed(4)}, ${e.latlng.lng.toFixed(4)}`
+        coordsRef.current.textContent = `${e.latlng.lat.toFixed(4)}, ${e.latlng.lng.toFixed(4)}`
       }
     }
     map.on('mousemove', onMove)
-    return () => { map.off('mousemove', onMove) }
+    return () => {
+      map.off('mousemove', onMove)
+    }
   }, [map])
 
   return (

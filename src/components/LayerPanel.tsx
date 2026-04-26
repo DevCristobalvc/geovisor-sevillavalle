@@ -9,10 +9,19 @@ interface LayerPanelProps {
 }
 
 const CATEGORIA_ORDER: Categoria[] = [
-  'actores', 'agua', 'biodiversidad', 'clima', 'suelos', 'territorio',
+  'actores',
+  'agua',
+  'biodiversidad',
+  'clima',
+  'suelos',
+  'territorio',
 ]
 
-export default function LayerPanel({ collapsed, onToggleCollapse, highlightCategoria }: LayerPanelProps) {
+export default function LayerPanel({
+  collapsed,
+  onToggleCollapse,
+  highlightCategoria,
+}: LayerPanelProps) {
   const {
     categorias,
     layersByCategory,
@@ -35,7 +44,11 @@ export default function LayerPanel({ collapsed, onToggleCollapse, highlightCateg
   const toggleAccordion = (cat: Categoria) => {
     setExpanded(prev => {
       const next = new Set(prev)
-      next.has(cat) ? next.delete(cat) : next.add(cat)
+      if (next.has(cat)) {
+        next.delete(cat)
+      } else {
+        next.add(cat)
+      }
       return next
     })
   }
@@ -45,17 +58,17 @@ export default function LayerPanel({ collapsed, onToggleCollapse, highlightCateg
       <button
         onClick={onToggleCollapse}
         aria-label={collapsed ? 'Expandir panel de capas' : 'Colapsar panel de capas'}
-        className="absolute top-3 z-10 bg-white border border-gray-200 rounded p-1.5 shadow hover:bg-gray-50 transition-colors"
+        className="absolute top-3 z-10 bg-white border border-gray-200 rounded p-1.5 shadow hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
         style={{ left: collapsed ? '8px' : 'calc(var(--panel-width) + 8px)' }}
       >
-        <span className="text-gris-texto text-xs font-mono">
-          {collapsed ? '›' : '‹'}
-        </span>
+        <span className="text-gris-texto text-xs font-mono">{collapsed ? '›' : '‹'}</span>
       </button>
 
       <aside
         className="layer-panel absolute top-0 left-0 z-10 flex flex-col"
-        style={{ transform: collapsed ? `translateX(calc(-1 * var(--panel-width)))` : 'translateX(0)' }}
+        style={{
+          transform: collapsed ? `translateX(calc(-1 * var(--panel-width)))` : 'translateX(0)',
+        }}
         aria-label="Panel de capas geográficas"
       >
         <div className="px-4 py-3 border-b border-gray-100 bg-verde-bosque text-white">
@@ -74,14 +87,21 @@ export default function LayerPanel({ collapsed, onToggleCollapse, highlightCateg
 
             return (
               <div key={cat} className="border-b border-gray-100">
-                <div className={`flex items-center ${cat === highlightCategoria ? 'bg-yellow-50' : ''}`}>
+                <div
+                  className={`flex items-center ${cat === highlightCategoria ? 'bg-yellow-50' : ''}`}
+                >
                   {/* Category-level toggle */}
                   <div className="pl-3 pr-1 flex-shrink-0">
                     <input
                       type="checkbox"
                       checked={fullyActive}
-                      ref={el => { if (el) el.indeterminate = partiallyActive }}
-                      onChange={e => { e.stopPropagation(); toggleCategory(cat) }}
+                      ref={el => {
+                        if (el) el.indeterminate = partiallyActive
+                      }}
+                      onChange={e => {
+                        e.stopPropagation()
+                        toggleCategory(cat)
+                      }}
                       onClick={e => e.stopPropagation()}
                       aria-label={`Activar todas las capas de ${info.label}`}
                       style={{ accentColor: info.color }}
@@ -92,7 +112,7 @@ export default function LayerPanel({ collapsed, onToggleCollapse, highlightCateg
                   {/* Accordion toggle */}
                   <button
                     onClick={() => toggleAccordion(cat)}
-                    className="flex-1 flex items-center justify-between px-2 py-3 hover:bg-gray-50 transition-colors"
+                    className="flex-1 flex items-center justify-between px-2 py-3 hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-verde-bosque"
                     aria-expanded={open}
                   >
                     <div className="flex items-center gap-2">
@@ -176,7 +196,10 @@ function LayerItem({
           {isPoint ? (
             <div
               className="w-3 h-3 rounded-full border border-white shadow-sm"
-              style={{ backgroundColor: layer.estilo?.fillColor ?? color, opacity: active ? 1 : 0.4 }}
+              style={{
+                backgroundColor: layer.estilo?.fillColor ?? color,
+                opacity: active ? 1 : 0.4,
+              }}
             />
           ) : (
             <div
@@ -192,7 +215,9 @@ function LayerItem({
         <div className="flex-1 min-w-0">
           <div className="text-sm text-gris-texto font-medium leading-tight">{layer.nombre}</div>
           {layer.descripcionBreve && (
-            <div className="text-xs text-gray-400 mt-0.5 leading-tight">{layer.descripcionBreve}</div>
+            <div className="text-xs text-gray-400 mt-0.5 leading-tight">
+              {layer.descripcionBreve}
+            </div>
           )}
         </div>
         {active && isGeoJSON && (
@@ -200,7 +225,7 @@ function LayerItem({
             onClick={() => window.dispatchEvent(new CustomEvent(`zoomToLayer:${layer.id}`))}
             aria-label={`Zoom a extensión de ${layer.nombre}`}
             title="Zoom a extensión"
-            className="flex-shrink-0 text-gray-400 hover:text-verde-bosque transition-colors text-xs mt-0.5"
+            className="flex-shrink-0 text-gray-400 hover:text-verde-bosque transition-colors text-xs mt-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque rounded"
           >
             ⊕
           </button>

@@ -4,16 +4,16 @@
 
 ---
 
-## ESTADO ACTUAL (post v2)
+## ESTADO ACTUAL (post v3)
 
 | Módulo | RF cubiertos | RF pendientes | Avance |
 |--------|-------------|---------------|--------|
 | Visualización (RF-01..06) | RF-01, RF-02, RF-03, RF-04, RF-05, RF-06* | RF-06 (dark mode) | 90 % |
-| Consulta (RF-07..11) | RF-07, RF-08, RF-09*, RF-11 | RF-09 (búsqueda features), RF-10 | 75 % |
+| Consulta (RF-07..11) | RF-07, RF-08, RF-09, RF-10, RF-11 | — | 100 % |
 | Pedagógico (RF-12..16) | RF-12, RF-13, RF-14, RF-16 | RF-15 | 80 % |
-| Exportación / Compartir (RF-17..18) | RF-18 | RF-17 | 50 % |
-| Accesibilidad / Offline (RF-19..21) | RF-19*, RF-20*, RF-21* | RF-20, RF-21 (completo) | 55 % |
-| **TOTAL** | **~16 / 21** | **~5 / 21** | **~75 %** |
+| Exportación / Compartir (RF-17..18) | RF-17, RF-18 | — | 100 % |
+| Accesibilidad / Offline (RF-19..21) | RF-19, RF-20*, RF-21 | RF-20 (completo) | 85 % |
+| **TOTAL** | **~20 / 21** | **~1 / 21** | **~93 %** |
 
 `*` = parcialmente implementado
 
@@ -41,41 +41,25 @@
 | BUG-01 | 46 YouTube IDs verificados vía oEmbed y reemplazados en las 23 fichas (todos los originales eran inválidos) |
 | BUG-02 | 63 URLs de Wikimedia Commons verificadas vía Commons API y reemplazadas (todas las originales eran archivos inexistentes) |
 
+## COMPLETADO EN v3
+
+| ID | Descripción |
+|----|-------------|
+| A11Y-02 | Escape para cerrar popup del mapa y InfoPanel; focus-visible:ring en todos los controles del LayerPanel |
+| FEAT-06 | Herramienta de medición: botón "Medir" en toolbar, cursor crosshair, polyline + tooltip con km/ha, botón "Limpiar". Usa Turf.js (@turf/turf). |
+| FEAT-08 | Exportar vista del mapa como PNG via html2canvas (lazy-loaded, no impacta bundle inicial) |
+| FEAT-11 | Búsqueda de features dentro de capas GeoJSON activas — panel flotante con búsqueda por atributos, zoom al resultado via `geocoderFlyTo` |
+| INFRA-01 | Service worker personalizado (injectManifest): pre-cache de tiles OSM zoom 10-14 para bbox de Sevilla en install; runtime CacheFirst para OSM+ESRI, NetworkFirst para WMS-CVC |
+| INFRA-02 | ESLint flat config (`eslint.config.js`), Prettier (`.prettierrc`), Husky + lint-staged (pre-commit: eslint --fix + prettier --write en .ts/.tsx) |
+
 ---
 
 ## FUNCIONALIDADES PENDIENTES
-
-### [FEAT-06] Herramienta de medición (distancia y área)
-**RF:** RF-10 | **Prioridad:** P2
-
-No implementado. Requiere integración de Turf.js.
-
-**Subtareas:**
-- Botón "Medir" en MapToolbar
-- Cursor crosshair, clic = vértice, doble clic = cerrar polígono
-- Tooltip con resultado en km / ha
-- Botón "Limpiar"
-
----
-
-### [FEAT-08] Exportar vista como imagen PNG
-**RF:** RF-17 | **Prioridad:** P2
-
-No implementado. Requiere `leaflet-image` o `html2canvas`.
-
----
 
 ### [FEAT-10] Línea de tiempo (timeline slider)
 **RF:** RF-15 | **Prioridad:** P3
 
 No implementado. No hay datos históricos disponibles aún.
-
----
-
-### [FEAT-11] Búsqueda de features dentro de capas GeoJSON
-**RF:** RF-09 | **Prioridad:** P2
-
-El geocoder busca lugares (Nominatim) pero no permite buscar dentro de los atributos de una capa activa (ej: "buscar vereda X").
 
 ---
 
@@ -122,30 +106,20 @@ LayerPanel e InfoPanel como bottom-sheets con swipe en móvil, no paneles latera
 
 ## ACCESIBILIDAD — PENDIENTES
 
-### [A11Y-02] Navegación por teclado completa
-**RF:** RF-21 | **Prioridad:** P1
+### [A11Y-03] Pre-cache offline completo de tiles
+**RF:** RF-20 | **Prioridad:** P1
 
-- Cerrar popup del mapa con `Escape`
-- Cerrar InfoPanel con `Escape`
-- Foco visible en todos los controles del LayerPanel
-- Auditoría axe-core: 0 violaciones `keyboard`
+INFRA-01 pre-cachea zoom 10-14. Evaluar si zoom 15-16 sobre el casco urbano es viable (~2000 tiles extra ~60 MB).
 
 ---
 
 ## INFRAESTRUCTURA — PENDIENTES
 
-### [INFRA-01] Pre-cache de tiles OSM zoom 10-14 para offline
-**RF:** RF-19 | **Prioridad:** P1
+### [INFRA-03] Lighthouse audit + métricas Core Web Vitals
+**Prioridad:** P2
 
-Workbox solo cachea en runtime. Agregar estrategia de pre-cache de tiles para el bounding box de Sevilla en zoom 10-14.
-
----
-
-### [INFRA-02] ESLint + Prettier + pre-commit hooks
-**Prioridad:** P3
-
-Instalar `husky` + `lint-staged`. El build tiene warnings menores de lint.
+Auditar FCP (<1.5s) y LCP (<2.5s) en la build de producción. Corregir si fallan.
 
 ---
 
-*Última actualización: 2026-04-25 — media fix: BUG-01 y BUG-02 resueltos*
+*Última actualización: 2026-04-25 — v3 sprint: A11Y-02, FEAT-06, FEAT-08, FEAT-11, INFRA-01, INFRA-02*
