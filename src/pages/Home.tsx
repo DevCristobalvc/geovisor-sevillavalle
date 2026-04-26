@@ -388,7 +388,8 @@ export default function Home() {
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
           effect="fade"
-          autoplay={{ delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          speed={800}
           pagination={{ clickable: true }}
           loop
           className="w-full"

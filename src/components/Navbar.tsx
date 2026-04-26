@@ -136,15 +136,22 @@ export default function Navbar() {
       {/* Logo */}
       <div className="flex items-center gap-3">
         <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <div
-            className="w-8 h-8 bg-verde-claro rounded-full flex items-center justify-center text-verde-bosque font-bold text-sm"
-            aria-hidden="true"
-          >
-            G
-          </div>
+          <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-shrink-0" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="#52B788" />
+            <path
+              d="M16 5C11.58 5 8 8.58 8 13c0 5.5 6.5 12.5 7.5 13.6a.65.65 0 001 0C17.5 25.5 24 20.5 24 13c0-4.42-3.58-8-8-8z"
+              fill="#2D6A4F"
+            />
+            <circle cx="16" cy="13" r="3.2" fill="#52B788" />
+            <circle cx="16" cy="13" r="1.4" fill="#2D6A4F" />
+          </svg>
           <div className="hidden sm:block">
-            <div className="font-bold text-sm leading-tight">Geovisor Ecopedagógico</div>
-            <div className="text-xs text-verde-palido leading-tight">Sevilla, Valle del Cauca</div>
+            <div className="font-bold text-sm leading-tight tracking-tight">
+              Geovisor Ecopedagógico
+            </div>
+            <div className="text-xs text-verde-palido/80 leading-tight">
+              Sevilla, Valle del Cauca
+            </div>
           </div>
         </Link>
       </div>
@@ -264,10 +271,10 @@ function NavLink({
     <Link
       to={to}
       aria-current={isActive ? 'page' : undefined}
-      className={`px-3 py-1.5 rounded text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${
+      className={`px-3 py-1.5 rounded text-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${
         isActive
-          ? 'bg-verde-claro text-verde-bosque font-semibold'
-          : 'text-verde-palido hover:bg-verde-bosque/80 hover:text-white'
+          ? 'bg-white/15 text-white font-semibold border-b-2 border-verde-claro rounded-b-none'
+          : 'text-verde-palido/90 hover:bg-white/10 hover:text-white'
       }`}
     >
       {children}
