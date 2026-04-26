@@ -4,6 +4,17 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: '/',
+  build: {
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          swiper: ['swiper'],
+          turf: ['@turf/turf'],
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     VitePWA({

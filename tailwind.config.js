@@ -42,6 +42,21 @@ export default {
         body: '1.6',
         heading: '1.2',
       },
+      animation: {
+        'fade-up': 'fadeUp 0.55s ease-out forwards',
+        'fade-in': 'fadeIn 0.4s ease-out forwards',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(22px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
     },
   },
   plugins: [],
