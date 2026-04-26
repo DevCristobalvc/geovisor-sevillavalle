@@ -55,7 +55,15 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
           aria-label="Cerrar ficha pedagógica"
           className="text-gray-400 hover:text-gris-texto transition-colors p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
         >
-          ✕
+          <svg
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="w-4 h-4"
+          >
+            <path strokeLinecap="round" d="M4 4l8 8M12 4l-8 8" />
+          </svg>
         </button>
       </div>
 
@@ -141,7 +149,14 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
                         aria-label={`${v.titulo} (abre en YouTube)`}
                         className="flex items-center gap-2 text-sm text-azul-medio hover:underline"
                       >
-                        <span aria-hidden="true">▶</span>
+                        <svg
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          className="w-3 h-3 flex-shrink-0"
+                          aria-hidden="true"
+                        >
+                          <path d="M4 3.5l10 4.5-10 4.5V3.5z" />
+                        </svg>
                         <span>{v.titulo}</span>
                       </a>
                     ))}

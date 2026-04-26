@@ -359,7 +359,18 @@ function MeasurementController({ active, onClear }: { active: boolean; onClear: 
           className="text-red-500 hover:text-red-700 font-medium text-xs focus-visible:ring-2 focus-visible:ring-red-500 rounded"
           aria-label="Limpiar medición y salir"
         >
-          Limpiar ✕
+          <span className="flex items-center gap-1">
+            Limpiar
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="w-3.5 h-3.5"
+            >
+              <path strokeLinecap="round" d="M4 4l8 8M12 4l-8 8" />
+            </svg>
+          </span>
         </button>
       </div>
     </div>

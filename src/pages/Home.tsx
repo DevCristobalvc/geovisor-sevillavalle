@@ -592,26 +592,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 8. FOOTER ────────────────────────────────────────────────────── */}
-      <footer className="bg-negro text-gray-500 px-6 py-8 text-sm text-center">
+      {/* ── 8. CRÉDITOS ──────────────────────────────────────────────────── */}
+      <section className="bg-negro text-gray-500 px-6 py-10 text-sm text-center">
         <p className="leading-relaxed">
-          Proyecto de Grado — Ingeniería de Sistemas · Universidad Santiago de Cali
+          Proyecto de Grado · Ingeniería de Sistemas
           <br />
-          Cristóbal Valencia Cerón · José David Molina Delgado · Director: Diego Fernando Loaiza
+          <span className="text-gray-400">Universidad Santiago de Cali</span>
           <br />
-          <span className="text-gray-600 text-xs mt-2 block">
-            Datos: CVC · IGAC · IDEAM · GBIF ·{' '}
-            <a
-              href="https://geo.cvc.gov.co"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white transition-colors"
-            >
-              Portal GeoCVC ↗
-            </a>
+          <span className="text-gray-600 text-xs mt-3 block">
+            Cristóbal Valencia Cerón · José David Molina Delgado
+            <br />
+            Director: Diego Fernando Loaiza
           </span>
         </p>
-      </footer>
+      </section>
     </main>
   )
 }

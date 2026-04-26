@@ -105,9 +105,17 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
       aria-label="Buscar en capas activas"
     >
       <div className="flex items-center gap-2 px-3 py-2 border-b border-gray-100">
-        <span className="text-gray-400 text-sm" aria-hidden="true">
-          🔍
-        </span>
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          className="w-4 h-4 text-gray-400 flex-shrink-0"
+          aria-hidden="true"
+        >
+          <circle cx="6.5" cy="6.5" r="4" />
+          <path strokeLinecap="round" d="M10 10l3 3" />
+        </svg>
         <input
           ref={inputRef}
           type="search"
@@ -123,7 +131,15 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
           aria-label="Cerrar búsqueda"
           className="text-gray-400 hover:text-gris-texto p-0.5 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
         >
-          ✕
+          <svg
+            viewBox="0 0 16 16"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="w-4 h-4"
+          >
+            <path strokeLinecap="round" d="M4 4l8 8M12 4l-8 8" />
+          </svg>
         </button>
       </div>
 

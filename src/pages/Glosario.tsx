@@ -130,12 +130,20 @@ export default function Glosario() {
 
   return (
     <main className="overflow-y-auto h-full bg-gris-claro">
-      <div className="max-w-3xl mx-auto px-6 py-8">
-        <h1 className="text-2xl font-bold text-verde-bosque mb-2">Glosario Territorial</h1>
-        <p className="text-sm text-gris-texto mb-6">
-          Términos clave ecopedagógicos, ecosistémicos y cartográficos del Geovisor.
-        </p>
+      {/* Page header */}
+      <div className="bg-verde-bosque text-white px-6 py-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-verde-palido/70 text-xs font-medium uppercase tracking-widest mb-1">
+            Geovisor Ecopedagógico
+          </p>
+          <h1 className="text-2xl font-bold leading-tight mb-2">Glosario Territorial</h1>
+          <p className="text-verde-palido/80 text-sm max-w-xl">
+            Términos clave ecopedagógicos, ecosistémicos y cartográficos del Geovisor.
+          </p>
+        </div>
+      </div>
 
+      <div className="max-w-3xl mx-auto px-6 py-8">
         <input
           type="search"
           value={busqueda}

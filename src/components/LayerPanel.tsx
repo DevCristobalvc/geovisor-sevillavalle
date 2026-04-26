@@ -61,7 +61,19 @@ export default function LayerPanel({
         className="absolute top-3 z-10 bg-white border border-gray-200 rounded p-1.5 shadow hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
         style={{ left: collapsed ? '8px' : 'calc(var(--panel-width) + 8px)' }}
       >
-        <span className="text-gris-texto text-xs font-mono">{collapsed ? '›' : '‹'}</span>
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="w-3.5 h-3.5 text-gris-texto"
+        >
+          {collapsed ? (
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 4l4 4-4 4" />
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10 4L6 8l4 4" />
+          )}
+        </svg>
       </button>
 
       <aside
@@ -130,7 +142,15 @@ export default function LayerPanel({
                         </span>
                       )}
                     </div>
-                    <span className="text-gray-400 text-xs mr-2">{open ? '▲' : '▼'}</span>
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      className={`w-3.5 h-3.5 text-gray-400 mr-2 transition-transform ${open ? 'rotate-180' : ''}`}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6l4 4 4-4" />
+                    </svg>
                   </button>
                 </div>
 
@@ -225,9 +245,21 @@ function LayerItem({
             onClick={() => window.dispatchEvent(new CustomEvent(`zoomToLayer:${layer.id}`))}
             aria-label={`Zoom a extensión de ${layer.nombre}`}
             title="Zoom a extensión"
-            className="flex-shrink-0 text-gray-400 hover:text-verde-bosque transition-colors text-xs mt-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque rounded"
+            className="flex-shrink-0 text-gray-400 hover:text-verde-bosque transition-colors mt-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque rounded p-0.5"
           >
-            ⊕
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              className="w-3.5 h-3.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2 2h4M2 2v4M14 2h-4M14 2v4M2 14h4M2 14v-4M14 14h-4M14 14v-4"
+              />
+            </svg>
           </button>
         )}
       </div>
