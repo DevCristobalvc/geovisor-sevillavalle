@@ -38,44 +38,8 @@
 | FEAT-09 | Thumbnail de capa en popup de Leaflet con onerror fallback |
 | A11Y | role=tablist/tab/tabpanel, aria-current, aria-hidden, aria-label |
 | REVIEW | Footer usa `<Link>` (era `<a>`, causaba reload); gallery onerror; `?categoria=` expande LayerPanel; Rickroll en agua_cuencas reemplazado; 5 fichas sin contenido rellenadas |
-
----
-
-## BUGS CONOCIDOS — PENDIENTES
-
-### [BUG-01] Videos de YouTube pueden redirigir a contenido incorrecto
-**Prioridad:** P1
-
-Los `youtube_id` de las fichas fueron generados automáticamente. Algunos IDs pueden:
-- Pertenecer a videos borrados → YouTube muestra "Video no disponible"
-- Pertenecer a videos de temáticas equivocadas
-- Ser IDs inventados que no existen
-
-**Afecta:** Todas las fichas pedagógicas (`public/fichas/*.json`)
-
-**Cómo corregir:**
-1. Abrir cada ficha en el InfoPanel del visor
-2. Hacer clic en cada enlace de video
-3. Si el video no coincide con el tema, buscar el correcto en YouTube y reemplazar el `youtube_id` en el JSON
-
-**IDs que se repiten mucho (probablemente incorrectos):**
-- `sMBBTHDJ3Ek` — usado en 4 fichas distintas
-- `kvHxbdj1Rw4` — usado en 4 fichas distintas
-- `7Qk3pFVbOiU` — usado en 3 fichas distintas
-
----
-
-### [BUG-02] Imágenes de galería pueden no cargarse (Wikimedia)
-**Prioridad:** P2
-
-Algunas URLs de Wikimedia Commons fueron generadas con nombres de archivo aproximados. Si la imagen no existe, se oculta (onerror ya implementado) pero la sección queda vacía.
-
-**Cómo verificar:** En cada ficha, pestaña "galeria" — verificar que las imágenes cargan visualmente.
-
-**Fichas con mayor riesgo** (usan imágenes genéricas):
-- `clima_estaciones.json`
-- `suelos_conflictos_uso.json`
-- `actores_humedales.json`
+| BUG-01 | 46 YouTube IDs verificados vía oEmbed y reemplazados en las 23 fichas (todos los originales eran inválidos) |
+| BUG-02 | 63 URLs de Wikimedia Commons verificadas vía Commons API y reemplazadas (todas las originales eran archivos inexistentes) |
 
 ---
 
@@ -184,4 +148,4 @@ Instalar `husky` + `lint-staged`. El build tiene warnings menores de lint.
 
 ---
 
-*Última actualización: 2026-04-25 — post sprint v2*
+*Última actualización: 2026-04-25 — media fix: BUG-01 y BUG-02 resueltos*
