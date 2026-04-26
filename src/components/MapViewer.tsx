@@ -52,6 +52,8 @@ export default function MapViewer({
       <MapEventSync />
       <CoordinatesDisplay />
       <PopupEscapeController />
+      <ScaleControl />
+      <ResetViewController />
       {flyTarget && <FlyController target={flyTarget} />}
       <SearchController />
       <MeasurementController active={isMeasuring} onClear={onMeasureClear ?? (() => {})} />
@@ -251,6 +253,28 @@ function PopupEscapeController() {
     }
     document.addEventListener('keydown', handler)
     return () => document.removeEventListener('keydown', handler)
+  }, [map])
+  return null
+}
+
+function ScaleControl() {
+  const map = useMap()
+  useEffect(() => {
+    const scale = L.control.scale({ imperial: false, position: 'bottomleft' })
+    scale.addTo(map)
+    return () => {
+      scale.remove()
+    }
+  }, [map])
+  return null
+}
+
+function ResetViewController() {
+  const map = useMap()
+  useEffect(() => {
+    const handler = () => map.flyTo(SEVILLA_CENTER, SEVILLA_DEFAULT_ZOOM, { duration: 1.2 })
+    window.addEventListener('mapResetView', handler)
+    return () => window.removeEventListener('mapResetView', handler)
   }, [map])
   return null
 }

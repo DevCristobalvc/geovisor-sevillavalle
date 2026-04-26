@@ -73,6 +73,21 @@ function IconDownload() {
   )
 }
 
+function IconLocate() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      className="w-3.5 h-3.5 inline-block mr-1.5"
+    >
+      <circle cx="8" cy="8" r="3" />
+      <path strokeLinecap="round" d="M8 1v2M8 13v2M1 8h2M13 8h2" />
+    </svg>
+  )
+}
+
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function MapToolbar({
@@ -160,6 +175,16 @@ export default function MapToolbar({
       >
         <IconDownload />
         Exportar PNG
+      </button>
+
+      {/* Volver a Sevilla */}
+      <button
+        onClick={() => window.dispatchEvent(new CustomEvent('mapResetView'))}
+        aria-label="Centrar mapa en Sevilla"
+        className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
+      >
+        <IconLocate />
+        Sevilla
       </button>
     </div>
   )

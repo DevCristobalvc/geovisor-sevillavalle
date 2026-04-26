@@ -88,6 +88,7 @@ function GeoSearch() {
 // ─── Navbar ───────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
+  { to: '/', label: 'Inicio' },
   { to: '/visor', label: 'Visor' },
   { to: '/recorridos', label: 'Recorridos' },
   { to: '/glosario', label: 'Glosario' },
@@ -224,9 +225,11 @@ export default function Navbar() {
             <Link
               key={to}
               to={to}
-              aria-current={pathname.startsWith(to) ? 'page' : undefined}
+              aria-current={
+                (to === '/' ? pathname === '/' : pathname.startsWith(to)) ? 'page' : undefined
+              }
               className={`py-3 px-2 text-sm font-medium border-b border-white/10 last:border-0 transition-colors ${
-                pathname.startsWith(to)
+                (to === '/' ? pathname === '/' : pathname.startsWith(to))
                   ? 'text-verde-claro font-semibold'
                   : 'text-white/80 hover:text-white'
               }`}
@@ -266,7 +269,7 @@ function NavLink({
   current: string
   children: React.ReactNode
 }) {
-  const isActive = current.startsWith(to)
+  const isActive = to === '/' ? current === '/' : current.startsWith(to)
   return (
     <Link
       to={to}

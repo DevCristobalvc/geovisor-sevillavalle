@@ -2,6 +2,98 @@ import { useState } from 'react'
 import { useMapLayers } from '../hooks/useMapLayers'
 import type { Categoria, LayerConfig } from '../types'
 
+// ─── Category icons ───────────────────────────────────────────────────────────
+
+const CATEGORIA_ICONS: Record<Categoria, React.ReactNode> = {
+  actores: (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      className="w-3.5 h-3.5"
+    >
+      <circle cx="6" cy="5" r="2" />
+      <path strokeLinecap="round" d="M2 13c0-2.2 1.8-4 4-4" />
+      <circle cx="11" cy="5" r="2" />
+      <path strokeLinecap="round" d="M14 13c0-2.2-1.8-4-4-4" />
+    </svg>
+  ),
+  agua: (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      className="w-3.5 h-3.5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8 2C8 2 3 7 3 10.5a5 5 0 0010 0C13 7 8 2 8 2z"
+      />
+    </svg>
+  ),
+  biodiversidad: (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      className="w-3.5 h-3.5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 13C3 13 4 6 8 4c4-2 7 1 5 5s-6 2-6 2"
+      />
+      <path strokeLinecap="round" d="M8 13V9" />
+    </svg>
+  ),
+  clima: (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      className="w-3.5 h-3.5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 10a4 4 0 017.8-1.2A3 3 0 1112 15H4a3 3 0 01-1-5.8"
+      />
+    </svg>
+  ),
+  suelos: (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      className="w-3.5 h-3.5"
+    >
+      <path strokeLinecap="round" d="M2 5h12M2 8.5h12M2 12h12" />
+    </svg>
+  ),
+  territorio: (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      className="w-3.5 h-3.5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8 2C5.8 2 4 3.8 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.2-1.8-4-4-4z"
+      />
+      <circle cx="8" cy="6" r="1.2" />
+    </svg>
+  ),
+}
+
 interface LayerPanelProps {
   collapsed: boolean
   onToggleCollapse: () => void
@@ -128,10 +220,13 @@ export default function LayerPanel({
                     aria-expanded={open}
                   >
                     <div className="flex items-center gap-2">
-                      <div
-                        className="w-3 h-3 rounded-full flex-shrink-0"
-                        style={{ backgroundColor: info.color }}
-                      />
+                      <span
+                        className="flex-shrink-0"
+                        style={{ color: info.color }}
+                        aria-hidden="true"
+                      >
+                        {CATEGORIA_ICONS[cat]}
+                      </span>
                       <span className="text-sm font-semibold text-gris-texto">{info.label}</span>
                       {count > 0 && (
                         <span
