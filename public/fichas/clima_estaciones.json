@@ -11,26 +11,53 @@
     "¿Cómo usarías los datos de temperatura para planificar una cosecha de café?"
   ],
   "vocabulario": [
-    { "termino": "Estación pluviométrica", "definicion": "Punto de monitoreo que solo mide la cantidad de lluvia que cae en un lugar (pluviómetro)." },
-    { "termino": "Estación limnigráfica", "definicion": "Punto de monitoreo que mide el nivel y caudal de un río continuamente mediante sensores automatizados." },
-    { "termino": "Isoyeta", "definicion": "Línea en un mapa que une puntos con igual cantidad de lluvia en un período determinado." },
-    { "termino": "Anomalía climática", "definicion": "Desviación del valor de una variable climática respecto a su promedio histórico, indicador de cambio climático." },
-    { "termino": "IDEAM", "definicion": "Instituto de Hidrología, Meteorología y Estudios Ambientales de Colombia, responsable del monitoreo del clima y el agua." }
+    {
+      "termino": "Estación pluviométrica",
+      "definicion": "Punto de monitoreo que solo mide la cantidad de lluvia que cae en un lugar (pluviómetro)."
+    },
+    {
+      "termino": "Estación limnigráfica",
+      "definicion": "Punto de monitoreo que mide el nivel y caudal de un río continuamente mediante sensores automatizados."
+    },
+    {
+      "termino": "Isoyeta",
+      "definicion": "Línea en un mapa que une puntos con igual cantidad de lluvia en un período determinado."
+    },
+    {
+      "termino": "Anomalía climática",
+      "definicion": "Desviación del valor de una variable climática respecto a su promedio histórico, indicador de cambio climático."
+    },
+    {
+      "termino": "IDEAM",
+      "definicion": "Instituto de Hidrología, Meteorología y Estudios Ambientales de Colombia, responsable del monitoreo del clima y el agua."
+    }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Weather_station_Brasschaat.jpg/1200px-Weather_station_Brasschaat.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GEONICA_-_METEODATA_and_DATARAIN.jpg/1280px-GEONICA_-_METEODATA_and_DATARAIN.jpg",
+      "titulo": "Estación hidrometeorológica automática",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Germi_Met.jpg",
       "titulo": "Estación meteorológica de monitoreo climático",
       "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Paramo_de_Belmira.jpg/1200px-Paramo_de_Belmira.jpg",
-      "titulo": "Páramo andino — zona de recarga hídrica monitoreada",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Paisaje_monta%C3%B1oso_Andino.jpg/1280px-Paisaje_monta%C3%B1oso_Andino.jpg",
+      "titulo": "Paisaje andino colombiano en zona de monitoreo climático",
       "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
-    { "youtube_id": "sMBBTHDJ3Ek", "titulo": "Red de monitoreo hidroclimatológico IDEAM — Colombia" }
+    {
+      "youtube_id": "NT5eq9SRc70",
+      "titulo": "Descargar datos de estaciones climatológicas IDEAM"
+    },
+    {
+      "youtube_id": "dgbXn60JDmE",
+      "titulo": "Espacializar estaciones hidrometeorológicas del IDEAM"
+    }
   ],
   "fuente_datos": "IDEAM / CVC — Red hidroclimatológica nacional",
   "nivel_educativo": "Básica secundaria (grados 7–11)"

@@ -35,29 +35,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Tremarctos_ornatus_-_Spectacled_bear.jpg/1200px-Tremarctos_ornatus_-_Spectacled_bear.jpg",
-      "titulo": "Oso de anteojos (Tremarctos ornatus), especie emblema del bosque andino",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg/1280px-Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg",
+      "titulo": "Oso de anteojos (Tremarctos ornatus)",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Tapirus_pinchaque_-_Mountain_Tapir.jpg/1200px-Tapirus_pinchaque_-_Mountain_Tapir.jpg",
-      "titulo": "Danta de páramo (Tapirus pinchaque), especie en peligro crítico",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tapirus_pinchaque_133819945.jpg/1280px-Tapirus_pinchaque_133819945.jpg",
+      "titulo": "Tapir de montaña (Tapirus pinchaque)",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Pharomachrus_fulgidus_-_White-tipped_Quetzal.jpg/1200px-Pharomachrus_fulgidus_-_White-tipped_Quetzal.jpg",
-      "titulo": "Quetzal colombiano (Pharomachrus fulgidus) en bosque andino",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pharomachrus_auriceps_Manizales%2C_Colombia.jpg",
+      "titulo": "Quetzal crestado, Manizales, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "kvHxbdj1Rw4",
-      "titulo": "El oso de anteojos: guardián de los Andes colombianos – Instituto Humboldt"
+      "youtube_id": "1cdGUxXuSYM",
+      "titulo": "Oso de anteojos, el guardián de los páramos"
     },
     {
-      "youtube_id": "O5PKjBiIgLU",
-      "titulo": "Biodiversidad del Eje Cafetero: aves y mamíferos del bosque andino"
+      "youtube_id": "ll1g9M2tHyU",
+      "titulo": "10 Animales en peligro de extinción en Colombia"
     }
   ],
   "fuente_datos": "GBIF – Registros de Ocurrencia Sevilla, Valle del Cauca; SiB Colombia – Catálogo de Biodiversidad Colombia; Instituto Humboldt – Libro Rojo de Mamíferos y Aves de Colombia",

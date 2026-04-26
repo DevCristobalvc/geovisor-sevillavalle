@@ -11,32 +11,53 @@
     "¿Qué medidas podría tomar tu comunidad para proteger los páramos?"
   ],
   "vocabulario": [
-    { "termino": "Páramo", "definicion": "Ecosistema de alta montaña (3000-4500 msnm) con clima frío y húmedo, especializado en captar y regular el agua de ríos y acuíferos." },
-    { "termino": "Frailejón", "definicion": "Planta característica del páramo (Espeletia spp.) con hojas cubiertas de pelillos que captan la humedad de la niebla." },
-    { "termino": "Acuífero", "definicion": "Depósito subterráneo de agua que se recarga lentamente a partir del agua filtrada por el suelo del páramo." },
-    { "termino": "Delimitación de páramos", "definicion": "Proceso legal por el cual el Instituto Humboldt define los límites exactos de un páramo para protegerlo de actividades extractivas." },
-    { "termino": "IAvH", "definicion": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt, entidad colombiana que estudia y delimita los páramos del país." }
+    {
+      "termino": "Páramo",
+      "definicion": "Ecosistema de alta montaña (3000-4500 msnm) con clima frío y húmedo, especializado en captar y regular el agua de ríos y acuíferos."
+    },
+    {
+      "termino": "Frailejón",
+      "definicion": "Planta característica del páramo (Espeletia spp.) con hojas cubiertas de pelillos que captan la humedad de la niebla."
+    },
+    {
+      "termino": "Acuífero",
+      "definicion": "Depósito subterráneo de agua que se recarga lentamente a partir del agua filtrada por el suelo del páramo."
+    },
+    {
+      "termino": "Delimitación de páramos",
+      "definicion": "Proceso legal por el cual el Instituto Humboldt define los límites exactos de un páramo para protegerlo de actividades extractivas."
+    },
+    {
+      "termino": "IAvH",
+      "definicion": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt, entidad colombiana que estudia y delimita los páramos del país."
+    }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Paramo_de_Belmira.jpg/1200px-Paramo_de_Belmira.jpg",
-      "titulo": "Páramo de Belmira, Antioquia",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Frailejones_Sumapaz%2C_Colombia.jpg/1280px-Frailejones_Sumapaz%2C_Colombia.jpg",
+      "titulo": "Frailejones en el Páramo de Sumapaz, Colombia",
       "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Espeletia_frailejones_p%C3%A1ramo.jpg/1200px-Espeletia_frailejones_p%C3%A1ramo.jpg",
-      "titulo": "Frailejones (Espeletia spp.) en el páramo andino",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Frailejones_in_Chingaza_National_Park_2.jpg/1280px-Frailejones_in_Chingaza_National_Park_2.jpg",
+      "titulo": "Frailejones en el Parque Nacional Chingaza",
       "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg/1200px-Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg",
-      "titulo": "Bosque andino en los Andes colombianos",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Valle_de_Frailejones%2C_Sierra_Nevada_del_Cocuy.JPG/1280px-Valle_de_Frailejones%2C_Sierra_Nevada_del_Cocuy.JPG",
+      "titulo": "Valle de frailejones, Sierra Nevada del Cocuy",
       "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
-    { "youtube_id": "kvHxbdj1Rw4", "titulo": "Los páramos de Colombia — Instituto Humboldt" },
-    { "youtube_id": "7Qk3pFVbOiU", "titulo": "Biodiversidad y conservación de páramos en el Valle del Cauca" }
+    {
+      "youtube_id": "IGOkd9YuFWM",
+      "titulo": "El Instituto Humboldt y el estudio de los páramos colombianos"
+    },
+    {
+      "youtube_id": "pcANXhbAQZM",
+      "titulo": "En peligro, los páramos colombianos — Telemundo"
+    }
   ],
   "fuente_datos": "Instituto Humboldt — Delimitación de páramos Colombia",
   "nivel_educativo": "Básica secundaria (grados 8–11)"

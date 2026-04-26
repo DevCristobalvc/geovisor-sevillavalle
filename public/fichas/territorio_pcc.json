@@ -11,31 +11,49 @@
     "¿De qué manera el turismo puede ser una oportunidad para Sevilla?"
   ],
   "vocabulario": [
-    { "termino": "Patrimonio Cultural de la Humanidad", "definicion": "Reconocimiento de la UNESCO a lugares, tradiciones y expresiones culturales de valor universal excepcional que deben ser conservados." },
-    { "termino": "Bahareque", "definicion": "Técnica constructiva tradicional de la región cafetera que usa madera, guadua y barro. Presente en la arquitectura típica de Sevilla." },
-    { "termino": "Araucaria", "definicion": "Árbol símbolo de Sevilla, de gran altura y copa piramidal, plantado históricamente en parques y calles del municipio." },
-    { "termino": "Zona buffer", "definicion": "Área de amortiguación alrededor de la zona núcleo del PCC, con restricciones de uso para proteger el paisaje declarado." }
+    {
+      "termino": "Patrimonio Cultural de la Humanidad",
+      "definicion": "Reconocimiento de la UNESCO a lugares, tradiciones y expresiones culturales de valor universal excepcional que deben ser conservados."
+    },
+    {
+      "termino": "Bahareque",
+      "definicion": "Técnica constructiva tradicional de la región cafetera que usa madera, guadua y barro. Presente en la arquitectura típica de Sevilla."
+    },
+    {
+      "termino": "Araucaria",
+      "definicion": "Árbol símbolo de Sevilla, de gran altura y copa piramidal, plantado históricamente en parques y calles del municipio."
+    },
+    {
+      "termino": "Zona buffer",
+      "definicion": "Área de amortiguación alrededor de la zona núcleo del PCC, con restricciones de uso para proteger el paisaje declarado."
+    }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg/1200px-Colombia_-_Salento_-_Bosque_de_Palmas_de_Cera_-_panoramio.jpg",
-      "titulo": "Valle de Cocora, corazón del Paisaje Cultural Cafetero",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/View_of_Salento%2C_Colombia_01.jpg/1280px-View_of_Salento%2C_Colombia_01.jpg",
+      "titulo": "Vista de Salento, Quindío, Paisaje Cultural Cafetero",
       "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Coffee_Plantation.jpg/1200px-Coffee_Plantation.jpg",
-      "titulo": "Cultivo de café en ladera andina",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Palma_de_cera_del_Quind%C3%ADo_%28Ceroxylon_quindiuense%29_%2814334219548%29.jpg/1280px-Palma_de_cera_del_Quind%C3%ADo_%28Ceroxylon_quindiuense%29_%2814334219548%29.jpg",
+      "titulo": "Palma de cera del Quindío, símbolo del PCC",
       "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Paramo_de_Belmira.jpg/1200px-Paramo_de_Belmira.jpg",
-      "titulo": "Paisaje de alta montaña en la región cafetera",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Cafetales%2C_en_Colombia.jpg",
+      "titulo": "Cafetales en el Paisaje Cultural Cafetero colombiano",
       "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
-    { "youtube_id": "sMBBTHDJ3Ek", "titulo": "Paisaje Cultural Cafetero — Patrimonio UNESCO en Colombia" },
-    { "youtube_id": "kvHxbdj1Rw4", "titulo": "Federación de Cafeteros: tradición y sostenibilidad en el PCC" }
+    {
+      "youtube_id": "27kYrXFsXmQ",
+      "titulo": "Paisaje Cultural Cafetero de Colombia — Patrimonio UNESCO"
+    },
+    {
+      "youtube_id": "281e7K1BNZc",
+      "titulo": "10 años de la declaratoria del Paisaje Cultural Cafetero"
+    }
   ],
   "fuente_datos": "MinCultura / Federación Nacional de Cafeteros — PCC Colombia",
   "nivel_educativo": "Básica secundaria (grados 6–11)"

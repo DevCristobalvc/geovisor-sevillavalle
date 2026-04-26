@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Groundwater_conceptual_model.jpg/1200px-Groundwater_conceptual_model.jpg",
-      "titulo": "Esquema conceptual de acuífero y aguas subterráneas",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Aquifer_tr.svg/1280px-Aquifer_tr.svg.png",
+      "titulo": "Esquema de acuífero subterráneo",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Pozo_monitoreo_agua_subterranea.jpg/1200px-Pozo_monitoreo_agua_subterranea.jpg",
-      "titulo": "Pozo de monitoreo de aguas subterráneas",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Groundwater_%28aquifer%2C_aquitard%2C_3_type_wells%29.PNG",
+      "titulo": "Diagrama de aguas subterráneas y tipos de pozos",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Spring_water_Colombia_Andes.jpg/1200px-Spring_water_Colombia_Andes.jpg",
-      "titulo": "Manantial de agua en zona andina colombiana",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Groundwater_flow.svg/1280px-Groundwater_flow.svg.png",
+      "titulo": "Flujo de aguas subterráneas",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "oNMnSXGlMPw",
-      "titulo": "Las aguas subterráneas en Colombia: recursos y desafíos – IDEAM"
+      "youtube_id": "HsoN1xqZOAc",
+      "titulo": "Aguas subterráneas, reúso en Colombia"
     },
     {
-      "youtube_id": "hxJdLlXcP2U",
-      "titulo": "Gestión de acuíferos y agua subterránea en el Valle del Cauca – CVC"
+      "youtube_id": "DsDmIXS_CgM",
+      "titulo": "Problemática de aguas subterráneas en Colombia"
     }
   ],
   "fuente_datos": "IDEAM – Sistema de Monitoreo de Aguas Subterráneas Colombia; CVC – Red de Pozos de Monitoreo Valle del Cauca; Municipio de Sevilla – Plan de Ordenación y Manejo de Cuencas (POMCA)",

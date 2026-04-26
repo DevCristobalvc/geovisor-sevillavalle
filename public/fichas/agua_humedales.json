@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ci%C3%A9naga_de_La_Virginia_Valle_del_Cauca.jpg/1200px-Ci%C3%A9naga_de_La_Virginia_Valle_del_Cauca.jpg",
-      "titulo": "Ciénaga en el Valle del Cauca con vegetación acuática",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Humedal_El_Chaparro_-_Ciudad_de_Neiva_%28Huila_-_Colombia%29.jpg/1280px-Humedal_El_Chaparro_-_Ciudad_de_Neiva_%28Huila_-_Colombia%29.jpg",
+      "titulo": "Humedal El Chaparro, Neiva, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ardea_alba_-_great_white_egret_Colombia.jpg/1200px-Ardea_alba_-_great_white_egret_Colombia.jpg",
-      "titulo": "Garza blanca (Ardea alba) en humedal colombiano",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Jacinto_de_agua_%28Eichhornia_crassipes%29.jpg/1280px-Jacinto_de_agua_%28Eichhornia_crassipes%29.jpg",
+      "titulo": "Jacinto de agua (buchón de agua)",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Eichhornia_crassipes_flowers.jpg/1200px-Eichhornia_crassipes_flowers.jpg",
-      "titulo": "Buchón de agua (Eichhornia crassipes), especie invasora de humedales",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2017_Bogot%C3%A1_Santa_Mar%C3%ADa_del_Lago%2C_humedal.jpg/1280px-2017_Bogot%C3%A1_Santa_Mar%C3%ADa_del_Lago%2C_humedal.jpg",
+      "titulo": "Humedal Santa María del Lago, Bogotá",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "0SoDmgn4WQQ",
-      "titulo": "Humedales de Colombia: ecosistemas de vida – Instituto Humboldt"
+      "youtube_id": "1aKJFhjEaPI",
+      "titulo": "Humedales: Guardianes del Agua y la Biodiversidad — TvAgro"
     },
     {
-      "youtube_id": "t9vFpzSOAaU",
-      "titulo": "Conservación de humedales en el Valle del Cauca – CVC"
+      "youtube_id": "JOVASN3AYJQ",
+      "titulo": "Avances en la conservación de los humedales en Colombia"
     }
   ],
   "fuente_datos": "CVC – Inventario de Humedales Valle del Cauca 2019; Instituto Humboldt – Catálogo de Humedales de Colombia; IGAC – Cartografía temática Sevilla 1:25.000",

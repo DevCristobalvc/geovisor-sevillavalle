@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Reforestation_Andean_forest_Colombia.jpg/1200px-Reforestation_Andean_forest_Colombia.jpg",
-      "titulo": "Reforestación con especies nativas en zona de bosque de protección",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bosque_andino_colombiano_antioquia.jpg",
+      "titulo": "Bosque andino colombiano, zona forestal protectora",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Riparian_corridor_Colombia_river.jpg/1200px-Riparian_corridor_Colombia_river.jpg",
-      "titulo": "Corredor ripario con bosque nativo en orillas de río colombiano",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Bosque_andino_colombiano_antioquia33.jpg",
+      "titulo": "Cobertura forestal en los Andes colombianos",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Soil_erosion_Colombia_Andes.jpg/1200px-Soil_erosion_Colombia_Andes.jpg",
-      "titulo": "Erosión en ladera andina sin cobertura forestal",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Cloud_Forest_Trees.jpg/1280px-Cloud_Forest_Trees.jpg",
+      "titulo": "Bosque de niebla como zona forestal protectora",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "szHdJHCkGHk",
-      "titulo": "Zonificación forestal y ordenamiento territorial en Colombia – IGAC"
+      "youtube_id": "k_xPDEDnlP0",
+      "titulo": "Fauna y Flora del Bosque Andino"
     },
     {
-      "youtube_id": "Q1VkFBqMUAE",
-      "titulo": "Bosques protectores y bosques productores: diferencias y manejo sostenible"
+      "youtube_id": "yDbHtrhr0Yc",
+      "titulo": "Paisajes Sonoros — Bosque Andino Insular Lacustre"
     }
   ],
   "fuente_datos": "IGAC – Zonificación Forestal Colombia 1:100.000; CVC – Zonificación de Bosques Valle del Cauca 1:50.000; MADS – Manual de Clasificación de Tierras de Colombia",

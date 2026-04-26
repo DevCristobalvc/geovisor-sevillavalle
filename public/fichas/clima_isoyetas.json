@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Rain_gauge_Colombia_IDEAM.jpg/1200px-Rain_gauge_Colombia_IDEAM.jpg",
-      "titulo": "Estación pluviométrica del IDEAM en zona andina colombiana",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Ciclo_da_%C3%A1gua.jpg",
+      "titulo": "Ciclo hidrológico y distribución de lluvias",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Valle_del_Cauca_clouds_rain.jpg/1200px-Valle_del_Cauca_clouds_rain.jpg",
-      "titulo": "Nubes de lluvia sobre el Valle del Cauca y la cordillera",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Nevado_del_Tolima_entre_nubes_y_monta%C3%B1as.jpg/1280px-Nevado_del_Tolima_entre_nubes_y_monta%C3%B1as.jpg",
+      "titulo": "Nevado del Tolima entre nubes y montañas",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cafetal_Colombia_rain_season.jpg/1200px-Cafetal_Colombia_rain_season.jpg",
-      "titulo": "Cultivos de café bajo la lluvia en zona andina",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Paisaje_monta%C3%B1oso_Andino.jpg/1280px-Paisaje_monta%C3%B1oso_Andino.jpg",
+      "titulo": "Paisaje montañoso andino con lluvias orográficas",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "sFTaUyoezg0",
-      "titulo": "El régimen de lluvias en Colombia y su relación con la ZCIT – IDEAM"
+      "youtube_id": "ETdvwa8yJSs",
+      "titulo": "Precipitación media — Método de las Isoyetas"
     },
     {
-      "youtube_id": "XpMv-hMFT4U",
-      "titulo": "Clima y agua en el Valle del Cauca: variabilidad y cambio climático – CVC"
+      "youtube_id": "ZNG0hmhzElI",
+      "titulo": "Isoyetas de precipitación en QGIS"
     }
   ],
   "fuente_datos": "IDEAM – Atlas Climatológico de Colombia 2005; IDEAM – Isoyetas Multianuales Colombia 2016; CVC – Red Hidrometeorológica del Valle del Cauca",

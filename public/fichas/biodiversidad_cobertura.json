@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Cafetal_con_sombr%C3%ADo_colombia.jpg/1200px-Cafetal_con_sombr%C3%ADo_colombia.jpg",
-      "titulo": "Cultivo de café con sombrío arbóreo en zona andina colombiana",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ecoregion_NT0221.png",
+      "titulo": "Ecorregiones y cobertura terrestre en Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Valle_del_Cauca_landscape_from_above.jpg/1200px-Valle_del_Cauca_landscape_from_above.jpg",
-      "titulo": "Paisaje del Valle del Cauca con diversidad de coberturas",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Biodiversidad_pura_y_viva_2019-05-16_at_5.56.44_PM.jpg",
+      "titulo": "Biodiversidad y cobertura vegetal en Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Pastos_ganaderia_Colombia_andino.jpg/1200px-Pastos_ganaderia_Colombia_andino.jpg",
-      "titulo": "Pastos para ganadería en zona andina colombiana",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Colombia_-_Valle_del_Cauca.svg/1280px-Colombia_-_Valle_del_Cauca.svg.png",
+      "titulo": "Mapa del Valle del Cauca, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "LJg3PH9WXAI",
-      "titulo": "Cobertura y uso del suelo en Colombia: metodología CORINE – IDEAM"
+      "youtube_id": "7rmd99Nq8Qw",
+      "titulo": "Mapa de Coberturas de la Tierra 2018 — IDEAM"
     },
     {
-      "youtube_id": "NhVZnzaXrBs",
-      "titulo": "Cambios de cobertura del suelo en el Valle del Cauca – CVC"
+      "youtube_id": "YnNkJcNtz2o",
+      "titulo": "Coberturas de la Tierra CORINE Land Cover en QGIS"
     }
   ],
   "fuente_datos": "IDEAM – Mapa de Cobertura de la Tierra Colombia CORINE Land Cover 2018; CVC – Mapa de Coberturas Valle del Cauca 2020; IGAC – Cartografía de uso del suelo Sevilla 1:25.000",

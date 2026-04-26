@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Forest_fragmentation_Colombia.jpg/1200px-Forest_fragmentation_Colombia.jpg",
-      "titulo": "Fragmentación del bosque andino en el paisaje colombiano",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bosque_andino_colombiano_antioquia.jpg",
+      "titulo": "Ecosistema de bosque andino colombiano",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Paramo_bosque_andino_transition_Colombia.jpg/1200px-Paramo_bosque_andino_transition_Colombia.jpg",
-      "titulo": "Transición entre páramo y bosque andino en los Andes colombianos",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Selva_h%C3%BAmeda_tropical_de_Guapi.jpg/1280px-Selva_h%C3%BAmeda_tropical_de_Guapi.jpg",
+      "titulo": "Selva húmeda tropical, ecosistema colombiano",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Wildlife_corridor_Colombia_Andes.jpg/1200px-Wildlife_corridor_Colombia_Andes.jpg",
-      "titulo": "Corredor de conectividad ecológica entre fragmentos de bosque",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Biodiversidad_pura_y_viva_2019-05-16_at_5.56.44_PM.jpg",
+      "titulo": "Biodiversidad de ecosistemas colombianos",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "OT8PBcJvfm8",
-      "titulo": "Ecosistemas de Colombia: diversidad y amenazas – Instituto Humboldt"
+      "youtube_id": "DBTtxpEGM4o",
+      "titulo": "Parques Nacionales de Colombia — conócelos y valóralos"
     },
     {
-      "youtube_id": "6gPrJCiakYE",
-      "titulo": "Fragmentación y conectividad ecológica en los Andes colombianos"
+      "youtube_id": "gRqCA7e2XrE",
+      "titulo": "Parques Nacionales Naturales de Colombia"
     }
   ],
   "fuente_datos": "Instituto Humboldt – Mapa de Ecosistemas Continentales Costeros y Marinos de Colombia 2017; IDEAM – Análisis de Fragmentación de Ecosistemas; CVC – Plan de Gestión Ambiental Regional 2015–2036",

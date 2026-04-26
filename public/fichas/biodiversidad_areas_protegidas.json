@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Reserva_forestal_bosque_andino_colombia.jpg/1200px-Reserva_forestal_bosque_andino_colombia.jpg",
-      "titulo": "Bosque andino dentro de reserva forestal en Colombia",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Landscape_Parque_Nacional_Natural_Tayrona.jpg/1280px-Landscape_Parque_Nacional_Natural_Tayrona.jpg",
+      "titulo": "Paisaje del Parque Nacional Natural Tayrona",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Colombia_protected_areas_Andes.jpg/1200px-Colombia_protected_areas_Andes.jpg",
-      "titulo": "Áreas protegidas en los Andes colombianos",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sulfur_mining_truck_-_Parque_Nacional_Natural_Purac%C3%A9_04.jpg/1280px-Sulfur_mining_truck_-_Parque_Nacional_Natural_Purac%C3%A9_04.jpg",
+      "titulo": "Parque Nacional Natural Puracé, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ecoturismo_bosque_andino_colombia.jpg/1200px-Ecoturismo_bosque_andino_colombia.jpg",
-      "titulo": "Ecoturismo en área protegida de bosque andino",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Selva_h%C3%BAmeda_tropical_de_Guapi.jpg/1280px-Selva_h%C3%BAmeda_tropical_de_Guapi.jpg",
+      "titulo": "Selva húmeda tropical de Guapi, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "DfRDNSCzLCE",
-      "titulo": "Sistema Nacional de Áreas Protegidas de Colombia – Parques Nacionales"
+      "youtube_id": "fR9ZEtrp-M0",
+      "titulo": "Sistema Nacional de Áreas Protegidas — SINAP"
     },
     {
-      "youtube_id": "9UZgLa7YXLU",
-      "titulo": "Áreas protegidas del Valle del Cauca: conservando el patrimonio natural – CVC"
+      "youtube_id": "DP6tAv18ZHA",
+      "titulo": "Parques Nacionales Naturales de Colombia"
     }
   ],
   "fuente_datos": "Ley 2ª de 1959; CVC – Registro de Áreas Protegidas Valle del Cauca; RUNAP – Registro Único Nacional de Áreas Protegidas; IDEAM – Mapa de Áreas Protegidas Colombia",

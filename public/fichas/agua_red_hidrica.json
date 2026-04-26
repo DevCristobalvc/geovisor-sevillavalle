@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/R%C3%ADo_La_Vieja_-_Valle_del_Cauca.jpg/1200px-R%C3%ADo_La_Vieja_-_Valle_del_Cauca.jpg",
-      "titulo": "Río La Vieja, uno de los principales ríos del norte del Valle del Cauca",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Ciclo_da_%C3%A1gua.jpg",
+      "titulo": "Ciclo hidrológico del agua",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Rio_Bugalagrande_Valle.jpg/1200px-Rio_Bugalagrande_Valle.jpg",
-      "titulo": "Río Bugalagrande en el Valle del Cauca",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rio_Cauca_serpentea.JPG/1280px-Rio_Cauca_serpentea.JPG",
+      "titulo": "Río Cauca serpenteando por el Valle",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Cuenca_hidrograf%C3%ADca_Colombia.jpg/1200px-Cuenca_hidrograf%C3%ADca_Colombia.jpg",
-      "titulo": "Red hídrica en los Andes colombianos",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Valle_geografico_del_rio_Cauca_Colombia.png",
+      "titulo": "Red hídrica del Valle geográfico del Río Cauca",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "7kqnABZKsJ4",
-      "titulo": "El ciclo del agua en los Andes colombianos – IDEAM"
+      "youtube_id": "6Y_edHlbayk",
+      "titulo": "Colombia frente al recurso hídrico"
     },
     {
-      "youtube_id": "sPwDxKCF4c0",
-      "titulo": "Cuencas hidrográficas del Valle del Cauca – CVC"
+      "youtube_id": "7Pbsw9DlHQQ",
+      "titulo": "Recursos hídricos de Colombia"
     }
   ],
   "fuente_datos": "IGAC – Servicio WMS Hidrografía Nacional 1:25.000; IDEAM – Red Hidrométrica Nacional; CVC – Diagnóstico cuencas hidrográficas Sevilla 2021",

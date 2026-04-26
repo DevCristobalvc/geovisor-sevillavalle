@@ -34,29 +34,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sevilla_Valle_del_Cauca_panorama.jpg/1200px-Sevilla_Valle_del_Cauca_panorama.jpg",
-      "titulo": "Vista panorámica del casco urbano de Sevilla, Valle del Cauca",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/ATARDECER_EN_SEVILLA_VALLE.JPG/1280px-ATARDECER_EN_SEVILLA_VALLE.JPG",
+      "titulo": "Atardecer en Sevilla, Valle del Cauca",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Vereda_cafetera_Colombia.jpg/1200px-Vereda_cafetera_Colombia.jpg",
-      "titulo": "Vereda rural cafetera en los Andes colombianos",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Panor%C3%A1mica_Sevilla_2304_MegsXplosion.jpg/1280px-Panor%C3%A1mica_Sevilla_2304_MegsXplosion.jpg",
+      "titulo": "Panorámica de Sevilla, Valle del Cauca",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Valle_del_Cauca_colombia_map.png/1200px-Valle_del_Cauca_colombia_map.png",
-      "titulo": "Mapa del departamento del Valle del Cauca con sus municipios",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Mapa_de_Valle_del_Cauca_%28subregiones%29.svg/1280px-Mapa_de_Valle_del_Cauca_%28subregiones%29.svg.png",
+      "titulo": "Mapa del Valle del Cauca con subregiones",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "iZBVB8-3nRU",
-      "titulo": "Sevilla, Valle del Cauca: historia y cultura de la Ciudad de las Puertas Abiertas"
+      "youtube_id": "AR_ngJHccXk",
+      "titulo": "Sevilla Valle, El Balcón del Valle del Cauca"
     },
     {
-      "youtube_id": "uGpNGYhXMAc",
-      "titulo": "Ordenamiento territorial y participación comunitaria en municipios cafeteros"
+      "youtube_id": "BM75lFFWSIQ",
+      "titulo": "Sevilla, municipio de Valle del Cauca, Colombia"
     }
   ],
   "fuente_datos": "DANE – Censo Nacional de Población y Vivienda 2018; DANE – Proyecciones municipales 2022; IGAC – División Político-Administrativa Colombia (DIVIPOLA); Municipio de Sevilla – Plan de Ordenamiento Territorial vigente",

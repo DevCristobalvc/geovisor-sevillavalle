@@ -35,29 +35,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Water_quality_monitoring_Colombia.jpg/1200px-Water_quality_monitoring_Colombia.jpg",
-      "titulo": "Monitoreo de calidad del agua en quebrada andina",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Medici%C3%B3n_de_Nitratos_por_colorimetr%C3%ADa_r%C3%ADo_Teusac%C3%A1_2024.jpg/1280px-Medici%C3%B3n_de_Nitratos_por_colorimetr%C3%ADa_r%C3%ADo_Teusac%C3%A1_2024.jpg",
+      "titulo": "Medición de calidad del agua en río colombiano",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Coffee_pulp_Colombia_water.jpg/1200px-Coffee_pulp_Colombia_water.jpg",
-      "titulo": "Procesamiento de café y riesgo de contaminación hídrica",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rio_Cauca_serpentea.JPG/1280px-Rio_Cauca_serpentea.JPG",
+      "titulo": "Río Cauca serpenteando por el Valle del Cauca",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Quebrada_contaminada_Colombia.jpg/1200px-Quebrada_contaminada_Colombia.jpg",
-      "titulo": "Quebrada con presencia de residuos y sedimentos",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/R%C3%ADo_La_Vieja_3._Cartago%2C_Valle%2C_Colombia..JPG/1280px-R%C3%ADo_La_Vieja_3._Cartago%2C_Valle%2C_Colombia..JPG",
+      "titulo": "Río La Vieja, Cartago, Valle del Cauca",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "WKLaRm9kRq4",
-      "titulo": "Monitoreo de calidad del agua en Colombia – IDEAM"
+      "youtube_id": "mlo5iQloQ6U",
+      "titulo": "Laboratorio de Calidad del Agua del IDEAM"
     },
     {
-      "youtube_id": "RYhTRmgEnp8",
-      "titulo": "Contaminación hídrica en zonas cafeteras y soluciones sostenibles"
+      "youtube_id": "OHJthMRifZQ",
+      "titulo": "Calidad del agua en Colombia: ODS N°6"
     }
   ],
   "fuente_datos": "CVC – Red de Calidad Hídrica Valle del Cauca; IDEAM – Estudio Nacional del Agua 2022; Municipio de Sevilla – Plan de Saneamiento y Manejo de Vertimientos (PSMV)",

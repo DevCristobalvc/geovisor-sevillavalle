@@ -35,29 +35,29 @@
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Ember%C3%A1_woman.jpg/800px-Ember%C3%A1_woman.jpg",
-      "titulo": "Mujer Embera con vestimenta y artesanías tradicionales",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Comunidad_ind%C3%ADgena_Golondrina_-_panoramio.jpg/1280px-Comunidad_ind%C3%ADgena_Golondrina_-_panoramio.jpg",
+      "titulo": "Comunidad indígena en Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Embera_community_Colombia.jpg/1200px-Embera_community_Colombia.jpg",
-      "titulo": "Comunidad Embera en zona de bosque andino de Colombia",
-      "credito": "Wikimedia Commons / CC BY"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Maloka_de_ceremonia_indigena.jpg/1280px-Maloka_de_ceremonia_indigena.jpg",
+      "titulo": "Maloca de ceremonia indígena, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Embera_handicrafts_Colombia.jpg/1200px-Embera_handicrafts_Colombia.jpg",
-      "titulo": "Artesanías Embera: canastos y collares de chaquiras",
-      "credito": "Wikimedia Commons / CC BY-SA"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mapa_veredas_de_Ramiriqu%C3%AD_-_Boyac%C3%A1.jpg/1280px-Mapa_veredas_de_Ramiriqu%C3%AD_-_Boyac%C3%A1.jpg",
+      "titulo": "Mapa de territorio con veredas en Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "XfEd_lpXAo0",
-      "titulo": "Pueblo Embera: territorio, cultura y resistencia en Colombia"
+      "youtube_id": "KuTUq5GaQrY",
+      "titulo": "Resguardo Indígena Dochama del Pueblo Embera Katío"
     },
     {
-      "youtube_id": "h9wQWYuDFlo",
-      "titulo": "Territorios indígenas y conservación de la biodiversidad en Colombia – Instituto Humboldt"
+      "youtube_id": "fzPlMlt_4LM",
+      "titulo": "Documental: Embera Katíos — historia y cultura propia"
     }
   ],
   "fuente_datos": "Constitución Política de Colombia 1991 – Art. 63, 246, 329, 330; DANE – Pueblos Indígenas de Colombia 2018; Ministerio del Interior – Registro de Resguardos Indígenas Colombia; CVC – Territorio y Ambiente en Resguardos Indígenas Valle del Cauca",
