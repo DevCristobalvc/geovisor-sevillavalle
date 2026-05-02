@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { useMapContext } from '../context/MapContext'
 import { LAYERS, CATEGORIAS } from '../config/layers.config'
 import type { Categoria, LayerConfig } from '../types'
@@ -8,13 +9,15 @@ export function useMapLayers() {
   const layersByCategory = (categoria: Categoria): LayerConfig[] =>
     LAYERS.filter(l => l.categoria === categoria)
 
-  const activeLayers = LAYERS.filter(l => isLayerActive(l.id))
+  const activeLayers = useMemo(
+    () => LAYERS.filter(l => isLayerActive(l.id)),
+    [state.capasActivas] // eslint-disable-line react-hooks/exhaustive-deps
+  )
 
   const activeLayersByCategory = (categoria: Categoria) =>
     activeLayers.filter(l => l.categoria === categoria)
 
-  const countByCategory = (categoria: Categoria) =>
-    activeLayersByCategory(categoria).length
+  const countByCategory = (categoria: Categoria) => activeLayersByCategory(categoria).length
 
   const toggleCategory = (categoria: Categoria) => {
     const layers = layersByCategory(categoria)

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useMapContext } from '../context/MapContext'
 
 interface MapToolbarProps {
@@ -107,85 +108,112 @@ export default function MapToolbar({
     { key: 'topo', label: 'Topográfico' },
   ]
 
+  const [collapsed, setCollapsed] = useState(false)
+
   return (
-    <div className="absolute top-3 right-3 z-[1000] flex flex-col gap-2">
-      {/* Selector mapa base */}
-      <div className="bg-white rounded shadow border border-gray-200 overflow-hidden">
-        {bases.map(b => (
-          <button
-            key={b.key}
-            onClick={() => dispatch({ type: 'SET_MAPA_BASE', base: b.key })}
-            className={`block w-full px-3 py-1.5 text-xs text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-verde-bosque ${
-              state.mapaBase === b.key
-                ? 'bg-verde-bosque text-white font-semibold'
-                : 'text-gris-texto hover:bg-gray-50'
-            }`}
-            aria-pressed={state.mapaBase === b.key}
-          >
-            {b.label}
-          </button>
-        ))}
+    <aside className="absolute top-3 right-3 z-[2] flex flex-col items-end gap-0">
+      {/* Toggle button */}
+      <button
+        onClick={() => setCollapsed(c => !c)}
+        aria-label={collapsed ? 'Mostrar herramientas' : 'Ocultar herramientas'}
+        className="bg-white border border-gray-200 rounded shadow p-1.5 mb-2 hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque self-end"
+      >
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="w-3.5 h-3.5 text-gris-texto"
+        >
+          {collapsed ? (
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6l4 4 4-4" />
+          ) : (
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4 10l4-4 4 4" />
+          )}
+        </svg>
+      </button>
+
+      <div
+        className={`flex flex-col gap-2 transition-all duration-200 origin-top overflow-hidden ${collapsed ? 'scale-y-0 opacity-0 pointer-events-none h-0' : 'scale-y-100 opacity-100'}`}
+      >
+        {/* Selector mapa base */}
+        <div className="bg-white rounded shadow border border-gray-200 overflow-hidden">
+          {bases.map(b => (
+            <button
+              key={b.key}
+              onClick={() => dispatch({ type: 'SET_MAPA_BASE', base: b.key })}
+              className={`block w-full px-3 py-1.5 text-xs text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-verde-bosque ${
+                state.mapaBase === b.key
+                  ? 'bg-verde-bosque text-white font-semibold'
+                  : 'text-gris-texto hover:bg-gray-50'
+              }`}
+              aria-pressed={state.mapaBase === b.key}
+            >
+              {b.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Toggle panel capas */}
+        <button
+          onClick={onTogglePanel}
+          aria-label="Mostrar/ocultar panel de capas"
+          className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
+        >
+          <IconLayers />
+          Capas
+        </button>
+
+        {/* Buscar en capas */}
+        <button
+          onClick={onToggleFeatureSearch}
+          aria-label="Buscar dentro de capas activas"
+          aria-pressed={isFeatureSearchOpen}
+          className={`border rounded shadow px-3 py-1.5 text-xs transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center ${
+            isFeatureSearchOpen
+              ? 'bg-verde-bosque text-white border-verde-bosque'
+              : 'bg-white border-gray-200 text-gris-texto hover:bg-gray-50'
+          }`}
+        >
+          <IconSearch />
+          Buscar
+        </button>
+
+        {/* Herramienta de medición */}
+        <button
+          onClick={onToggleMeasure}
+          aria-label={isMeasuring ? 'Desactivar herramienta de medición' : 'Medir distancia y área'}
+          aria-pressed={isMeasuring}
+          className={`border rounded shadow px-3 py-1.5 text-xs transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center ${
+            isMeasuring
+              ? 'bg-orange-500 text-white border-orange-500'
+              : 'bg-white border-gray-200 text-gris-texto hover:bg-gray-50'
+          }`}
+        >
+          <IconRuler />
+          {isMeasuring ? 'Midiendo…' : 'Medir'}
+        </button>
+
+        {/* Exportar PNG */}
+        <button
+          onClick={onExportPNG}
+          aria-label="Exportar vista del mapa como imagen PNG"
+          className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
+        >
+          <IconDownload />
+          Exportar PNG
+        </button>
+
+        {/* Volver a Sevilla */}
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent('mapResetView'))}
+          aria-label="Centrar mapa en Sevilla"
+          className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
+        >
+          <IconLocate />
+          Sevilla
+        </button>
       </div>
-
-      {/* Toggle panel capas */}
-      <button
-        onClick={onTogglePanel}
-        aria-label="Mostrar/ocultar panel de capas"
-        className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
-      >
-        <IconLayers />
-        Capas
-      </button>
-
-      {/* Buscar en capas */}
-      <button
-        onClick={onToggleFeatureSearch}
-        aria-label="Buscar dentro de capas activas"
-        aria-pressed={isFeatureSearchOpen}
-        className={`border rounded shadow px-3 py-1.5 text-xs transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center ${
-          isFeatureSearchOpen
-            ? 'bg-verde-bosque text-white border-verde-bosque'
-            : 'bg-white border-gray-200 text-gris-texto hover:bg-gray-50'
-        }`}
-      >
-        <IconSearch />
-        Buscar
-      </button>
-
-      {/* Herramienta de medición */}
-      <button
-        onClick={onToggleMeasure}
-        aria-label={isMeasuring ? 'Desactivar herramienta de medición' : 'Medir distancia y área'}
-        aria-pressed={isMeasuring}
-        className={`border rounded shadow px-3 py-1.5 text-xs transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center ${
-          isMeasuring
-            ? 'bg-orange-500 text-white border-orange-500'
-            : 'bg-white border-gray-200 text-gris-texto hover:bg-gray-50'
-        }`}
-      >
-        <IconRuler />
-        {isMeasuring ? 'Midiendo…' : 'Medir'}
-      </button>
-
-      {/* Exportar PNG */}
-      <button
-        onClick={onExportPNG}
-        aria-label="Exportar vista del mapa como imagen PNG"
-        className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
-      >
-        <IconDownload />
-        Exportar PNG
-      </button>
-
-      {/* Volver a Sevilla */}
-      <button
-        onClick={() => window.dispatchEvent(new CustomEvent('mapResetView'))}
-        aria-label="Centrar mapa en Sevilla"
-        className="bg-white border border-gray-200 rounded shadow px-3 py-1.5 text-xs text-gris-texto hover:bg-gray-50 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque flex items-center"
-      >
-        <IconLocate />
-        Sevilla
-      </button>
-    </div>
+    </aside>
   )
 }
