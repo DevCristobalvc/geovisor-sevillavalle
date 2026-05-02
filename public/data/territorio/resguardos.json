@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "name": "Resguardos Indígenas - Sevilla",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-76.012, 4.228],
+            [-76.024, 4.234],
+            [-76.038, 4.241],
+            [-76.051, 4.252],
+            [-76.058, 4.263],
+            [-76.055, 4.275],
+            [-76.044, 4.279],
+            [-76.031, 4.277],
+            [-76.018, 4.272],
+            [-76.006, 4.265],
+            [-75.999, 4.254],
+            [-76.001, 4.241],
+            [-76.008, 4.232],
+            [-76.012, 4.228]
+          ]
+        ]
+      },
+      "properties": {
+        "nombre": "Resguardo Indígena Ancore Drua",
+        "pueblo": "Embera",
+        "area_ha": 3218.7,
+        "resolucion": "Resolución 012 de 1995 - INCORA",
+        "municipio": "Sevilla"
+      }
+    }
+  ]
+}

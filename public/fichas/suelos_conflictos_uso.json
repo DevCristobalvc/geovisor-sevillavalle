@@ -11,14 +11,54 @@
     "¿Qué alternativas productivas reducirían los conflictos de uso en Sevilla?"
   ],
   "vocabulario": [
-    { "termino": "Vocación del suelo", "definicion": "Uso más apropiado para un terreno según sus características físicas, climáticas y ecológicas naturales." },
-    { "termino": "Erosión", "definicion": "Desgaste y arrastre de las capas superficiales del suelo por el agua o el viento, acelerado por la deforestación." },
-    { "termino": "CORINE Land Cover", "definicion": "Sistema de clasificación de coberturas del suelo adoptado en Colombia para mapear y monitorizar los cambios en el uso de la tierra." },
-    { "termino": "Uso potencial", "definicion": "El uso que maximiza la productividad de un terreno sin degradarlo, según sus condiciones naturales." },
-    { "termino": "IGAC", "definicion": "Instituto Geográfico Agustín Codazzi, entidad colombiana responsable de la cartografía y el catastro nacional." }
+    {
+      "termino": "Vocación del suelo",
+      "definicion": "Uso más apropiado para un terreno según sus características físicas, climáticas y ecológicas naturales."
+    },
+    {
+      "termino": "Erosión",
+      "definicion": "Desgaste y arrastre de las capas superficiales del suelo por el agua o el viento, acelerado por la deforestación."
+    },
+    {
+      "termino": "CORINE Land Cover",
+      "definicion": "Sistema de clasificación de coberturas del suelo adoptado en Colombia para mapear y monitorizar los cambios en el uso de la tierra."
+    },
+    {
+      "termino": "Uso potencial",
+      "definicion": "El uso que maximiza la productividad de un terreno sin degradarlo, según sus condiciones naturales."
+    },
+    {
+      "termino": "IGAC",
+      "definicion": "Instituto Geográfico Agustín Codazzi, entidad colombiana responsable de la cartografía y el catastro nacional."
+    }
   ],
-  "galeria": [],
-  "videos": [],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/El_%C3%81guila_%287%29%2C_Valle%2C_Colombia.JPG/1280px-El_%C3%81guila_%287%29%2C_Valle%2C_Colombia.JPG",
+      "titulo": "Paisaje rural con usos del suelo, El Águila, Valle",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Cafetales%2C_en_Colombia.jpg",
+      "titulo": "Cafetales en laderas colombianas, uso agrícola del suelo",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Paisaje_monta%C3%B1oso_Andino.jpg/1280px-Paisaje_monta%C3%B1oso_Andino.jpg",
+      "titulo": "Conflictos de uso del suelo en paisaje andino",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "sJ25zmwBIE4",
+      "titulo": "Conflictos de uso del suelo"
+    },
+    {
+      "youtube_id": "OXC0sT_P5jw",
+      "titulo": "IDEAM: cooperación contra desertificación y degradación de suelos"
+    }
+  ],
   "fuente_datos": "IGAC / UPRA — Conflictos de uso del suelo 1:50.000",
   "nivel_educativo": "Básica secundaria (grados 8–11)"
 }

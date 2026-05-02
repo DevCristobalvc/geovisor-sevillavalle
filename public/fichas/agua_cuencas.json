@@ -11,21 +11,53 @@
     "¿Qué pasaría si los páramos que alimentan estas cuencas desaparecieran?"
   ],
   "vocabulario": [
-    { "termino": "Cuenca hidrográfica", "definicion": "Territorio que drena sus aguas hacia un mismo río, delimitado por divisorias de aguas como montañas y cerros." },
-    { "termino": "Afluente", "definicion": "Río o quebrada que desemboca en otro río más grande, aportando su caudal de agua." },
-    { "termino": "Caudal", "definicion": "Volumen de agua que pasa por un punto de un río en una unidad de tiempo, expresado en metros cúbicos por segundo (m³/s)." },
-    { "termino": "Divisoria de aguas", "definicion": "Línea imaginaria que separa dos cuencas hidrográficas, generalmente coincide con las cimas de montañas." },
-    { "termino": "Deforestación", "definicion": "Eliminación de bosques para convertir el suelo en zonas agrícolas, ganaderas o urbanas, reduciendo la captación de agua." }
+    {
+      "termino": "Cuenca hidrográfica",
+      "definicion": "Territorio que drena sus aguas hacia un mismo río, delimitado por divisorias de aguas como montañas y cerros."
+    },
+    {
+      "termino": "Afluente",
+      "definicion": "Río o quebrada que desemboca en otro río más grande, aportando su caudal de agua."
+    },
+    {
+      "termino": "Caudal",
+      "definicion": "Volumen de agua que pasa por un punto de un río en una unidad de tiempo, expresado en metros cúbicos por segundo (m³/s)."
+    },
+    {
+      "termino": "Divisoria de aguas",
+      "definicion": "Línea imaginaria que separa dos cuencas hidrográficas, generalmente coincide con las cimas de montañas."
+    },
+    {
+      "termino": "Deforestación",
+      "definicion": "Eliminación de bosques para convertir el suelo en zonas agrícolas, ganaderas o urbanas, reduciendo la captación de agua."
+    }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/R%C3%ADo_Bugalagrande.jpg/1280px-R%C3%ADo_Bugalagrande.jpg",
-      "titulo": "Río Bugalagrande",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/R%C3%ADo_Cauca._Puente_Anacaro_%281%29._Cartago_-_Ansermanuevo%2C_Valle%2C_Colombia.JPG/1280px-R%C3%ADo_Cauca._Puente_Anacaro_%281%29._Cartago_-_Ansermanuevo%2C_Valle%2C_Colombia.JPG",
+      "titulo": "Río Cauca — Puente Anacaro, Valle del Cauca",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Valle_geografico_del_rio_Cauca_Colombia.png",
+      "titulo": "Valle geográfico del Río Cauca, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Ciclo_da_%C3%A1gua.jpg",
+      "titulo": "Ciclo hidrológico del agua",
       "credito": "CC-BY-SA Wikimedia Commons"
     }
   ],
   "videos": [
-    { "youtube_id": "dQw4w9WgXcQ", "titulo": "El ciclo del agua en el Valle del Cauca" }
+    {
+      "youtube_id": "UmLLv7hz6Ss",
+      "titulo": "Las cuencas hidrográficas de Colombia explicadas"
+    },
+    {
+      "youtube_id": "hduhX9OgqZs",
+      "titulo": "Hidrografía de Colombia"
+    }
   ],
   "fuente_datos": "IDEAM / CVC — Servicio WMS público",
   "nivel_educativo": "Básica secundaria (grados 6–9)"

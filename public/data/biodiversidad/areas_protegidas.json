@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "name": "Áreas Protegidas - Sevilla, Valle del Cauca",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.988, 4.322],
+            [-75.998, 4.335],
+            [-76.012, 4.348],
+            [-76.028, 4.362],
+            [-76.041, 4.371],
+            [-76.055, 4.383],
+            [-76.068, 4.398],
+            [-76.075, 4.418],
+            [-76.071, 4.438],
+            [-76.058, 4.443],
+            [-76.039, 4.441],
+            [-76.021, 4.437],
+            [-76.004, 4.432],
+            [-75.992, 4.424],
+            [-75.983, 4.412],
+            [-75.981, 4.398],
+            [-75.984, 4.383],
+            [-75.980, 4.368],
+            [-75.982, 4.353],
+            [-75.985, 4.339],
+            [-75.988, 4.322]
+          ]
+        ]
+      },
+      "properties": {
+        "nombre": "Reserva Forestal Protectora Ley 2ª de 1959 - Vertiente Occidental",
+        "categoria": "Reserva Forestal",
+        "area_ha": 14820.5,
+        "fecha_declaracion": "1959-12-16",
+        "entidad_administradora": "Ministerio de Ambiente y Desarrollo Sostenible - CVC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.962, 4.281],
+            [-75.974, 4.292],
+            [-75.988, 4.304],
+            [-76.001, 4.318],
+            [-76.014, 4.331],
+            [-76.019, 4.343],
+            [-76.013, 4.350],
+            [-75.999, 4.348],
+            [-75.986, 4.341],
+            [-75.972, 4.333],
+            [-75.963, 4.322],
+            [-75.958, 4.310],
+            [-75.957, 4.297],
+            [-75.960, 4.287],
+            [-75.962, 4.281]
+          ]
+        ]
+      },
+      "properties": {
+        "nombre": "DRMI Cuchilla El Tigre - Farallones del Norte",
+        "categoria": "DRMI",
+        "area_ha": 5640.2,
+        "fecha_declaracion": "2008-06-20",
+        "entidad_administradora": "CVC - Corporación Autónoma Regional del Valle del Cauca"
+      }
+    }
+  ]
+}

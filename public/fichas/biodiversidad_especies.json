@@ -1,0 +1,65 @@
+{
+  "id": "biodiversidad_especies",
+  "titulo": "Registro de Especies de Sevilla",
+  "categoria": "biodiversidad",
+  "descripcion": "Sevilla, Valle del Cauca, es un municipio con una riqueza biológica excepcional gracias a la diversidad de ecosistemas que alberga: desde el páramo y el bosque andino en las alturas hasta el bosque seco tropical en las zonas más cálidas. El Sistema de Información sobre Biodiversidad de Colombia (SiB Colombia) y la plataforma global GBIF (Global Biodiversity Information Facility) reúnen miles de registros de ocurrencia de especies observadas en el municipio, reportados por investigadores, naturalistas aficionados, comunidades y estudiantes a través de aplicaciones como iNaturalist. Entre las especies más emblemáticas del territorio sevillano se encuentran el oso de anteojos (Tremarctos ornatus), único oso nativo de Suramérica y especie en peligro, que habita los bosques altoandinos y el páramo; la danta de páramo o tapir de montaña (Tapirus pinchaque), el mamífero terrestre más grande de los Andes colombianos y una especie en peligro crítico que cumple un papel fundamental en la dispersión de semillas de árboles grandes; y el quetzal colombiano (Pharomachrus fulgidus), una de las aves más hermosas del bosque andino, cuyo canto y plumaje iridiscente lo convierten en un símbolo de la naturaleza tropical. También se registran en Sevilla el puma (Puma concolor), el ocelote (Leopardus pardalis), el mono aullador (Alouatta seniculus), cientos de especies de aves migratorias y residentes, y una enorme diversidad de anfibios y plantas endémicas de los Andes colombianos. Muchas de estas especies se encuentran en categorías de amenaza nacional o global y dependen de que los ecosistemas de Sevilla se mantengan en buen estado.",
+  "importancia": "Cada especie que habita en Sevilla cumple una función en el ecosistema: los grandes mamíferos dispersan semillas y controlan poblaciones de herbívoros; las aves polinizan flores y controlan insectos; los anfibios son indicadores de la calidad del agua y del ambiente. La pérdida de cualquiera de estas especies tiene consecuencias en cadena sobre todo el ecosistema. Registrar, conocer y divulgar la biodiversidad de Sevilla es el primer paso para protegerla. Los datos de GBIF y SiB Colombia son herramientas poderosas que permiten a cualquier ciudadano, investigador o gobernante conocer qué vive en su territorio y tomar decisiones informadas para conservarlo.",
+  "preguntas_reflexivas": [
+    "¿Por qué el oso de anteojos necesita grandes extensiones de bosque andino para sobrevivir y no puede vivir en un parche de bosque pequeño?",
+    "¿Cómo la danta de páramo contribuye a la regeneración del bosque al dispersar las semillas de los árboles?",
+    "¿Qué podrías hacer tú para contribuir al registro de especies en Sevilla usando aplicaciones como iNaturalist?",
+    "¿Por qué la pérdida de un anfibio puede indicar que algo está mal con la calidad del agua de una quebrada?",
+    "¿Qué relación hay entre la biodiversidad de Sevilla y el turismo de naturaleza que puede beneficiar a las comunidades locales?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Especie endémica",
+      "definicion": "Especie que solo existe en una región geográfica específica y en ningún otro lugar del mundo. Colombia es el país con mayor número de especies endémicas de aves y anfibios en el planeta."
+    },
+    {
+      "termino": "Especie en peligro",
+      "definicion": "Especie cuyas poblaciones han disminuido tanto que enfrenta un riesgo muy alto de extinción si no se toman medidas de conservación urgentes. Las categorías de la IUCN son: Vulnerable, En Peligro y En Peligro Crítico."
+    },
+    {
+      "termino": "GBIF",
+      "definicion": "Global Biodiversity Information Facility (Instalación Global de Información sobre Biodiversidad). Plataforma internacional de acceso libre que reúne millones de registros de ocurrencia de especies de todo el mundo."
+    },
+    {
+      "termino": "SiB Colombia",
+      "definicion": "Sistema de Información sobre Biodiversidad de Colombia. Plataforma nacional que centraliza los datos de biodiversidad del país, articulada con el Instituto Humboldt y GBIF."
+    },
+    {
+      "termino": "Dispersor de semillas",
+      "definicion": "Animal que come frutos y deposita las semillas en lugares lejanos a través de sus heces, contribuyendo a la regeneración del bosque. Los grandes mamíferos como la danta son dispersores esenciales para semillas grandes."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg/1280px-Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg",
+      "titulo": "Oso de anteojos (Tremarctos ornatus)",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tapirus_pinchaque_133819945.jpg/1280px-Tapirus_pinchaque_133819945.jpg",
+      "titulo": "Tapir de montaña (Tapirus pinchaque)",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pharomachrus_auriceps_Manizales%2C_Colombia.jpg",
+      "titulo": "Quetzal crestado, Manizales, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "1cdGUxXuSYM",
+      "titulo": "Oso de anteojos, el guardián de los páramos"
+    },
+    {
+      "youtube_id": "ll1g9M2tHyU",
+      "titulo": "10 Animales en peligro de extinción en Colombia"
+    }
+  ],
+  "fuente_datos": "GBIF – Registros de Ocurrencia Sevilla, Valle del Cauca; SiB Colombia – Catálogo de Biodiversidad Colombia; Instituto Humboldt – Libro Rojo de Mamíferos y Aves de Colombia",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "agua_humedales",
+  "titulo": "Humedales del Municipio",
+  "categoria": "agua",
+  "descripcion": "Los humedales son ecosistemas acuáticos que incluyen lagunas, ciénagas, pantanos, turberas y zonas inundables de ríos. En el municipio de Sevilla, estos ecosistemas se encuentran principalmente en las zonas planas y en las orillas de los principales ríos y quebradas. A pesar de su pequeña extensión, los humedales son considerados ecosistemas vitales porque albergan una biodiversidad extraordinaria y prestan múltiples servicios ambientales a la población. Funcionan como esponjas naturales: absorben el exceso de agua durante las lluvias intensas y la liberan gradualmente en época de sequía, regulando así las inundaciones y garantizando el suministro de agua en los períodos secos. También actúan como filtros naturales, atrapando sedimentos y purificando el agua antes de que llegue a los ríos. En los humedales de Sevilla y el norte del Valle del Cauca es posible observar aves acuáticas migratorias que recorren miles de kilómetros desde Norteamérica y el Caribe, como la garza real, el martín pescador y varias especies de patos. Sin embargo, estos valiosos ecosistemas enfrentan graves amenazas: el drenaje para ampliar tierras agrícolas, la contaminación por agroquímicos y aguas residuales, la invasión de especies exóticas como el buchón de agua y la alteración de sus cuencas abastecedoras. La conservación de los humedales de Sevilla requiere un esfuerzo conjunto de propietarios, comunidades y entidades ambientales.",
+  "importancia": "Los humedales son los ecosistemas más productivos del planeta en términos de biodiversidad y servicios ambientales por unidad de área. Un humedal saludable puede albergar decenas de especies de aves, peces, anfibios, reptiles y plantas acuáticas en pocos hectáreas. Para Sevilla, los humedales representan amortiguadores naturales ante el riesgo de inundaciones que protegen hogares y cultivos, además de ser laboratorios naturales para la educación ambiental de las nuevas generaciones. Su destrucción tendría consecuencias graves e irreversibles para la biodiversidad local y para la calidad y disponibilidad del agua en el municipio.",
+  "preguntas_reflexivas": [
+    "¿Por qué los humedales se denominan 'esponjas naturales' y cómo esta función protege a las comunidades que viven cerca?",
+    "¿Qué amenazas enfrentan los humedales de Sevilla y cuál crees que es la más urgente de atender?",
+    "¿Por qué son importantes los humedales para las aves migratorias que viajan desde Norteamérica hasta Suramérica?",
+    "¿Cómo podría una comunidad escolar contribuir a proteger un humedal cercano a su vereda?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Humedal",
+      "definicion": "Ecosistema acuático donde el suelo está cubierto o saturado de agua permanente o temporalmente, como lagunas, ciénagas, pantanos y zonas inundables de ríos."
+    },
+    {
+      "termino": "Servicios ecosistémicos",
+      "definicion": "Beneficios gratuitos que la naturaleza provee a las personas, como la regulación de inundaciones, la purificación del agua, la producción de alimentos y la biodiversidad que ofrecen los humedales."
+    },
+    {
+      "termino": "Buchón de agua",
+      "definicion": "Planta acuática invasora (Eichhornia crassipes) originaria de Suramérica que crece masivamente en humedales y ríos, bloqueando la luz solar y consumiendo el oxígeno del agua, afectando a peces y otras especies."
+    },
+    {
+      "termino": "Aves migratorias",
+      "definicion": "Aves que realizan largos viajes estacionales entre sus áreas de reproducción (generalmente en el norte) y sus áreas de invernada (en el sur), usando los humedales como sitios de descanso y alimentación."
+    },
+    {
+      "termino": "Convención Ramsar",
+      "definicion": "Tratado internacional firmado en Ramsar, Irán, en 1971, que busca la conservación y el uso sostenible de los humedales del mundo reconocidos por su importancia ecológica."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Humedal_El_Chaparro_-_Ciudad_de_Neiva_%28Huila_-_Colombia%29.jpg/1280px-Humedal_El_Chaparro_-_Ciudad_de_Neiva_%28Huila_-_Colombia%29.jpg",
+      "titulo": "Humedal El Chaparro, Neiva, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Jacinto_de_agua_%28Eichhornia_crassipes%29.jpg/1280px-Jacinto_de_agua_%28Eichhornia_crassipes%29.jpg",
+      "titulo": "Jacinto de agua (buchón de agua)",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2017_Bogot%C3%A1_Santa_Mar%C3%ADa_del_Lago%2C_humedal.jpg/1280px-2017_Bogot%C3%A1_Santa_Mar%C3%ADa_del_Lago%2C_humedal.jpg",
+      "titulo": "Humedal Santa María del Lago, Bogotá",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "1aKJFhjEaPI",
+      "titulo": "Humedales: Guardianes del Agua y la Biodiversidad — TvAgro"
+    },
+    {
+      "youtube_id": "JOVASN3AYJQ",
+      "titulo": "Avances en la conservación de los humedales en Colombia"
+    }
+  ],
+  "fuente_datos": "CVC – Inventario de Humedales Valle del Cauca 2019; Instituto Humboldt – Catálogo de Humedales de Colombia; IGAC – Cartografía temática Sevilla 1:25.000",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

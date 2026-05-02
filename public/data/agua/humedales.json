@@ -1,0 +1,84 @@
+{
+  "type": "FeatureCollection",
+  "name": "Humedales Sevilla",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.9651, 4.2458],
+            [-75.9629, 4.2443],
+            [-75.9605, 4.2451],
+            [-75.9598, 4.2471],
+            [-75.9611, 4.2492],
+            [-75.9636, 4.2501],
+            [-75.9661, 4.2491],
+            [-75.9668, 4.2472],
+            [-75.9658, 4.2453],
+            [-75.9651, 4.2458]
+          ]
+        ]
+      },
+      "properties": {
+        "nombre": "Humedal La Cristalina",
+        "tipo": "humedal",
+        "area_ha": 12.4,
+        "estado_conservacion": "regular"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.9912, 4.3142],
+            [-75.9888, 4.3128],
+            [-75.9861, 4.3135],
+            [-75.9853, 4.3158],
+            [-75.9862, 4.3181],
+            [-75.9889, 4.3193],
+            [-75.9917, 4.3185],
+            [-75.9928, 4.3163],
+            [-75.9921, 4.3143],
+            [-75.9912, 4.3142]
+          ]
+        ]
+      },
+      "properties": {
+        "nombre": "Laguna Miraflores",
+        "tipo": "laguna",
+        "area_ha": 8.7,
+        "estado_conservacion": "bueno"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.9474, 4.2318],
+            [-75.9448, 4.2302],
+            [-75.9419, 4.2308],
+            [-75.9406, 4.2328],
+            [-75.9412, 4.2352],
+            [-75.9438, 4.2367],
+            [-75.9467, 4.2361],
+            [-75.9481, 4.2342],
+            [-75.9477, 4.2323],
+            [-75.9474, 4.2318]
+          ]
+        ]
+      },
+      "properties": {
+        "nombre": "Ciénaga El Silencio",
+        "tipo": "ciénaga",
+        "area_ha": 15.2,
+        "estado_conservacion": "crítico"
+      }
+    }
+  ]
+}

@@ -1,41 +1,47 @@
 import type { LayerConfig, Categoria } from '../types'
 
-export const CATEGORIAS: Record<Categoria, { label: string; color: string; icono: string; descripcion: string }> = {
+export const CATEGORIAS: Record<
+  Categoria,
+  { label: string; color: string; icono: string; descripcion: string }
+> = {
   actores: {
     label: 'Actores Sociales',
     color: '#6D4C41',
     icono: 'users',
-    descripcion: 'Comunidades, ONGs, líderes y organizaciones con presencia en los ecosistemas de Sevilla',
+    descripcion:
+      'Comunidades, ONGs, líderes y organizaciones con presencia en los ecosistemas de Sevilla',
   },
   agua: {
     label: 'Agua',
-    color: '#1E88E5',
+    color: '#2E86C1',
     icono: 'droplet',
     descripcion: 'Cuencas, ríos, humedales y sistemas de monitoreo hídrico del municipio',
   },
   biodiversidad: {
     label: 'Biodiversidad',
-    color: '#388E3C',
+    color: '#2D6A4F',
     icono: 'leaf',
-    descripcion: 'Ecosistemas, coberturas del suelo, páramos, áreas protegidas y registros de especies',
+    descripcion:
+      'Ecosistemas, coberturas del suelo, páramos, áreas protegidas y registros de especies',
   },
   clima: {
     label: 'Cambio Climático',
-    color: '#FB8C00',
+    color: '#F39C12',
     icono: 'cloud',
     descripcion: 'Estaciones hidroclimatológicas, isoyetas y pisos térmicos del territorio',
   },
   suelos: {
     label: 'Suelos',
-    color: '#F57F17',
+    color: '#8B6914',
     icono: 'layers',
     descripcion: 'Conflictos de uso del suelo y su relación con las actividades productivas',
   },
   territorio: {
     label: 'Territorio',
-    color: '#3949AB',
+    color: '#1B4F72',
     icono: 'map-pin',
-    descripcion: 'División político-administrativa, resguardos indígenas y Paisaje Cultural Cafetero',
+    descripcion:
+      'División político-administrativa, resguardos indígenas y Paisaje Cultural Cafetero',
   },
 }
 
@@ -91,7 +97,8 @@ export const LAYERS: LayerConfig[] = [
     fichaId: 'actores_bosque_seco',
     atributosPopup: ['nombre', 'sector', 'municipio'],
     miniatura: '/images/actores/bosque_seco_thumb.webp',
-    descripcionBreve: 'Entes gubernamentales, JAC, juntas de acueducto y sector productivo en zona seca',
+    descripcionBreve:
+      'Entes gubernamentales, JAC, juntas de acueducto y sector productivo en zona seca',
   },
 
   // ── AGUA ────────────────────────────────────────────────────────────────────
@@ -101,7 +108,7 @@ export const LAYERS: LayerConfig[] = [
     categoria: 'agua',
     tipo: 'geojson',
     url: '/data/agua/cuencas.json',
-    estilo: { color: '#1E88E5', fillColor: '#42A5F5', fillOpacity: 0.35, weight: 2 },
+    estilo: { color: '#2E86C1', fillColor: '#5DADE2', fillOpacity: 0.35, weight: 2 },
     visibleDefault: true,
     fichaId: 'agua_cuencas',
     atributosPopup: ['nombre', 'area_ha', 'rio_principal'],
@@ -166,7 +173,7 @@ export const LAYERS: LayerConfig[] = [
     categoria: 'agua',
     tipo: 'geojson',
     url: '/data/agua/predios_art111.json',
-    estilo: { color: '#1565C0', fillColor: '#1E88E5', fillOpacity: 0.3, weight: 2 },
+    estilo: { color: '#1B4F72', fillColor: '#2E86C1', fillOpacity: 0.3, weight: 2 },
     visibleDefault: false,
     fichaId: 'agua_predios_art111',
     atributosPopup: ['predio', 'area_ha', 'fuente_hidrica_protegida'],
@@ -317,7 +324,7 @@ export const LAYERS: LayerConfig[] = [
     categoria: 'territorio',
     tipo: 'geojson',
     url: '/data/territorio/division_administrativa.json',
-    estilo: { color: '#3949AB', fillColor: '#5C6BC0', fillOpacity: 0.1, weight: 2, dashArray: '4' },
+    estilo: { color: '#1B4F72', fillColor: '#2980B9', fillOpacity: 0.1, weight: 2, dashArray: '4' },
     visibleDefault: true,
     fichaId: 'territorio_division',
     atributosPopup: ['nombre_vereda', 'codigo_dane', 'area_km2'],
@@ -366,11 +373,11 @@ export const MAPA_BASE_ATTRIBUTION = {
   dark: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 }
 
-export const SEVILLA_CENTER: [number, number] = [4.2710, -75.9366]
+export const SEVILLA_CENTER: [number, number] = [4.271, -75.9366]
 export const SEVILLA_DEFAULT_ZOOM = 13
 export const SEVILLA_MIN_ZOOM = 10
 export const SEVILLA_MAX_ZOOM = 18
 export const SEVILLA_BOUNDS: [[number, number], [number, number]] = [
-  [4.10, -76.08],
+  [4.1, -76.08],
   [4.44, -75.78],
 ]

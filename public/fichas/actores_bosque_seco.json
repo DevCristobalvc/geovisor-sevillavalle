@@ -1,0 +1,64 @@
+{
+  "id": "actores_bosque_seco",
+  "titulo": "Actores del Bosque Seco Tropical",
+  "categoria": "actores",
+  "descripcion": "El bosque seco tropical (BST) es uno de los ecosistemas más amenazados del mundo y de Colombia. En Sevilla, las zonas de menor altitud de la vertiente oriental hacia el río Cauca y el valle geográfico albergan remanentes de este valioso ecosistema. Los actores que interactúan con él son múltiples y tienen intereses y capacidades muy distintas. Las entidades gubernamentales como la CVC, el Ministerio de Ambiente y las alcaldías tienen la responsabilidad legal de proteger estas áreas, elaborar planes de restauración y sancionar actividades ilegales como la tala y las quemas. Sin embargo, su presencia en el territorio no siempre es suficiente para cubrir toda la extensión de este ecosistema fragmentado. Las comunidades locales y las Juntas de Acción Comunal de las veredas ubicadas en la zona baja del municipio viven en contacto directo con el bosque seco y dependen de sus recursos para leña, madera y pastoreo. Son actores fundamentales cuyo conocimiento del territorio y cuya participación activa en los programas de restauración es indispensable. El sector avícola y ganadero, que ocupa grandes extensiones en la zona, representa una presión importante sobre el BST, ya que la expansión de galpones y potreros ha sido históricamente la causa principal de su deforestación. Sin embargo, algunos empresarios del sector han comenzado a incorporar prácticas de ganadería silvopastoril que permiten la recuperación de cobertura arbórea en sus predios. La participación de todos estos actores en diálogos de concertación es esencial para lograr la recuperación del BST en Sevilla.",
+  "importancia": "El bosque seco tropical en Colombia ha perdido más del 90% de su cobertura original, lo que lo convierte en uno de los ecosistemas más destruidos del país. Los fragmentos que quedan en municipios como Sevilla son refugios irremplazables para especies de flora y fauna adaptadas a condiciones de alta temperatura y sequía estacional. Además, el BST protege suelos altamente erosionables, regula microclimas locales y provee servicios como la polinización de cultivos en zonas bajas. Los actores que trabajan por su conservación —entidades del Estado, comunidades y sectores productivos responsables— están contribuyendo a salvar uno de los patrimonios naturales más únicos y escasos de Colombia.",
+  "preguntas_reflexivas": [
+    "¿Por qué crees que el bosque seco tropical ha perdido más del 90% de su cobertura en Colombia?",
+    "¿Cómo pueden las empresas avícolas y ganaderas cambiar sus prácticas para que sean más amigables con el bosque seco?",
+    "¿Qué papel tienen las Juntas de Acción Comunal en la protección de los fragmentos de bosque seco que quedan?",
+    "¿Qué pasaría con las aves y otros animales del bosque seco si los últimos fragmentos desaparecieran?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Bosque seco tropical",
+      "definicion": "Ecosistema forestal tropical caracterizado por una marcada estación seca de varios meses al año, en la que muchos árboles pierden sus hojas. Presente en zonas cálidas por debajo de los 1.000 metros de altitud."
+    },
+    {
+      "termino": "Ganadería silvopastoril",
+      "definicion": "Sistema de producción ganadera que combina pastos con árboles y arbustos en el mismo potrero, beneficiando tanto al ganado con sombra y alimento como al ecosistema con cobertura y biodiversidad."
+    },
+    {
+      "termino": "Fragmentación de hábitat",
+      "definicion": "División de un ecosistema continuo en parches aislados más pequeños, generalmente causada por actividades humanas como la agricultura, la ganadería o la construcción de vías."
+    },
+    {
+      "termino": "Concertación",
+      "definicion": "Proceso de diálogo y acuerdo entre diferentes actores con intereses distintos para llegar a decisiones colectivas sobre el manejo de un territorio o recurso natural."
+    },
+    {
+      "termino": "Restauración activa",
+      "definicion": "Estrategia de recuperación de ecosistemas degradados que implica intervenciones humanas directas como la siembra de plantas nativas y el control de especies invasoras."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Ara%C3%B1a_Bosque_Seco_Tropical.jpg",
+      "titulo": "Araña del bosque seco tropical colombiano",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/El_sabor_del_la_biodiversidad_del_bosque_seco_tropical_colombiano.jpg/1280px-El_sabor_del_la_biodiversidad_del_bosque_seco_tropical_colombiano.jpg",
+      "titulo": "Biodiversidad del bosque seco tropical colombiano",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ecoregion_NT0221.png",
+      "titulo": "Ecorregión de bosque seco tropical en Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "aDxuzcuJ0pQ",
+      "titulo": "Bosque seco tropical — Colombia"
+    },
+    {
+      "youtube_id": "aJlv-asAx8k",
+      "titulo": "Misión Ciencia: Bosque seco tropical"
+    }
+  ],
+  "fuente_datos": "Instituto Humboldt – Caracterización del Bosque Seco Tropical en Colombia; CVC – Inventario Ecosistemas Valle del Cauca; IDEAM – Mapa Ecosistemas Continentales 2017",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

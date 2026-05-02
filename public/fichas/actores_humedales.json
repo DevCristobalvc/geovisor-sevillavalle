@@ -11,13 +11,50 @@
     "¿De qué manera los jóvenes pueden participar en la conservación de estos ecosistemas?"
   ],
   "vocabulario": [
-    { "termino": "Actor social", "definicion": "Persona, grupo u organización que tiene intereses, conocimientos o acciones sobre un territorio o recurso natural." },
-    { "termino": "Humedal", "definicion": "Ecosistema donde el suelo está saturado de agua permanente o temporalmente, como pantanos, lagunas y ciénagas." },
-    { "termino": "ONG ambiental", "definicion": "Organización No Gubernamental dedicada a la conservación del medio ambiente, sin fines de lucro." },
-    { "termino": "Gestión ambiental participativa", "definicion": "Forma de tomar decisiones sobre el uso y conservación de recursos naturales involucrando a todas las comunidades afectadas." }
+    {
+      "termino": "Actor social",
+      "definicion": "Persona, grupo u organización que tiene intereses, conocimientos o acciones sobre un territorio o recurso natural."
+    },
+    {
+      "termino": "Humedal",
+      "definicion": "Ecosistema donde el suelo está saturado de agua permanente o temporalmente, como pantanos, lagunas y ciénagas."
+    },
+    {
+      "termino": "ONG ambiental",
+      "definicion": "Organización No Gubernamental dedicada a la conservación del medio ambiente, sin fines de lucro."
+    },
+    {
+      "termino": "Gestión ambiental participativa",
+      "definicion": "Forma de tomar decisiones sobre el uso y conservación de recursos naturales involucrando a todas las comunidades afectadas."
+    }
   ],
-  "galeria": [],
-  "videos": [],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Humedal_El_Chaparro_-_Ciudad_de_Neiva_%28Huila_-_Colombia%29.jpg/1280px-Humedal_El_Chaparro_-_Ciudad_de_Neiva_%28Huila_-_Colombia%29.jpg",
+      "titulo": "Humedal El Chaparro, Neiva, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/2017_Bogot%C3%A1_Santa_Mar%C3%ADa_del_Lago%2C_humedal.jpg/1280px-2017_Bogot%C3%A1_Santa_Mar%C3%ADa_del_Lago%2C_humedal.jpg",
+      "titulo": "Humedal Santa María del Lago, Bogotá",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2017_Bogot%C3%A1_folcha_en_el_humedal_Santa_Mar%C3%ADa_del_Lago.jpg/1280px-2017_Bogot%C3%A1_folcha_en_el_humedal_Santa_Mar%C3%ADa_del_Lago.jpg",
+      "titulo": "Ave folcha en humedal, Bogotá",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "JOVASN3AYJQ",
+      "titulo": "Avances en la conservación de los humedales en Colombia"
+    },
+    {
+      "youtube_id": "1aKJFhjEaPI",
+      "titulo": "Humedales: Guardianes del Agua y la Biodiversidad — TvAgro"
+    }
+  ],
   "fuente_datos": "CVC / Alcaldía de Sevilla — Actores ambientales Valle del Cauca",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

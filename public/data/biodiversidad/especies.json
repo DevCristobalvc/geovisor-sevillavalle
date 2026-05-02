@@ -1,0 +1,126 @@
+{
+  "type": "FeatureCollection",
+  "name": "Ocurrencias de Especies - Sevilla, Valle del Cauca",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.952, 4.288]
+      },
+      "properties": {
+        "nombre_cientifico": "Andigena hypoglauca",
+        "nombre_comun": "Pájaro Toche / Tucán andino",
+        "familia": "Ramphastidae",
+        "fecha_registro": "2023-07-14",
+        "fuente": "SiB Colombia - eBird",
+        "categoria_amenaza": "NT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.018, 4.341]
+      },
+      "properties": {
+        "nombre_cientifico": "Quercus humboldtii",
+        "nombre_comun": "Roble colombiano",
+        "familia": "Fagaceae",
+        "fecha_registro": "2023-05-22",
+        "fuente": "GBIF - Herbario Universidad del Valle",
+        "categoria_amenaza": "NT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.047, 4.408]
+      },
+      "properties": {
+        "nombre_cientifico": "Tapirus pinchaque",
+        "nombre_comun": "Danta de páramo",
+        "familia": "Tapiridae",
+        "fecha_registro": "2022-11-03",
+        "fuente": "CVC - Programa de Monitoreo de Fauna",
+        "categoria_amenaza": "EN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.031, 4.378]
+      },
+      "properties": {
+        "nombre_cientifico": "Tremarctos ornatus",
+        "nombre_comun": "Oso de anteojos",
+        "familia": "Ursidae",
+        "fecha_registro": "2023-02-18",
+        "fuente": "WCS Colombia - Cámaras trampa",
+        "categoria_amenaza": "VU"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.913, 4.231]
+      },
+      "properties": {
+        "nombre_cientifico": "Heliconia stricta",
+        "nombre_comun": "Heliconia",
+        "familia": "Heliconiaceae",
+        "fecha_registro": "2024-01-09",
+        "fuente": "GBIF - Jardin Botánico de Bogotá",
+        "categoria_amenaza": "LC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.003, 4.322]
+      },
+      "properties": {
+        "nombre_cientifico": "Podocarpus oleifolius",
+        "nombre_comun": "Pino colombiano / Chaquiro",
+        "familia": "Podocarpaceae",
+        "fecha_registro": "2023-08-30",
+        "fuente": "GBIF - Universidad Nacional de Colombia",
+        "categoria_amenaza": "NT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.978, 4.314]
+      },
+      "properties": {
+        "nombre_cientifico": "Pharomachrus auriceps",
+        "nombre_comun": "Quetzal cabecidorado",
+        "familia": "Trogonidae",
+        "fecha_registro": "2024-03-05",
+        "fuente": "SiB Colombia - eBird",
+        "categoria_amenaza": "LC"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.883, 4.218]
+      },
+      "properties": {
+        "nombre_cientifico": "Bromelia karatas",
+        "nombre_comun": "Piñuela",
+        "familia": "Bromeliaceae",
+        "fecha_registro": "2023-10-12",
+        "fuente": "GBIF - Herbario CVC",
+        "categoria_amenaza": "LC"
+      }
+    }
+  ]
+}

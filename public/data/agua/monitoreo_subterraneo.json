@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "name": "Monitoreo Aguas Subterráneas",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.934, 4.271]
+      },
+      "properties": {
+        "codigo": "vs-pm-1",
+        "profundidad": "45 m",
+        "nivel_freatico": "12.3 m bns (bajo nivel del suelo)",
+        "parametros_hidroquimicos": "Tipo hidroquímico: bicarbonatado cálcico. Dureza total: 187 mg/L CaCO3. Nitratos: 4.2 mg/L. Hierro total: 0.18 mg/L. Manganeso: 0.03 mg/L. Conductividad eléctrica: 312 µS/cm. Temperatura: 22.4°C. pH: 7.3."
+      }
+    }
+  ]
+}

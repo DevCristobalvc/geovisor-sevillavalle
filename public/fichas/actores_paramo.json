@@ -1,0 +1,64 @@
+{
+  "id": "actores_paramo",
+  "titulo": "Comunidades del Páramo",
+  "categoria": "actores",
+  "descripcion": "Los páramos de Chili-Barragán y Las Hermosas, ubicados en el municipio de Sevilla, Valle del Cauca, son ecosistemas de alta montaña que dependen tanto de sus condiciones naturales como de las comunidades humanas que los habitan y protegen. Entre los actores más importantes se encuentran las comunidades indígenas Embera, quienes han convivido históricamente con estos territorios y poseen saberes ancestrales sobre el manejo del agua, las plantas medicinales y los ciclos ecológicos del páramo. Su visión de la naturaleza como un ser vivo y sagrado contrasta con, pero complementa, las perspectivas técnicas de conservación. Junto a ellos, los campesinos y agricultores de las veredas aledañas practican una agricultura de subsistencia y cultivo de papa, cebolla y ganadería extensiva a menor escala, actividades que históricamente han generado presión sobre estos frágiles ecosistemas pero que hoy muchos de ellos buscan transformar hacia prácticas más sostenibles. Las Juntas de Acción Comunal (JAC) son organizaciones comunitarias de base que juegan un papel clave en la coordinación de proyectos de restauración, la gestión del acueducto veredal y la articulación con entidades como la CVC (Corporación Autónoma Regional del Valle del Cauca). Estas comunidades son fundamentales para garantizar que las decisiones sobre el páramo consideren el conocimiento local y los derechos territoriales de quienes lo han cuidado por generaciones.",
+  "importancia": "Los páramos de Chili-Barragán y Las Hermosas son las principales fuentes de agua para el municipio de Sevilla y los municipios vecinos. Proteger estos ecosistemas es, ante todo, proteger el agua que bebemos. Las comunidades que habitan y trabajan cerca del páramo son las primeras guardianas de este recurso vital. Cuando estas comunidades reciben apoyo, formación y reconocimiento, el páramo se conserva mejor. Los saberes indígenas Embera sobre el manejo del territorio, sumados a las prácticas agroecológicas de los campesinos y la organización comunitaria de las JAC, crean un tejido social robusto capaz de responder ante incendios, tala ilegal y los efectos del cambio climático. Sin la participación activa y el bienestar de estas comunidades, ninguna política de conservación puede tener éxito duradero.",
+  "preguntas_reflexivas": [
+    "¿Por qué es importante que las comunidades indígenas y campesinas participen en las decisiones sobre el cuidado del páramo?",
+    "¿Qué saberes ancestrales de los Embera podrían ser útiles para la conservación del ecosistema de páramo?",
+    "¿Cómo puede una Junta de Acción Comunal ayudar a proteger las fuentes de agua de su vereda?",
+    "¿Qué conflictos pueden surgir entre las actividades agrícolas y la conservación del páramo, y cómo podrían resolverse?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Páramo",
+      "definicion": "Ecosistema de alta montaña ubicado entre los 3.000 y 4.200 metros sobre el nivel del mar, caracterizado por su clima frío, vegetación de frailejones y su enorme capacidad de almacenar y regular el agua."
+    },
+    {
+      "termino": "Junta de Acción Comunal (JAC)",
+      "definicion": "Organización comunitaria de participación ciudadana conformada por vecinos de una misma vereda o barrio, que trabajan juntos para gestionar proyectos y solucionar problemas comunes."
+    },
+    {
+      "termino": "Saberes ancestrales",
+      "definicion": "Conocimientos tradicionales transmitidos de generación en generación por comunidades indígenas y campesinas sobre el manejo del territorio, las plantas, los animales y los ciclos naturales."
+    },
+    {
+      "termino": "CVC",
+      "definicion": "Corporación Autónoma Regional del Valle del Cauca. Entidad oficial encargada de gestionar, proteger y administrar los recursos naturales y el medio ambiente en el departamento del Valle del Cauca."
+    },
+    {
+      "termino": "Restauración ecológica",
+      "definicion": "Proceso mediante el cual se ayuda a recuperar un ecosistema degradado o destruido, sembrando plantas nativas, controlando especies invasoras y reduciendo las presiones humanas sobre el ambiente."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Frailejones_Sumapaz_P%C3%A1ramo%2CColombia.jpg/1280px-Frailejones_Sumapaz_P%C3%A1ramo%2CColombia.jpg",
+      "titulo": "Frailejones en el Páramo de Sumapaz, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Frailejones_in_Chingaza_National_Park_1.jpg/1280px-Frailejones_in_Chingaza_National_Park_1.jpg",
+      "titulo": "Frailejones en el Parque Nacional Chingaza",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/P%C3%A1ramo_del_Consuelo_6%2C_Boyac%C3%A1%2C_Colombia.jpg/1280px-P%C3%A1ramo_del_Consuelo_6%2C_Boyac%C3%A1%2C_Colombia.jpg",
+      "titulo": "Páramo del Consuelo, Boyacá, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "IGOkd9YuFWM",
+      "titulo": "El Instituto Humboldt y el estudio de los páramos colombianos"
+    },
+    {
+      "youtube_id": "pcANXhbAQZM",
+      "titulo": "En peligro, los páramos colombianos — Telemundo"
+    }
+  ],
+  "fuente_datos": "CVC – Plan de Manejo Páramo Las Hermosas; IDEAM – Atlas Páramos de Colombia; IGAC – Cartografía social municipal Sevilla 2022",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}

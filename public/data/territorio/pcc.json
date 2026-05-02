@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "name": "Paisaje Cultural Cafetero - Sevilla",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.838, 4.183],
+            [-75.852, 4.191],
+            [-75.869, 4.198],
+            [-75.886, 4.208],
+            [-75.901, 4.221],
+            [-75.918, 4.235],
+            [-75.932, 4.248],
+            [-75.944, 4.261],
+            [-75.953, 4.274],
+            [-75.960, 4.288],
+            [-75.963, 4.302],
+            [-75.961, 4.316],
+            [-75.956, 4.321],
+            [-75.942, 4.318],
+            [-75.927, 4.312],
+            [-75.910, 4.304],
+            [-75.893, 4.294],
+            [-75.877, 4.282],
+            [-75.861, 4.268],
+            [-75.847, 4.252],
+            [-75.836, 4.235],
+            [-75.831, 4.218],
+            [-75.832, 4.201],
+            [-75.838, 4.183]
+          ]
+        ]
+      },
+      "properties": {
+        "categoria": "Zona Principal",
+        "area_ha": 28450.0,
+        "anno_declaracion": 2011,
+        "bienes_culturales": "Fincas cafeteras tradicionales, arquitectura bahareque, trapiches, beneficiaderos de café, caminos reales, poblado histórico de Sevilla"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-75.812, 4.163],
+            [-75.828, 4.171],
+            [-75.844, 4.178],
+            [-75.862, 4.183],
+            [-75.838, 4.183],
+            [-75.832, 4.201],
+            [-75.831, 4.218],
+            [-75.836, 4.235],
+            [-75.847, 4.252],
+            [-75.861, 4.268],
+            [-75.877, 4.282],
+            [-75.893, 4.294],
+            [-75.910, 4.304],
+            [-75.927, 4.312],
+            [-75.942, 4.318],
+            [-75.956, 4.321],
+            [-75.963, 4.316],
+            [-75.966, 4.328],
+            [-75.968, 4.342],
+            [-75.964, 4.355],
+            [-75.952, 4.362],
+            [-75.936, 4.361],
+            [-75.918, 4.356],
+            [-75.899, 4.348],
+            [-75.880, 4.337],
+            [-75.862, 4.324],
+            [-75.844, 4.309],
+            [-75.827, 4.293],
+            [-75.812, 4.275],
+            [-75.800, 4.256],
+            [-75.793, 4.236],
+            [-75.791, 4.215],
+            [-75.795, 4.195],
+            [-75.804, 4.178],
+            [-75.812, 4.163]
+          ]
+        ]
+      },
+      "properties": {
+        "categoria": "Zona de Amortiguación",
+        "area_ha": 51230.0,
+        "anno_declaracion": 2011,
+        "bienes_culturales": "Zona de transición paisajística, ganadería extensiva, cultivos de pancoger, bosques fragmentados, corredores biológicos entre zona cafetera y páramo"
+      }
+    }
+  ]
+}

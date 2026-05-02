@@ -1,0 +1,64 @@
+{
+  "id": "biodiversidad_areas_protegidas",
+  "titulo": "Áreas Protegidas del Municipio",
+  "categoria": "biodiversidad",
+  "descripcion": "Las áreas protegidas son zonas del territorio delimitadas y reguladas legalmente para conservar la naturaleza y los servicios que esta presta a la sociedad. En el municipio de Sevilla existen varias categorías de áreas protegidas de gran importancia. La más extensa es la Reserva Forestal Protectora-Productora de la Cuenca Alta del Río Cauca, declarada por la Ley 2ª de 1959, que abarca grandes extensiones de los Andes colombianos y busca mantener los bosques andinos para proteger las cuencas que abastecen de agua a millones de colombianos. En esta zona, el aprovechamiento forestal comercial está restringido y la actividad principal debe ser la conservación y el uso sostenible del bosque. Dentro o en zonas aledañas al municipio también se encuentran Distritos Regionales de Manejo Integrado (DRMI), categorías declaradas por las Corporaciones Autónomas Regionales como la CVC para proteger ecosistemas estratégicos a nivel regional. En un DRMI se permiten algunas actividades productivas sostenibles, pero bajo restricciones orientadas a mantener la integridad del ecosistema. Las áreas protegidas cumplen múltiples funciones: protegen las fuentes de agua de los acueductos, conservan hábitats para la vida silvestre, secuestran carbono y proveen a las comunidades oportunidades para el ecoturismo y la educación ambiental. Su administración efectiva requiere del compromiso de los propietarios de los predios, las comunidades, la CVC y las autoridades municipales.",
+  "importancia": "Las áreas protegidas de Sevilla son el corazón verde del municipio. Sin ellas, la deforestación y la expansión agrícola habrían eliminado los últimos reductos de ecosistemas naturales que garantizan el agua, la biodiversidad y el equilibrio climático local. La Reserva Forestal Ley 2ª/1959 protege desde hace más de seis décadas los bosques andinos de los que depende el suministro de agua para toda la región. Los DRMI complementan esta protección en zonas de alta importancia ecológica. Conocer los límites, las normas y la importancia de estas áreas es un derecho y una responsabilidad de todos los ciudadanos de Sevilla.",
+  "preguntas_reflexivas": [
+    "¿Por qué se necesitan leyes y normas para proteger las áreas naturales, en lugar de depender solo de la voluntad de los propietarios?",
+    "¿Qué actividades crees que deberían estar permitidas y cuáles prohibidas dentro de una reserva forestal?",
+    "¿Cómo puede una comunidad escolar visitar y aprender de un área protegida de manera responsable?",
+    "¿Qué pasaría con el agua de Sevilla si se eliminara la protección de la Reserva Forestal Ley 2ª/1959?"
+  ],
+  "vocabulario": [
+    {
+      "termino": "Reserva forestal",
+      "definicion": "Área de terreno cubierta de bosque que el Estado declara y regula para proteger los recursos forestales, el agua y la biodiversidad. Puede ser de protección estricta o de uso sostenible según su categoría."
+    },
+    {
+      "termino": "Ley 2ª de 1959",
+      "definicion": "Primera ley forestal de Colombia que declaró siete grandes zonas de reserva forestal en el país para proteger los bosques andinos y tropicales, incluyendo la cuenca alta del río Cauca que atraviesa el municipio de Sevilla."
+    },
+    {
+      "termino": "DRMI (Distrito Regional de Manejo Integrado)",
+      "definicion": "Área protegida de carácter regional, declarada por las Corporaciones Autónomas Regionales, que permite el uso sostenible de los recursos naturales bajo normas de manejo que protegen los ecosistemas estratégicos."
+    },
+    {
+      "termino": "Ecoturismo",
+      "definicion": "Forma de turismo responsable hacia áreas naturales que conserva el ambiente, minimiza el impacto negativo y genera beneficios económicos para las comunidades locales, contribuyendo a la conservación."
+    },
+    {
+      "termino": "Secuestro de carbono",
+      "definicion": "Proceso mediante el cual los bosques absorben y almacenan dióxido de carbono (CO₂) de la atmósfera a través de la fotosíntesis, contribuyendo a reducir el efecto invernadero y el cambio climático."
+    }
+  ],
+  "galeria": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Landscape_Parque_Nacional_Natural_Tayrona.jpg/1280px-Landscape_Parque_Nacional_Natural_Tayrona.jpg",
+      "titulo": "Paisaje del Parque Nacional Natural Tayrona",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Sulfur_mining_truck_-_Parque_Nacional_Natural_Purac%C3%A9_04.jpg/1280px-Sulfur_mining_truck_-_Parque_Nacional_Natural_Purac%C3%A9_04.jpg",
+      "titulo": "Parque Nacional Natural Puracé, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Selva_h%C3%BAmeda_tropical_de_Guapi.jpg/1280px-Selva_h%C3%BAmeda_tropical_de_Guapi.jpg",
+      "titulo": "Selva húmeda tropical de Guapi, Colombia",
+      "credito": "CC-BY-SA Wikimedia Commons"
+    }
+  ],
+  "videos": [
+    {
+      "youtube_id": "fR9ZEtrp-M0",
+      "titulo": "Sistema Nacional de Áreas Protegidas — SINAP"
+    },
+    {
+      "youtube_id": "DP6tAv18ZHA",
+      "titulo": "Parques Nacionales Naturales de Colombia"
+    }
+  ],
+  "fuente_datos": "Ley 2ª de 1959; CVC – Registro de Áreas Protegidas Valle del Cauca; RUNAP – Registro Único Nacional de Áreas Protegidas; IDEAM – Mapa de Áreas Protegidas Colombia",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
+}
