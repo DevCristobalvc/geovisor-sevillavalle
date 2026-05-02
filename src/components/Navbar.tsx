@@ -1,6 +1,8 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useOffline } from '../hooks/useOffline'
+
+// ─── Geocoder ────────────────────────────────────────────────────────────────
 
 interface NominatimResult {
   lat: string
@@ -18,7 +20,10 @@ function GeoSearch() {
   const search = (q: string) => {
     setQuery(q)
     if (debounceRef.current) clearTimeout(debounceRef.current)
-    if (q.trim().length < 3) { setResults([]); return }
+    if (q.trim().length < 3) {
+      setResults([])
+      return
+    }
 
     debounceRef.current = setTimeout(async () => {
       setSearching(true)
@@ -80,34 +85,88 @@ function GeoSearch() {
   )
 }
 
+// ─── Navbar ───────────────────────────────────────────────────────────────────
+
+const NAV_LINKS = [
+  { to: '/', label: 'Inicio' },
+  { to: '/visor', label: 'Visor' },
+  { to: '/recorridos', label: 'Recorridos' },
+  { to: '/glosario', label: 'Glosario' },
+  { to: '/guia', label: 'Guía' },
+]
+
 export default function Navbar() {
   const isOffline = useOffline()
   const { pathname } = useLocation()
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  // Close menu when route changes
+  useEffect(() => {
+    setMobileOpen(false)
+  }, [pathname])
+
+  // Close on Escape
+  useEffect(() => {
+    if (!mobileOpen) return
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileOpen(false)
+    }
+    document.addEventListener('keydown', handler)
+    return () => document.removeEventListener('keydown', handler)
+  }, [mobileOpen])
+
+  // Close on outside click
+  useEffect(() => {
+    if (!mobileOpen) return
+    const handler = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMobileOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [mobileOpen])
 
   return (
     <header
-      className="flex items-center justify-between px-4 bg-verde-bosque text-white shadow-md z-50"
+      ref={menuRef}
+      className="relative flex items-center justify-between px-4 bg-verde-bosque text-white shadow-md z-50"
       style={{ height: 'var(--header-height)', minHeight: 'var(--header-height)' }}
     >
+      {/* Logo */}
       <div className="flex items-center gap-3">
         <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <div className="w-8 h-8 bg-verde-claro rounded-full flex items-center justify-center text-verde-bosque font-bold text-sm" aria-hidden="true">
-            G
-          </div>
+          <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-shrink-0" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="#52B788" />
+            <path
+              d="M16 5C11.58 5 8 8.58 8 13c0 5.5 6.5 12.5 7.5 13.6a.65.65 0 001 0C17.5 25.5 24 20.5 24 13c0-4.42-3.58-8-8-8z"
+              fill="#2D6A4F"
+            />
+            <circle cx="16" cy="13" r="3.2" fill="#52B788" />
+            <circle cx="16" cy="13" r="1.4" fill="#2D6A4F" />
+          </svg>
           <div className="hidden sm:block">
-            <div className="font-bold text-sm leading-tight">Geovisor Ecopedagógico</div>
-            <div className="text-xs text-verde-palido leading-tight">Sevilla, Valle del Cauca</div>
+            <div className="font-bold text-sm leading-tight tracking-tight">
+              Geovisor Ecopedagógico
+            </div>
+            <div className="text-xs text-verde-palido/80 leading-tight">
+              Sevilla, Valle del Cauca
+            </div>
           </div>
         </Link>
       </div>
 
-      <nav className="flex items-center gap-1" aria-label="Navegación principal">
-        <NavLink to="/visor" current={pathname}>Visor</NavLink>
-        <NavLink to="/recorridos" current={pathname}>Recorridos</NavLink>
-        <NavLink to="/glosario" current={pathname}>Glosario</NavLink>
-        <NavLink to="/guia" current={pathname}>Guía</NavLink>
+      {/* Desktop nav */}
+      <nav className="hidden md:flex items-center gap-1" aria-label="Navegación principal">
+        {NAV_LINKS.map(({ to, label }) => (
+          <NavLink key={to} to={to} current={pathname}>
+            {label}
+          </NavLink>
+        ))}
       </nav>
 
+      {/* Right side */}
       <div className="flex items-center gap-2">
         <GeoSearch />
         {isOffline && (
@@ -124,21 +183,101 @@ export default function Navbar() {
         >
           GeoCVC ↗
         </a>
+
+        {/* Hamburger button — mobile only */}
+        <button
+          onClick={() => setMobileOpen(v => !v)}
+          aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={mobileOpen}
+          className="md:hidden p-2 rounded hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="w-5 h-5"
+          >
+            {mobileOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile dropdown */}
+      <div
+        className="absolute top-full left-0 right-0 bg-verde-bosque border-t border-white/10 shadow-lg z-40 overflow-hidden md:hidden"
+        style={{
+          maxHeight: mobileOpen ? '320px' : '0',
+          transition: 'max-height 0.3s ease',
+        }}
+        aria-hidden={!mobileOpen}
+      >
+        <nav className="flex flex-col py-2 px-4" aria-label="Navegación móvil">
+          {NAV_LINKS.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              aria-current={
+                (to === '/' ? pathname === '/' : pathname.startsWith(to)) ? 'page' : undefined
+              }
+              className={`py-3 px-2 text-sm font-medium border-b border-white/10 last:border-0 transition-colors ${
+                (to === '/' ? pathname === '/' : pathname.startsWith(to))
+                  ? 'text-verde-claro font-semibold'
+                  : 'text-white/80 hover:text-white'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+          {/* Mobile geocoder */}
+          <div className="py-3">
+            <input
+              type="search"
+              placeholder="Buscar lugar en el mapa..."
+              aria-label="Buscar lugar en el mapa"
+              onChange={e => {
+                if (e.target.value.length >= 3) {
+                  // Reuse same search logic via event — navigation happens in visor
+                  window.dispatchEvent(
+                    new CustomEvent('mobileGeoSearch', { detail: e.target.value })
+                  )
+                }
+              }}
+              className="w-full bg-white/15 text-white placeholder-white/50 border border-white/20 rounded px-3 py-2 text-sm focus:outline-none focus:bg-white/25"
+            />
+          </div>
+        </nav>
       </div>
     </header>
   )
 }
 
-function NavLink({ to, current, children }: { to: string; current: string; children: React.ReactNode }) {
-  const isActive = current.startsWith(to)
+function NavLink({
+  to,
+  current,
+  children,
+}: {
+  to: string
+  current: string
+  children: React.ReactNode
+}) {
+  const isActive = to === '/' ? current === '/' : current.startsWith(to)
   return (
     <Link
       to={to}
       aria-current={isActive ? 'page' : undefined}
-      className={`px-3 py-1.5 rounded text-sm transition-colors ${
+      className={`px-3 py-1.5 rounded text-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${
         isActive
-          ? 'bg-verde-claro text-verde-bosque font-semibold'
-          : 'text-verde-palido hover:bg-verde-bosque/80 hover:text-white'
+          ? 'bg-white/15 text-white font-semibold border-b-2 border-verde-claro rounded-b-none'
+          : 'text-verde-palido/90 hover:bg-white/10 hover:text-white'
       }`}
     >
       {children}

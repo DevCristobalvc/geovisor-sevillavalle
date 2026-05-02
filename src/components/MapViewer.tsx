@@ -52,6 +52,8 @@ export default function MapViewer({
       <MapEventSync />
       <CoordinatesDisplay />
       <PopupEscapeController />
+      <ScaleControl />
+      <ResetViewController />
       {flyTarget && <FlyController target={flyTarget} />}
       <SearchController />
       <MeasurementController active={isMeasuring} onClear={onMeasureClear ?? (() => {})} />
@@ -255,6 +257,28 @@ function PopupEscapeController() {
   return null
 }
 
+function ScaleControl() {
+  const map = useMap()
+  useEffect(() => {
+    const scale = L.control.scale({ imperial: false, position: 'bottomleft' })
+    scale.addTo(map)
+    return () => {
+      scale.remove()
+    }
+  }, [map])
+  return null
+}
+
+function ResetViewController() {
+  const map = useMap()
+  useEffect(() => {
+    const handler = () => map.flyTo(SEVILLA_CENTER, SEVILLA_DEFAULT_ZOOM, { duration: 1.2 })
+    window.addEventListener('mapResetView', handler)
+    return () => window.removeEventListener('mapResetView', handler)
+  }, [map])
+  return null
+}
+
 function MeasurementController({ active, onClear }: { active: boolean; onClear: () => void }) {
   const map = useMap()
   const groupRef = useRef<L.LayerGroup | null>(null)
@@ -359,7 +383,18 @@ function MeasurementController({ active, onClear }: { active: boolean; onClear: 
           className="text-red-500 hover:text-red-700 font-medium text-xs focus-visible:ring-2 focus-visible:ring-red-500 rounded"
           aria-label="Limpiar medición y salir"
         >
-          Limpiar ✕
+          <span className="flex items-center gap-1">
+            Limpiar
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="w-3.5 h-3.5"
+            >
+              <path strokeLinecap="round" d="M4 4l8 8M12 4l-8 8" />
+            </svg>
+          </span>
         </button>
       </div>
     </div>

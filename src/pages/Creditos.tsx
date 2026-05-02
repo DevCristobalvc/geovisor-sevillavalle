@@ -1,12 +1,19 @@
 export default function Creditos() {
   return (
     <main className="overflow-y-auto h-full bg-gris-claro">
-      <div className="max-w-3xl mx-auto px-6 py-8">
-        <h1 className="text-2xl font-bold text-verde-bosque mb-2">Créditos y Fuentes</h1>
-        <p className="text-sm text-gray-500 mb-8">
-          Este geovisor es un proyecto de grado de la Universidad Santiago de Cali.
-        </p>
+      <div className="bg-verde-bosque text-white px-6 py-8">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-verde-palido/70 text-xs font-medium uppercase tracking-widest mb-1">
+            Geovisor Ecopedagógico
+          </p>
+          <h1 className="text-2xl font-bold leading-tight mb-2">Créditos y Fuentes</h1>
+          <p className="text-verde-palido/80 text-sm">
+            Proyecto de grado · Universidad Santiago de Cali
+          </p>
+        </div>
+      </div>
 
+      <div className="max-w-3xl mx-auto px-6 py-8">
         <div className="space-y-6">
           <section className="bg-white rounded-xl p-5 shadow-sm">
             <h2 className="font-bold text-base text-gris-texto mb-3">Equipo de desarrollo</h2>
@@ -23,19 +30,22 @@ export default function Creditos() {
           </section>
 
           <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-3">Fuentes de datos geoespaciales</h2>
+            <h2 className="font-bold text-base text-gris-texto mb-3">
+              Fuentes de datos geoespaciales
+            </h2>
             <ul className="space-y-2 text-sm text-gris-texto font-pedagogica">
               <li>
-                <strong>IGAC</strong> — Instituto Geográfico Agustín Codazzi. División político-administrativa,
-                cobertura del suelo, conflictos de uso, zonificación forestal, pisos térmicos.
+                <strong>IGAC</strong> — Instituto Geográfico Agustín Codazzi. División
+                político-administrativa, cobertura del suelo, conflictos de uso, zonificación
+                forestal, pisos térmicos.
               </li>
               <li>
                 <strong>CVC</strong> — Corporación Autónoma Regional del Valle del Cauca. Cuencas
                 hidrográficas, ecosistemas, red hídrica, estaciones hidroclimatológicas.
               </li>
               <li>
-                <strong>IDEAM</strong> — Instituto de Hidrología, Meteorología y Estudios Ambientales.
-                Isoyetas de precipitación, datos climáticos históricos.
+                <strong>IDEAM</strong> — Instituto de Hidrología, Meteorología y Estudios
+                Ambientales. Isoyetas de precipitación, datos climáticos históricos.
               </li>
               <li>
                 <strong>SiB Colombia / GBIF</strong> — Sistema de Información sobre Biodiversidad de
@@ -64,21 +74,23 @@ export default function Creditos() {
           </section>
 
           <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-3">Imágenes y contenido multimedia</h2>
+            <h2 className="font-bold text-base text-gris-texto mb-3">
+              Imágenes y contenido multimedia
+            </h2>
             <p className="text-sm text-gris-texto font-pedagogica">
               Las imágenes utilizadas en las fichas pedagógicas provienen de{' '}
-              <strong>Wikimedia Commons</strong> bajo licencias Creative Commons.
-              Los créditos individuales se especifican en cada ficha pedagógica.
-              Los videos referenciados pertenecen a sus respectivos canales de YouTube.
+              <strong>Wikimedia Commons</strong> bajo licencias Creative Commons. Los créditos
+              individuales se especifican en cada ficha pedagógica. Los videos referenciados
+              pertenecen a sus respectivos canales de YouTube.
             </p>
           </section>
 
           <section className="bg-white rounded-xl p-5 shadow-sm">
             <h2 className="font-bold text-base text-gris-texto mb-3">Licencia</h2>
             <p className="text-sm text-gris-texto font-pedagogica">
-              El código fuente de esta aplicación está disponible bajo licencia{' '}
-              <strong>MIT</strong>. Los datos geoespaciales son propiedad de sus respectivas
-              fuentes institucionales y están sujetos a sus propias políticas de uso.
+              El código fuente de esta aplicación está disponible bajo licencia <strong>MIT</strong>
+              . Los datos geoespaciales son propiedad de sus respectivas fuentes institucionales y
+              están sujetos a sus propias políticas de uso.
             </p>
           </section>
         </div>

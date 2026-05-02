@@ -93,48 +93,42 @@ export default function Visor() {
         highlightCategoria={searchParams.get('categoria')}
       />
 
-      {/* Área del mapa */}
-      <div
-        className="flex-1 relative transition-all duration-300"
-        style={{ marginLeft: panelCollapsed ? 0 : 'var(--panel-width)', height: '100%' }}
-      >
-        <MapViewer
-          onFeatureClick={(_feature, layer) => setFichaAbierta(layer.fichaId)}
-          flyTarget={
-            currentParada
-              ? { lat: currentParada.lat, lng: currentParada.lng, zoom: currentParada.zoom }
-              : null
-          }
-          isMeasuring={isMeasuring}
-          onMeasureClear={() => setIsMeasuring(false)}
-        />
-        <MapToolbar
-          panelCollapsed={panelCollapsed}
-          onTogglePanel={() => setPanelCollapsed(v => !v)}
-          isMeasuring={isMeasuring}
-          onToggleMeasure={() => setIsMeasuring(v => !v)}
-          onExportPNG={handleExportPNG}
-          isFeatureSearchOpen={isFeatureSearchOpen}
-          onToggleFeatureSearch={() => setIsFeatureSearchOpen(v => !v)}
-        />
+      <MapViewer
+        onFeatureClick={(_feature, layer) => setFichaAbierta(layer.fichaId)}
+        flyTarget={
+          currentParada
+            ? { lat: currentParada.lat, lng: currentParada.lng, zoom: currentParada.zoom }
+            : null
+        }
+        isMeasuring={isMeasuring}
+        onMeasureClear={() => setIsMeasuring(false)}
+      />
+      <MapToolbar
+        panelCollapsed={panelCollapsed}
+        onTogglePanel={() => setPanelCollapsed(v => !v)}
+        isMeasuring={isMeasuring}
+        onToggleMeasure={() => setIsMeasuring(v => !v)}
+        onExportPNG={handleExportPNG}
+        isFeatureSearchOpen={isFeatureSearchOpen}
+        onToggleFeatureSearch={() => setIsFeatureSearchOpen(v => !v)}
+      />
 
-        {/* Feature search panel */}
-        <FeatureSearchPanel
-          isOpen={isFeatureSearchOpen}
-          onClose={() => setIsFeatureSearchOpen(false)}
-        />
+      {/* Feature search panel */}
+      <FeatureSearchPanel
+        isOpen={isFeatureSearchOpen}
+        onClose={() => setIsFeatureSearchOpen(false)}
+      />
 
-        {/* Recorrido HUD */}
-        {recorrido && (
-          <RecorridoHUD
-            recorrido={recorrido}
-            paradaIndex={paradaIndex}
-            onPrev={() => setParadaIndex(i => Math.max(0, i - 1))}
-            onNext={() => setParadaIndex(i => Math.min(recorrido.paradas.length - 1, i + 1))}
-            onExit={exitRecorrido}
-          />
-        )}
-      </div>
+      {/* Recorrido HUD */}
+      {recorrido && (
+        <RecorridoHUD
+          recorrido={recorrido}
+          paradaIndex={paradaIndex}
+          onPrev={() => setParadaIndex(i => Math.max(0, i - 1))}
+          onNext={() => setParadaIndex(i => Math.min(recorrido.paradas.length - 1, i + 1))}
+          onExit={exitRecorrido}
+        />
+      )}
 
       {/* Panel de ficha pedagógica */}
       <InfoPanel fichaId={fichaAbierta} onClose={() => setFichaAbierta(null)} />
