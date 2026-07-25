@@ -131,26 +131,57 @@ export default function Navbar() {
   return (
     <header
       ref={menuRef}
-      className="relative flex items-center justify-between px-4 bg-verde-bosque text-white shadow-md z-50"
-      style={{ height: 'var(--header-height)', minHeight: 'var(--header-height)' }}
+      className="relative flex items-center justify-between px-4 text-white z-50"
+      style={{
+        height: 'var(--header-height)',
+        minHeight: 'var(--header-height)',
+        background: 'linear-gradient(90deg, #0c1c14 0%, #123526 100%)',
+        borderBottom: '1px solid rgba(82,183,136,0.22)',
+        boxShadow: '0 1px 12px rgba(0,0,0,0.25)',
+      }}
     >
       {/* Logo */}
       <div className="flex items-center gap-3">
-        <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
-          <svg viewBox="0 0 32 32" fill="none" className="w-8 h-8 flex-shrink-0" aria-hidden="true">
-            <rect width="32" height="32" rx="7" fill="#52B788" />
+        <Link to="/" className="flex items-center gap-2.5 hover:opacity-90 transition-opacity">
+          <svg viewBox="0 0 32 32" fill="none" className="w-9 h-9 flex-shrink-0" aria-hidden="true">
+            <defs>
+              <linearGradient
+                id="logoGrad"
+                x1="0"
+                y1="0"
+                x2="32"
+                y2="32"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#52B788" />
+                <stop offset="1" stopColor="#2D6A4F" />
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            {/* Capas apiladas (glifo GIS) */}
+            <path d="M16 6l8 4-8 4-8-4 8-4z" fill="#fff" />
             <path
-              d="M16 5C11.58 5 8 8.58 8 13c0 5.5 6.5 12.5 7.5 13.6a.65.65 0 001 0C17.5 25.5 24 20.5 24 13c0-4.42-3.58-8-8-8z"
-              fill="#2D6A4F"
+              d="M8 14l8 4 8-4"
+              stroke="#fff"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              opacity="0.9"
             />
-            <circle cx="16" cy="13" r="3.2" fill="#52B788" />
-            <circle cx="16" cy="13" r="1.4" fill="#2D6A4F" />
+            <path
+              d="M8 18l8 4 8-4"
+              stroke="#fff"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              opacity="0.6"
+            />
           </svg>
           <div className="hidden sm:block">
             <div className="font-bold text-sm leading-tight tracking-tight">
               Geovisor Ecopedagógico
             </div>
-            <div className="text-xs text-verde-palido/80 leading-tight">
+            <div className="text-[11px] text-verde-claro/80 leading-tight tracking-wide">
               Sevilla, Valle del Cauca
             </div>
           </div>
@@ -213,10 +244,11 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       <div
-        className="absolute top-full left-0 right-0 bg-verde-bosque border-t border-white/10 shadow-lg z-40 overflow-hidden md:hidden"
+        className="absolute top-full left-0 right-0 border-t border-white/10 shadow-lg z-40 overflow-hidden md:hidden"
         style={{
           maxHeight: mobileOpen ? '320px' : '0',
           transition: 'max-height 0.3s ease',
+          background: 'linear-gradient(90deg, #0c1c14 0%, #123526 100%)',
         }}
         aria-hidden={!mobileOpen}
       >
