@@ -10,6 +10,9 @@ import type { Categoria } from '../types'
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
+const HERO_IMG =
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/View_of_Salento%2C_Colombia_01.jpg/1600px-View_of_Salento%2C_Colombia_01.jpg'
+
 const CAROUSEL_SLIDES = [
   {
     url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/View_of_Salento%2C_Colombia_01.jpg/1280px-View_of_Salento%2C_Colombia_01.jpg',
@@ -44,11 +47,17 @@ const CAROUSEL_SLIDES = [
 ]
 
 const STATS = [
-  { value: 22, label: 'capas geográficas', suffix: '' },
-  { value: 23, label: 'fichas pedagógicas', suffix: '' },
-  { value: 6, label: 'categorías temáticas', suffix: '' },
-  { value: 4, label: 'recorridos guiados', suffix: '' },
+  { value: 23, label: 'capas geográficas' },
+  { value: 23, label: 'fichas pedagógicas' },
+  { value: 6, label: 'categorías temáticas' },
+  { value: 3, label: 'recorridos guiados' },
 ]
+
+// Instituciones que proveen los geoservicios / datos oficiales
+const FUENTES = ['CVC', 'IGAC', 'IDEAM', 'Humboldt', 'RUNAP', 'GBIF', 'OpenStreetMap']
+
+// Sellos de plataforma (bajo los CTA del hero)
+const PLATAFORMA = ['Sin instalación', 'Funciona sin conexión', 'Datos abiertos oficiales']
 
 const CAPABILITIES = [
   {
@@ -64,7 +73,7 @@ const CAPABILITIES = [
         <path d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
       </svg>
     ),
-    titulo: 'Explora 22 capas geográficas',
+    titulo: 'Explora 23 capas geográficas',
     desc: 'Activa, combina y ajusta capas de agua, biodiversidad, territorio, clima, suelos y actores sociales del municipio.',
   },
   {
@@ -82,7 +91,7 @@ const CAPABILITIES = [
       </svg>
     ),
     titulo: 'Sigue recorridos guiados',
-    desc: '4 itinerarios temáticos que llevan al estudiante por los puntos más relevantes del territorio con narración contextual.',
+    desc: '3 itinerarios temáticos que llevan al estudiante por los puntos más relevantes del territorio con narración contextual.',
   },
   {
     icon: (
@@ -251,7 +260,7 @@ function AnimatedHeadline() {
       {words.map((word, i) => (
         <span
           key={i}
-          className="hero-word block"
+          className={`hero-word block ${i === words.length - 1 ? 'text-hero-gradient' : ''}`}
           style={
             show
               ? {
@@ -269,6 +278,42 @@ function AnimatedHeadline() {
   )
 }
 
+// ─── Fondo de curvas de nivel (topográfico) ──────────────────────────────────
+
+function ContourBackdrop() {
+  return (
+    <svg
+      className="absolute inset-0 w-full h-full animate-float-slow"
+      viewBox="0 0 1440 820"
+      preserveAspectRatio="xMidYMid slice"
+      aria-hidden="true"
+    >
+      <g fill="none" stroke="#52B788" strokeOpacity="0.12" strokeWidth="1.1">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <ellipse
+            key={`a${i}`}
+            cx="360"
+            cy="300"
+            rx={55 + i * 52}
+            ry={38 + i * 34}
+            transform="rotate(-18 360 300)"
+          />
+        ))}
+        {Array.from({ length: 7 }).map((_, i) => (
+          <ellipse
+            key={`b${i}`}
+            cx="1120"
+            cy="580"
+            rx={68 + i * 58}
+            ry={46 + i * 40}
+            transform="rotate(14 1120 580)"
+          />
+        ))}
+      </g>
+    </svg>
+  )
+}
+
 // ─── Main component ───────────────────────────────────────────────────────────
 
 export default function Home() {
@@ -278,34 +323,56 @@ export default function Home() {
     <main className="overflow-y-auto h-full bg-white">
       {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
       <section
-        className="relative flex flex-col items-center justify-center text-center text-white px-6"
-        style={{
-          minHeight: 'calc(100vh - 64px)',
-          background: 'linear-gradient(160deg, #0d1f16 0%, #1a3a27 50%, #2D6A4F 100%)',
-        }}
+        className="relative flex flex-col items-center justify-center text-center text-white px-6 overflow-hidden"
+        style={{ minHeight: 'calc(100vh - 64px)', backgroundColor: '#0a1510' }}
       >
-        {/* Background texture — very subtle grid */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(0deg,#fff 0,#fff 1px,transparent 0,transparent 50%),' +
-              'repeating-linear-gradient(90deg,#fff 0,#fff 1px,transparent 0,transparent 50%)',
-            backgroundSize: '48px 48px',
+        {/* Foto de terreno (base) */}
+        <img
+          src={HERO_IMG}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: 0.3 }}
+          onError={e => {
+            ;(e.currentTarget as HTMLImageElement).style.display = 'none'
           }}
         />
+        {/* Overlays de profundidad */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(130% 120% at 50% 0%, rgba(26,58,39,0.55) 0%, rgba(13,31,22,0.9) 55%, #0a1510 100%)',
+          }}
+        />
+        <ContourBackdrop />
+        <div
+          className="absolute inset-x-0 bottom-0 h-32"
+          style={{ background: 'linear-gradient(to top, #0a1510 0%, transparent 100%)' }}
+        />
+
+        {/* Barra de estado tipo GIS */}
+        <div className="absolute top-5 inset-x-0 z-10 px-6">
+          <div className="max-w-5xl mx-auto flex items-center justify-center sm:justify-between text-[11px] tracking-wide text-white/45 font-mono">
+            <span className="hidden sm:inline">4°16′N · 75°56′O</span>
+            <span className="uppercase">Geovisor Ecopedagógico · v3.0</span>
+            <span className="hidden sm:inline">EPSG:4326 · WGS 84</span>
+          </div>
+        </div>
 
         <div className="relative z-10 max-w-3xl mx-auto">
           <div
-            className="inline-block text-xs font-semibold tracking-widest uppercase mb-8 px-4 py-1.5 rounded-full border"
+            className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase mb-8 px-4 py-1.5 rounded-full border backdrop-blur-sm"
             style={{
-              borderColor: 'rgba(82,183,136,0.4)',
+              borderColor: 'rgba(82,183,136,0.35)',
+              backgroundColor: 'rgba(82,183,136,0.08)',
               color: '#52B788',
               animation: 'fadeIn 0.5s ease 0.05s forwards',
               opacity: 0,
             }}
           >
-            Geovisor Ecopedagógico · Sevilla, Valle del Cauca
+            <span className="w-1.5 h-1.5 rounded-full bg-verde-claro" />
+            Sevilla, Valle del Cauca · Colombia
           </div>
 
           <h1
@@ -316,36 +383,67 @@ export default function Home() {
           </h1>
 
           <p
-            className="text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto"
+            className="text-lg md:text-xl leading-relaxed mb-9 max-w-xl mx-auto"
             style={{
-              color: 'rgba(216,243,220,0.8)',
+              color: 'rgba(216,243,220,0.82)',
               animation: 'fadeUp 0.6s ease 0.65s forwards',
               opacity: 0,
             }}
           >
-            Una herramienta interactiva para comprender las transformaciones socioecosistémicas del
+            Plataforma cartográfica para comprender las transformaciones socioecosistémicas del
             municipio a través de capas geográficas, fichas pedagógicas y recorridos guiados.
           </p>
 
           <div
-            className="flex flex-col sm:flex-row gap-3 justify-center"
-            style={{
-              animation: 'fadeUp 0.6s ease 0.9s forwards',
-              opacity: 0,
-            }}
+            className="flex flex-col sm:flex-row gap-3 justify-center mb-8"
+            style={{ animation: 'fadeUp 0.6s ease 0.9s forwards', opacity: 0 }}
           >
             <Link
               to="/visor"
-              className="bg-verde-claro text-verde-bosque font-semibold px-8 py-3 rounded-lg hover:bg-white transition-all duration-200 hover:scale-[1.02]"
+              className="inline-flex items-center justify-center gap-2 bg-verde-claro text-verde-bosque font-semibold px-8 py-3 rounded-lg hover:bg-white transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-verde-claro/20"
             >
-              Abrir visor
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                className="w-4 h-4"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 6.75 3 9.75v10.5l6-3m0-10.5 6 3m-6-3v10.5m6-7.5 6-3v10.5l-6 3m0-10.5v10.5m0-10.5-6-3"
+                />
+              </svg>
+              Abrir el visor
             </Link>
             <Link
               to="/recorridos"
-              className="border border-white/30 text-white/90 px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-200"
+              className="border border-white/25 text-white/90 px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 backdrop-blur-sm"
             >
               Ver recorridos
             </Link>
+          </div>
+
+          {/* Sellos de plataforma */}
+          <div
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+            style={{ animation: 'fadeIn 0.6s ease 1.15s forwards', opacity: 0 }}
+          >
+            {PLATAFORMA.map(t => (
+              <span key={t} className="inline-flex items-center gap-1.5 text-xs text-white/55">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#52B788"
+                  strokeWidth="2"
+                  className="w-3.5 h-3.5"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+                {t}
+              </span>
+            ))}
           </div>
         </div>
 
@@ -353,7 +451,7 @@ export default function Home() {
         <button
           onClick={() => statsRef.current?.scrollIntoView({ behavior: 'smooth' })}
           aria-label="Continuar hacia abajo"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40 hover:text-white/80 transition-colors"
+          className="absolute bottom-7 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors z-10"
           style={{ animation: 'fadeIn 0.5s ease 1.4s forwards', opacity: 0 }}
         >
           <svg
@@ -361,29 +459,58 @@ export default function Home() {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            className="w-6 h-6 animate-pulse-slow"
+            className="w-6 h-6 animate-scroll-hint"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </button>
       </section>
 
-      {/* ── 2. STATS STRIP ───────────────────────────────────────────────── */}
-      <div ref={statsRef} />
-      <section className="border-y border-gray-100 bg-white py-10 px-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {STATS.map((s, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <div className="text-4xl md:text-5xl font-bold text-verde-bosque mb-1 tabular-nums">
-                <CountUp target={s.value} />
-              </div>
-              <div className="text-sm text-gray-500 leading-tight">{s.label}</div>
-            </Reveal>
-          ))}
+      {/* ── 2. BARRA DE CONFIANZA — fuentes oficiales ────────────────────── */}
+      <section
+        aria-label="Fuentes de datos oficiales"
+        className="px-6 py-6"
+        style={{ backgroundColor: '#0a1510' }}
+      >
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 whitespace-nowrap">
+            Datos oficiales de
+          </span>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {FUENTES.map(f => (
+              <span
+                key={f}
+                className="text-sm font-semibold tracking-wide text-white/45 hover:text-white/70 transition-colors"
+              >
+                {f}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ── 3. CARRUSEL DE IMÁGENES ──────────────────────────────────────── */}
+      {/* ── 3. STATS — panel tipo dashboard ──────────────────────────────── */}
+      <div ref={statsRef} />
+      <section className="bg-white py-14 px-6 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-100 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+            {STATS.map((s, i) => (
+              <Reveal key={i} delay={i * 80}>
+                <div className="bg-white px-6 py-8 text-center h-full flex flex-col justify-center">
+                  <div className="text-4xl md:text-5xl font-bold text-verde-bosque mb-2 tabular-nums leading-none">
+                    <CountUp target={s.value} />
+                  </div>
+                  <div className="text-xs uppercase tracking-wide text-gray-500 leading-tight">
+                    {s.label}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. CARRUSEL DE IMÁGENES ──────────────────────────────────────── */}
       <section aria-label="Galería del territorio" className="bg-black">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
@@ -425,7 +552,7 @@ export default function Home() {
         </Swiper>
       </section>
 
-      {/* ── 4. CAPABILITIES ──────────────────────────────────────────────── */}
+      {/* ── 5. CAPABILITIES ──────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <Reveal className="text-center mb-14">
@@ -446,8 +573,10 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {CAPABILITIES.map((cap, i) => (
               <Reveal key={i} delay={i * 70}>
-                <div className="group p-6 rounded-2xl border border-gray-100 hover:border-verde-bosque/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white">
-                  <div className="w-10 h-10 mb-4 text-verde-bosque">{cap.icon}</div>
+                <div className="group p-6 rounded-2xl border border-gray-100 hover:border-verde-bosque/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white h-full">
+                  <div className="w-11 h-11 mb-4 rounded-xl bg-verde-palido/60 text-verde-bosque flex items-center justify-center group-hover:bg-verde-palido transition-colors">
+                    <div className="w-6 h-6">{cap.icon}</div>
+                  </div>
                   <h3 className="font-semibold text-negro text-sm mb-2 leading-snug">
                     {cap.titulo}
                   </h3>
@@ -459,7 +588,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. EL TERRITORIO ─────────────────────────────────────────────── */}
+      {/* ── 6. EL TERRITORIO ─────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <Reveal>
@@ -507,7 +636,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 6. ENFOQUE ECOPEDAGÓGICO ─────────────────────────────────────── */}
+      {/* ── 7. ENFOQUE ECOPEDAGÓGICO ─────────────────────────────────────── */}
       <section className="py-20 px-6 bg-verde-bosque text-white">
         <div className="max-w-3xl mx-auto text-center">
           <Reveal>
@@ -539,7 +668,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 7. CATEGORÍAS ────────────────────────────────────────────────── */}
+      {/* ── 8. CATEGORÍAS ────────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <Reveal className="mb-12">
@@ -562,7 +691,7 @@ export default function Home() {
                 <Link
                   to={`/visor?categoria=${key}`}
                   aria-label={`Explorar ${info.label} en el visor`}
-                  className="group flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 bg-white"
+                  className="group flex items-start gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 bg-white h-full"
                 >
                   <div
                     className="w-1 self-stretch rounded-full flex-shrink-0 transition-all duration-300 group-hover:w-1.5"
@@ -592,8 +721,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 8. CRÉDITOS ──────────────────────────────────────────────────── */}
-      <section className="bg-negro text-gray-500 px-6 py-10 text-sm text-center">
+      {/* ── 9. CRÉDITOS ──────────────────────────────────────────────────── */}
+      <section className="bg-negro text-gray-500 px-6 py-12 text-sm text-center">
         <p className="leading-relaxed">
           Proyecto de Grado · Ingeniería de Sistemas
           <br />
@@ -602,9 +731,12 @@ export default function Home() {
           <span className="text-gray-600 text-xs mt-3 block">
             Cristóbal Valencia Cerón · José David Molina Delgado
             <br />
-            Director: Diego Fernando Loaiza
+            Director: Diego Fernando Loaiza · Grupo INFORMA
           </span>
         </p>
+        <div className="mt-6 pt-6 border-t border-white/5 max-w-md mx-auto text-xs text-gray-600">
+          Fuentes: CVC · IGAC · IDEAM · IAvH · RUNAP · GBIF · OpenStreetMap
+        </div>
       </section>
     </main>
   )

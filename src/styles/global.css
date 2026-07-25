@@ -215,6 +215,49 @@
   transform: translateY(18px);
 }
 
+/* Home hero — acento tipográfico y fondo de curvas de nivel */
+.text-hero-gradient {
+  background: linear-gradient(120deg, #52b788 0%, #d8f3dc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0);
+  }
+}
+.animate-float-slow {
+  animation: floatSlow 22s ease-in-out infinite;
+}
+
+@keyframes scrollHint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.9;
+  }
+}
+.animate-scroll-hint {
+  animation: scrollHint 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-scroll-hint {
+    animation: none !important;
+  }
+}
+
 /* Swiper custom pagination */
 .swiper-pagination-bullet {
   background: white !important;
