@@ -18,6 +18,19 @@ The Geovisor Ecopedagógico is a 100% client-side SPA (JAMstack) — no backend,
 
 ---
 
+## Documentation
+
+Two companion documents describe the project in depth. Both are versioned as PDF in the repository root and also available as public Google Docs (with Mermaid diagrams and, in the technical doc, the full functional-requirements tables with acceptance criteria).
+
+| Document | PDF (repo root) | Google Doc (public) |
+|----------|-----------------|---------------------|
+| **User Manual** — step-by-step guide for students, teachers and general public | [`Manual de Usuario - Geovisor Ecopedagogico.pdf`](./Manual%20de%20Usuario%20-%20Geovisor%20Ecopedagogico.pdf) | [Open](https://docs.google.com/document/d/1JMv-kcwOrR1U2nIFGATAw8lcuOv_1D9R5lDVH0PJjUQ/edit) |
+| **Technical Documentation** — architecture, components, data model, deployment, RF tables | [`Documentacion Tecnica - Geovisor Ecopedagogico.pdf`](./Documentacion%20Tecnica%20-%20Geovisor%20Ecopedagogico.pdf) | [Open](https://docs.google.com/document/d/1WQQfyvkqqG2Xhn2BIev4sF7NWk3nf-zpkhqpJaiyZwc/edit) |
+
+See also the original [Requirements Document v2.0](./Documento%20de%20Requerimientos%20v2%20-%20Geovisor%20Ecopedag%C3%B3gico.pdf).
+
+---
+
 ## Tech Stack
 
 | Layer | Technology | Version |
@@ -99,7 +112,7 @@ geovisor-sevillavalle/
 │   │   ├── Glosario.tsx         # Searchable ecopedagogical glossary (RF-16)
 │   │   └── Guia.tsx             # Usage instructions
 │   ├── config/
-│   │   └── layers.config.ts     # Single source of truth for all 22 map layers
+│   │   └── layers.config.ts     # Single source of truth for all 23 map layers
 │   ├── context/
 │   │   └── MapContext.tsx       # Global map state (useReducer + Context API)
 │   ├── hooks/
@@ -122,7 +135,7 @@ geovisor-sevillavalle/
 
 ## Geographic Layers
 
-All 22 layers are defined in [`src/config/layers.config.ts`](src/config/layers.config.ts). Adding or modifying a layer requires only editing that file — no component changes needed.
+All 23 layers are defined in [`src/config/layers.config.ts`](src/config/layers.config.ts). Adding or modifying a layer requires only editing that file — no component changes needed.
 
 | Category | Layers | Data type |
 |----------|--------|-----------|
