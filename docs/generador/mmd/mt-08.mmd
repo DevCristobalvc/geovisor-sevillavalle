@@ -1,0 +1,4 @@
+flowchart LR
+    A["LayerPanel<br/><small>fuera de MapContainer</small>"] -->|"dispatchEvent"| B["Evento de window<br/><small>zoomToLayer</small>"]
+    B --> C["Controlador<br/>dentro del mapa"]
+    C -->|"useMap()"| D["Leaflet ejecuta<br/>el desplazamiento"]

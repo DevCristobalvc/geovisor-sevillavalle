@@ -80,12 +80,17 @@ flowchart LR
 
 ## Documentation
 
-Two companion documents describe the project in depth. Both are versioned as PDF in the repository root and also available as public Google Docs (with Mermaid diagrams and, in the technical doc, the full functional-requirements tables with acceptance criteria).
+Two companion manuals live in [`docs/`](./docs), each in Word and PDF. They follow APA 7
+formatting and are diagram-led: 21 rendered Mermaid figures carry most of the explanation.
 
-| Document | PDF (repo root) | Google Doc (public) |
-|----------|-----------------|---------------------|
-| **User Manual** — step-by-step guide for students, teachers and general public | [`Manual de Usuario - Geovisor Ecopedagogico.pdf`](./Manual%20de%20Usuario%20-%20Geovisor%20Ecopedagogico.pdf) | [Open](https://docs.google.com/document/d/1JMv-kcwOrR1U2nIFGATAw8lcuOv_1D9R5lDVH0PJjUQ/edit) |
-| **Technical Documentation** — architecture, components, data model, deployment, RF tables | [`Documentacion Tecnica - Geovisor Ecopedagogico.pdf`](./Documentacion%20Tecnica%20-%20Geovisor%20Ecopedagogico.pdf) | [Open](https://docs.google.com/document/d/1WQQfyvkqqG2Xhn2BIev4sF7NWk3nf-zpkhqpJaiyZwc/edit) |
+| Document | Word | PDF |
+|----------|------|-----|
+| **Manual de Usuario** — step-by-step guide for students, teachers and general public (12 pp., 9 figures) | [`.docx`](./docs/Manual%20de%20Usuario%20-%20Geovisor%20Ecopedagogico.docx) | [`.pdf`](./docs/Manual%20de%20Usuario%20-%20Geovisor%20Ecopedagogico.pdf) |
+| **Manual Técnico** — architecture, components, data model, deployment, RF tables (17 pp., 12 figures) | [`.docx`](./docs/Manual%20Tecnico%20-%20Geovisor%20Ecopedagogico.docx) | [`.pdf`](./docs/Manual%20Tecnico%20-%20Geovisor%20Ecopedagogico.pdf) |
+
+Both are **generated, not hand-edited** — the sources live in
+[`docs/generador/`](./docs/generador) so the deliverable and its source stay in sync with
+the code. See that folder's README to regenerate them.
 
 See also the original [Requirements Document v2.0](./Documento%20de%20Requerimientos%20v2%20-%20Geovisor%20Ecopedag%C3%B3gico.pdf).
 

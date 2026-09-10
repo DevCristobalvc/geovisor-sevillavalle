@@ -1,0 +1,6 @@
+flowchart LR
+    A["Elegir un<br/>recorrido"] --> B["Parada 1<br/><small>el mapa vuela al punto</small>"]
+    B -->|"Siguiente"| C["Parada 2"]
+    C -->|"Siguiente"| D["Parada N"]
+    D --> E["Fin del<br/>recorrido"]
+    C -.->|"Anterior"| B

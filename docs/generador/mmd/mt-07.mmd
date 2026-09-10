@@ -1,0 +1,5 @@
+flowchart LR
+    A["Un componente<br/>despacha una acción"] --> B["mapReducer<br/><small>seis acciones posibles</small>"]
+    B --> C["Nuevo estado<br/><small>inmutable</small>"]
+    C --> D["Se re-renderizan<br/>los consumidores"]
+    D -.->|"nueva interacción"| A

@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant U as Usuario
+    participant P as LayerPanel
+    participant C as MapContext
+    participant M as MapViewer
+    U->>P: Marca una capa
+    P->>C: TOGGLE_LAYER
+    C-->>M: capasActivas actualizado
+    M->>M: fetch del GeoJSON
+    M-->>U: Capa visible con leyenda

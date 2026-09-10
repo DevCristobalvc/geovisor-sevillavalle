@@ -1,0 +1,5 @@
+flowchart LR
+    A["Primera visita<br/>con internet"] --> B["El navegador<br/>guarda una copia"]
+    B --> C["Mapa base, capas<br/>y fichas disponibles"]
+    C --> D["Visitas siguientes<br/>sin conexión"]
+    D -.->|"siguen requiriendo internet"| E["Capas WMS<br/>y videos"]

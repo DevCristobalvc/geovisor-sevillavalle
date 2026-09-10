@@ -1,0 +1,7 @@
+flowchart TD
+    A{"Tipo de capa"} -->|"geojson"| B["fetch del archivo<br/>y render vectorial"]
+    A -->|"wms"| C["WMSTileLayer<br/>petición al geoservicio"]
+    A -->|"xyz"| D["TileLayer<br/>teselas del proveedor"]
+    B --> E["Capa visible<br/>en el mapa"]
+    C --> E
+    D --> E

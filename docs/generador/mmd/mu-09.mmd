@@ -1,0 +1,6 @@
+flowchart LR
+    A["Una capa<br/>no aparece"] --> B{"¿Está marcada<br/>la casilla?"}
+    B -->|"No"| C["Marcarla en el<br/>panel izquierdo"]
+    B -->|"Sí"| D{"¿Hay conexión<br/>a internet?"}
+    D -->|"No"| E["Las capas WMS<br/>requieren internet"]
+    D -->|"Sí"| F["Ajustar el zoom:<br/>algunas capas solo se<br/>ven a cierta escala"]

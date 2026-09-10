@@ -1,0 +1,5 @@
+flowchart LR
+    U["Navegador<br/>del usuario"] --> A["Geovisor<br/><small>SPA React</small>"]
+    A -->|"HTTPS"| W["Geoservicios WMS<br/><small>CVC, IGAC, IDEAM</small>"]
+    A -->|"HTTPS"| T["Teselas XYZ<br/><small>OSM, ESRI, GBIF</small>"]
+    A -->|"archivo estático"| G["GeoJSON y fichas<br/><small>del repositorio</small>"]

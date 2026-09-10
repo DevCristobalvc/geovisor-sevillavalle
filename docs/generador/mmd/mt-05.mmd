@@ -1,0 +1,6 @@
+flowchart TD
+    CTX["MapContext<br/><small>estado global</small>"] --> LP["LayerPanel<br/><small>selector de capas</small>"]
+    CTX --> MV["MapViewer<br/><small>render del mapa</small>"]
+    CTX --> MT["MapToolbar<br/><small>mapa base y herramientas</small>"]
+    MV --> IP["InfoPanel<br/><small>ficha pedagógica</small>"]
+    LP --> IP
