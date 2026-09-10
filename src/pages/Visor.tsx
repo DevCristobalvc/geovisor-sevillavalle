@@ -36,22 +36,33 @@ export default function Visor() {
     return () => window.removeEventListener('openFicha', handler)
   }, [])
 
-  // Load recorrido from ?recorrido= query param
+  // Load recorrido from ?recorrido= query param.
+  // Depende del id, NO del objeto searchParams: useUrlSync reescribe lat/lng/zoom
+  // en cada flyTo, y con [searchParams] el recorrido volvía a la parada 1 sola.
+  const recorridoId = searchParams.get('recorrido')
+
   useEffect(() => {
-    const recorridoId = searchParams.get('recorrido')
     if (!recorridoId) {
       setRecorrido(null)
       return
     }
 
     fetch(`/data/recorridos/${recorridoId}.json`)
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+      })
       .then((data: Recorrido) => {
         setRecorrido(data)
         setParadaIndex(0)
       })
-      .catch(() => setRecorrido(null))
-  }, [searchParams])
+      .catch(err => {
+        // Sin este aviso el recorrido falla en silencio: la tarjeta enlaza,
+        // el visor abre y no ocurre nada.
+        console.warn(`No se pudo cargar el recorrido "${recorridoId}":`, err)
+        setRecorrido(null)
+      })
+  }, [recorridoId])
 
   const currentParada = recorrido ? recorrido.paradas[paradaIndex] : null
 

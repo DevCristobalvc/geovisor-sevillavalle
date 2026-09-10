@@ -18,6 +18,66 @@ The Geovisor Ecopedagógico is a 100% client-side SPA (JAMstack) — no backend,
 
 ---
 
+## At a Glance
+
+| | |
+|---|---|
+| **What it is** | A didactic web GIS for the municipality of Sevilla, Valle del Cauca |
+| **Who it is for** | Secondary school students (10–15), teachers, general public |
+| **Content** | 23 geographic layers · 6 categories · 23 pedagogical sheets · 4 guided tours |
+| **Architecture** | JAMstack SPA — no backend, no database, no personal data |
+| **Data** | 7 live WMS services + 16 GeoJSON layers versioned in this repo |
+| **Offline** | Service Worker pre-caches app, data and OSM tiles (zoom 10–14, ~50 MB) |
+
+---
+
+## How It Works
+
+Four separate views, each answering one question.
+
+**1. Where does the data come from?**
+
+```mermaid
+flowchart LR
+    A["Entidades oficiales<br/>CVC · IGAC · IDEAM<br/>Humboldt · RUNAP"] -->|"WMS · 7 capas"| V["Geovisor"]
+    B["Repositorio del proyecto<br/>16 capas GeoJSON"] -->|"archivo estático"| V
+    C["OSM · ESRI · GBIF"] -->|"teselas XYZ"| V
+    V --> D["Aula"]
+```
+
+**2. How is the application put together?**
+
+```mermaid
+flowchart LR
+    A["layers.config.ts<br/>23 capas declarativas"] --> B["MapContext<br/>useReducer"]
+    B --> C["MapViewer<br/>Leaflet"]
+    B --> D["LayerPanel<br/>selector de capas"]
+    C --> E["InfoPanel<br/>ficha pedagógica"]
+    D --> E
+```
+
+**3. What does a student actually do?**
+
+```mermaid
+flowchart LR
+    A["Abrir el visor"] --> B["Elegir categoría"]
+    B --> C["Activar una capa"]
+    C --> D["Clic en el mapa"]
+    D --> E["Leer la ficha<br/>y sus preguntas"]
+```
+
+**4. How does it work without internet?**
+
+```mermaid
+flowchart LR
+    A["Primera visita<br/>con conexión"] --> B["Service Worker<br/>guarda en caché"]
+    B --> C["App · GeoJSON · fichas<br/>teselas OSM zoom 10-14"]
+    C --> D["Visitas siguientes<br/>sin conexión"]
+    D -.->|"requieren internet"| E["Capas WMS<br/>y videos"]
+```
+
+---
+
 ## Documentation
 
 Two companion documents describe the project in depth. Both are versioned as PDF in the repository root and also available as public Google Docs (with Mermaid diagrams and, in the technical doc, the full functional-requirements tables with acceptance criteria).
@@ -62,7 +122,7 @@ npm install
 
 # Start dev server with hot reload
 npm run dev
-# → http://localhost:5173/geovisor-sevillavalle/
+# → http://localhost:5173/
 ```
 
 ### Production build
@@ -72,12 +132,14 @@ npm run dev
 npm run build        # output → dist/
 
 # Preview the production build locally
-npm run preview      # → http://localhost:4173/geovisor-sevillavalle/
+npm run preview      # → http://localhost:4173/
 ```
 
 ### Deployment
 
-Every push to `main` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which runs `npm run build` and deploys `dist/` to GitHub Pages automatically. No manual steps required.
+Every push to `main` or `Master` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which runs `npm run build` and deploys `dist/` to GitHub Pages automatically. No manual steps required.
+
+> **Note on `base`:** `vite.config.ts` sets `base: '/'`, so the app expects to be served from a domain root (Vercel, or GitHub Pages with a custom domain). Deploying to a GitHub Pages *project* site (`user.github.io/geovisor-sevillavalle/`) would require changing `base` to `'/geovisor-sevillavalle/'` — and the absolute `fetch('/data/...')` calls would need `import.meta.env.BASE_URL` prefixed.
 
 ---
 
@@ -92,25 +154,29 @@ geovisor-sevillavalle/
 │   │   ├── agua/                # River basins, wetlands, monitoring points
 │   │   ├── biodiversidad/       # Páramos, species records, protected areas
 │   │   ├── clima/               # Hydroclimatological stations
-│   │   ├── suelos/              # Land use conflicts
+│   │   ├── recorridos/          # Guided tour definitions (one JSON per tour)
 │   │   └── territorio/          # Administrative boundaries, PCC, resguardos
 │   ├── fichas/                  # Pedagogical sheet content (JSON, one per layer)
-│   └── images/                  # Thumbnails organized by category (.webp)
+│   └── icons/                   # PWA icons (192 / 512 px)
 │
 ├── src/
 │   ├── components/
 │   │   ├── MapViewer.tsx        # Leaflet map container (GeoJSON + WMS rendering)
 │   │   ├── LayerPanel.tsx       # Collapsible accordion layer selector
 │   │   ├── InfoPanel.tsx        # Slide-in pedagogical sheet panel
-│   │   ├── MapToolbar.tsx       # Base map selector + panel toggle
-│   │   ├── Navbar.tsx           # Top navigation bar
+│   │   ├── MapToolbar.tsx       # Base map selector, measure, export, search
+│   │   ├── FeatureSearchPanel.tsx # Attribute search across active layers (RF-09)
+│   │   ├── RecorridoHUD.tsx     # Guided tour stop navigation (RF-14)
+│   │   ├── Navbar.tsx           # Top navigation bar + Nominatim geocoder
 │   │   └── Footer.tsx           # Attribution footer
 │   ├── pages/
 │   │   ├── Home.tsx             # Landing page with territory context
 │   │   ├── Visor.tsx            # Main map interface (CU-01, CU-02)
 │   │   ├── Recorridos.tsx       # Guided thematic tours (RF-14)
 │   │   ├── Glosario.tsx         # Searchable ecopedagogical glossary (RF-16)
-│   │   └── Guia.tsx             # Usage instructions
+│   │   ├── Guia.tsx             # Usage instructions
+│   │   ├── Creditos.tsx         # Credits and data attributions
+│   │   └── Privacidad.tsx       # Privacy notice (Ley 1581 de 2012)
 │   ├── config/
 │   │   └── layers.config.ts     # Single source of truth for all 23 map layers
 │   ├── context/
@@ -118,7 +184,9 @@ geovisor-sevillavalle/
 │   ├── hooks/
 │   │   ├── useMapLayers.ts      # Layer access + toggle helpers
 │   │   ├── useMediaQuery.ts     # Responsive breakpoint detection
+│   │   ├── useUrlSync.ts        # Serializes map state into query params (RF-18)
 │   │   └── useOffline.ts        # Online/offline status tracker
+│   ├── sw.ts                    # Service Worker (Workbox injectManifest)
 │   └── types/
 │       └── index.ts             # All domain TypeScript interfaces
 │

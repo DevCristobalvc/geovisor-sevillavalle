@@ -1,0 +1,39 @@
+{
+  "id": "territorios_vida",
+  "titulo": "Territorios de vida",
+  "descripcion": "Un recorrido por los actores y comunidades que habitan y cuidan el territorio sevillano: el pueblo Embera Chamí del resguardo Ancore Drua, las familias cafeteras del Paisaje Cultural Cafetero, las reservas de la sociedad civil que custodian el bosque andino y las organizaciones que sostienen la red de cuidado del municipio. Cada parada muestra que el territorio no es solo geografía: es la gente que lo habita.",
+  "paradas": [
+    {
+      "id": 1,
+      "titulo": "Sevilla, la Ciudad de las Araucarias",
+      "narracion": "El casco urbano de Sevilla es el punto de partida de este recorrido. Fundada en 1903 en plena colonización antioqueña, la ciudad creció al ritmo del café y hoy es uno de los municipios nucleares del Paisaje Cultural Cafetero declarado Patrimonio de la Humanidad por la UNESCO en 2011. Su arquitectura de bahareque, sus calles empinadas y las araucarias que le dan el sobrenombre son la huella visible de una forma de habitar la montaña. Pero el territorio de Sevilla se extiende mucho más allá: 1.193 km² que van de los 900 a los 4.200 metros de altitud, donde viven comunidades campesinas, indígenas y cafeteras cuyas decisiones cotidianas moldean los ecosistemas que este geovisor documenta.",
+      "lat": 4.271,
+      "lng": -75.9366,
+      "zoom": 13
+    },
+    {
+      "id": 2,
+      "titulo": "Resguardo Indígena Ancore Drua",
+      "narracion": "El Resguardo Ancore Drua es el territorio colectivo del pueblo Embera Chamí en Sevilla. Los Embera son uno de los pueblos indígenas más numerosos de Colombia y en este municipio han habitado ancestralmente las zonas de bosque andino y de transición hacia el páramo. El resguardo es una figura jurídica reconocida por la Constitución de 1991: otorga a la comunidad propiedad colectiva e inalienable sobre su territorio y el derecho a gobernarlo según sus propias autoridades y normas. Las investigaciones muestran que los territorios bajo manejo indígena conservan, en promedio, mayor cobertura boscosa y mayor biodiversidad que áreas comparables fuera de ellos. El saber ancestral Embera sobre plantas, ciclos del agua y manejo del bosque no es folclor: es una tecnología de gestión territorial que funciona.",
+      "lat": 4.32,
+      "lng": -75.99,
+      "zoom": 14
+    },
+    {
+      "id": 3,
+      "titulo": "Familias cafeteras del Paisaje Cultural Cafetero",
+      "narracion": "En las laderas medias de Sevilla, entre los 1.200 y los 1.900 metros, viven las familias que sostienen el Paisaje Cultural Cafetero. La declaratoria de la UNESCO no protege únicamente el paisaje: reconoce la cultura, el esfuerzo humano y la tradición centenaria de los cultivadores de café. Aquí conviven dos modelos en tensión. El café bajo sombrío, sembrado entre árboles nativos, conserva suelo, agua y aves migratorias; el monocultivo a plena exposición produce más por hectárea pero erosiona la ladera y empobrece la biodiversidad. La decisión de cada familia cafetera —qué sembrar, cómo y con qué sombra— es una decisión ecológica que se acumula a escala de todo el municipio. Observa en el mapa cómo la zona PCC se superpone con las cuencas que abastecen de agua a la población.",
+      "lat": 4.24,
+      "lng": -75.9,
+      "zoom": 13
+    },
+    {
+      "id": 4,
+      "titulo": "La red de cuidado del bosque andino",
+      "narracion": "El bosque andino de Sevilla es uno de los ecosistemas más biodiversos y amenazados del planeta, y su conservación depende de una red de actores que trabajan desde frentes distintos. La academia —universidades como la Universidad Santiago de Cali y la Universidad del Valle— genera el conocimiento científico sobre flora, fauna y servicios ecosistémicos. Organizaciones como la Fundación Ecohabitats y Resnatur acompañan procesos comunitarios y articulan las Reservas Naturales de la Sociedad Civil, predios privados que sus dueños destinan voluntariamente a la conservación. La CVC, como autoridad ambiental regional, regula y financia; el municipio ordena el uso del suelo. Ninguno de estos actores basta por sí solo. Esta última parada cierra el recorrido con la idea central del geovisor: el territorio se sostiene cuando la gente que lo habita decide cuidarlo en conjunto.",
+      "lat": 4.35,
+      "lng": -75.95,
+      "zoom": 13
+    }
+  ]
+}

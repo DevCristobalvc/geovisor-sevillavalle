@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
@@ -50,7 +50,7 @@ const STATS = [
   { value: 23, label: 'capas geográficas' },
   { value: 23, label: 'fichas pedagógicas' },
   { value: 6, label: 'categorías temáticas' },
-  { value: 3, label: 'recorridos guiados' },
+  { value: 4, label: 'recorridos guiados' },
 ]
 
 // Instituciones que proveen los geoservicios / datos oficiales
@@ -58,6 +58,53 @@ const FUENTES = ['CVC', 'IGAC', 'IDEAM', 'Humboldt', 'RUNAP', 'GBIF', 'OpenStree
 
 // Sellos de plataforma (bajo los CTA del hero)
 const PLATAFORMA = ['Sin instalación', 'Funciona sin conexión', 'Datos abiertos oficiales']
+
+// Resumen ejecutivo: de dónde salen los datos, qué hace la herramienta y dónde se usa.
+// Refleja layers.config.ts (23 capas: 16 GeoJSON + 7 WMS) y src/sw.ts.
+const FLUJO = [
+  {
+    paso: '01',
+    titulo: 'Fuentes oficiales',
+    resumen: 'Entidades públicas que producen y publican la información geográfica.',
+    items: [
+      { nombre: 'CVC — Portal GeoCVC', tag: 'WMS' },
+      { nombre: 'IGAC — Geoservicios', tag: 'WMS' },
+      { nombre: 'IDEAM — Hidroclimatología', tag: 'WMS' },
+      { nombre: 'Humboldt · RUNAP', tag: 'WMS' },
+      { nombre: 'GBIF / SiB Colombia', tag: 'XYZ' },
+      { nombre: 'OpenStreetMap · ESRI', tag: 'Teselas' },
+    ],
+    nota: '16 capas GeoJSON versionadas en el repositorio + 7 servicios WMS consultados en vivo.',
+  },
+  {
+    paso: '02',
+    titulo: 'El geovisor',
+    resumen: 'Aplicación que corre entera en el navegador: sin backend ni base de datos.',
+    items: [
+      { nombre: '23 capas en 6 categorías', tag: 'Mapa' },
+      { nombre: '23 fichas pedagógicas', tag: 'Contenido' },
+      { nombre: '4 recorridos guiados', tag: 'Narrativa' },
+      { nombre: 'Medir distancias y áreas', tag: 'Turf.js' },
+      { nombre: 'Exportar vista a PNG', tag: 'Imagen' },
+      { nombre: 'Compartir estado por URL', tag: 'Enlace' },
+    ],
+    nota: 'React 18 + TypeScript sobre Leaflet. El estado del mapa se serializa en la URL.',
+  },
+  {
+    paso: '03',
+    titulo: 'En el aula',
+    resumen: 'Uso pedagógico en secundaria, incluso donde la conexión falla.',
+    items: [
+      { nombre: 'Estudiantes de 10 a 15 años', tag: 'Grados 6–11' },
+      { nombre: 'Docentes y público general', tag: 'Abierto' },
+      { nombre: 'Sin instalar nada', tag: 'Web' },
+      { nombre: 'Mapa base y datos en caché', tag: 'Offline' },
+      { nombre: 'Instalable como aplicación', tag: 'PWA' },
+      { nombre: 'Navegable por teclado', tag: 'WCAG AA' },
+    ],
+    nota: 'Un Service Worker precarga la app, los GeoJSON y las teselas de Sevilla (zoom 10–14).',
+  },
+]
 
 const CAPABILITIES = [
   {
@@ -280,6 +327,87 @@ function AnimatedHeadline() {
 
 // ─── Fondo de curvas de nivel (topográfico) ──────────────────────────────────
 
+/**
+ * Nodo de isolíneas: anillos concéntricos que respiran desde el centro,
+ * un anillo de barrido que recorre el trazo y un vértice con latido.
+ * La animación vive en global.css (.contour-*) y se apaga con
+ * `prefers-reduced-motion`.
+ */
+function ContourNode({
+  cx,
+  cy,
+  rings,
+  rx0,
+  ry0,
+  step,
+  tilt,
+  ccw = false,
+}: {
+  cx: number
+  cy: number
+  rings: number
+  rx0: number
+  ry0: number
+  step: number
+  tilt: number
+  ccw?: boolean
+}) {
+  // El anillo de barrido se sitúa a media altura del nodo
+  const sweep = Math.floor(rings / 2)
+
+  return (
+    // La inclinación va como atributo para no competir con el transform CSS
+    <g transform={`rotate(${tilt} ${cx} ${cy})`}>
+      <g className={`contour-drift${ccw ? ' contour-drift--ccw' : ''}`}>
+        {Array.from({ length: rings }).map((_, i) => (
+          <ellipse
+            key={i}
+            className="contour-ring"
+            cx={cx}
+            cy={cy}
+            rx={rx0 + i * step}
+            ry={ry0 + i * step * 0.66}
+            // Delay creciente: la onda se propaga del centro hacia afuera
+            style={{ animationDelay: `${i * 0.42}s` }}
+          />
+        ))}
+        <ellipse
+          className="contour-sweep"
+          cx={cx}
+          cy={cy}
+          rx={rx0 + sweep * step}
+          ry={ry0 + sweep * step * 0.66}
+          stroke="#52B788"
+          strokeOpacity="0.5"
+          strokeWidth="1.4"
+        />
+      </g>
+      <circle className="contour-ping" cx={cx} cy={cy} r={rx0 * 0.5} fill="#52B788" />
+      <circle cx={cx} cy={cy} r="2.5" fill="#52B788" fillOpacity="0.6" />
+    </g>
+  )
+}
+
+/** Conector entre etapas del diagrama: chevron horizontal en desktop, vertical al apilarse. */
+function FlowArrow({ delay = 0 }: { delay?: number }) {
+  return (
+    <Reveal delay={delay} className="flex items-center justify-center">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#52B788"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="w-5 h-5 opacity-40 rotate-90 lg:rotate-0"
+      >
+        <path d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+      </svg>
+    </Reveal>
+  )
+}
+
 function ContourBackdrop() {
   return (
     <svg
@@ -289,26 +417,8 @@ function ContourBackdrop() {
       aria-hidden="true"
     >
       <g fill="none" stroke="#52B788" strokeOpacity="0.12" strokeWidth="1.1">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <ellipse
-            key={`a${i}`}
-            cx="360"
-            cy="300"
-            rx={55 + i * 52}
-            ry={38 + i * 34}
-            transform="rotate(-18 360 300)"
-          />
-        ))}
-        {Array.from({ length: 7 }).map((_, i) => (
-          <ellipse
-            key={`b${i}`}
-            cx="1120"
-            cy="580"
-            rx={68 + i * 58}
-            ry={46 + i * 40}
-            transform="rotate(14 1120 580)"
-          />
-        ))}
+        <ContourNode cx={360} cy={300} rings={8} rx0={55} ry0={38} step={52} tilt={-18} />
+        <ContourNode cx={1120} cy={580} rings={7} rx0={68} ry0={46} step={58} tilt={14} ccw />
       </g>
     </svg>
   )
@@ -588,7 +698,75 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 6. EL TERRITORIO ─────────────────────────────────────────────── */}
+      {/* ── 6. CÓMO FUNCIONA — resumen ejecutivo de la herramienta ───────── */}
+      <section
+        aria-labelledby="como-funciona-titulo"
+        className="py-20 px-6"
+        style={{ backgroundColor: '#0a1510' }}
+      >
+        <div className="max-w-5xl mx-auto">
+          <Reveal className="text-center mb-14">
+            <div className="text-xs font-semibold tracking-widest uppercase text-verde-claro mb-3">
+              Cómo funciona
+            </div>
+            <h2
+              id="como-funciona-titulo"
+              className="font-bold text-white mb-4"
+              style={{ fontSize: 'clamp(1.7rem, 4vw, 2.5rem)', lineHeight: 1.15 }}
+            >
+              De los geoservicios oficiales
+              <br />
+              al salón de clase
+            </h2>
+            <p className="text-white/50 max-w-xl mx-auto text-base leading-relaxed">
+              El geovisor no almacena datos propios: los consume en vivo de las entidades que los
+              producen y los traduce a un lenguaje que un estudiante de secundaria puede leer.
+            </p>
+          </Reveal>
+
+          {/* Diagrama de flujo: fuentes → geovisor → aula */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr_auto_1fr] gap-4 lg:gap-3 items-stretch">
+            {FLUJO.map((etapa, i) => (
+              <Fragment key={etapa.paso}>
+                {i > 0 && <FlowArrow delay={i * 140 - 70} />}
+                <Reveal delay={i * 140} className="h-full">
+                  <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="font-mono text-xs text-verde-claro">{etapa.paso}</span>
+                      <h3 className="font-semibold text-white text-sm">{etapa.titulo}</h3>
+                    </div>
+                    <p className="text-xs text-white/40 leading-relaxed mb-5">{etapa.resumen}</p>
+
+                    <ul className="space-y-2.5">
+                      {etapa.items.map(item => (
+                        <li key={item.nombre} className="flex items-baseline justify-between gap-3">
+                          <span className="text-xs text-white/75 leading-snug">{item.nombre}</span>
+                          <span className="font-mono text-[10px] uppercase tracking-wide text-verde-claro/60 whitespace-nowrap">
+                            {item.tag}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-5 pt-4 border-t border-white/10 text-[11px] text-white/35 leading-relaxed">
+                      {etapa.nota}
+                    </div>
+                  </div>
+                </Reveal>
+              </Fragment>
+            ))}
+          </div>
+
+          <Reveal delay={480}>
+            <p className="text-center text-xs text-white/30 mt-10 max-w-2xl mx-auto leading-relaxed">
+              Arquitectura JAMstack: sin servidor propio, sin base de datos y sin datos personales.
+              Todo el procesamiento ocurre en el navegador del usuario.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── 7. EL TERRITORIO ─────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <Reveal>

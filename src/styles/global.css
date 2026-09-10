@@ -236,6 +236,85 @@
   animation: floatSlow 22s ease-in-out infinite;
 }
 
+/* ── Campo de curvas de nivel animado (hero) ──────────────────────────────
+   Cada nodo de isolíneas respira desde su centro y deriva lentamente,
+   como un relieve topográfico vivo. Los anillos de barrido recorren el
+   trazo para sugerir lectura de datos. */
+
+/* Respiración radial: la onda se propaga del centro hacia afuera vía delay */
+@keyframes contourBreathe {
+  0%,
+  100% {
+    transform: scale(1);
+    stroke-opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.055);
+    stroke-opacity: 0.22;
+  }
+}
+
+/* Deriva rotacional muy lenta del nodo completo */
+@keyframes contourDrift {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Barrido: el trazo discontinuo recorre el anillo */
+@keyframes contourSweep {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -1200;
+  }
+}
+
+/* Vértice central del nodo: latido tipo estación de monitoreo */
+@keyframes contourPing {
+  0% {
+    transform: scale(0.4);
+    opacity: 0.55;
+  }
+  70%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.contour-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: contourBreathe 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+.contour-drift {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: contourDrift 240s linear infinite;
+}
+.contour-drift--ccw {
+  animation-direction: reverse;
+  animation-duration: 300s;
+}
+
+.contour-sweep {
+  stroke-dasharray: 26 210;
+  animation: contourSweep 14s linear infinite;
+}
+
+.contour-ping {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: contourPing 4.5s ease-out infinite;
+}
+
 @keyframes scrollHint {
   0%,
   100% {
@@ -253,8 +332,19 @@
 
 @media (prefers-reduced-motion: reduce) {
   .animate-float-slow,
-  .animate-scroll-hint {
+  .animate-scroll-hint,
+  .contour-ring,
+  .contour-drift,
+  .contour-sweep,
+  .contour-ping {
     animation: none !important;
+  }
+  /* Sin movimiento, el barrido queda como línea continua visible */
+  .contour-sweep {
+    stroke-dasharray: none;
+  }
+  .contour-ping {
+    opacity: 0.35;
   }
 }
 
