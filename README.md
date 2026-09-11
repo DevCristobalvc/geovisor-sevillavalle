@@ -6,8 +6,6 @@
 Cristóbal Valencia Cerón · José David Molina Delgado  
 Advisor: Diego Fernando Loaiza · Research Group INFORMA
 
-[![Deploy to GitHub Pages](https://github.com/cristobal-valencia/geovisor-sevillavalle/actions/workflows/deploy.yml/badge.svg)](https://github.com/cristobal-valencia/geovisor-sevillavalle/actions/workflows/deploy.yml)
-
 ---
 
 ## Overview
@@ -108,7 +106,7 @@ See also the original [Requirements Document v2.0](./Documento%20de%20Requerimie
 | Routing | React Router | 6.x |
 | Offline / PWA | Workbox (vite-plugin-pwa) | 7.x |
 | UI primitives | Radix UI | 1.x |
-| Deployment | GitHub Actions → GitHub Pages | — |
+| Deployment | Vercel | — |
 
 ---
 
@@ -142,9 +140,11 @@ npm run preview      # → http://localhost:4173/
 
 ### Deployment
 
-Every push to `main` or `Master` triggers the GitHub Actions workflow (`.github/workflows/deploy.yml`), which runs `npm run build` and deploys `dist/` to GitHub Pages automatically. No manual steps required.
+Deployment is handled by **Vercel**, connected to this repository. Every push to `Master` triggers a build and publishes it automatically — no workflow files and no manual steps.
 
-> **Note on `base`:** `vite.config.ts` sets `base: '/'`, so the app expects to be served from a domain root (Vercel, or GitHub Pages with a custom domain). Deploying to a GitHub Pages *project* site (`user.github.io/geovisor-sevillavalle/`) would require changing `base` to `'/geovisor-sevillavalle/'` — and the absolute `fetch('/data/...')` calls would need `import.meta.env.BASE_URL` prefixed.
+`vercel.json` rewrites every route to `index.html`, which is what a client-side router needs so that deep links such as `/visor?recorrido=huellas_cafe` resolve correctly.
+
+> **Note on `base`:** `vite.config.ts` sets `base: '/'` and the app fetches its data with absolute paths (`fetch('/data/...')`). Both assume the site is served from a domain root, which is exactly what Vercel provides. Serving it from a subpath instead would require changing `base` and prefixing those fetches with `import.meta.env.BASE_URL`.
 
 ---
 
@@ -195,10 +195,10 @@ geovisor-sevillavalle/
 │   └── types/
 │       └── index.ts             # All domain TypeScript interfaces
 │
-├── .github/
-│   └── workflows/
-│       └── deploy.yml           # CI/CD: build + deploy to GitHub Pages
+├── docs/                        # User and technical manuals (.docx + .pdf)
+│   └── generador/               # Scripts and Mermaid sources that build them
 │
+├── vercel.json                  # SPA rewrites (all routes → index.html)
 ├── vite.config.ts               # Vite + PWA (Workbox) configuration
 ├── tailwind.config.js           # Custom design system (ecopedagogical palette)
 └── tsconfig.app.json            # TypeScript compiler options (ES2022 strict)
