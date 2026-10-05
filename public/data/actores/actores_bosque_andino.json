@@ -1,57 +1,68 @@
 {
   "type": "FeatureCollection",
-  "name": "Actores Bosque Andino",
+  "metadata": {
+    "origen": "Datos ilustrativos elaborados por el equipo del proyecto. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales.",
+    "pendiente": "Se reemplazará por el conjunto oficial «Actores sociales del bosque de zona andina» de la CVC."
+  },
   "features": [
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Grupo de investigación universitario",
+        "tipo_actor": "Academia",
+        "ecosistema": "Bosque andino"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.981, 4.318]
-      },
-      "properties": {
-        "nombre": "Universidad del Valle - Grupo GEMA",
-        "rol": "Academia",
-        "predio": "Bosque de Investigación El Robledal",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -75.981,
+          4.318
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Reserva natural de la sociedad civil",
+        "tipo_actor": "Propietario de reserva",
+        "ecosistema": "Bosque andino"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.012, 4.347]
-      },
-      "properties": {
-        "nombre": "Reserva Natural La Montañita",
-        "rol": "Propietario de Reserva",
-        "predio": "La Montañita",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -76.012,
+          4.347
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Empresa de aprovechamiento forestal",
+        "tipo_actor": "Sector productivo",
+        "ecosistema": "Bosque andino"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.998, 4.332]
-      },
-      "properties": {
-        "nombre": "Maderas del Pacífico Ltda.",
-        "rol": "Maderero",
-        "predio": "Zona de Aprovechamiento Forestal Norte",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -75.998,
+          4.332
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Asociación de productores agroforestales",
+        "tipo_actor": "Sector productivo",
+        "ecosistema": "Bosque andino"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.024, 4.308]
-      },
-      "properties": {
-        "nombre": "Asociación de Productores Agroforestales Sevilla",
-        "rol": "Agricultor",
-        "predio": "Fincas Agroforestales Vereda El Pomo",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -76.024,
+          4.308
+        ]
       }
     }
   ]

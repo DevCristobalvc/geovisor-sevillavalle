@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useMapLayers } from '../hooks/useMapLayers'
-import type { Categoria, LayerConfig } from '../types'
+import { wmsLegendUrl } from '../config/layers.config'
+import type { Categoria, LayerConfig, WmsStatus } from '../types'
 
 // ─── Category icons ───────────────────────────────────────────────────────────
 
@@ -132,6 +133,17 @@ export default function LayerPanel({
     defaultExpanded.add(highlightCategoria as Categoria)
   }
   const [expanded, setExpanded] = useState<Set<Categoria>>(defaultExpanded)
+  const [wmsStatus, setWmsStatus] = useState<Record<string, WmsStatus>>({})
+
+  // MapViewer informa si cada servicio WMS respondió (evento `wmsStatus`)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { id, status } = (e as CustomEvent<{ id: string; status: WmsStatus }>).detail
+      setWmsStatus(prev => (prev[id] === status ? prev : { ...prev, [id]: status }))
+    }
+    window.addEventListener('wmsStatus', handler)
+    return () => window.removeEventListener('wmsStatus', handler)
+  }, [])
 
   const toggleAccordion = (cat: Categoria) => {
     setExpanded(prev => {
@@ -260,6 +272,7 @@ export default function LayerPanel({
                         color={info.color}
                         opacity={getLayerOpacity(layer.id)}
                         onOpacityChange={v => setLayerOpacity(layer.id, v)}
+                        status={wmsStatus[layer.id]}
                       />
                     ))}
                   </div>
@@ -270,7 +283,7 @@ export default function LayerPanel({
         </div>
 
         <div className="px-4 py-2 border-t border-gray-100 text-xs text-gray-400 text-center">
-          Fuentes: CVC · IGAC · IDEAM · GBIF
+          Fuentes: CVC · IGAC · IDEAM
         </div>
       </aside>
     </>
@@ -284,6 +297,7 @@ function LayerItem({
   color,
   opacity,
   onOpacityChange,
+  status,
 }: {
   layer: LayerConfig
   active: boolean
@@ -291,9 +305,12 @@ function LayerItem({
   color: string
   opacity: number
   onOpacityChange: (v: number) => void
+  status?: WmsStatus
 }) {
   const isPoint = (layer.estilo?.radius ?? 0) > 0
   const isGeoJSON = layer.tipo === 'geojson'
+  const isWMS = layer.tipo === 'wms'
+  const [legendOpen, setLegendOpen] = useState(false)
 
   return (
     <div className="px-4 py-2 hover:bg-gray-50">
@@ -334,6 +351,17 @@ function LayerItem({
               {layer.descripcionBreve}
             </div>
           )}
+          <div className="flex items-center gap-1.5 mt-1" title={layer.fuente.detalle}>
+            {layer.fuente.ilustrativo ? (
+              <span className="text-[10px] font-semibold uppercase tracking-wide px-1.5 py-px rounded bg-amber-100 text-amber-800">
+                Ilustrativo
+              </span>
+            ) : (
+              <span className="text-[10px] text-gray-400">
+                {layer.fuente.entidad} · {isWMS ? 'WMS en vivo' : 'GeoJSON'}
+              </span>
+            )}
+          </div>
         </div>
         {active && isGeoJSON && (
           <button
@@ -376,6 +404,64 @@ function LayerItem({
           <span className="text-xs text-gray-400 w-8 text-right">{Math.round(opacity * 100)}%</span>
         </div>
       )}
+
+      {active && isWMS && status === 'error' && (
+        <p className="mt-1.5 ml-7 text-xs text-red-600 leading-snug" role="status">
+          El servicio de {layer.fuente.entidad} no respondió. Revisa la conexión o intenta más
+          tarde.
+        </p>
+      )}
+
+      {active && isWMS && (
+        <div className="mt-1.5 pl-7">
+          <button
+            onClick={() => setLegendOpen(v => !v)}
+            aria-expanded={legendOpen}
+            className="text-xs text-azul-medio hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque rounded"
+          >
+            {legendOpen ? 'Ocultar leyenda' : 'Ver leyenda'}
+          </button>
+          {legendOpen && <WmsLegend layer={layer} />}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function WmsLegend({ layer }: { layer: LayerConfig }) {
+  if (layer.leyenda) {
+    return (
+      <ul className="mt-1.5 space-y-1" aria-label={`Leyenda de ${layer.nombre}`}>
+        {layer.leyenda.map(item => (
+          <li key={item.etiqueta} className="flex items-center gap-2 text-xs text-gris-texto">
+            <span
+              className="w-3.5 h-3 rounded-sm border border-black/10 flex-shrink-0"
+              style={{ backgroundColor: item.color }}
+              aria-hidden="true"
+            />
+            {item.etiqueta}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+  // Sin leyenda propia: la imagen que publica el propio servicio (GetLegendGraphic)
+  const subcapas = (layer.wmsLayers ?? '').split(',').filter(Boolean)
+  return (
+    <div className="mt-1.5 max-h-56 overflow-y-auto rounded border border-gray-100 bg-white p-1">
+      {subcapas.map(sub => (
+        <img
+          key={sub}
+          src={wmsLegendUrl(layer, sub)}
+          alt={`Leyenda de ${layer.nombre}`}
+          loading="lazy"
+          className="max-w-full"
+          onError={e => {
+            ;(e.currentTarget as HTMLImageElement).style.display = 'none'
+          }}
+        />
+      ))}
     </div>
   )
 }

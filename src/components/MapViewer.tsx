@@ -7,6 +7,7 @@ import {
   useMap,
   useMapEvents,
 } from 'react-leaflet'
+import { useSearchParams } from 'react-router-dom'
 import L from 'leaflet'
 import type { LeafletMouseEvent } from 'leaflet'
 import * as turf from '@turf/turf'
@@ -20,7 +21,7 @@ import {
   SEVILLA_MIN_ZOOM,
   SEVILLA_MAX_ZOOM,
 } from '../config/layers.config'
-import type { LayerConfig } from '../types'
+import type { LayerConfig, LayerStyle, WmsStatus } from '../types'
 
 interface MapViewerProps {
   onFeatureClick?: (feature: GeoJSON.Feature, layer: LayerConfig) => void
@@ -36,11 +37,26 @@ export default function MapViewer({
   onMeasureClear,
 }: MapViewerProps) {
   const { state } = useMapContext()
+  const [searchParams] = useSearchParams()
+  // MapContainer solo lee center/zoom al crearse: la vista de un enlace compartido (RF-18)
+  // se toma de la URL en ese momento; useUrlSync se encarga del resto del estado.
+  const [vistaInicial] = useState(() => {
+    const lat = parseFloat(searchParams.get('lat') ?? '')
+    const lng = parseFloat(searchParams.get('lng') ?? '')
+    const zoom = parseInt(searchParams.get('zoom') ?? '')
+    return {
+      center: (!isNaN(lat) && !isNaN(lng) ? [lat, lng] : SEVILLA_CENTER) as [number, number],
+      zoom:
+        !isNaN(zoom) && zoom >= SEVILLA_MIN_ZOOM && zoom <= SEVILLA_MAX_ZOOM
+          ? zoom
+          : SEVILLA_DEFAULT_ZOOM,
+    }
+  })
 
   return (
     <MapContainer
-      center={SEVILLA_CENTER}
-      zoom={SEVILLA_DEFAULT_ZOOM}
+      center={vistaInicial.center}
+      zoom={vistaInicial.zoom}
       minZoom={SEVILLA_MIN_ZOOM}
       maxZoom={SEVILLA_MAX_ZOOM}
       className="w-full h-full"
@@ -84,17 +100,7 @@ function ActiveLayers({
         const opacity = getLayerOpacity(layer.id)
 
         if (layer.tipo === 'wms') {
-          return (
-            <WMSTileLayer
-              key={layer.id}
-              url={layer.url}
-              layers={layer.wmsLayers ?? ''}
-              format={layer.wmsFormat ?? 'image/png'}
-              transparent={true}
-              version="1.1.1"
-              opacity={opacity * 0.85}
-            />
-          )
+          return <WMSLayer key={layer.id} layer={layer} opacity={opacity} />
         }
 
         if (layer.tipo === 'geojson') {
@@ -111,6 +117,54 @@ function ActiveLayers({
         return null
       })}
     </>
+  )
+}
+
+/**
+ * Capa WMS con teselas de 512 px: cuatro veces menos peticiones que las de 256 px,
+ * lo que importa porque el portal de la CVC limita la tasa de peticiones por IP y un
+ * salón de clase comparte una sola IP. Informa su estado con el evento `wmsStatus`
+ * para que el panel de capas avise cuando el servicio no responde.
+ */
+function WMSLayer({ layer, opacity }: { layer: LayerConfig; opacity: number }) {
+  const counts = useRef({ ok: 0, error: 0 })
+
+  const report = useCallback(
+    (status: WmsStatus) =>
+      window.dispatchEvent(new CustomEvent('wmsStatus', { detail: { id: layer.id, status } })),
+    [layer.id]
+  )
+
+  useEffect(() => {
+    report('cargando')
+    return () => {
+      report('cargando')
+    }
+  }, [report])
+
+  return (
+    <WMSTileLayer
+      url={layer.url}
+      layers={layer.wmsLayers ?? ''}
+      format={layer.wmsFormat ?? 'image/png'}
+      transparent={true}
+      version="1.1.1"
+      tileSize={512}
+      opacity={opacity * 0.85}
+      attribution={`${layer.nombre}: ${layer.fuente.entidad}`}
+      eventHandlers={{
+        loading: () => {
+          counts.current = { ok: 0, error: 0 }
+        },
+        tileload: () => {
+          counts.current.ok++
+        },
+        tileerror: () => {
+          counts.current.error++
+        },
+        load: () => report(counts.current.ok > 0 || counts.current.error === 0 ? 'ok' : 'error'),
+      }}
+    />
   )
 }
 
@@ -145,7 +199,7 @@ function GeoJSONLayer({
 
   if (!data) return null
 
-  const style = layer.estilo ?? {}
+  const style: Partial<LayerStyle> = layer.estilo ?? {}
   const baseStyle = {
     color: style.color ?? '#2D6A4F',
     weight: style.weight ?? 1.5,
@@ -180,6 +234,68 @@ function GeoJSONLayer({
   )
 }
 
+const ETIQUETAS: Record<string, string> = {
+  area_ha: 'Área (ha)',
+  area_km2: 'Área (km²)',
+  area_en_sevilla_ha: 'Área en Sevilla (ha)',
+  area_total_ha: 'Área total (ha)',
+  altitud_msnm: 'Altitud (m s. n. m.)',
+  elevacion_msnm: 'Elevación (m s. n. m.)',
+  profundidad_m: 'Profundidad (m)',
+  codigo: 'Código',
+  codigo_ideam: 'Código IDEAM',
+  codigo_pozo: 'Código del pozo',
+  codigo_predio: 'Código predial',
+  nombre_cientifico: 'Nombre científico',
+  nombre_comun: 'Nombre común',
+  resolucion: 'Resolución',
+  tipologia: 'Tipología',
+  ambito: 'Ámbito',
+  acto_administrativo: 'Acto administrativo',
+  subzona_hidrografica: 'Subzona hidrográfica',
+  estacion: 'Estación',
+  anno_levantamiento: 'Año de levantamiento',
+  anno_declaracion: 'Año de declaración',
+  categoria: 'Categoría',
+  categoria_amenaza: 'Categoría de amenaza',
+  codigo_dane: 'Código DANE',
+  estado_conservacion: 'Estado de conservación',
+  fecha_declaracion: 'Fecha de declaración',
+  fecha_muestreo: 'Fecha de muestreo',
+  fuente_hidrica_protegida: 'Fuente hídrica protegida',
+  nivel_freatico: 'Nivel freático',
+  nombre_complejo: 'Complejo',
+  nombre_vereda: 'Nombre',
+  parametros: 'Parámetros',
+  rio_principal: 'Río principal',
+  altitud_rango: 'Rango altitudinal',
+  tipo_actor: 'Tipo de actor',
+}
+
+function etiqueta(clave: string): string {
+  if (ETIQUETAS[clave]) return ETIQUETAS[clave]
+  const texto = clave.replace(/_/g, ' ')
+  return texto.charAt(0).toUpperCase() + texto.slice(1)
+}
+
+/** Los valores vienen de servicios externos: se escapan antes de entrar al HTML del popup. */
+function escapeHtml(valor: unknown): string {
+  return String(valor)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
+function formatear(valor: unknown): string {
+  // Años y códigos numéricos cortos se dejan tal cual; áreas y decimales con formato local
+  if (typeof valor === 'number' && (!Number.isInteger(valor) || valor >= 10000)) {
+    return valor.toLocaleString('es-CO', { maximumFractionDigits: 1 })
+  }
+  return escapeHtml(valor)
+}
+
 function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string {
   const props = feature.properties ?? {}
   const atributos = layer.atributosPopup ?? Object.keys(props).slice(0, 4)
@@ -187,19 +303,25 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
     .filter(k => props[k] != null)
     .map(
       k =>
-        `<tr><td class="text-gray-500 pr-2 text-xs">${k}</td><td class="text-xs font-medium">${props[k]}</td></tr>`
+        `<tr><td class="text-gray-500 pr-2 text-xs align-top">${escapeHtml(etiqueta(k))}</td><td class="text-xs font-medium">${formatear(props[k])}</td></tr>`
     )
     .join('')
 
   const thumbnail = layer.miniatura
-    ? `<img src="${layer.miniatura}" alt="Miniatura de ${layer.nombre}" style="width:100%;height:80px;object-fit:cover;border-radius:4px;margin-bottom:8px" onerror="this.style.display='none'" />`
+    ? `<img src="${layer.miniatura}" alt="Miniatura de ${escapeHtml(layer.nombre)}" style="width:100%;height:80px;object-fit:cover;border-radius:4px;margin-bottom:8px" onerror="this.style.display='none'" />`
+    : ''
+
+  const ilustrativo = layer.fuente.ilustrativo
+    ? `<div style="background:#FEF3C7;color:#92400E;border-radius:4px;padding:3px 6px;margin-bottom:6px;font-size:11px">Dato ilustrativo: no proviene de una fuente oficial</div>`
     : ''
 
   return `
     <div>
       ${thumbnail}
-      <div class="font-semibold text-sm mb-1" style="color:${layer.estilo?.color ?? '#2D6A4F'}">${layer.nombre}</div>
+      <div class="font-semibold text-sm mb-1" style="color:${layer.estilo?.color ?? '#2D6A4F'}">${escapeHtml(layer.nombre)}</div>
+      ${ilustrativo}
       ${rows ? `<table class="w-full">${rows}</table>` : ''}
+      <div style="color:#6B7280;font-size:10px;margin-top:6px">Fuente: ${escapeHtml(layer.fuente.entidad)}</div>
       <button
         onclick="window.dispatchEvent(new CustomEvent('openFicha', { detail: '${layer.fichaId}' }))"
         style="background:#2D6A4F;color:white;border:none;cursor:pointer;padding:4px 8px;border-radius:4px;width:100%;margin-top:8px;font-size:12px"

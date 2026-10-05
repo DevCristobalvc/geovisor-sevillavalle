@@ -1,57 +1,67 @@
 {
   "type": "FeatureCollection",
-  "name": "Actores Páramo",
+  "metadata": {
+    "origen": "Datos ilustrativos elaborados por el equipo del proyecto. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales."
+  },
   "features": [
     {
       "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-76.018, 4.362]
-      },
       "properties": {
-        "nombre": "Comunidad Indígena Alto Chili",
-        "vereda": "Alto Chili",
+        "nombre": "Comunidad campesina de alta montaña",
         "tipo_actor": "Comunidad",
-        "municipio": "Sevilla"
+        "ecosistema": "Páramo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.018,
+          4.362
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Liderazgo comunitario del páramo",
+        "tipo_actor": "Líder comunitario",
+        "ecosistema": "Páramo"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.043, 4.388]
-      },
-      "properties": {
-        "nombre": "Carmen Lucía Patiño",
-        "vereda": "Las Hermosas",
-        "tipo_actor": "Líder",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -76.043,
+          4.388
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Asociación de productores ganaderos",
+        "tipo_actor": "Sector productivo",
+        "ecosistema": "Páramo"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-76.007, 4.415]
-      },
-      "properties": {
-        "nombre": "Asociación Ganadera del Páramo Barragán",
-        "vereda": "Barragán",
-        "tipo_actor": "Empresa",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -76.007,
+          4.415
+        ]
       }
     },
     {
       "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-76.058, 4.401]
-      },
       "properties": {
-        "nombre": "Colectivo Guardianes del Páramo",
-        "vereda": "Las Hermosas",
+        "nombre": "Colectivo juvenil de guardianes del páramo",
         "tipo_actor": "Comunidad",
-        "municipio": "Sevilla"
+        "ecosistema": "Páramo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.058,
+          4.401
+        ]
       }
     }
   ]

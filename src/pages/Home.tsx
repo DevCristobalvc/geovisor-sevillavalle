@@ -53,14 +53,14 @@ const STATS = [
   { value: 4, label: 'recorridos guiados' },
 ]
 
-// Instituciones que proveen los geoservicios / datos oficiales
-const FUENTES = ['CVC', 'IGAC', 'IDEAM', 'Humboldt', 'RUNAP', 'GBIF', 'OpenStreetMap']
+// Instituciones cuyos servicios y datos consume el geovisor (ver layers.config.ts)
+const FUENTES = ['CVC — GeoCVC', 'IGAC', 'IDEAM']
 
 // Sellos de plataforma (bajo los CTA del hero)
-const PLATAFORMA = ['Sin instalación', 'Funciona sin conexión', 'Datos abiertos oficiales']
+const PLATAFORMA = ['Sin instalación', 'Funciona sin conexión', 'Fuente citada en cada capa']
 
 // Resumen ejecutivo: de dónde salen los datos, qué hace la herramienta y dónde se usa.
-// Refleja layers.config.ts (23 capas: 16 GeoJSON + 7 WMS) y src/sw.ts.
+// Refleja layers.config.ts (23 capas: 7 WMS oficiales + 16 GeoJSON representativos) y src/sw.ts.
 const FLUJO = [
   {
     paso: '01',
@@ -68,13 +68,11 @@ const FLUJO = [
     resumen: 'Entidades públicas que producen y publican la información geográfica.',
     items: [
       { nombre: 'CVC — Portal GeoCVC', tag: 'WMS' },
-      { nombre: 'IGAC — Geoservicios', tag: 'WMS' },
-      { nombre: 'IDEAM — Hidroclimatología', tag: 'WMS' },
-      { nombre: 'Humboldt · RUNAP', tag: 'WMS' },
-      { nombre: 'GBIF / SiB Colombia', tag: 'XYZ' },
-      { nombre: 'OpenStreetMap · ESRI', tag: 'Teselas' },
+      { nombre: 'IDEAM — Cobertura y clima', tag: 'WMS' },
+      { nombre: 'IGAC — Agrología', tag: 'WMS' },
+      { nombre: 'OpenStreetMap · Esri', tag: 'Mapa base' },
     ],
-    nota: '16 capas GeoJSON versionadas en el repositorio + 7 servicios WMS consultados en vivo.',
+    nota: '7 servicios WMS en vivo (CVC 4 · IDEAM 2 · IGAC 1). Las 16 capas GeoJSON son datos representativos del equipo, rotulados como ilustrativos.',
   },
   {
     paso: '02',
@@ -95,7 +93,7 @@ const FLUJO = [
     titulo: 'En el aula',
     resumen: 'Uso pedagógico en secundaria, incluso donde la conexión falla.',
     items: [
-      { nombre: 'Estudiantes de 10 a 15 años', tag: 'Grados 6–11' },
+      { nombre: 'Estudiantes de 10 a 15 años', tag: 'Grados 6–9' },
       { nombre: 'Docentes y público general', tag: 'Abierto' },
       { nombre: 'Sin instalar nada', tag: 'Web' },
       { nombre: 'Mapa base y datos en caché', tag: 'Offline' },
@@ -138,7 +136,7 @@ const CAPABILITIES = [
       </svg>
     ),
     titulo: 'Sigue recorridos guiados',
-    desc: '3 itinerarios temáticos que llevan al estudiante por los puntos más relevantes del territorio con narración contextual.',
+    desc: '4 itinerarios temáticos que llevan al estudiante por los puntos más relevantes del territorio con narración contextual.',
   },
   {
     icon: (
@@ -584,7 +582,7 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3">
           <span className="text-[10px] uppercase tracking-[0.2em] text-white/30 whitespace-nowrap">
-            Datos oficiales de
+            Cartografía oficial de
           </span>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             {FUENTES.map(f => (
@@ -719,8 +717,9 @@ export default function Home() {
               al salón de clase
             </h2>
             <p className="text-white/50 max-w-xl mx-auto text-base leading-relaxed">
-              El geovisor no almacena datos propios: los consume en vivo de las entidades que los
-              producen y los traduce a un lenguaje que un estudiante de secundaria puede leer.
+              El geovisor no produce cartografía oficial propia: consulta en vivo los servicios de
+              las entidades que la producen y la traduce a un lenguaje que un estudiante de
+              secundaria puede leer. Cada capa indica de dónde vienen sus datos.
             </p>
           </Reveal>
 
@@ -796,7 +795,7 @@ export default function Home() {
           <Reveal delay={120}>
             <div className="grid grid-cols-1 gap-4">
               {[
-                { label: 'Área municipal', value: '1.193 km²' },
+                { label: 'Área municipal', value: '538 km²' },
                 { label: 'Rango altitudinal', value: '900 – 4.200 m.s.n.m.' },
                 { label: 'Declaratoria PCC', value: 'UNESCO 2011' },
                 { label: 'Cuencas principales', value: 'Bugalagrande · La Paila · La Vieja' },
@@ -909,11 +908,13 @@ export default function Home() {
           <span className="text-gray-600 text-xs mt-3 block">
             Cristóbal Valencia Cerón · José David Molina Delgado
             <br />
-            Director: Diego Fernando Loaiza · Grupo INFORMA
+            Dirección: Diego Fernando Loaiza · Silvia Andrea Quijano Pérez
+            <br />
+            Grupo de investigación COMBA I+D
           </span>
         </p>
         <div className="mt-6 pt-6 border-t border-white/5 max-w-md mx-auto text-xs text-gray-600">
-          Fuentes: CVC · IGAC · IDEAM · IAvH · RUNAP · GBIF · OpenStreetMap
+          Fuentes: CVC · IGAC · IDEAM · Mapa base: OpenStreetMap · Esri
         </div>
       </section>
     </main>

@@ -28,7 +28,8 @@ title_page(
     affiliation="Facultad de Ingeniería, Universidad Santiago de Cali",
     program="Programa de Ingeniería de Sistemas",
     course="Trabajo de grado",
-    instructor="Director: Diego Fernando Loaiza — Grupo de Investigación INFORMA",
+    instructor="Dirección: Diego Fernando Loaiza y Silvia Andrea Quijano Pérez — "
+               "Grupo de Investigación COMBA I+D",
     date="2026",
 )
 
@@ -84,7 +85,7 @@ table(doc, 1, "Componentes del stack y su versión",
           ["Geometría", "Turf.js", "7.x"],
           ["Exportación de imagen", "html2canvas", "1.4"],
           ["Calidad", "ESLint + Prettier + Husky", "—"],
-          ["Despliegue", "GitHub Actions", "—"],
+          ["Despliegue", "Vercel", "—"],
       ],
       note="El estado no se persiste en almacenamiento local: se serializa en los "
            "parámetros de la dirección web, lo que permite compartir una vista.",
@@ -93,11 +94,24 @@ table(doc, 1, "Componentes del stack y su versión",
 # ─────────────── 3. Origen y estrategia de datos ───────────────
 h1(doc, "Origen y Estrategia de Datos")
 body(doc,
-     "Las capas se consumen de dos formas según su naturaleza. Los vectores pequeños se "
-     "sirven como GeoJSON estático versionado en el repositorio, lo que garantiza su "
-     "disponibilidad sin conexión. Las capas ráster —coberturas, clima, conflictos de "
-     "uso— se consultan en vivo mediante Web Map Service, porque su tamaño y su "
-     "frecuencia de actualización desaconsejan replicarlas.")
+     "Las capas se consumen de dos formas según su naturaleza. Las capas ráster "
+     "—red hídrica, coberturas, ecosistemas, zonificación forestal, clima y conflictos "
+     "de uso— se consultan en vivo mediante Web Map Service, porque su tamaño y su "
+     "frecuencia de actualización desaconsejan replicarlas. Los vectores se sirven como "
+     "GeoJSON estático versionado en el repositorio, lo que garantiza su disponibilidad "
+     "sin conexión.")
+body(doc,
+     "Los dieciséis GeoJSON son, por ahora, datos representativos elaborados por el "
+     "equipo para el prototipo, con geometrías y cifras aproximadas; la interfaz los "
+     "rotula como ilustrativos en el panel de capas, el globo de información y la ficha, "
+     "y no contienen datos personales. Trece de ellos tienen un equivalente oficial en "
+     "los servicios de la CVC (Portal GeoCVC) con elementos dentro de Sevilla. El script "
+     "scripts/datos/build_capas_oficiales.py los descarga, los filtra con el límite "
+     "municipal oficial, recorta las geometrías que lo desbordan, simplifica los "
+     "vértices y omite los atributos con datos personales —nombres de contacto, "
+     "teléfonos, correos, observadores, propietarios y NIT—; su ejecución quedó "
+     "pendiente. Las tres capas restantes, actores de humedales, páramo y bosque seco, "
+     "no tienen registros oficiales para el municipio.")
 
 figure(doc, 3, "Composición del inventario de capas por tipo de servicio",
        img("mt-03"),
@@ -107,17 +121,17 @@ figure(doc, 3, "Composición del inventario de capas por tipo de servicio",
 table(doc, 2, "Fuentes de datos e instituciones proveedoras",
       ["Institución", "Tipo", "Contenido"],
       [
-          ["CVC — Portal GeoCVC", "WMS", "Cuencas, coberturas, conflictos de uso"],
-          ["IGAC", "WMS", "Cartografía base y catastral"],
-          ["IDEAM", "WMS", "Isoyetas y estaciones hidroclimatológicas"],
-          ["Instituto Humboldt", "WMS", "Delimitación de páramos"],
-          ["RUNAP", "WMS", "Áreas protegidas"],
-          ["GBIF / SiB Colombia", "XYZ", "Registros de presencia de especies"],
+          ["CVC — Portal GeoCVC", "WMS",
+           "Red hídrica, ecosistemas, zonificación forestal, isoyetas"],
+          ["IDEAM", "WMS", "Cobertura de la tierra 2024 y pisos térmicos"],
+          ["IGAC", "WMS", "Conflictos de uso de la tierra 2012"],
+          ["Equipo del proyecto", "GeoJSON",
+           "16 capas representativas (13 se reemplazarán por extractos de la CVC)"],
           ["OpenStreetMap", "XYZ", "Mapa base callejero"],
-          ["ESRI World Imagery", "XYZ", "Mapa base satelital"],
+          ["Esri World Imagery", "XYZ", "Mapa base satelital"],
       ],
-      note="Todas las fuentes son de acceso público y conservan sus licencias de "
-           "origen.",
+      note="Todas las fuentes oficiales son de acceso público y conservan sus licencias "
+           "de origen. Servicios verificados en octubre de 2026.",
       col_widths=[2.2, 0.9, 3.4])
 
 table(doc, 3, "Distribución de las capas por categoría",
@@ -128,7 +142,7 @@ table(doc, 3, "Distribución de las capas por categoría",
           ["Biodiversidad", "6", "GeoJSON y WMS"],
           ["Cambio climático", "3", "GeoJSON y WMS"],
           ["Suelos", "1", "WMS"],
-          ["Territorio", "3", "GeoJSON y WMS"],
+          ["Territorio", "3", "GeoJSON"],
       ],
       note="Total: 23 capas, de las cuales 16 son GeoJSON estático y 7 son WMS.",
       col_widths=[2.4, 1.2, 2.9])
@@ -239,13 +253,14 @@ body(doc,
      "El Service Worker aplica una estrategia de caché diferenciada según el tipo de "
      "recurso. La aplicación, los archivos GeoJSON y las fichas se precargan en la "
      "instalación. Las teselas del mapa base se sirven primero desde caché. Los "
-     "servicios WMS se consultan primero en red y solo recurren a la caché si esta no "
-     "responde.")
+     "servicios WMS de la CVC, el IDEAM y el IGAC se consultan primero en red y solo "
+     "recurren a la caché si no responden en diez segundos; si un servicio falla, el "
+     "panel de capas lo avisa junto a la capa afectada.")
 
 figure(doc, 11, "Estrategia de caché del Service Worker",
        img("mt-11"),
-       "Las teselas precargadas cubren el área del municipio entre los niveles de "
-       "acercamiento 10 y 14, aproximadamente 50 MB.")
+       "Las teselas precargadas cubren el límite municipal oficial entre los niveles "
+       "de acercamiento 10 y 14: 571 teselas, unos 11 MB.")
 
 # ─────────────── 12. Despliegue ───────────────
 h1(doc, "Despliegue e Integración Continua")
@@ -261,7 +276,7 @@ h1(doc, "Requisitos No Funcionales")
 table(doc, 6, "Requisitos no funcionales y su estado",
       ["Atributo", "Objetivo", "Estado"],
       [
-          ["Rendimiento", "Bundle JavaScript menor a 500 KB comprimido", "142 KB"],
+          ["Rendimiento", "Bundle JavaScript menor a 500 KB comprimido", "145 KB"],
           ["Rendimiento", "Primer contenido visible en menos de 1,5 s", "Por auditar"],
           ["Datos", "Cada archivo GeoJSON menor a 2 MB", "Cumplido"],
           ["Offline", "Teselas del municipio, niveles 10 a 14", "Cumplido"],
@@ -281,8 +296,15 @@ reference(doc,
           "mobile-friendly interactive maps (Versión 1.9) [Software]. "
           "https://leafletjs.com")
 reference(doc,
-          "Corporación Autónoma Regional del Valle del Cauca. (2024). Portal GeoCVC. "
-          "https://geo.cvc.gov.co/inicio/")
+          "Corporación Autónoma Regional del Valle del Cauca. (2026). Portal GeoCVC "
+          "[Servicios WMS y FeatureServer]. https://portal-geo.cvc.gov.co")
+reference(doc,
+          "Instituto de Hidrología, Meteorología y Estudios Ambientales. (2026). "
+          "Servicios geográficos del IDEAM [Servicios WMS]. "
+          "https://visualizador.ideam.gov.co/gisserver/rest/services")
+reference(doc,
+          "Instituto Geográfico Agustín Codazzi. (2026). Servicios de mapas del IGAC "
+          "[Servicios WMS]. https://mapas.igac.gov.co/server/rest/services")
 reference(doc,
           "Open Geospatial Consortium. (2010). OpenGIS Web Map Service (WMS) "
           "implementation specification (Versión 1.3.0). "

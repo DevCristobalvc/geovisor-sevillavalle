@@ -58,7 +58,10 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
         try {
           const center = turf.centroid(feature as turf.AllGeoJSON)
           const [lng, lat] = center.geometry.coordinates
-          const label = String(Object.values(props).find(Boolean) ?? layer.nombre)
+          const principal = layer.atributosPopup?.[0]
+          const label = String(
+            (principal && props[principal]) ?? Object.values(props).find(Boolean) ?? layer.nombre
+          )
           found.push({ layerName: layer.nombre, label, lat, lng })
           if (found.length >= 10) break
         } catch {

@@ -1,12 +1,6 @@
 export type LayerType = 'geojson' | 'wms' | 'xyz'
 
-export type Categoria =
-  | 'actores'
-  | 'agua'
-  | 'biodiversidad'
-  | 'clima'
-  | 'suelos'
-  | 'territorio'
+export type Categoria = 'actores' | 'agua' | 'biodiversidad' | 'clima' | 'suelos' | 'territorio'
 
 export interface LayerStyle {
   color: string
@@ -15,6 +9,29 @@ export interface LayerStyle {
   fillColor?: string
   dashArray?: string
   radius?: number
+}
+
+/** Estado de carga de una capa WMS, difundido con el evento `wmsStatus` */
+export type WmsStatus = 'cargando' | 'ok' | 'error'
+
+export interface LeyendaItem {
+  color: string
+  etiqueta: string
+}
+
+/** Procedencia de los datos de una capa, visible en el panel, el popup y la ficha. */
+export interface FuenteCapa {
+  /** Entidad productora, p. ej. "CVC" */
+  entidad: string
+  /** Conjunto de datos o servicio, p. ej. "Red Hídrica (GeoCVC)" */
+  detalle: string
+  /** Enlace al servicio o portal de origen */
+  url?: string
+  /**
+   * true cuando los datos fueron elaborados por el equipo con fines de prototipo y no
+   * provienen de una fuente oficial. La interfaz los rotula como "Ilustrativo".
+   */
+  ilustrativo?: boolean
 }
 
 export interface LayerConfig {
@@ -31,6 +48,9 @@ export interface LayerConfig {
   miniatura?: string
   estilo?: LayerStyle
   descripcionBreve?: string
+  fuente: FuenteCapa
+  /** Leyenda propia (WMS). Si falta, se usa GetLegendGraphic del servicio. */
+  leyenda?: LeyendaItem[]
 }
 
 export interface VocabularioItem {
@@ -59,6 +79,7 @@ export interface FichaPedagogica {
   vocabulario: VocabularioItem[]
   galeria: GaleriaItem[]
   videos: VideoItem[]
+  /** Referencias del contenido pedagógico (no la procedencia de los datos de la capa) */
   fuente_datos: string
   nivel_educativo: string
 }

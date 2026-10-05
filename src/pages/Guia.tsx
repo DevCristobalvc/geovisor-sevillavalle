@@ -30,6 +30,12 @@ export default function Guia() {
               temáticas. Haz clic en el nombre de una categoría para expandirla, y activa las
               subcapas con los interruptores. Puedes activar varias capas al mismo tiempo.
             </p>
+            <p className="mt-2">
+              Debajo de cada capa verás de qué entidad vienen sus datos (CVC, IDEAM o IGAC). Las
+              capas marcadas como <strong>Ilustrativo</strong> son ejemplos preparados para el
+              prototipo, no datos oficiales. En las capas WMS activas, el botón{' '}
+              <strong>Ver leyenda</strong> explica qué significa cada color.
+            </p>
           </GuiaSection>
 
           <GuiaSection titulo="Consultar fichas pedagógicas" numero={3}>
@@ -69,7 +75,7 @@ export default function Guia() {
 
         <div className="mt-8 bg-verde-palido rounded-xl p-4 text-sm text-verde-bosque">
           <strong>¿Tienes preguntas?</strong> Este visor fue desarrollado como proyecto de grado en
-          la Universidad Santiago de Cali. Grupo de investigación INFORMA.
+          la Universidad Santiago de Cali. Grupo de investigación COMBA I+D.
         </div>
       </div>
     </main>

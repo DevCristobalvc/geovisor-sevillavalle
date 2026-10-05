@@ -1,4 +1,4 @@
-import type { LayerConfig, Categoria } from '../types'
+import type { LayerConfig, Categoria, FuenteCapa } from '../types'
 
 export const CATEGORIAS: Record<
   Categoria,
@@ -45,6 +45,35 @@ export const CATEGORIAS: Record<
   },
 }
 
+// ─── Servicios oficiales ──────────────────────────────────────────────────────
+// Verificados el 2026-10-05: todos responden GetMap sobre Sevilla en EPSG:3857.
+// El antiguo GeoCVC (geo.cvc.gov.co) y geoservicios.igac.gov.co / geoserver.ideam.gov.co
+// ya no existen; estas son sus direcciones vigentes.
+
+export const PORTAL_GEOCVC = 'https://portal-geo.cvc.gov.co'
+const CVC_WMS = `${PORTAL_GEOCVC}/server/services`
+const IDEAM_WMS = 'https://visualizador.ideam.gov.co/gisserver/services'
+const IGAC_WMS = 'https://mapas.igac.gov.co/server/services'
+
+/**
+ * Capas GeoJSON que aún son datos representativos hechos a mano. Su reemplazo por el
+ * extracto oficial de la CVC (scripts/datos/build_capas_oficiales.py) quedó pendiente:
+ * ver ip.todo en la raíz del repositorio.
+ */
+const pendienteCvc = (conjunto: string): FuenteCapa => ({
+  entidad: 'Equipo del proyecto',
+  detalle: `Datos representativos elaborados por el equipo para el prototipo: geometrías y cifras aproximadas. Se reemplazarán por el conjunto oficial «${conjunto}» de la CVC.`,
+  ilustrativo: true,
+})
+
+/** Capas sin registros oficiales para Sevilla: elaboradas por el equipo para el prototipo */
+const ILUSTRATIVO: FuenteCapa = {
+  entidad: 'Equipo del proyecto',
+  detalle:
+    'Datos ilustrativos elaborados para el prototipo. No provienen de una fuente oficial; se reemplazarán con la cartografía social de la tesis colaboradora.',
+  ilustrativo: true,
+}
+
 export const LAYERS: LayerConfig[] = [
   // ── ACTORES SOCIALES ────────────────────────────────────────────────────────
   {
@@ -56,9 +85,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#6D4C41', fillColor: '#6D4C41', fillOpacity: 0.7, weight: 1.5, radius: 8 },
     visibleDefault: false,
     fichaId: 'actores_humedales',
-    atributosPopup: ['nombre', 'tipo_actor', 'ecosistema', 'contacto'],
+    atributosPopup: ['nombre', 'tipo_actor', 'ecosistema'],
     miniatura: '/images/actores/humedales_thumb.webp',
-    descripcionBreve: 'ONGs, comunidades y líderes con incidencia en los humedales de Sevilla',
+    descripcionBreve: 'Tipos de actores con incidencia en los humedales',
+    fuente: ILUSTRATIVO,
   },
   {
     id: 'actores_paramo',
@@ -69,9 +99,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#6D4C41', fillColor: '#8D6E63', fillOpacity: 0.7, weight: 1.5, radius: 8 },
     visibleDefault: false,
     fichaId: 'actores_paramo',
-    atributosPopup: ['nombre', 'vereda', 'tipo_actor'],
+    atributosPopup: ['nombre', 'tipo_actor', 'ecosistema'],
     miniatura: '/images/actores/paramo_thumb.webp',
-    descripcionBreve: 'Comunidades de páramo de Chili-Barragán y Las Hermosas',
+    descripcionBreve: 'Tipos de actores en la alta montaña de Sevilla',
+    fuente: ILUSTRATIVO,
   },
   {
     id: 'actores_bosque_andino',
@@ -82,9 +113,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#5D4037', fillColor: '#5D4037', fillOpacity: 0.7, weight: 1.5, radius: 8 },
     visibleDefault: false,
     fichaId: 'actores_bosque_andino',
-    atributosPopup: ['nombre', 'rol', 'predio'],
+    atributosPopup: ['nombre', 'tipo_actor', 'ecosistema'],
     miniatura: '/images/actores/bosque_andino_thumb.webp',
-    descripcionBreve: 'Academia, ONGs, propietarios de reservas y sector productivo en zona andina',
+    descripcionBreve: 'Tipos de actores en el bosque andino',
+    fuente: pendienteCvc('Actores sociales del bosque de zona andina'),
   },
   {
     id: 'actores_bosque_seco',
@@ -95,10 +127,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#4E342E', fillColor: '#4E342E', fillOpacity: 0.7, weight: 1.5, radius: 8 },
     visibleDefault: false,
     fichaId: 'actores_bosque_seco',
-    atributosPopup: ['nombre', 'sector', 'municipio'],
+    atributosPopup: ['nombre', 'tipo_actor', 'ecosistema'],
     miniatura: '/images/actores/bosque_seco_thumb.webp',
-    descripcionBreve:
-      'Entes gubernamentales, JAC, juntas de acueducto y sector productivo en zona seca',
+    descripcionBreve: 'Tipos de actores en las zonas bajas y secas',
+    fuente: ILUSTRATIVO,
   },
 
   // ── AGUA ────────────────────────────────────────────────────────────────────
@@ -111,22 +143,28 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#2E86C1', fillColor: '#5DADE2', fillOpacity: 0.35, weight: 2 },
     visibleDefault: true,
     fichaId: 'agua_cuencas',
-    atributosPopup: ['nombre', 'area_ha', 'rio_principal'],
+    atributosPopup: ['nombre', 'rio_principal', 'area_ha'],
     miniatura: '/images/agua/cuencas_thumb.webp',
-    descripcionBreve: 'Ríos Bugalagrande, La Paila, La Vieja y quebrada Las Cañas',
+    descripcionBreve: 'Río Bugalagrande y quebrada Las Cañas (trazado aproximado)',
+    fuente: pendienteCvc('Cuencas hidrográficas'),
   },
   {
     id: 'agua_red_hidrica',
     nombre: 'Red Hídrica',
     categoria: 'agua',
     tipo: 'wms',
-    url: 'https://geoservicios.igac.gov.co/geoserver/wms',
-    wmsLayers: 'igac:red_hidrica',
+    url: `${CVC_WMS}/Agua/Red_Hidrica/MapServer/WMSServer`,
+    wmsLayers: '0,1,2',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'agua_red_hidrica',
     miniatura: '/images/agua/red_hidrica_thumb.webp',
-    descripcionBreve: 'Ríos, quebradas y cuerpos de agua superficial',
+    descripcionBreve: 'Ríos, quebradas y otros drenajes del Valle del Cauca',
+    fuente: {
+      entidad: 'CVC',
+      detalle: 'Red Hídrica — servicio WMS del Portal GeoCVC',
+      url: PORTAL_GEOCVC,
+    },
   },
   {
     id: 'agua_humedales',
@@ -139,7 +177,8 @@ export const LAYERS: LayerConfig[] = [
     fichaId: 'agua_humedales',
     atributosPopup: ['nombre', 'tipo', 'area_ha', 'estado_conservacion'],
     miniatura: '/images/agua/humedales_thumb.webp',
-    descripcionBreve: 'Humedales y lagunas del municipio de Sevilla',
+    descripcionBreve: 'Ejemplos de humedales y lagunas (trazado aproximado)',
+    fuente: pendienteCvc('Huella de humedales'),
   },
   {
     id: 'agua_calidad',
@@ -152,7 +191,8 @@ export const LAYERS: LayerConfig[] = [
     fichaId: 'agua_calidad',
     atributosPopup: ['codigo', 'parametros', 'fecha_muestreo'],
     miniatura: '/images/agua/calidad_thumb.webp',
-    descripcionBreve: 'Estaciones de muestreo Quebrada San José',
+    descripcionBreve: 'Puntos de muestreo en la quebrada San José (aproximados)',
+    fuente: pendienteCvc('Estaciones de muestreo de calidad del agua'),
   },
   {
     id: 'agua_monitoreo_subterraneo',
@@ -163,9 +203,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#01579B', fillColor: '#039BE5', fillOpacity: 0.9, weight: 2, radius: 10 },
     visibleDefault: false,
     fichaId: 'agua_monitoreo_subterraneo',
-    atributosPopup: ['profundidad', 'nivel_freatico'],
+    atributosPopup: ['codigo', 'profundidad', 'nivel_freatico'],
     miniatura: '/images/agua/monitoreo_thumb.webp',
-    descripcionBreve: 'Pozo de monitoreo vs-pm-1',
+    descripcionBreve: 'Pozo de monitoreo vs-pm-1 (ubicación aproximada)',
+    fuente: pendienteCvc('Pozos de monitoreo de agua subterránea'),
   },
   {
     id: 'agua_predios_art111',
@@ -178,35 +219,47 @@ export const LAYERS: LayerConfig[] = [
     fichaId: 'agua_predios_art111',
     atributosPopup: ['predio', 'area_ha', 'fuente_hidrica_protegida'],
     miniatura: '/images/agua/predios_thumb.webp',
-    descripcionBreve: 'Predios adquiridos para protección de cuencas',
+    descripcionBreve: 'Ejemplos de predios para proteger fuentes de acueductos',
+    fuente: pendienteCvc('Predios Art. 111 Ley 99 de 1993'),
   },
 
   // ── BIODIVERSIDAD ───────────────────────────────────────────────────────────
   {
     id: 'biodiversidad_cobertura_50k',
-    nombre: 'Cobertura Uso Suelo 50K',
+    nombre: 'Cobertura de la Tierra 2024',
     categoria: 'biodiversidad',
     tipo: 'wms',
-    url: 'https://geoservicios.igac.gov.co/arcgis/services/igac_cobertura_tierra/MapServer/WMSServer',
-    wmsLayers: 'Cobertura_Tierra_2022',
+    url: `${IDEAM_WMS}/Estado_Cobertura_Tierra/MapServer/WMSServer`,
+    wmsLayers: '1',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'biodiversidad_cobertura',
     miniatura: '/images/biodiversidad/cobertura_thumb.webp',
-    descripcionBreve: 'CORINE Land Cover: superficies construidas, plantadas y naturales',
+    descripcionBreve:
+      'Corine Land Cover 1:100.000: territorios artificializados, agrícolas y naturales',
+    fuente: {
+      entidad: 'IDEAM',
+      detalle: 'Cobertura de la tierra 1:100.000, periodo 2024 (Corine Land Cover) — servicio WMS',
+      url: 'https://visualizador.ideam.gov.co',
+    },
   },
   {
     id: 'biodiversidad_ecosistemas',
-    nombre: 'Ecosistemas y Fragmentación',
+    nombre: 'Ecosistemas',
     categoria: 'biodiversidad',
     tipo: 'wms',
-    url: 'https://geoservicios.cvc.gov.co/geoserver/wms',
-    wmsLayers: 'cvc:ecosistemas_fragmentacion',
+    url: `${CVC_WMS}/Biodiversidad/Ecosistemas/MapServer/WMSServer`,
+    wmsLayers: '1',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'biodiversidad_ecosistemas',
     miniatura: '/images/biodiversidad/ecosistemas_thumb.webp',
-    descripcionBreve: 'Tipo de ecosistema e índice de fragmentación (1-5)',
+    descripcionBreve: 'Ecosistemas del Valle del Cauca según clima, relieve y suelo',
+    fuente: {
+      entidad: 'CVC',
+      detalle: 'Ecosistemas — servicio WMS del Portal GeoCVC',
+      url: PORTAL_GEOCVC,
+    },
   },
   {
     id: 'biodiversidad_paramos',
@@ -219,7 +272,8 @@ export const LAYERS: LayerConfig[] = [
     fichaId: 'biodiversidad_paramos',
     atributosPopup: ['nombre_complejo', 'area_ha', 'altitud_rango'],
     miniatura: '/images/biodiversidad/paramos_thumb.webp',
-    descripcionBreve: 'Complejos de páramo Chili-Barragán y Las Hermosas',
+    descripcionBreve: 'Complejo de páramo Chilí-Barragán (trazado aproximado)',
+    fuente: pendienteCvc('Páramos'),
   },
   {
     id: 'biodiversidad_especies',
@@ -230,9 +284,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1B5E20', fillColor: '#43A047', fillOpacity: 0.85, weight: 1, radius: 7 },
     visibleDefault: false,
     fichaId: 'biodiversidad_especies',
-    atributosPopup: ['nombre_cientifico', 'familia', 'fecha_registro', 'fuente'],
+    atributosPopup: ['nombre_cientifico', 'nombre_comun', 'familia', 'categoria_amenaza'],
     miniatura: '/images/biodiversidad/especies_thumb.webp',
-    descripcionBreve: 'Ocurrencias de flora y fauna en Sevilla (GBIF/SiB Colombia)',
+    descripcionBreve: 'Ejemplos de especies de fauna y flora del territorio',
+    fuente: pendienteCvc('Registro de especies'),
   },
   {
     id: 'biodiversidad_areas_protegidas',
@@ -245,20 +300,26 @@ export const LAYERS: LayerConfig[] = [
     fichaId: 'biodiversidad_areas_protegidas',
     atributosPopup: ['nombre', 'categoria', 'area_ha', 'fecha_declaracion'],
     miniatura: '/images/biodiversidad/areas_protegidas_thumb.webp',
-    descripcionBreve: 'Reserva Forestal Ley 2ª/1959 y DRMI',
+    descripcionBreve: 'Reserva Forestal Ley 2.ª y un DRMI (trazado aproximado)',
+    fuente: pendienteCvc('Sistema de áreas protegidas y Reserva Forestal Ley 2.ª de 1959'),
   },
   {
     id: 'biodiversidad_zonificacion_forestal',
     nombre: 'Zonificación Forestal',
     categoria: 'biodiversidad',
     tipo: 'wms',
-    url: 'https://geoservicios.igac.gov.co/geoserver/wms',
-    wmsLayers: 'igac:zonificacion_forestal',
+    url: `${CVC_WMS}/Biodiversidad/Uso_Potencial__Zonificacion_Forestal/MapServer/WMSServer`,
+    wmsLayers: '0',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'biodiversidad_zonificacion_forestal',
     miniatura: '/images/biodiversidad/zonificacion_thumb.webp',
-    descripcionBreve: 'Uso potencial del suelo en zonas forestales',
+    descripcionBreve: 'Uso potencial del suelo y zonificación forestal 1:100.000',
+    fuente: {
+      entidad: 'CVC',
+      detalle: 'Uso potencial y zonificación forestal — servicio WMS del Portal GeoCVC',
+      url: PORTAL_GEOCVC,
+    },
   },
 
   // ── CAMBIO CLIMÁTICO ────────────────────────────────────────────────────────
@@ -267,13 +328,18 @@ export const LAYERS: LayerConfig[] = [
     nombre: 'Isoyetas de Precipitación',
     categoria: 'clima',
     tipo: 'wms',
-    url: 'https://geoserver.ideam.gov.co/geoserver/ows',
-    wmsLayers: 'ideam:isoyetas_multianuales',
+    url: `${CVC_WMS}/Cambio_Climatico/Precipitacion_Isoyetas_Multianuales_2016/MapServer/WMSServer`,
+    wmsLayers: '25',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'clima_isoyetas',
     miniatura: '/images/clima/isoyetas_thumb.webp',
-    descripcionBreve: 'Isoyetas multianuales 2016 — zonas Cauca y Pacífico',
+    descripcionBreve: 'Precipitación media anual (mm), isoyetas multianuales 2016 — zona Cauca',
+    fuente: {
+      entidad: 'CVC',
+      detalle: 'Isoyetas multianuales 2016 — servicio WMS del Portal GeoCVC',
+      url: PORTAL_GEOCVC,
+    },
   },
   {
     id: 'clima_estaciones',
@@ -284,22 +350,36 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#E65100', fillColor: '#FF9800', fillOpacity: 0.9, weight: 2, radius: 10 },
     visibleDefault: false,
     fichaId: 'clima_estaciones',
-    atributosPopup: ['codigo', 'tipo', 'entidad', 'series_hist'],
+    atributosPopup: ['nombre', 'codigo', 'tipo', 'entidad'],
     miniatura: '/images/clima/estaciones_thumb.webp',
-    descripcionBreve: 'Red de monitoreo climático y limnigráfico',
+    descripcionBreve: 'Ejemplos de estaciones de la red hidroclimatológica',
+    fuente: pendienteCvc('Red hidroclimatológica'),
   },
   {
     id: 'clima_pisos_termicos',
     nombre: 'Pisos Térmicos',
     categoria: 'clima',
     tipo: 'wms',
-    url: 'https://geoservicios.igac.gov.co/geoserver/wms',
-    wmsLayers: 'igac:pisos_termicos_100k',
+    url: `${IDEAM_WMS}/Clima_Temperatura/MapServer/WMSServer`,
+    wmsLayers: '3',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'clima_pisos_termicos',
     miniatura: '/images/clima/pisos_termicos_thumb.webp',
-    descripcionBreve: 'Cálido, medio, frío, muy frío y extremadamente frío en Sevilla',
+    descripcionBreve: 'Temperatura media anual y pisos térmicos, de templado a páramo',
+    fuente: {
+      entidad: 'IDEAM',
+      detalle: 'Temperatura media anual y pisos térmicos, periodo 1971–2000 — servicio WMS',
+      url: 'https://visualizador.ideam.gov.co',
+    },
+    leyenda: [
+      { color: '#FFFF73', etiqueta: 'Cálido · más de 24 °C' },
+      { color: '#98E600', etiqueta: 'Templado · 18 a 24 °C' },
+      { color: '#C2FBFE', etiqueta: 'Frío · 12 a 18 °C' },
+      { color: '#BED2FF', etiqueta: 'Muy frío (páramo bajo) · 6 a 12 °C' },
+      { color: '#0181FE', etiqueta: 'Extremadamente frío (páramo alto) · 0 a 6 °C' },
+      { color: '#E600FF', etiqueta: 'Nival · menos de 0 °C' },
+    ],
   },
 
   // ── SUELOS ──────────────────────────────────────────────────────────────────
@@ -308,13 +388,25 @@ export const LAYERS: LayerConfig[] = [
     nombre: 'Conflictos de Uso del Suelo',
     categoria: 'suelos',
     tipo: 'wms',
-    url: 'https://geoservicios.igac.gov.co/geoserver/wms',
-    wmsLayers: 'igac:conflictos_uso_suelo_50k',
+    url: `${IGAC_WMS}/agrologia/conflictos2012territorionacional/MapServer/WMSServer`,
+    wmsLayers: '1',
     wmsFormat: 'image/png',
     visibleDefault: false,
     fichaId: 'suelos_conflictos_uso',
     miniatura: '/images/suelos/conflictos_thumb.webp',
-    descripcionBreve: 'Alto conflicto, moderado, sin conflicto y zona urbana',
+    descripcionBreve: 'Uso adecuado, subutilización y sobreutilización de la tierra (2012)',
+    fuente: {
+      entidad: 'IGAC',
+      detalle: 'Conflictos de uso de la tierra 2012, escala 1:100.000 — servicio WMS',
+      url: 'https://mapas.igac.gov.co',
+    },
+    leyenda: [
+      { color: '#B4FF1A', etiqueta: 'Uso adecuado o sin conflicto' },
+      { color: '#FFFF1A', etiqueta: 'Subutilización (ligera, moderada o severa)' },
+      { color: '#FF1A1A', etiqueta: 'Sobreutilización y otros conflictos' },
+      { color: '#D1D1D1', etiqueta: 'Áreas protegidas, zona urbana o sin determinar' },
+      { color: '#A1DFF3', etiqueta: 'Cuerpos de agua' },
+    ],
   },
 
   // ── TERRITORIO ADMINISTRATIVO ────────────────────────────────────────────────
@@ -327,9 +419,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1B4F72', fillColor: '#2980B9', fillOpacity: 0.1, weight: 2, dashArray: '4' },
     visibleDefault: true,
     fichaId: 'territorio_division',
-    atributosPopup: ['nombre_vereda', 'codigo_dane', 'area_km2'],
+    atributosPopup: ['nombre_vereda', 'codigo_dane', 'tipo'],
     miniatura: '/images/territorio/division_thumb.webp',
-    descripcionBreve: 'Límite del municipio, veredas y corregimientos',
+    descripcionBreve: 'Límite municipal y casco urbano (trazado aproximado)',
+    fuente: pendienteCvc('División político-administrativa'),
   },
   {
     id: 'territorio_resguardos',
@@ -340,9 +433,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1A237E', fillColor: '#3F51B5', fillOpacity: 0.3, weight: 2 },
     visibleDefault: false,
     fichaId: 'territorio_resguardos',
-    atributosPopup: ['nombre', 'pueblo', 'area_ha', 'resolucion'],
+    atributosPopup: ['nombre', 'pueblo', 'resolucion'],
     miniatura: '/images/territorio/resguardos_thumb.webp',
-    descripcionBreve: 'Resguardo Indígena Ancore Drua',
+    descripcionBreve: 'Resguardo Indígena Ancore Drua (trazado aproximado)',
+    fuente: pendienteCvc('Resguardos indígenas'),
   },
   {
     id: 'territorio_pcc',
@@ -353,9 +447,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#283593', fillColor: '#7986CB', fillOpacity: 0.25, weight: 2 },
     visibleDefault: false,
     fichaId: 'territorio_pcc',
-    atributosPopup: ['categoria', 'area_ha', 'anno_declaracion'],
+    atributosPopup: ['categoria', 'anno_declaracion'],
     miniatura: '/images/territorio/pcc_thumb.webp',
-    descripcionBreve: 'Zona declarada Patrimonio Cultural de la Humanidad (UNESCO 2011)',
+    descripcionBreve: 'Área principal y de amortiguamiento del PCC (aproximada)',
+    fuente: pendienteCvc('Paisaje Cultural Cafetero'),
   },
 ]
 
@@ -377,7 +472,21 @@ export const SEVILLA_CENTER: [number, number] = [4.271, -75.9366]
 export const SEVILLA_DEFAULT_ZOOM = 13
 export const SEVILLA_MIN_ZOOM = 10
 export const SEVILLA_MAX_ZOOM = 18
+// Extensión del límite municipal oficial (CVC): lat 3,90–4,41 · lon −76,04 a −75,74
 export const SEVILLA_BOUNDS: [[number, number], [number, number]] = [
-  [4.1, -76.08],
-  [4.44, -75.78],
+  [3.88, -76.06],
+  [4.43, -75.72],
 ]
+
+/** URL de la leyenda (GetLegendGraphic) de una subcapa WMS */
+export function wmsLegendUrl(layer: LayerConfig, subcapa: string): string {
+  const params = new URLSearchParams({
+    service: 'WMS',
+    request: 'GetLegendGraphic',
+    version: '1.3.0',
+    format: 'image/png',
+    sld_version: '1.1.0',
+    layer: subcapa,
+  })
+  return `${layer.url}?${params}`
+}

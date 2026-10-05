@@ -1,75 +1,82 @@
 {
   "type": "FeatureCollection",
-  "name": "Actores Humedales",
+  "metadata": {
+    "origen": "Datos ilustrativos elaborados por el equipo del proyecto. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales."
+  },
   "features": [
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Organización ambiental dedicada a humedales",
+        "tipo_actor": "ONG",
+        "ecosistema": "Humedal"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.962, 4.268]
-      },
-      "properties": {
-        "nombre": "Corporación Ambiental Humedales del Valle",
-        "tipo_actor": "ONG",
-        "ecosistema": "Humedal",
-        "contacto": "humedalesvalle@correo.co",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -75.962,
+          4.268
+        ]
       }
     },
     {
       "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-75.978, 4.281]
-      },
       "properties": {
-        "nombre": "Comunidad Vereda La Cristalina",
+        "nombre": "Junta de Acción Comunal de la vereda",
         "tipo_actor": "Comunidad",
-        "ecosistema": "Humedal",
-        "contacto": "jac.cristalina@correo.co",
-        "municipio": "Sevilla"
+        "ecosistema": "Humedal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.978,
+          4.281
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Liderazgo comunitario del humedal",
+        "tipo_actor": "Líder comunitario",
+        "ecosistema": "Humedal"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.955, 4.291]
-      },
-      "properties": {
-        "nombre": "Nelson Giraldo Ríos",
-        "tipo_actor": "Líder",
-        "ecosistema": "Humedal",
-        "contacto": "ngiraldo@correo.co",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -75.955,
+          4.291
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Asociación de productores acuícolas",
+        "tipo_actor": "Sector productivo",
+        "ecosistema": "Humedal"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.993, 4.274]
-      },
-      "properties": {
-        "nombre": "Asociación de Acuicultores del Municipio",
-        "tipo_actor": "Empresa",
-        "ecosistema": "Humedal",
-        "contacto": "acuicultores.sevilla@correo.co",
-        "municipio": "Sevilla"
+        "coordinates": [
+          -75.993,
+          4.274
+        ]
       }
     },
     {
       "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-75.969, 4.298]
-      },
       "properties": {
-        "nombre": "Fundación Río Vivo",
+        "nombre": "Fundación ambiental local",
         "tipo_actor": "ONG",
-        "ecosistema": "Humedal",
-        "contacto": "riovivo@fundacion.org",
-        "municipio": "Sevilla"
+        "ecosistema": "Humedal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.969,
+          4.298
+        ]
       }
     }
   ]

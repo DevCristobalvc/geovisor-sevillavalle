@@ -59,6 +59,6 @@
       "titulo": "Paisajes Sonoros — Bosque Andino Insular Lacustre"
     }
   ],
-  "fuente_datos": "IGAC – Zonificación Forestal Colombia 1:100.000; CVC – Zonificación de Bosques Valle del Cauca 1:50.000; MADS – Manual de Clasificación de Tierras de Colombia",
+  "fuente_datos": "CVC – Uso potencial y zonificación forestal del Valle del Cauca, escala 1:100.000 (Portal GeoCVC, servicio WMS); MADS – Manual de Clasificación de Tierras de Colombia",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

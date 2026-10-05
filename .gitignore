@@ -58,3 +58,9 @@ Desktop.ini
 
 # Claude Code — local overrides (keep project settings.json tracked)
 .claude/settings.local.json
+
+# Manuales — PNG intermedios de los diagramas Mermaid (se regeneran con mmdc)
+docs/generador/img/
+
+# Python
+__pycache__/

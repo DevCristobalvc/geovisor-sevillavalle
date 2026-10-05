@@ -12,8 +12,10 @@ precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
 
 // ─── OSM tile pre-cache for Sevilla bbox zoom 10-14 ─────────────────────────
-const PRECACHE_TILE_CACHE = 'osm-tiles-precache-v1'
-const BBOX = { minLat: 4.1, maxLat: 4.44, minLng: -76.08, maxLng: -75.78 }
+// BBOX = official municipal boundary (CVC) plus a small margin; keep in sync with
+// SEVILLA_BOUNDS in layers.config.ts. v2: the old bbox left out the south of the municipality.
+const PRECACHE_TILE_CACHE = 'osm-tiles-precache-v2'
+const BBOX = { minLat: 3.88, maxLat: 4.43, minLng: -76.06, maxLng: -75.72 }
 
 function tileCoords(lat: number, lng: number, z: number): [number, number] {
   const n = 2 ** z
@@ -60,6 +62,18 @@ self.addEventListener('install', (event: ExtendableEvent) => {
   )
 })
 
+// Caches replaced in this version: free the space they took on the device
+const OBSOLETE_CACHES = ['osm-tiles-precache-v1', 'wms-cvc']
+self.addEventListener('activate', (event: ExtendableEvent) => {
+  event.waitUntil(
+    caches
+      .keys()
+      .then(keys =>
+        Promise.all(keys.filter(k => OBSOLETE_CACHES.includes(k)).map(k => caches.delete(k)))
+      )
+  )
+})
+
 // ─── Runtime caching strategies ─────────────────────────────────────────────
 
 // OSM tiles (covers pre-cached + any tiles outside bbox)
@@ -80,11 +94,15 @@ registerRoute(
   })
 )
 
-// CVC WMS services (network-first, fallback to cache when offline)
+// Official WMS services — CVC, IDEAM and IGAC (network-first, fallback to cache when offline)
 registerRoute(
-  ({ url }) => /^https:\/\/.*\.cvc\.gov\.co\//.test(url.href),
+  ({ url }) =>
+    /^https:\/\/(portal-geo\.cvc\.gov\.co|visualizador\.ideam\.gov\.co|mapas\.igac\.gov\.co)\/.*WMSServer/i.test(
+      url.href
+    ),
   new NetworkFirst({
-    cacheName: 'wms-cvc',
-    plugins: [new ExpirationPlugin({ maxEntries: 200, maxAgeSeconds: 24 * 60 * 60 })],
+    cacheName: 'wms-oficial',
+    networkTimeoutSeconds: 10,
+    plugins: [new ExpirationPlugin({ maxEntries: 400, maxAgeSeconds: 24 * 60 * 60 })],
   })
 )

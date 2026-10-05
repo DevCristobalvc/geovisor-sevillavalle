@@ -92,7 +92,7 @@ function IconLocate() {
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function MapToolbar({
-  panelCollapsed,
+  panelCollapsed: _panelCollapsed,
   onTogglePanel,
   isMeasuring,
   onToggleMeasure,

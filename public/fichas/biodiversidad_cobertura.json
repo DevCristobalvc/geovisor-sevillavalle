@@ -59,6 +59,6 @@
       "titulo": "Coberturas de la Tierra CORINE Land Cover en QGIS"
     }
   ],
-  "fuente_datos": "IDEAM – Mapa de Cobertura de la Tierra Colombia CORINE Land Cover 2018; CVC – Mapa de Coberturas Valle del Cauca 2020; IGAC – Cartografía de uso del suelo Sevilla 1:25.000",
+  "fuente_datos": "IDEAM – Cobertura de la tierra Corine Land Cover adaptada para Colombia, periodo 2024, escala 1:100.000 (servicio WMS); CVC – Mapa de Coberturas Valle del Cauca 2020; IGAC – Cartografía de uso del suelo Sevilla 1:25.000",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

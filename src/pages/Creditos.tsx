@@ -1,3 +1,5 @@
+import { PORTAL_GEOCVC } from '../config/layers.config'
+
 export default function Creditos() {
   return (
     <main className="overflow-y-auto h-full bg-gris-claro">
@@ -19,12 +21,23 @@ export default function Creditos() {
             <h2 className="font-bold text-base text-gris-texto mb-3">Equipo de desarrollo</h2>
             <ul className="space-y-2 text-sm text-gris-texto font-pedagogica">
               <li className="flex gap-2">
-                <span className="font-semibold">Estudiante investigador:</span>
-                <span>Proyecto de Grado — Ingeniería de Sistemas, USC</span>
+                <span className="font-semibold">Estudiantes:</span>
+                <span>Cristóbal Valencia Cerón · José David Molina Delgado</span>
               </li>
               <li className="flex gap-2">
-                <span className="font-semibold">Director:</span>
-                <span>Grupo de investigación INFORMA, Universidad Santiago de Cali</span>
+                <span className="font-semibold">Dirección:</span>
+                <span>Diego Fernando Loaiza · Silvia Andrea Quijano Pérez</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="font-semibold">Grupo:</span>
+                <span>COMBA I+D — Ingeniería de Sistemas, Universidad Santiago de Cali</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="font-semibold">Tesis colaboradora:</span>
+                <span>
+                  «Cartografiar las huellas del café», de Jonathan Rodríguez Camacho, que aporta el
+                  contenido ecopedagógico
+                </span>
               </li>
             </ul>
           </section>
@@ -35,30 +48,40 @@ export default function Creditos() {
             </h2>
             <ul className="space-y-2 text-sm text-gris-texto font-pedagogica">
               <li>
-                <strong>IGAC</strong> — Instituto Geográfico Agustín Codazzi. División
-                político-administrativa, cobertura del suelo, conflictos de uso, zonificación
-                forestal, pisos térmicos.
-              </li>
-              <li>
-                <strong>CVC</strong> — Corporación Autónoma Regional del Valle del Cauca. Cuencas
-                hidrográficas, ecosistemas, red hídrica, estaciones hidroclimatológicas.
+                <strong>CVC</strong> — Corporación Autónoma Regional del Valle del Cauca,{' '}
+                <a
+                  href={PORTAL_GEOCVC}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-azul-medio hover:underline"
+                >
+                  Portal GeoCVC
+                </a>
+                . Servicios WMS de red hídrica, ecosistemas, zonificación forestal e isoyetas de
+                precipitación.
               </li>
               <li>
                 <strong>IDEAM</strong> — Instituto de Hidrología, Meteorología y Estudios
-                Ambientales. Isoyetas de precipitación, datos climáticos históricos.
+                Ambientales. Servicios WMS de cobertura de la tierra 2024 y pisos térmicos.
               </li>
               <li>
-                <strong>SiB Colombia / GBIF</strong> — Sistema de Información sobre Biodiversidad de
-                Colombia. Registros de especies de flora y fauna.
+                <strong>IGAC</strong> — Instituto Geográfico Agustín Codazzi. Servicio WMS de
+                conflictos de uso de la tierra 2012.
               </li>
               <li>
-                <strong>RUNAP</strong> — Registro Único Nacional de Áreas Protegidas. Límites de
-                áreas protegidas y categorías de manejo.
-              </li>
-              <li>
-                <strong>MinCultura</strong> — Paisaje Cultural Cafetero (UNESCO, 2011).
+                <strong>Datos ilustrativos</strong> — Las 16 capas GeoJSON (actores, cuencas,
+                humedales, calidad del agua, monitoreo subterráneo, predios, páramos, áreas
+                protegidas, especies, estaciones, división político-administrativa, resguardos y
+                Paisaje Cultural Cafetero) son datos representativos elaborados por el equipo para
+                el prototipo, con geometrías y cifras aproximadas. Se rotulan como «Ilustrativo» en
+                el visor y no contienen datos personales.
               </li>
             </ul>
+            <p className="mt-3 text-xs text-gray-500 font-pedagogica">
+              Trece de ellas se reemplazarán por extractos oficiales de la CVC con{' '}
+              <code>scripts/datos/build_capas_oficiales.py</code>. Los actores de humedales, páramo
+              y bosque seco no tienen registros oficiales para Sevilla.
+            </p>
           </section>
 
           <section className="bg-white rounded-xl p-5 shadow-sm">

@@ -206,7 +206,7 @@ export default function Navbar() {
           </span>
         )}
         <a
-          href="https://geo.cvc.gov.co"
+          href="https://portal-geo.cvc.gov.co"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Ir a GeoCVC (abre en nueva pestaña)"

@@ -59,6 +59,6 @@
       "titulo": "Los pisos térmicos en Colombia"
     }
   ],
-  "fuente_datos": "IDEAM – Atlas Climatológico de Colombia; IGAC – Clasificación Climática de Colombia; CVC – Caracterización bioclimática Valle del Cauca",
+  "fuente_datos": "IDEAM – Temperatura media anual y pisos térmicos 1971–2000 (servicio WMS); IDEAM – Atlas Climatológico de Colombia; IGAC – Clasificación Climática de Colombia; CVC – Caracterización bioclimática Valle del Cauca",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

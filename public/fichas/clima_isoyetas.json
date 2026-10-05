@@ -59,6 +59,6 @@
       "titulo": "Isoyetas de precipitación en QGIS"
     }
   ],
-  "fuente_datos": "IDEAM – Atlas Climatológico de Colombia 2005; IDEAM – Isoyetas Multianuales Colombia 2016; CVC – Red Hidrometeorológica del Valle del Cauca",
+  "fuente_datos": "IDEAM – Atlas Climatológico de Colombia 2005; CVC – Isoyetas multianuales 2016 del Valle del Cauca (Portal GeoCVC, servicio WMS); CVC – Red Hidrometeorológica del Valle del Cauca",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

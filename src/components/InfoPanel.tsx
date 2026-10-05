@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import type { FichaPedagogica } from '../types'
-import { CATEGORIAS } from '../config/layers.config'
+import { CATEGORIAS, LAYERS } from '../config/layers.config'
 
 interface InfoPanelProps {
   fichaId: string | null
@@ -29,6 +29,7 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
   }, [fichaId])
 
   const isOpen = !!fichaId
+  const capa = LAYERS.find(l => l.fichaId === fichaId)
 
   useEffect(() => {
     if (!isOpen) return
@@ -164,10 +165,38 @@ export default function InfoPanel({ fichaId, onClose }: InfoPanelProps) {
                 </div>
               )}
 
-              <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-400">
-                <strong>Fuente:</strong> {ficha.fuente_datos}
-                <br />
-                <strong>Nivel:</strong> {ficha.nivel_educativo}
+              <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-400 space-y-1">
+                {capa && (
+                  <p className="text-xs leading-relaxed">
+                    <strong>Datos de la capa:</strong>{' '}
+                    {capa.fuente.ilustrativo ? (
+                      <span className="text-amber-800">{capa.fuente.detalle}</span>
+                    ) : (
+                      <>
+                        {capa.fuente.entidad} — {capa.fuente.detalle}
+                        {capa.fuente.url && (
+                          <>
+                            {' '}
+                            <a
+                              href={capa.fuente.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-azul-medio hover:underline"
+                            >
+                              (ver portal ↗)
+                            </a>
+                          </>
+                        )}
+                      </>
+                    )}
+                  </p>
+                )}
+                <p className="text-xs leading-relaxed">
+                  <strong>Referencias:</strong> {ficha.fuente_datos}
+                </p>
+                <p className="text-xs leading-relaxed">
+                  <strong>Nivel:</strong> {ficha.nivel_educativo}
+                </p>
               </div>
             </div>
           )}

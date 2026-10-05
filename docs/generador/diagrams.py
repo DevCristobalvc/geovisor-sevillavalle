@@ -83,7 +83,7 @@ DIAGRAMS["mu-09"] = """flowchart LR
 DIAGRAMS["mt-01"] = """flowchart LR
     U["Navegador<br/>del usuario"] --> A["Geovisor<br/><small>SPA React</small>"]
     A -->|"HTTPS"| W["Geoservicios WMS<br/><small>CVC, IGAC, IDEAM</small>"]
-    A -->|"HTTPS"| T["Teselas XYZ<br/><small>OSM, ESRI, GBIF</small>"]
+    A -->|"HTTPS"| T["Teselas XYZ<br/><small>OSM, Esri</small>"]
     A -->|"archivo estático"| G["GeoJSON y fichas<br/><small>del repositorio</small>"]
 """
 
@@ -91,12 +91,12 @@ DIAGRAMS["mt-02"] = """flowchart LR
     A["Interfaz<br/><small>React 18<br/>TypeScript 5</small>"] --> B["Cartografía<br/><small>Leaflet 1.9<br/>React-Leaflet 4</small>"]
     B --> C["Estado<br/><small>Context API<br/>useReducer</small>"]
     C --> D["Offline<br/><small>Workbox 7<br/>Service Worker</small>"]
-    D --> E["Despliegue<br/><small>Vite 5<br/>GitHub Actions</small>"]
+    D --> E["Despliegue<br/><small>Vite 5<br/>Vercel</small>"]
 """
 
 DIAGRAMS["mt-03"] = """flowchart LR
     A["7 capas WMS<br/><small>ráster, en vivo</small>"] --> C["layers.config.ts"]
-    B["16 capas GeoJSON<br/><small>versionadas en el repositorio</small>"] --> C
+    B["16 capas GeoJSON<br/><small>representativas,<br/>en el repositorio</small>"] --> C
     C --> D["23 capas<br/>en 6 categorías"]
 """
 
@@ -159,12 +159,12 @@ DIAGRAMS["mt-10"] = """flowchart LR
 DIAGRAMS["mt-11"] = """flowchart TD
     SW["Service Worker<br/><small>Workbox</small>"] --> A["Precaché<br/><small>aplicación, GeoJSON y fichas</small>"]
     SW --> B["Cache first<br/><small>teselas OSM, zoom 10 a 14</small>"]
-    SW --> C["Network first<br/><small>servicios WMS de la CVC</small>"]
+    SW --> C["Network first<br/><small>servicios WMS de CVC,<br/>IDEAM e IGAC</small>"]
 """
 
 DIAGRAMS["mt-12"] = """flowchart LR
-    A["push a la<br/>rama principal"] --> B["GitHub Actions"]
-    B --> C["npm ci"]
+    A["push a la<br/>rama Master"] --> B["Vercel"]
+    B --> C["npm install"]
     C --> D["npm run build"]
     D --> E["Publicación<br/>del sitio"]
 """

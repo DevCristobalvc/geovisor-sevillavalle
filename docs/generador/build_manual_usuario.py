@@ -28,7 +28,8 @@ title_page(
     affiliation="Facultad de Ingeniería, Universidad Santiago de Cali",
     program="Programa de Ingeniería de Sistemas",
     course="Trabajo de grado",
-    instructor="Director: Diego Fernando Loaiza — Grupo de Investigación INFORMA",
+    instructor="Dirección: Diego Fernando Loaiza y Silvia Andrea Quijano Pérez — "
+               "Grupo de Investigación COMBA I+D",
     date="2026",
 )
 
@@ -113,7 +114,9 @@ h2(doc, "Panel izquierdo")
 body(doc,
      "Contiene las seis categorías de capas organizadas en un acordeón. Al abrir una "
      "categoría y marcar una capa, esta muestra su control de opacidad y su leyenda de "
-     "colores.")
+     "colores. Debajo de cada capa se indica la entidad que produce sus datos (CVC, "
+     "IDEAM o IGAC); las capas rotuladas como Ilustrativo son ejemplos preparados para "
+     "el prototipo y no datos oficiales.")
 
 h2(doc, "Área central")
 body(doc,
@@ -250,6 +253,8 @@ table(doc, 3, "Incidencias habituales y su solución",
       [
           ["El mapa se ve vacío",
            "Acercar o alejar el zoom; algunas capas solo se ven a cierta escala"],
+          ["Aviso «el servicio no respondió»",
+           "La entidad que publica la capa WMS no está disponible; intentar más tarde"],
           ["Un video no abre",
            "Requiere internet; sin conexión se muestra un aviso"],
           ["Una imagen no carga",
@@ -263,8 +268,8 @@ table(doc, 3, "Incidencias habituales y su solución",
 doc.add_page_break()
 h1(doc, "Referencias")
 reference(doc,
-          "Corporación Autónoma Regional del Valle del Cauca. (2024). Portal GeoCVC. "
-          "https://geo.cvc.gov.co/inicio/")
+          "Corporación Autónoma Regional del Valle del Cauca. (2026). Portal GeoCVC "
+          "[Servicios WMS y FeatureServer]. https://portal-geo.cvc.gov.co")
 reference(doc,
           "Organización de las Naciones Unidas para la Educación, la Ciencia y la "
           "Cultura. (2011). Paisaje Cultural Cafetero de Colombia. "

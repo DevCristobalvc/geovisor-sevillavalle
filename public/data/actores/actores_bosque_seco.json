@@ -1,57 +1,67 @@
 {
   "type": "FeatureCollection",
-  "name": "Actores Bosque Seco Tropical",
+  "metadata": {
+    "origen": "Datos ilustrativos elaborados por el equipo del proyecto. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales."
+  },
   "features": [
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Autoridad ambiental regional",
+        "tipo_actor": "Ente gubernamental",
+        "ecosistema": "Bosque seco"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.921, 4.213]
-      },
-      "properties": {
-        "nombre": "CVC - Corporación Autónoma Regional del Valle",
-        "sector": "Gubernamental",
-        "municipio": "Sevilla",
-        "tipo_actor": "Ente Gubernamental"
+        "coordinates": [
+          -75.921,
+          4.213
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Asociación de productores avícolas",
+        "tipo_actor": "Sector productivo",
+        "ecosistema": "Bosque seco"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.948, 4.238]
-      },
-      "properties": {
-        "nombre": "Asociación Avícola del Norte del Valle",
-        "sector": "Sector Productivo",
-        "municipio": "Sevilla",
-        "tipo_actor": "Empresa"
+        "coordinates": [
+          -75.948,
+          4.238
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Junta de Acción Comunal de la vereda",
+        "tipo_actor": "Comunidad",
+        "ecosistema": "Bosque seco"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.883, 4.225]
-      },
-      "properties": {
-        "nombre": "JAC Vereda El Bosque Seco",
-        "sector": "Comunitario",
-        "municipio": "Sevilla",
-        "tipo_actor": "Comunidad"
+        "coordinates": [
+          -75.883,
+          4.225
+        ]
       }
     },
     {
       "type": "Feature",
+      "properties": {
+        "nombre": "Fundación ambiental local",
+        "tipo_actor": "ONG",
+        "ecosistema": "Bosque seco"
+      },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.937, 4.251]
-      },
-      "properties": {
-        "nombre": "Fundación Semillas de Agua",
-        "sector": "ONG Ambiental",
-        "municipio": "Sevilla",
-        "tipo_actor": "ONG"
+        "coordinates": [
+          -75.937,
+          4.251
+        ]
       }
     }
   ]

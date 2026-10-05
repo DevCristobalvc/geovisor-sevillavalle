@@ -59,6 +59,6 @@
       "titulo": "Hidrografía de Colombia"
     }
   ],
-  "fuente_datos": "IDEAM / CVC — Servicio WMS público",
+  "fuente_datos": "CVC – Cuencas hidrográficas del Valle del Cauca (Portal GeoCVC); IDEAM – Zonificación hidrográfica de Colombia",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }
