@@ -101,17 +101,14 @@ body(doc,
      "GeoJSON estático versionado en el repositorio, lo que garantiza su disponibilidad "
      "sin conexión.")
 body(doc,
-     "Los dieciséis GeoJSON son, por ahora, datos representativos elaborados por el "
-     "equipo para el prototipo, con geometrías y cifras aproximadas; la interfaz los "
-     "rotula como ilustrativos en el panel de capas, el globo de información y la ficha, "
-     "y no contienen datos personales. Trece de ellos tienen un equivalente oficial en "
-     "los servicios de la CVC (Portal GeoCVC) con elementos dentro de Sevilla. El script "
-     "scripts/datos/build_capas_oficiales.py los descarga, los filtra con el límite "
-     "municipal oficial, recorta las geometrías que lo desbordan, simplifica los "
-     "vértices y omite los atributos con datos personales —nombres de contacto, "
-     "teléfonos, correos, observadores, propietarios y NIT—; su ejecución quedó "
-     "pendiente. Las tres capas restantes, actores de humedales, páramo y bosque seco, "
-     "no tienen registros oficiales para el municipio.")
+     "Trece de los dieciséis GeoJSON son extractos de los servicios oficiales de la CVC "
+     "(Portal GeoCVC). El script scripts/datos/build_capas_oficiales.py los descarga, "
+     "los filtra con el límite municipal oficial de Sevilla, recorta las geometrías que "
+     "lo desbordan, simplifica los vértices y omite los atributos con datos personales "
+     "—nombres de contacto, teléfonos, correos, observadores, propietarios y NIT—. Las "
+     "tres capas restantes, actores de humedales, páramo y bosque seco, no tienen "
+     "registros oficiales para el municipio: son datos ilustrativos elaborados por el "
+     "equipo, sin datos personales, y la interfaz los rotula como tales.")
 
 figure(doc, 3, "Composición del inventario de capas por tipo de servicio",
        img("mt-03"),
@@ -125,8 +122,11 @@ table(doc, 2, "Fuentes de datos e instituciones proveedoras",
            "Red hídrica, ecosistemas, zonificación forestal, isoyetas"],
           ["IDEAM", "WMS", "Cobertura de la tierra 2024 y pisos térmicos"],
           ["IGAC", "WMS", "Conflictos de uso de la tierra 2012"],
-          ["Equipo del proyecto", "GeoJSON",
-           "16 capas representativas (13 se reemplazarán por extractos de la CVC)"],
+          ["CVC — Portal GeoCVC", "GeoJSON",
+           "13 extractos: cuencas, humedales, calidad del agua, monitoreo subterráneo, "
+           "predios Art. 111, páramos, áreas protegidas, especies, estaciones, división "
+           "político-administrativa, resguardos, PCC y actores del bosque andino"],
+          ["Equipo del proyecto", "GeoJSON", "3 capas ilustrativas de actores sociales"],
           ["OpenStreetMap", "XYZ", "Mapa base callejero"],
           ["Esri World Imagery", "XYZ", "Mapa base satelital"],
       ],

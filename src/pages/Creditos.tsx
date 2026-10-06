@@ -57,8 +57,11 @@ export default function Creditos() {
                 >
                   Portal GeoCVC
                 </a>
-                . Servicios WMS de red hídrica, ecosistemas, zonificación forestal e isoyetas de
-                precipitación.
+                . Servicios WMS de red hídrica, ecosistemas, zonificación forestal e isoyetas, y los
+                extractos GeoJSON de cuencas, humedales, calidad del agua, monitoreo subterráneo,
+                predios Art. 111, páramos, áreas protegidas, especies, estaciones, división
+                político-administrativa, resguardos, Paisaje Cultural Cafetero y actores del bosque
+                andino.
               </li>
               <li>
                 <strong>IDEAM</strong> — Instituto de Hidrología, Meteorología y Estudios
@@ -69,18 +72,16 @@ export default function Creditos() {
                 conflictos de uso de la tierra 2012.
               </li>
               <li>
-                <strong>Datos ilustrativos</strong> — Las 16 capas GeoJSON (actores, cuencas,
-                humedales, calidad del agua, monitoreo subterráneo, predios, páramos, áreas
-                protegidas, especies, estaciones, división político-administrativa, resguardos y
-                Paisaje Cultural Cafetero) son datos representativos elaborados por el equipo para
-                el prototipo, con geometrías y cifras aproximadas. Se rotulan como «Ilustrativo» en
-                el visor y no contienen datos personales.
+                <strong>Datos ilustrativos</strong> — Las capas de actores de humedales, páramo y
+                bosque seco no tienen registros oficiales para Sevilla: son ejemplos elaborados por
+                el equipo para el prototipo, sin datos personales, y se rotulan como «Ilustrativo»
+                en el visor.
               </li>
             </ul>
             <p className="mt-3 text-xs text-gray-500 font-pedagogica">
-              Trece de ellas se reemplazarán por extractos oficiales de la CVC con{' '}
-              <code>scripts/datos/build_capas_oficiales.py</code>. Los actores de humedales, páramo
-              y bosque seco no tienen registros oficiales para Sevilla.
+              Los extractos GeoJSON se generan con{' '}
+              <code>scripts/datos/build_capas_oficiales.py</code>, que filtra cada capa con el
+              límite municipal oficial y omite los atributos con datos personales.
             </p>
           </section>
 

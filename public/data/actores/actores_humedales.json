@@ -1,7 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "origen": "Datos ilustrativos elaborados por el equipo del proyecto. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales."
+    "origen": "Datos ilustrativos elaborados por el equipo del proyecto",
+    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora."
   },
   "features": [
     {
@@ -14,8 +15,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.962,
-          4.268
+          -75.93217,
+          4.26941
         ]
       }
     },
@@ -29,8 +30,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.978,
-          4.281
+          -75.91781,
+          4.26729
         ]
       }
     },
@@ -44,8 +45,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.955,
-          4.291
+          -75.9238,
+          4.27989
         ]
       }
     },
@@ -59,8 +60,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.993,
-          4.274
+          -75.92739,
+          4.25769
         ]
       }
     },
@@ -74,8 +75,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.969,
-          4.298
+          -75.93517,
+          4.27989
         ]
       }
     }

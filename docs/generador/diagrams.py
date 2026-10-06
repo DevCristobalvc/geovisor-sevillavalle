@@ -84,7 +84,7 @@ DIAGRAMS["mt-01"] = """flowchart LR
     U["Navegador<br/>del usuario"] --> A["Geovisor<br/><small>SPA React</small>"]
     A -->|"HTTPS"| W["Geoservicios WMS<br/><small>CVC, IGAC, IDEAM</small>"]
     A -->|"HTTPS"| T["Teselas XYZ<br/><small>OSM, Esri</small>"]
-    A -->|"archivo estático"| G["GeoJSON y fichas<br/><small>del repositorio</small>"]
+    A -->|"archivo estático"| G["GeoJSON y fichas<br/><small>extractos CVC del repositorio</small>"]
 """
 
 DIAGRAMS["mt-02"] = """flowchart LR
@@ -96,7 +96,7 @@ DIAGRAMS["mt-02"] = """flowchart LR
 
 DIAGRAMS["mt-03"] = """flowchart LR
     A["7 capas WMS<br/><small>ráster, en vivo</small>"] --> C["layers.config.ts"]
-    B["16 capas GeoJSON<br/><small>representativas,<br/>en el repositorio</small>"] --> C
+    B["16 capas GeoJSON<br/><small>13 extractos de la CVC<br/>y 3 ilustrativas</small>"] --> C
     C --> D["23 capas<br/>en 6 categorías"]
 """
 

@@ -55,15 +55,11 @@ const CVC_WMS = `${PORTAL_GEOCVC}/server/services`
 const IDEAM_WMS = 'https://visualizador.ideam.gov.co/gisserver/services'
 const IGAC_WMS = 'https://mapas.igac.gov.co/server/services'
 
-/**
- * Capas GeoJSON que aún son datos representativos hechos a mano. Su reemplazo por el
- * extracto oficial de la CVC (scripts/datos/build_capas_oficiales.py) quedó pendiente:
- * ver ip.todo en la raíz del repositorio.
- */
-const pendienteCvc = (conjunto: string): FuenteCapa => ({
-  entidad: 'Equipo del proyecto',
-  detalle: `Datos representativos elaborados por el equipo para el prototipo: geometrías y cifras aproximadas. Se reemplazarán por el conjunto oficial «${conjunto}» de la CVC.`,
-  ilustrativo: true,
+/** Capas GeoJSON extraídas de la CVC con scripts/datos/build_capas_oficiales.py */
+const cvc = (conjunto: string): FuenteCapa => ({
+  entidad: 'CVC',
+  detalle: `${conjunto} (Portal GeoCVC), recortado a Sevilla`,
+  url: PORTAL_GEOCVC,
 })
 
 /** Capas sin registros oficiales para Sevilla: elaboradas por el equipo para el prototipo */
@@ -113,10 +109,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#5D4037', fillColor: '#5D4037', fillOpacity: 0.7, weight: 1.5, radius: 8 },
     visibleDefault: false,
     fichaId: 'actores_bosque_andino',
-    atributosPopup: ['nombre', 'tipo_actor', 'ecosistema'],
+    atributosPopup: ['nombre', 'categoria', 'rol', 'ambito'],
     miniatura: '/images/actores/bosque_andino_thumb.webp',
-    descripcionBreve: 'Tipos de actores en el bosque andino',
-    fuente: pendienteCvc('Actores sociales del bosque de zona andina'),
+    descripcionBreve: 'Entidades públicas registradas por la CVC en Sevilla',
+    fuente: cvc('Actores sociales del bosque de zona andina'),
   },
   {
     id: 'actores_bosque_seco',
@@ -143,10 +139,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#2E86C1', fillColor: '#5DADE2', fillOpacity: 0.35, weight: 2 },
     visibleDefault: true,
     fichaId: 'agua_cuencas',
-    atributosPopup: ['nombre', 'rio_principal', 'area_ha'],
+    atributosPopup: ['nombre', 'subzona_hidrografica', 'area_en_sevilla_ha'],
     miniatura: '/images/agua/cuencas_thumb.webp',
-    descripcionBreve: 'Río Bugalagrande y quebrada Las Cañas (trazado aproximado)',
-    fuente: pendienteCvc('Cuencas hidrográficas'),
+    descripcionBreve: 'Bugalagrande, La Paila, Las Cañas y La Vieja dentro del municipio',
+    fuente: cvc('Cuencas hidrográficas'),
   },
   {
     id: 'agua_red_hidrica',
@@ -175,10 +171,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#0277BD', fillColor: '#29B6F6', fillOpacity: 0.45, weight: 1.5 },
     visibleDefault: false,
     fichaId: 'agua_humedales',
-    atributosPopup: ['nombre', 'tipo', 'area_ha', 'estado_conservacion'],
+    atributosPopup: ['nombre', 'categoria', 'origen', 'area_ha'],
     miniatura: '/images/agua/humedales_thumb.webp',
-    descripcionBreve: 'Ejemplos de humedales y lagunas (trazado aproximado)',
-    fuente: pendienteCvc('Huella de humedales'),
+    descripcionBreve: 'Humedal Siracusa, inventariado por la CVC',
+    fuente: cvc('Huella de humedales'),
   },
   {
     id: 'agua_calidad',
@@ -189,10 +185,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#006064', fillColor: '#00ACC1', fillOpacity: 0.8, weight: 1.5, radius: 10 },
     visibleDefault: false,
     fichaId: 'agua_calidad',
-    atributosPopup: ['codigo', 'parametros', 'fecha_muestreo'],
+    atributosPopup: ['estacion', 'corriente', 'altitud_msnm'],
     miniatura: '/images/agua/calidad_thumb.webp',
-    descripcionBreve: 'Puntos de muestreo en la quebrada San José (aproximados)',
-    fuente: pendienteCvc('Estaciones de muestreo de calidad del agua'),
+    descripcionBreve: 'Estaciones de muestreo en las quebradas San José y Las Cañas',
+    fuente: cvc('Estaciones de muestreo de calidad del agua'),
   },
   {
     id: 'agua_monitoreo_subterraneo',
@@ -203,10 +199,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#01579B', fillColor: '#039BE5', fillOpacity: 0.9, weight: 2, radius: 10 },
     visibleDefault: false,
     fichaId: 'agua_monitoreo_subterraneo',
-    atributosPopup: ['codigo', 'profundidad', 'nivel_freatico'],
+    atributosPopup: ['codigo_pozo', 'estado', 'profundidad_m', 'actividad_monitoreo'],
     miniatura: '/images/agua/monitoreo_thumb.webp',
-    descripcionBreve: 'Pozo de monitoreo vs-pm-1 (ubicación aproximada)',
-    fuente: pendienteCvc('Pozos de monitoreo de agua subterránea'),
+    descripcionBreve: 'Pozo de monitoreo de agua subterránea vs-pm-1',
+    fuente: cvc('Pozos de monitoreo de agua subterránea'),
   },
   {
     id: 'agua_predios_art111',
@@ -217,10 +213,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1B4F72', fillColor: '#2E86C1', fillOpacity: 0.3, weight: 2 },
     visibleDefault: false,
     fichaId: 'agua_predios_art111',
-    atributosPopup: ['predio', 'area_ha', 'fuente_hidrica_protegida'],
+    atributosPopup: ['corregimiento', 'cuenca', 'area_ha', 'ecosistema'],
     miniatura: '/images/agua/predios_thumb.webp',
-    descripcionBreve: 'Ejemplos de predios para proteger fuentes de acueductos',
-    fuente: pendienteCvc('Predios Art. 111 Ley 99 de 1993'),
+    descripcionBreve: 'Predios adquiridos para proteger fuentes que abastecen acueductos',
+    fuente: cvc('Predios Art. 111 Ley 99 de 1993'),
   },
 
   // ── BIODIVERSIDAD ───────────────────────────────────────────────────────────
@@ -270,10 +266,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#2E7D32', fillColor: '#66BB6A', fillOpacity: 0.35, weight: 2 },
     visibleDefault: false,
     fichaId: 'biodiversidad_paramos',
-    atributosPopup: ['nombre_complejo', 'area_ha', 'altitud_rango'],
+    atributosPopup: ['complejo', 'resolucion', 'area_en_sevilla_ha'],
     miniatura: '/images/biodiversidad/paramos_thumb.webp',
-    descripcionBreve: 'Complejo de páramo Chilí-Barragán (trazado aproximado)',
-    fuente: pendienteCvc('Páramos'),
+    descripcionBreve: 'Complejos de páramo Las Hermosas y Chilí-Barragán delimitados por el MADS',
+    fuente: cvc('Páramos'),
   },
   {
     id: 'biodiversidad_especies',
@@ -284,10 +280,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1B5E20', fillColor: '#43A047', fillOpacity: 0.85, weight: 1, radius: 7 },
     visibleDefault: false,
     fichaId: 'biodiversidad_especies',
-    atributosPopup: ['nombre_cientifico', 'nombre_comun', 'familia', 'categoria_amenaza'],
+    atributosPopup: ['nombre_cientifico', 'nombre_comun', 'familia', 'localidad'],
     miniatura: '/images/biodiversidad/especies_thumb.webp',
-    descripcionBreve: 'Ejemplos de especies de fauna y flora del territorio',
-    fuente: pendienteCvc('Registro de especies'),
+    descripcionBreve: 'Registros biológicos de flora documentados por la CVC en Sevilla',
+    fuente: cvc('Registro de especies'),
   },
   {
     id: 'biodiversidad_areas_protegidas',
@@ -298,10 +294,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#33691E', fillColor: '#8BC34A', fillOpacity: 0.3, weight: 2 },
     visibleDefault: false,
     fichaId: 'biodiversidad_areas_protegidas',
-    atributosPopup: ['nombre', 'categoria', 'area_ha', 'fecha_declaracion'],
+    atributosPopup: ['nombre', 'categoria', 'acto_administrativo', 'area_en_sevilla_ha'],
     miniatura: '/images/biodiversidad/areas_protegidas_thumb.webp',
-    descripcionBreve: 'Reserva Forestal Ley 2.ª y un DRMI (trazado aproximado)',
-    fuente: pendienteCvc('Sistema de áreas protegidas y Reserva Forestal Ley 2.ª de 1959'),
+    descripcionBreve: 'PNN Las Hermosas, DRMI, reservas de la sociedad civil y Reserva Ley 2.ª',
+    fuente: cvc('Sistema de áreas protegidas y Reserva Forestal Ley 2.ª de 1959'),
   },
   {
     id: 'biodiversidad_zonificacion_forestal',
@@ -350,10 +346,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#E65100', fillColor: '#FF9800', fillOpacity: 0.9, weight: 2, radius: 10 },
     visibleDefault: false,
     fichaId: 'clima_estaciones',
-    atributosPopup: ['nombre', 'codigo', 'tipo', 'entidad'],
+    atributosPopup: ['nombre', 'codigo', 'tipo', 'estado'],
     miniatura: '/images/clima/estaciones_thumb.webp',
-    descripcionBreve: 'Ejemplos de estaciones de la red hidroclimatológica',
-    fuente: pendienteCvc('Red hidroclimatológica'),
+    descripcionBreve: 'Estaciones pluviométricas y pluviográficas de la red de la CVC',
+    fuente: cvc('Red hidroclimatológica'),
   },
   {
     id: 'clima_pisos_termicos',
@@ -419,10 +415,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1B4F72', fillColor: '#2980B9', fillOpacity: 0.1, weight: 2, dashArray: '4' },
     visibleDefault: true,
     fichaId: 'territorio_division',
-    atributosPopup: ['nombre_vereda', 'codigo_dane', 'tipo'],
+    atributosPopup: ['nombre', 'clase', 'codigo', 'area_km2'],
     miniatura: '/images/territorio/division_thumb.webp',
-    descripcionBreve: 'Límite municipal y casco urbano (trazado aproximado)',
-    fuente: pendienteCvc('División político-administrativa'),
+    descripcionBreve: 'Corregimientos y cabecera municipal de Sevilla',
+    fuente: cvc('División político-administrativa'),
   },
   {
     id: 'territorio_resguardos',
@@ -433,10 +429,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#1A237E', fillColor: '#3F51B5', fillOpacity: 0.3, weight: 2 },
     visibleDefault: false,
     fichaId: 'territorio_resguardos',
-    atributosPopup: ['nombre', 'pueblo', 'resolucion'],
+    atributosPopup: ['nombre', 'pueblo', 'acto_administrativo', 'area_ha'],
     miniatura: '/images/territorio/resguardos_thumb.webp',
-    descripcionBreve: 'Resguardo Indígena Ancore Drua (trazado aproximado)',
-    fuente: pendienteCvc('Resguardos indígenas'),
+    descripcionBreve: 'Resguardo Indígena Ancore Drua (pueblo Embera Chamí)',
+    fuente: cvc('Resguardos indígenas — Agencia Nacional de Tierras'),
   },
   {
     id: 'territorio_pcc',
@@ -447,10 +443,10 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#283593', fillColor: '#7986CB', fillOpacity: 0.25, weight: 2 },
     visibleDefault: false,
     fichaId: 'territorio_pcc',
-    atributosPopup: ['categoria', 'anno_declaracion'],
+    atributosPopup: ['zona', 'documento', 'area_en_sevilla_ha'],
     miniatura: '/images/territorio/pcc_thumb.webp',
-    descripcionBreve: 'Área principal y de amortiguamiento del PCC (aproximada)',
-    fuente: pendienteCvc('Paisaje Cultural Cafetero'),
+    descripcionBreve: 'Área principal y de amortiguamiento del PCC (UNESCO 2011)',
+    fuente: cvc('Paisaje Cultural Cafetero'),
   },
 ]
 

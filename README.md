@@ -11,7 +11,7 @@ Partner thesis (ecopedagogical content): *Cartografiar las huellas del café*, J
 
 ## Overview
 
-The Geovisor Ecopedagógico is a 100% client-side SPA (JAMstack) — no backend, no database, no server-side logic. Geographic data comes from two places: 7 raster layers are requested live from official WMS services (CVC, IDEAM, IGAC), and 16 vector layers ship as static GeoJSON files versioned in this repository. Those 16 are still representative data made by the team and the UI labels them as illustrative; 13 of them are due to be replaced with official CVC extracts (see [Data provenance](#data-provenance)). The application is designed as a didactic tool for secondary school students (ages 10–15) in Sevilla, Valle del Cauca, following the ecopedagogical framework of Zimmermann (2005).
+The Geovisor Ecopedagógico is a 100% client-side SPA (JAMstack) — no backend, no database, no server-side logic. Geographic data comes from two places: 7 raster layers are requested live from official WMS services (CVC, IDEAM, IGAC), and 16 vector layers ship as static GeoJSON files versioned in this repository. 13 of them are extracts of official CVC services clipped to Sevilla; the other 3 are illustrative and labelled as such in the UI (see [Data provenance](#data-provenance)). The application is designed as a didactic tool for secondary school students (ages 10–15) in Sevilla, Valle del Cauca, following the ecopedagogical framework of Zimmermann (2005).
 
 **Reference portal:** [Portal GeoCVC](https://portal-geo.cvc.gov.co) — the technical and functional benchmark for this project. (Its former address, `geo.cvc.gov.co`, no longer resolves.)
 
@@ -25,7 +25,7 @@ The Geovisor Ecopedagógico is a 100% client-side SPA (JAMstack) — no backend,
 | **Who it is for** | Secondary school students (10–15), teachers, general public |
 | **Content** | 23 geographic layers · 6 categories · 23 pedagogical sheets · 4 guided tours |
 | **Architecture** | JAMstack SPA — no backend, no database, no personal data |
-| **Data** | 7 live WMS layers (CVC 4 · IDEAM 2 · IGAC 1) + 16 representative GeoJSON layers (labelled illustrative) |
+| **Data** | 7 live WMS layers (CVC 4 · IDEAM 2 · IGAC 1) + 16 GeoJSON layers (13 official CVC extracts · 3 illustrative) |
 | **Offline** | Service Worker pre-caches app, data and OSM tiles (zoom 10–14, 571 tiles, ~11 MB) |
 
 ---
@@ -39,7 +39,8 @@ Four separate views, each answering one question.
 ```mermaid
 flowchart LR
     A["Entidades oficiales<br/>CVC · IDEAM · IGAC"] -->|"WMS · 7 capas en vivo"| V["Geovisor"]
-    B["Repositorio del proyecto<br/>16 capas GeoJSON representativas"] -->|"archivo estático"| V
+    A -->|"extracción con script<br/>13 capas"| B["Repositorio del proyecto<br/>16 capas GeoJSON"]
+    B -->|"archivo estático"| V
     C["OSM · Esri"] -->|"teselas XYZ"| V
     V --> D["Aula"]
 ```
@@ -155,7 +156,7 @@ Deployment is handled by **Vercel**, connected to this repository. Every push to
 geovisor-sevillavalle/
 │
 ├── public/
-│   ├── data/                    # Static GeoJSON (representative data, ≤ 2 MB each)
+│   ├── data/                    # Static GeoJSON (13 official CVC extracts + 3 illustrative, ≤ 2 MB each)
 │   │   ├── actores/             # Social actors per ecosystem
 │   │   ├── agua/                # River basins, wetlands, monitoring points
 │   │   ├── biodiversidad/       # Páramos, species records, protected areas
@@ -200,7 +201,7 @@ geovisor-sevillavalle/
 │   └── generador/               # Scripts and Mermaid sources that build them
 │
 ├── scripts/
-│   └── datos/                   # build_capas_oficiales.py — builds the 13 official GeoJSON from CVC (pending run)
+│   └── datos/                   # build_capas_oficiales.py — rebuilds the 13 official GeoJSON from CVC
 │
 ├── vercel.json                  # SPA rewrites (all routes → index.html)
 ├── vite.config.ts               # Vite + PWA (Workbox) configuration
@@ -216,14 +217,14 @@ All 23 layers are defined in [`src/config/layers.config.ts`](src/config/layers.c
 
 | Category | Layers | Data type |
 |----------|--------|-----------|
-| Actores Sociales | Humedales, Páramo, Bosque Andino, Bosque Seco | GeoJSON |
+| Actores Sociales | Humedales\*, Páramo\*, Bosque Andino, Bosque Seco\* | GeoJSON |
 | Agua | Cuencas, Red Hídrica, Humedales, Calidad Agua, Monitoreo Subterráneo, Predios Art.111 | GeoJSON + WMS |
 | Biodiversidad | Cobertura de la Tierra 2024, Ecosistemas, Páramos, Especies, Áreas Protegidas, Zonificación Forestal | GeoJSON + WMS |
 | Cambio Climático | Isoyetas, Estaciones Hidroclimatológicas, Pisos Térmicos | GeoJSON + WMS |
 | Suelos | Conflictos de Uso del Suelo | WMS |
 | Territorio | División Político-Administrativa, Resguardos Indígenas, PCC UNESCO | GeoJSON |
 
-All GeoJSON layers are currently representative data (see [Data provenance](#data-provenance)).
+\* Illustrative layers (see [Data provenance](#data-provenance)).
 
 ---
 
@@ -247,9 +248,9 @@ The previous endpoints (`geoservicios.igac.gov.co`, `geoservicios.cvc.gov.co`, `
 
 ### Data provenance
 
-- **Today all 16 GeoJSON layers are representative data** made by the team for the prototype: geometries and figures are approximate. Each one is labelled **Ilustrativo** in the layer panel, the popup and the pedagogical sheet. They contain no personal data: the social-actor layers hold generic actor *types*, not people, organizations or contact details.
-- **13 of them have an official CVC equivalent with features in Sevilla** (verified on 2026-10-05): cuencas, humedales, calidad del agua, monitoreo subterráneo, predios Art. 111, páramos, áreas protegidas, especies, estaciones, división político-administrativa, resguardos, PCC and bosque-andino actors. [`scripts/datos/build_capas_oficiales.py`](scripts/datos/build_capas_oficiales.py) queries the CVC FeatureServers (`portal-geo.cvc.gov.co/server/rest/services`) with Sevilla's official municipal boundary, clips what extends beyond it, simplifies the geometry (~5 m), drops fields with personal data (contact names, phones, e-mails, station observers, landowners, tax IDs) and writes a `metadata` block with the provenance into each file. **Running it is pending** — the CVC firewall blocked the IP during the first download; see [`ip.todo`](ip.todo).
-- **3 layers have no official records for Sevilla** (wetland, páramo and dry-forest actors) and stay illustrative until the partner thesis provides its social cartography.
+- **13 GeoJSON layers are official CVC data**: cuencas, humedales, calidad del agua, monitoreo subterráneo, predios Art. 111, páramos, áreas protegidas, especies, estaciones, división político-administrativa, resguardos, PCC and bosque-andino actors. [`scripts/datos/build_capas_oficiales.py`](scripts/datos/build_capas_oficiales.py) queries the CVC FeatureServers (`portal-geo.cvc.gov.co/server/rest/services`) with Sevilla's official municipal boundary, clips what extends beyond it, simplifies the geometry (~5 m), drops fields with personal data (contact names, phones, e-mails, station observers, landowners, tax IDs) and writes a `metadata` block (source services, processing, download date) into each file.
+- **3 GeoJSON layers are illustrative**: social actors of wetlands, páramo and dry forest. The CVC has no records of those actors for Sevilla, so the files contain generic actor *types* at approximate locations — no real people, organizations or contact data. The UI labels them **Ilustrativo**; they are meant to be replaced with the social cartography of the partner thesis.
+- The CVC portal sits behind a firewall that blocks an IP for ~40 minutes after bursts of requests. The script pauses 3 s between requests and supports a local response cache (`GEOVISOR_CACHE=<folder>`); never run it in parallel.
 
 ```bash
 pip install requests shapely
@@ -299,7 +300,7 @@ WMS tiles already seen are kept for 24 h (network-first, 10 s timeout); new WMS 
 | First Contentful Paint | < 1.5 s @ 10 Mbps | Pending Lighthouse audit |
 | Largest Contentful Paint | < 2.5 s (Core Web Vitals Good) | Pending Lighthouse audit |
 | WCAG compliance | Level AA | In progress |
-| GeoJSON file size | < 2 MB each | ✅ All current files < 10 KB |
+| GeoJSON file size | < 2 MB each | ✅ Largest: `territorio/division_administrativa.json`, 150 KB |
 | Offline tile cache | Zoom 10–14 | ✅ 571 tiles (~11 MB) over the official boundary |
 
 ---
@@ -307,7 +308,7 @@ WMS tiles already seen are kept for 24 h (network-first, 10 s timeout); new WMS 
 ## Roadmap
 
 - [x] Working official WMS endpoints (CVC, IDEAM, IGAC)
-- [ ] Replace 13 representative GeoJSON with official CVC extracts — script ready, run pending ([`ip.todo`](ip.todo))
+- [x] Official GeoJSON from CVC services (13 of 16 layers)
 - [x] Guided tour navigation with `flyTo` animation and step narration (RF-14)
 - [x] URL-based map state sharing via query params (RF-18)
 - [x] Export map view as PNG (RF-17)

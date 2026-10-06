@@ -60,19 +60,19 @@ const FUENTES = ['CVC — GeoCVC', 'IGAC', 'IDEAM']
 const PLATAFORMA = ['Sin instalación', 'Funciona sin conexión', 'Fuente citada en cada capa']
 
 // Resumen ejecutivo: de dónde salen los datos, qué hace la herramienta y dónde se usa.
-// Refleja layers.config.ts (23 capas: 7 WMS oficiales + 16 GeoJSON representativos) y src/sw.ts.
+// Refleja layers.config.ts (23 capas: 7 WMS + 16 GeoJSON, 13 de ellos extraídos de la CVC) y src/sw.ts.
 const FLUJO = [
   {
     paso: '01',
     titulo: 'Fuentes oficiales',
     resumen: 'Entidades públicas que producen y publican la información geográfica.',
     items: [
-      { nombre: 'CVC — Portal GeoCVC', tag: 'WMS' },
+      { nombre: 'CVC — Portal GeoCVC', tag: 'WMS + GeoJSON' },
       { nombre: 'IDEAM — Cobertura y clima', tag: 'WMS' },
       { nombre: 'IGAC — Agrología', tag: 'WMS' },
       { nombre: 'OpenStreetMap · Esri', tag: 'Mapa base' },
     ],
-    nota: '7 servicios WMS en vivo (CVC 4 · IDEAM 2 · IGAC 1). Las 16 capas GeoJSON son datos representativos del equipo, rotulados como ilustrativos.',
+    nota: '7 servicios WMS en vivo (CVC 4 · IDEAM 2 · IGAC 1) y 16 capas GeoJSON: 13 extraídas de la CVC y 3 ilustrativas.',
   },
   {
     paso: '02',

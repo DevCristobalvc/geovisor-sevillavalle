@@ -120,6 +120,8 @@ function ActiveLayers({
   )
 }
 
+const WMS_TIMEOUT_MS = 12000
+
 /**
  * Capa WMS con teselas de 512 px: cuatro veces menos peticiones que las de 256 px,
  * lo que importa porque el portal de la CVC limita la tasa de peticiones por IP y un
@@ -128,6 +130,10 @@ function ActiveLayers({
  */
 function WMSLayer({ layer, opacity }: { layer: LayerConfig; opacity: number }) {
   const counts = useRef({ ok: 0, error: 0 })
+  // Un firewall puede dejar las peticiones colgadas sin responder ni fallar: en ese caso
+  // Leaflet nunca emite `load`, así que se da el servicio por caído si en este plazo no
+  // llegó ninguna tesela.
+  const espera = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const report = useCallback(
     (status: WmsStatus) =>
@@ -135,9 +141,15 @@ function WMSLayer({ layer, opacity }: { layer: LayerConfig; opacity: number }) {
     [layer.id]
   )
 
+  const limpiarEspera = () => {
+    if (espera.current) clearTimeout(espera.current)
+    espera.current = null
+  }
+
   useEffect(() => {
     report('cargando')
     return () => {
+      if (espera.current) clearTimeout(espera.current)
       report('cargando')
     }
   }, [report])
@@ -155,14 +167,22 @@ function WMSLayer({ layer, opacity }: { layer: LayerConfig; opacity: number }) {
       eventHandlers={{
         loading: () => {
           counts.current = { ok: 0, error: 0 }
+          limpiarEspera()
+          espera.current = setTimeout(() => {
+            if (counts.current.ok === 0) report('error')
+          }, WMS_TIMEOUT_MS)
         },
         tileload: () => {
           counts.current.ok++
+          if (counts.current.ok === 1) report('ok')
         },
         tileerror: () => {
           counts.current.error++
         },
-        load: () => report(counts.current.ok > 0 || counts.current.error === 0 ? 'ok' : 'error'),
+        load: () => {
+          limpiarEspera()
+          report(counts.current.ok > 0 || counts.current.error === 0 ? 'ok' : 'error')
+        },
       }}
     />
   )
