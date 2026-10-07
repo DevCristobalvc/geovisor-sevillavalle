@@ -64,9 +64,9 @@ export default function Privacidad() {
         <Seccion titulo="4. Almacenamiento local">
           <p>
             La aplicación es una PWA (aplicación web progresiva). El navegador puede guardar
-            localmente teselas y recursos estáticos para funcionar sin conexión, y la preferencia de
-            tema (día o noche). Esta información permanece en el dispositivo del usuario y no se
-            comparte.
+            localmente teselas y recursos estáticos para funcionar sin conexión. Si se elige el modo
+            noche, esa preferencia se guarda solo mientras la pestaña esté abierta. Esta información
+            permanece en el dispositivo del usuario y no se comparte.
           </p>
         </Seccion>
 

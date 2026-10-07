@@ -231,9 +231,26 @@ const legImg = await page.locator('aside img[alt^="Leyenda de"]').evaluateAll(el
 ok('Leyenda GetLegendGraphic (IDEAM cobertura) carga', legImg.some(w => w > 0), `anchos: ${legImg.join(',')}`)
 await page.locator('aside[aria-label="Panel de capas geográficas"]').screenshot({ path: SHOTS + '07-leyendas.png' })
 
-// ── 6b. Tema día/noche (RF-06): se alterna, se recuerda y oscurece el mapa base ──
+// ── 6b. Tema día/noche (RF-06): abre en día, se alterna, dura en la pestaña ──────
+{
+  // Visita nueva con el sistema en modo oscuro y una preferencia vieja en localStorage:
+  // debe abrir igual en modo día.
+  const ctxNuevo = await browser.newContext({ colorScheme: 'dark', serviceWorkers: 'block' })
+  await ctxNuevo.addInitScript(() => {
+    try {
+      localStorage.setItem('ecodex-tema', 'oscuro')
+    } catch {
+      /* noop */
+    }
+  })
+  const visita = await ctxNuevo.newPage()
+  await visita.goto(`${BASE}/`, { waitUntil: 'networkidle' })
+  const oscuroAlAbrir = await visita.evaluate(() => document.documentElement.classList.contains('dark'))
+  ok('Tema: toda visita nueva abre en modo día', !oscuroAlAbrir)
+  await ctxNuevo.close()
+}
 await page.goto(`${BASE}/visor?layers=territorio_division`, { waitUntil: 'networkidle' })
-await page.evaluate(() => localStorage.removeItem('ecodex-tema'))
+await page.evaluate(() => sessionStorage.removeItem('ecodex-tema'))
 await page.reload({ waitUntil: 'networkidle' })
 const temaInicial = await page.evaluate(() => document.documentElement.classList.contains('dark'))
 await page.getByRole('button', { name: /modo (día|noche)/i }).click()
@@ -242,14 +259,11 @@ const temaTrasClic = await page.evaluate(() => document.documentElement.classLis
 await page.reload({ waitUntil: 'networkidle' })
 await page.waitForTimeout(800)
 const temaTrasRecarga = await page.evaluate(() => document.documentElement.classList.contains('dark'))
-ok('Tema: el botón alterna y la elección se recuerda', temaTrasClic !== temaInicial && temaTrasRecarga === temaTrasClic)
-await page.evaluate(() => localStorage.setItem('ecodex-tema', 'oscuro'))
-await page.reload({ waitUntil: 'networkidle' })
-await page.waitForTimeout(800)
+ok('Tema: el botón alterna a noche y se mantiene al recargar la pestaña', !temaInicial && temaTrasClic && temaTrasRecarga)
 const filtro = await page.locator('.mapa-base-filtro').first().evaluate(e => getComputedStyle(e).filter)
 ok('Tema oscuro: mapa base con filtro de fósforo', filtro !== 'none', filtro.slice(0, 60))
 await page.screenshot({ path: SHOTS + '08-tema-oscuro.png' })
-await page.evaluate(() => localStorage.setItem('ecodex-tema', 'claro'))
+await page.evaluate(() => sessionStorage.setItem('ecodex-tema', 'claro'))
 
 // ── 6c. Fichas: 3–5 preguntas e imágenes solo de Wikimedia Commons ─────────
 const fichas = await page.evaluate(async ids => {

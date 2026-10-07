@@ -120,8 +120,9 @@ body(doc,
 
 body(doc,
      "La barra superior incluye el interruptor de modo día y modo noche. El modo noche "
-     "oscurece la interfaz y el mapa base para trabajar con poca luz; el Geovisor "
-     "recuerda la elección en ese navegador.")
+     "oscurece la interfaz y el mapa base para trabajar con poca luz. El Geovisor "
+     "siempre abre en modo día; el modo noche se mantiene mientras la pestaña esté "
+     "abierta.")
 
 h2(doc, "Área central")
 body(doc,

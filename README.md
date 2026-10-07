@@ -207,7 +207,7 @@ geovisor-sevillavalle/
 │   │   ├── useMapLayers.ts      # Layer access + toggle helpers
 │   │   ├── useMediaQuery.ts     # Responsive breakpoint detection
 │   │   ├── useUrlSync.ts        # Serializes map state into query params (RF-18)
-│   │   ├── useTema.ts           # Day/night theme (RF-06), remembered per browser
+│   │   ├── useTema.ts           # Day/night theme (RF-06): always opens in day mode; night lasts per tab
 │   │   └── useOffline.ts        # Online/offline status tracker
 │   ├── sw.ts                    # Service Worker (Workbox injectManifest)
 │   └── types/

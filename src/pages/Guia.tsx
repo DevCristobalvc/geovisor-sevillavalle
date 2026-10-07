@@ -55,8 +55,8 @@ export default function Guia() {
           <GuiaSection titulo="Modo día y modo noche" numero={5}>
             <p>
               El botón <strong>Noche</strong> de la barra superior activa el modo terminal: fondo
-              oscuro, letras de fósforo verde y mapa nocturno. El geovisor recuerda tu elección en
-              este navegador.
+              oscuro, letras de fósforo verde y mapa nocturno. El geovisor siempre abre en modo día;
+              el modo noche se mantiene mientras la pestaña esté abierta.
             </p>
           </GuiaSection>
 

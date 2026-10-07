@@ -9,11 +9,12 @@
       content="Geovisor Ecopedagógico de Sevilla, Valle del Cauca: cartografía oficial, fichas pedagógicas y recorridos guiados para estudiantes de grados 6.º a 9.º y sus docentes."
     />
     <meta name="theme-color" content="#F2EEE1" />
-    <!-- Aplica el tema guardado antes de pintar, para evitar el destello del tema claro -->
+    <!-- Toda visita nueva abre en modo día. Si en esta pestaña se eligió el modo noche, se
+         aplica antes de pintar para evitar el destello al recargar o navegar. -->
     <script>
       try {
-        var t = localStorage.getItem('ecodex-tema')
-        if (t === 'oscuro' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        localStorage.removeItem('ecodex-tema') // preferencia persistente de la versión anterior
+        if (sessionStorage.getItem('ecodex-tema') === 'oscuro') {
           document.documentElement.classList.add('dark')
           document.querySelector('meta[name="theme-color"]').setAttribute('content', '#050906')
         }
