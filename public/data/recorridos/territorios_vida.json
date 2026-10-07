@@ -1,39 +1,39 @@
 {
   "id": "territorios_vida",
   "titulo": "Territorios de vida",
-  "descripcion": "Un recorrido por los actores y comunidades que habitan y cuidan el territorio sevillano: el pueblo Embera Chamí del resguardo Ancore Drua, las familias cafeteras del Paisaje Cultural Cafetero, las reservas de la sociedad civil que custodian el bosque andino y las organizaciones que sostienen la red de cuidado del municipio. Cada parada muestra que el territorio no es solo geografía: es la gente que lo habita.",
+  "descripcion": "Un recorrido por las personas y comunidades que habitan y cuidan el territorio sevillano: la población de la cabecera y los corregimientos, el pueblo Embera Chamí del resguardo Ancore Drua, las familias cafeteras del Paisaje Cultural Cafetero y los propietarios de reservas naturales de la sociedad civil. Cada parada muestra que el territorio no es solo geografía: es la gente que lo habita.",
   "paradas": [
     {
       "id": 1,
-      "titulo": "Sevilla, la Ciudad de las Araucarias",
-      "narracion": "El casco urbano de Sevilla es el punto de partida de este recorrido. Fundada en 1903 en plena colonización antioqueña, la ciudad creció al ritmo del café y hoy es uno de los municipios nucleares del Paisaje Cultural Cafetero declarado Patrimonio de la Humanidad por la UNESCO en 2011. Su arquitectura de bahareque, sus calles empinadas y las araucarias que le dan el sobrenombre son la huella visible de una forma de habitar la montaña. Pero el territorio de Sevilla se extiende mucho más allá: 1.193 km² que van de los 900 a los 4.200 metros de altitud, donde viven comunidades campesinas, indígenas y cafeteras cuyas decisiones cotidianas moldean los ecosistemas que este geovisor documenta.",
-      "lat": 4.271,
-      "lng": -75.9366,
-      "zoom": 13
+      "titulo": "Sevilla, el Balcón del Valle",
+      "narracion": "El recorrido empieza en la cabecera municipal. Según la cartografía de la CVC, Sevilla tiene unos 538 km², organizados en la cabecera y 16 corregimientos, y se extiende desde menos de 1.000 metros de altitud en el occidente hasta más de 4.000 metros en los páramos del suroriente. Según las proyecciones del DANE, en 2026 viven en el municipio unas 44.200 personas, cerca del 78 % en la cabecera. Las decisiones cotidianas de esa población —cómo usa el agua, qué produce, qué protege— moldean los ecosistemas que muestra este geovisor. Activa la capa División Político-Administrativa: ¿cuál es el corregimiento más extenso?",
+      "lat": 4.265,
+      "lng": -75.935,
+      "zoom": 12
     },
     {
       "id": 2,
       "titulo": "Resguardo Indígena Ancore Drua",
-      "narracion": "El Resguardo Ancore Drua es el territorio colectivo del pueblo Embera Chamí en Sevilla. Los Embera son uno de los pueblos indígenas más numerosos de Colombia y en este municipio han habitado ancestralmente las zonas de bosque andino y de transición hacia el páramo. El resguardo es una figura jurídica reconocida por la Constitución de 1991: otorga a la comunidad propiedad colectiva e inalienable sobre su territorio y el derecho a gobernarlo según sus propias autoridades y normas. Las investigaciones muestran que los territorios bajo manejo indígena conservan, en promedio, mayor cobertura boscosa y mayor biodiversidad que áreas comparables fuera de ellos. El saber ancestral Embera sobre plantas, ciclos del agua y manejo del bosque no es folclor: es una tecnología de gestión territorial que funciona.",
-      "lat": 4.32,
-      "lng": -75.99,
-      "zoom": 14
+      "narracion": "Unos cinco kilómetros al sur de la cabecera está el Resguardo Indígena Ancore Drua, del pueblo Embera Chamí. Fue constituido en 2018 por la Agencia Nacional de Tierras sobre dos predios que suman unas 17 hectáreas, para una comunidad que llegó a Sevilla desplazada desde Alcalá por la violencia armada. Un resguardo es propiedad colectiva: no se puede vender, embargar ni perder con el paso del tiempo, y la comunidad lo gobierna mediante su cabildo. Los Embera Chamí conservan su lengua y su tejido en chaquira. Activa la capa Resguardos Indígenas y observa su ubicación respecto al Paisaje Cultural Cafetero.",
+      "lat": 4.2199,
+      "lng": -75.9301,
+      "zoom": 15
     },
     {
       "id": 3,
       "titulo": "Familias cafeteras del Paisaje Cultural Cafetero",
-      "narracion": "En las laderas medias de Sevilla, entre los 1.200 y los 1.900 metros, viven las familias que sostienen el Paisaje Cultural Cafetero. La declaratoria de la UNESCO no protege únicamente el paisaje: reconoce la cultura, el esfuerzo humano y la tradición centenaria de los cultivadores de café. Aquí conviven dos modelos en tensión. El café bajo sombrío, sembrado entre árboles nativos, conserva suelo, agua y aves migratorias; el monocultivo a plena exposición produce más por hectárea pero erosiona la ladera y empobrece la biodiversidad. La decisión de cada familia cafetera —qué sembrar, cómo y con qué sombra— es una decisión ecológica que se acumula a escala de todo el municipio. Observa en el mapa cómo la zona PCC se superpone con las cuencas que abastecen de agua a la población.",
+      "narracion": "En estas laderas, dentro de la zona principal del Paisaje Cultural Cafetero, predominan las fincas cafeteras familiares. La UNESCO reconoció en 2011 no solo el paisaje, sino el esfuerzo de generaciones de caficultores que adaptaron el cultivo a montañas muy empinadas. Aquí cada decisión tiene efectos ecológicos: un cafetal con árboles de sombra conserva el suelo y ofrece refugio a las aves, mientras que uno a plena exposición puede producir más por hectárea, pero deja el suelo más expuesto a la erosión. Activa la capa Cuencas Hidrográficas: ¿hacia qué río drena esta zona?",
       "lat": 4.24,
       "lng": -75.9,
       "zoom": 13
     },
     {
       "id": 4,
-      "titulo": "La red de cuidado del bosque andino",
-      "narracion": "El bosque andino de Sevilla es uno de los ecosistemas más biodiversos y amenazados del planeta, y su conservación depende de una red de actores que trabajan desde frentes distintos. La academia —universidades como la Universidad Santiago de Cali y la Universidad del Valle— genera el conocimiento científico sobre flora, fauna y servicios ecosistémicos. Organizaciones como la Fundación Ecohabitats y Resnatur acompañan procesos comunitarios y articulan las Reservas Naturales de la Sociedad Civil, predios privados que sus dueños destinan voluntariamente a la conservación. La CVC, como autoridad ambiental regional, regula y financia; el municipio ordena el uso del suelo. Ninguno de estos actores basta por sí solo. Esta última parada cierra el recorrido con la idea central del geovisor: el territorio se sostiene cuando la gente que lo habita decide cuidarlo en conjunto.",
-      "lat": 4.35,
-      "lng": -75.95,
-      "zoom": 13
+      "titulo": "Reservas naturales de la sociedad civil",
+      "narracion": "En el corregimiento de Alegrías, cuatro predios privados fueron registrados ante Parques Nacionales Naturales como Reservas Naturales de la Sociedad Civil: La Mina, El Mirador, Mata de Guadua y La Esperanza, que suman unas 965 hectáreas. Nadie obligó a sus propietarios: es una decisión voluntaria que protege bosques, nacimientos y fauna. Junto a ellos actúan la CVC, la Administración municipal y el CIDEA de Sevilla, que coordina la educación ambiental. Ninguno basta por sí solo: el territorio se sostiene cuando quienes lo habitan deciden cuidarlo juntos. Activa la capa Áreas Protegidas.",
+      "lat": 4.066,
+      "lng": -75.81,
+      "zoom": 12
     }
   ]
 }

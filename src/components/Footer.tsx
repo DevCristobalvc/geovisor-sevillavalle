@@ -1,20 +1,33 @@
 import { Link } from 'react-router-dom'
+import { PORTAL_GEOCVC } from '../config/layers.config'
 
 export default function Footer() {
   return (
     <footer
-      className="flex items-center justify-between px-4 bg-negro text-white text-xs z-50"
+      className="z-50 flex items-center justify-between gap-3 border-t-2 border-line bg-surface px-3 sm:px-4 font-ui text-[11px] text-muted"
       style={{ height: 'var(--footer-height)' }}
     >
-      <span className="text-gray-400">Fuentes: CVC · IGAC · IDEAM · OSM</span>
-      <span className="hidden sm:block text-gray-500">Geovisor Ecopedagógico · USC · v3.0</span>
+      <span className="truncate">
+        <span className="font-pixel font-bold text-ink">EcoDex</span>
+        <span className="hidden sm:inline"> · Explora · Pregunta · Cuida</span>
+      </span>
+      <span className="hidden md:block">Fuentes: CVC · IDEAM · IGAC · OSM</span>
       <div className="flex gap-3">
-        <Link to="/privacidad" className="text-gray-400 hover:text-white transition-colors">
+        <Link to="/privacidad" className="hover:text-ink transition-colors">
           Privacidad
         </Link>
-        <Link to="/creditos" className="text-gray-400 hover:text-white transition-colors">
+        <Link to="/creditos" className="hover:text-ink transition-colors">
           Créditos
         </Link>
+        <a
+          href={PORTAL_GEOCVC}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ir a GeoCVC (abre en nueva pestaña)"
+          className="hidden sm:inline hover:text-ink transition-colors"
+        >
+          GeoCVC ↗
+        </a>
       </div>
     </footer>
   )

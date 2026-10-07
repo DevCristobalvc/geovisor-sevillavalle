@@ -2,63 +2,54 @@
   "id": "biodiversidad_cobertura",
   "titulo": "Cobertura y Uso del Suelo",
   "categoria": "biodiversidad",
-  "descripcion": "La cobertura y uso del suelo describe cómo está siendo ocupado y utilizado el territorio de un municipio. En Colombia, la metodología oficial para clasificar y mapear las coberturas de la tierra es CORINE Land Cover (Coordination of Information on the Environment), adaptada por el IDEAM para las condiciones del país. Esta metodología utiliza imágenes satelitales y fotointerpretación para identificar y delimitar las diferentes coberturas presentes en el territorio, organizadas en una jerarquía de cinco niveles de detalle. En Sevilla, las coberturas más importantes son: los cultivos de café con sombrío, que cubren grandes extensiones de las laderas entre los 1.200 y 1.800 metros de altitud y que, cuando tienen buen sombrío arbóreo, pueden albergar una biodiversidad considerable; los pastos para ganadería, presentes principalmente en las zonas más bajas y en algunas zonas altas donde han reemplazado al bosque; los bosques naturales, que persisten principalmente en las zonas más escarpadas, en las cañadas y en las partes altas cercanas al páramo; la vegetación secundaria o rastrojos, que son áreas en proceso de recuperación después de haber sido intervenidas; y el área urbana del casco municipal y los centros poblados. El mapa de cobertura y uso del suelo es una herramienta fundamental para planificar el ordenamiento territorial, identificar conflictos entre el uso actual y el potencial del suelo, y evaluar el estado de conservación de los ecosistemas naturales del municipio a lo largo del tiempo.",
-  "importancia": "Conocer cómo está distribuida la cobertura del suelo en Sevilla es esencial para tomar decisiones de planificación territorial bien fundamentadas. Este mapa permite identificar dónde quedan los últimos fragmentos de bosque nativo que deben protegerse urgentemente, dónde hay suelos degradados que requieren restauración, y dónde los usos productivos son compatibles con la conservación. También permite monitorear cambios a través del tiempo: si la cobertura boscosa aumenta o disminuye. Para los estudiantes, analizar el mapa de coberturas es una forma concreta de entender cómo las decisiones de las personas y las empresas transforman el paisaje natural y afectan la biodiversidad y el agua.",
+  "descripcion": "La cobertura de la tierra describe lo que hay sobre la superficie: bosques, pastos, cultivos, vegetación de páramo, cuerpos de agua o zonas construidas. En Colombia se mapea con la metodología CORINE Land Cover, de origen europeo y adaptada para el país por el IDEAM, que interpreta imágenes de satélite y clasifica el territorio en una leyenda jerárquica. En su nivel más general hay cinco grandes grupos: territorios artificializados, territorios agrícolas, bosques y áreas seminaturales, áreas húmedas y superficies de agua; cada grupo se divide en clases cada vez más detalladas. Esta capa muestra el mapa del IDEAM a escala 1:100.000 para el periodo 2024. Al explorar Sevilla, observa qué cobertura domina en las laderas medias, dónde persisten los bosques y cómo cambia el paisaje hacia los páramos del suroriente.",
+  "importancia": "El mapa de coberturas permite ver dónde quedan bosques que deben protegerse, dónde hay suelos sin cobertura expuestos a la erosión y cómo se distribuyen los usos productivos. Comparado con mapas de años anteriores, también muestra los cambios: si el bosque avanza o retrocede. Para los estudiantes es una forma concreta de ver cómo las decisiones de las personas transforman el paisaje y afectan el agua y la biodiversidad.",
   "preguntas_reflexivas": [
-    "¿Qué cobertura del suelo crees que es más abundante en Sevilla y por qué?",
-    "¿Por qué el café con sombrío puede ser más amigable con la biodiversidad que el café sin sombrío o que los pastos?",
-    "¿Qué cambios en la cobertura del suelo de Sevilla has podido observar en tu vida o en las historias de personas mayores de tu comunidad?",
-    "¿Cómo usarías un mapa de cobertura del suelo para proponer áreas prioritarias de restauración ecológica en tu municipio?"
+    "Según el mapa, ¿qué cobertura parece ser la más extensa en Sevilla? ¿Por qué crees que es así?",
+    "¿Por qué un cafetal con árboles de sombra puede albergar más aves que un potrero sin árboles?",
+    "¿Qué cambios en el paisaje recuerdan los adultos mayores de tu familia o de tu vereda?",
+    "¿Cómo usarías un mapa de coberturas para proponer zonas prioritarias de restauración?"
   ],
   "vocabulario": [
     {
-      "termino": "CORINE Land Cover",
-      "definicion": "Metodología europea adaptada para Colombia por el IDEAM que permite clasificar y mapear los diferentes tipos de cobertura de la tierra usando imágenes satelitales, facilitando la comparación entre distintas regiones y períodos de tiempo."
-    },
-    {
-      "termino": "Cobertura del suelo",
-      "definicion": "Descripción física de lo que cubre la superficie terrestre en un lugar determinado: bosque, cultivos, pastos, cuerpos de agua, zonas urbanas, entre otros."
+      "termino": "Cobertura de la tierra",
+      "definicion": "Descripción de lo que cubre la superficie en un lugar: bosque, cultivos, pastos, cuerpos de agua, zonas urbanas, entre otros."
     },
     {
       "termino": "Uso del suelo",
-      "definicion": "Actividad humana que se desarrolla en un territorio: agricultura, ganadería, minería, urbanismo, conservación. Puede ser diferente de la cobertura actual (por ejemplo, suelo con vocación forestal usado para ganadería)."
+      "definicion": "Actividad humana que se desarrolla en un terreno: agricultura, ganadería, minería, vivienda o conservación."
+    },
+    {
+      "termino": "CORINE Land Cover",
+      "definicion": "Metodología de origen europeo, adaptada para Colombia por el IDEAM, para clasificar y mapear la cobertura de la tierra con imágenes de satélite."
     },
     {
       "termino": "Vegetación secundaria",
-      "definicion": "Comunidad vegetal que crece en áreas que fueron previamente intervenidas o deforestadas y que se encuentran en proceso natural de recuperación. También conocida como rastrojo o monte."
+      "definicion": "Vegetación que crece en áreas que fueron taladas o intervenidas y que se están recuperando; también se le llama rastrojo."
     },
     {
       "termino": "Fotointerpretación",
-      "definicion": "Técnica de análisis de imágenes aéreas o satelitales para identificar y clasificar los elementos del paisaje como bosques, cultivos, ríos y construcciones, basándose en su color, forma, textura y contexto."
+      "definicion": "Técnica para identificar y clasificar elementos del paisaje en imágenes aéreas o de satélite a partir de su color, forma, textura y contexto."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ecoregion_NT0221.png",
-      "titulo": "Ecorregiones y cobertura terrestre en Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Colinas_cafeteras.JPG/1280px-Colinas_cafeteras.JPG",
+      "titulo": "Mosaico de cafetales, pastos y bosque en las laderas de Sevilla",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Biodiversidad_pura_y_viva_2019-05-16_at_5.56.44_PM.jpg",
-      "titulo": "Biodiversidad y cobertura vegetal en Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Colombia_-_Valle_del_Cauca.svg/1280px-Colombia_-_Valle_del_Cauca.svg.png",
-      "titulo": "Mapa del Valle del Cauca, Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Desde_el_mirador_Alto_de_la_Cruz_Sevilla_16.jpg/1280px-Desde_el_mirador_Alto_de_la_Cruz_Sevilla_16.jpg",
+      "titulo": "Vista desde el mirador Alto de la Cruz, Sevilla",
+      "credito": "Remux · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "7rmd99Nq8Qw",
-      "titulo": "Mapa de Coberturas de la Tierra 2018 — IDEAM"
-    },
-    {
-      "youtube_id": "YnNkJcNtz2o",
-      "titulo": "Coberturas de la Tierra CORINE Land Cover en QGIS"
+      "titulo": "Mapa de Coberturas de la Tierra 2018 — IDEAM Colombia"
     }
   ],
-  "fuente_datos": "IDEAM – Cobertura de la tierra Corine Land Cover adaptada para Colombia, periodo 2024, escala 1:100.000 (servicio WMS); CVC – Mapa de Coberturas Valle del Cauca 2020; IGAC – Cartografía de uso del suelo Sevilla 1:25.000",
+  "fuente_datos": "IDEAM – Cobertura de la tierra, metodología CORINE Land Cover adaptada para Colombia, escala 1:100.000, periodo 2024 (servicio WMS); IDEAM (2010) – Leyenda Nacional de Coberturas de la Tierra. Metodología CORINE Land Cover adaptada para Colombia",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

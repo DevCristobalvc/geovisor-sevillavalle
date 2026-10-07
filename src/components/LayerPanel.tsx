@@ -1,99 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type CSSProperties } from 'react'
 import { useMapLayers } from '../hooks/useMapLayers'
-import { wmsLegendUrl } from '../config/layers.config'
+import { LAYERS, wmsLegendUrl } from '../config/layers.config'
+import { PixelIcon } from './Dex'
 import type { Categoria, LayerConfig, WmsStatus } from '../types'
-
-// ─── Category icons ───────────────────────────────────────────────────────────
-
-const CATEGORIA_ICONS: Record<Categoria, React.ReactNode> = {
-  actores: (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      className="w-3.5 h-3.5"
-    >
-      <circle cx="6" cy="5" r="2" />
-      <path strokeLinecap="round" d="M2 13c0-2.2 1.8-4 4-4" />
-      <circle cx="11" cy="5" r="2" />
-      <path strokeLinecap="round" d="M14 13c0-2.2-1.8-4-4-4" />
-    </svg>
-  ),
-  agua: (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      className="w-3.5 h-3.5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8 2C8 2 3 7 3 10.5a5 5 0 0010 0C13 7 8 2 8 2z"
-      />
-    </svg>
-  ),
-  biodiversidad: (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      className="w-3.5 h-3.5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3 13C3 13 4 6 8 4c4-2 7 1 5 5s-6 2-6 2"
-      />
-      <path strokeLinecap="round" d="M8 13V9" />
-    </svg>
-  ),
-  clima: (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      className="w-3.5 h-3.5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3 10a4 4 0 017.8-1.2A3 3 0 1112 15H4a3 3 0 01-1-5.8"
-      />
-    </svg>
-  ),
-  suelos: (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      className="w-3.5 h-3.5"
-    >
-      <path strokeLinecap="round" d="M2 5h12M2 8.5h12M2 12h12" />
-    </svg>
-  ),
-  territorio: (
-    <svg
-      viewBox="0 0 16 16"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      className="w-3.5 h-3.5"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M8 2C5.8 2 4 3.8 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.2-1.8-4-4-4z"
-      />
-      <circle cx="8" cy="6" r="1.2" />
-    </svg>
-  ),
-}
 
 interface LayerPanelProps {
   collapsed: boolean
@@ -109,6 +18,11 @@ const CATEGORIA_ORDER: Categoria[] = [
   'suelos',
   'territorio',
 ]
+
+/** Número de dex de cada capa (#01–#23), según su orden en layers.config.ts */
+const NUMERO = Object.fromEntries(
+  LAYERS.map((l, i) => [l.id, `#${String(i + 1).padStart(2, '0')}`])
+)
 
 export default function LayerPanel({
   collapsed,
@@ -126,6 +40,7 @@ export default function LayerPanel({
     countByCategory,
     setLayerOpacity,
     getLayerOpacity,
+    activeLayers,
   } = useMapLayers()
 
   const defaultExpanded = new Set<Categoria>(['agua', 'territorio'])
@@ -148,34 +63,34 @@ export default function LayerPanel({
   const toggleAccordion = (cat: Categoria) => {
     setExpanded(prev => {
       const next = new Set(prev)
-      if (next.has(cat)) {
-        next.delete(cat)
-      } else {
-        next.add(cat)
-      }
+      if (next.has(cat)) next.delete(cat)
+      else next.add(cat)
       return next
     })
   }
+
+  const activas = activeLayers.length
+  const segmentos = 23
 
   return (
     <>
       <button
         onClick={onToggleCollapse}
         aria-label={collapsed ? 'Expandir panel de capas' : 'Colapsar panel de capas'}
-        className="absolute top-3 z-10 bg-white border border-gray-200 rounded p-1.5 shadow hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
-        style={{ left: collapsed ? '8px' : 'calc(var(--panel-width) + 8px)' }}
+        className="absolute top-3 z-10 rounded-lg border-2 border-line bg-surface p-1.5 text-ink shadow-dex-sm transition-[left] duration-300"
+        style={{ left: collapsed ? '10px' : 'calc(var(--panel-width) + 10px)' }}
       >
         <svg
-          viewBox="0 0 16 16"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          className="w-3.5 h-3.5 text-gris-texto"
+          viewBox="0 0 8 8"
+          className="w-3.5 h-3.5"
+          shapeRendering="crispEdges"
+          fill="currentColor"
+          aria-hidden="true"
         >
           {collapsed ? (
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 4l4 4-4 4" />
+            <path d="M2 1h1v1H2zM3 2h1v1H3zM4 3h1v2H4zM3 5h1v1H3zM2 6h1v1H2z" />
           ) : (
-            <path strokeLinecap="round" strokeLinejoin="round" d="M10 4L6 8l4 4" />
+            <path d="M5 1h1v1H5zM4 2h1v1H4zM3 3h1v2H3zM4 5h1v1H4zM5 6h1v1H5z" />
           )}
         </svg>
       </button>
@@ -183,13 +98,28 @@ export default function LayerPanel({
       <aside
         className="layer-panel absolute top-0 left-0 z-10 flex flex-col"
         style={{
-          transform: collapsed ? `translateX(calc(-1 * var(--panel-width)))` : 'translateX(0)',
+          transform: collapsed
+            ? `translateX(calc(-1 * var(--panel-width) - 4px))`
+            : 'translateX(0)',
         }}
         aria-label="Panel de capas geográficas"
       >
-        <div className="px-4 py-3 border-b border-gray-100 bg-verde-bosque text-white">
-          <h2 className="text-sm font-bold uppercase tracking-wide">Capas Geográficas</h2>
-          <p className="text-xs text-verde-palido mt-0.5">Selecciona las capas a visualizar</p>
+        {/* Cabezal del dex */}
+        <div className="border-b-2 border-line bg-surface2 px-4 py-3">
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-pixel text-lg font-bold text-ink glow">Capas geográficas</h2>
+            <span className="font-ui text-[11px] font-semibold text-muted">
+              {String(activas).padStart(2, '0')}/{LAYERS.length} activas
+            </span>
+          </div>
+          <div className="mt-2 flex gap-[2px]" aria-hidden="true">
+            {Array.from({ length: segmentos }).map((_, i) => (
+              <span
+                key={i}
+                className={`h-1.5 flex-1 rounded-[1px] ${i < activas ? 'bg-accent' : 'bg-line/15'}`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="flex-1 overflow-y-auto">
@@ -202,11 +132,10 @@ export default function LayerPanel({
             const partiallyActive = isCategoryPartiallyActive(cat)
 
             return (
-              <div key={cat} className="border-b border-gray-100">
+              <div key={cat} className="border-b border-line-soft">
                 <div
-                  className={`flex items-center ${cat === highlightCategoria ? 'bg-yellow-50' : ''}`}
+                  className={`flex items-center ${cat === highlightCategoria ? 'bg-accent-soft' : ''}`}
                 >
-                  {/* Category-level toggle */}
                   <div className="pl-3 pr-1 flex-shrink-0">
                     <input
                       type="checkbox"
@@ -220,44 +149,42 @@ export default function LayerPanel({
                       }}
                       onClick={e => e.stopPropagation()}
                       aria-label={`Activar todas las capas de ${info.label}`}
+                      className="h-4 w-4 cursor-pointer"
                       style={{ accentColor: info.color }}
-                      className="cursor-pointer"
                     />
                   </div>
 
-                  {/* Accordion toggle */}
                   <button
                     onClick={() => toggleAccordion(cat)}
-                    className="flex-1 flex items-center justify-between px-2 py-3 hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-verde-bosque"
+                    className="flex-1 flex items-center justify-between px-2 py-2.5 hover:bg-surface2 transition-colors"
                     aria-expanded={open}
                   >
-                    <div className="flex items-center gap-2">
+                    <span className="flex items-center gap-2.5">
                       <span
-                        className="flex-shrink-0"
-                        style={{ color: info.color }}
+                        className="tinta-tipo flex h-7 w-7 items-center justify-center rounded-md border-2 border-line"
+                        style={
+                          {
+                            '--tipo': info.color,
+                            backgroundColor: `${info.color}26`,
+                          } as CSSProperties
+                        }
                         aria-hidden="true"
                       >
-                        {CATEGORIA_ICONS[cat]}
+                        <PixelIcon nombre={cat} className="w-4 h-4" />
                       </span>
-                      <span className="text-sm font-semibold text-gris-texto">{info.label}</span>
+                      <span className="font-ui text-sm font-semibold text-ink">{info.label}</span>
                       {count > 0 && (
-                        <span
-                          className="text-xs text-white px-1.5 py-0.5 rounded-full leading-none"
-                          style={{ backgroundColor: info.color }}
-                        >
+                        <span className="rounded bg-accent px-1.5 py-px font-ui text-[10px] font-bold text-on-accent">
                           {count}
                         </span>
                       )}
-                    </div>
-                    <svg
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      className={`w-3.5 h-3.5 text-gray-400 mr-2 transition-transform ${open ? 'rotate-180' : ''}`}
+                    </span>
+                    <span
+                      className={`mr-1 font-mono text-xs text-muted transition-transform ${open ? 'rotate-90' : ''}`}
+                      aria-hidden="true"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6l4 4 4-4" />
-                    </svg>
+                      ▶
+                    </span>
                   </button>
                 </div>
 
@@ -282,7 +209,7 @@ export default function LayerPanel({
           })}
         </div>
 
-        <div className="px-4 py-2 border-t border-gray-100 text-xs text-gray-400 text-center">
+        <div className="border-t-2 border-line bg-surface2 px-4 py-2 text-center font-ui text-[11px] text-muted">
           Fuentes: CVC · IGAC · IDEAM
         </div>
       </aside>
@@ -312,52 +239,60 @@ function LayerItem({
   const isWMS = layer.tipo === 'wms'
   const [legendOpen, setLegendOpen] = useState(false)
 
+  const led =
+    isWMS && active
+      ? status === 'error'
+        ? 'dex-led-error'
+        : status === 'ok'
+          ? 'dex-led-ok'
+          : 'dex-led-warn animate-led-pulse'
+      : null
+
   return (
-    <div className="px-4 py-2 hover:bg-gray-50">
-      <div className="flex items-start gap-3">
+    <div className={`px-3 py-2 ${active ? 'bg-accent-soft/60' : 'hover:bg-surface2'}`}>
+      <div className="flex items-start gap-2.5">
         <input
           type="checkbox"
           checked={active}
           onChange={onToggle}
-          className="mt-1 flex-shrink-0 rounded cursor-pointer"
+          className="mt-1 h-4 w-4 flex-shrink-0 cursor-pointer"
           style={{ accentColor: color }}
           aria-label={`Activar capa ${layer.nombre}`}
         />
-        {/* Legend swatch */}
-        <div className="mt-0.5 flex-shrink-0" aria-hidden="true">
+        <div className="mt-1 flex-shrink-0" aria-hidden="true">
           {isPoint ? (
             <div
-              className="w-3 h-3 rounded-full border border-white shadow-sm"
-              style={{
-                backgroundColor: layer.estilo?.fillColor ?? color,
-                opacity: active ? 1 : 0.4,
-              }}
+              className="h-3 w-3 rounded-full border border-line/60"
+              style={{ backgroundColor: layer.estilo?.fillColor ?? color }}
             />
           ) : (
             <div
-              className="w-4 h-3 rounded-sm border shadow-sm"
+              className="h-3 w-4 rounded-sm border"
               style={{
                 backgroundColor: layer.estilo?.fillColor ?? color,
                 borderColor: layer.estilo?.color ?? color,
-                opacity: active ? 1 : 0.4,
               }}
             />
           )}
         </div>
         <div className="flex-1 min-w-0">
-          <div className="text-sm text-gris-texto font-medium leading-tight">{layer.nombre}</div>
+          <div className="flex items-baseline gap-1.5">
+            <span className="font-mono text-[10px] text-muted">{NUMERO[layer.id]}</span>
+            <span className="font-ui text-sm font-medium text-ink leading-tight">
+              {layer.nombre}
+            </span>
+          </div>
           {layer.descripcionBreve && (
-            <div className="text-xs text-gray-400 mt-0.5 leading-tight">
+            <div className="mt-0.5 text-xs text-ink-soft leading-snug">
               {layer.descripcionBreve}
             </div>
           )}
-          <div className="flex items-center gap-1.5 mt-1" title={layer.fuente.detalle}>
+          <div className="mt-1 flex items-center gap-1.5" title={layer.fuente.detalle}>
             {layer.fuente.ilustrativo ? (
-              <span className="text-[10px] font-semibold uppercase tracking-wide px-1.5 py-px rounded bg-amber-100 text-amber-800">
-                Ilustrativo
-              </span>
+              <span className="dex-chip border-warn/50 bg-warn/10 text-warn">Ilustrativo</span>
             ) : (
-              <span className="text-[10px] text-gray-400">
+              <span className="flex items-center gap-1.5 font-ui text-[10px] text-muted">
+                {led && <span className={`dex-led ${led}`} aria-hidden="true" />}
                 {layer.fuente.entidad} · {isWMS ? 'WMS en vivo' : 'GeoJSON'}
               </span>
             )}
@@ -368,28 +303,26 @@ function LayerItem({
             onClick={() => window.dispatchEvent(new CustomEvent(`zoomToLayer:${layer.id}`))}
             aria-label={`Zoom a extensión de ${layer.nombre}`}
             title="Zoom a extensión"
-            className="flex-shrink-0 text-gray-400 hover:text-verde-bosque transition-colors mt-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque rounded p-0.5"
+            className="mt-0.5 flex-shrink-0 rounded p-0.5 text-muted hover:text-accent transition-colors"
           >
             <svg
-              viewBox="0 0 16 16"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
+              viewBox="0 0 8 8"
               className="w-3.5 h-3.5"
+              shapeRendering="crispEdges"
+              fill="currentColor"
+              aria-hidden="true"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M2 2h4M2 2v4M14 2h-4M14 2v4M2 14h4M2 14v-4M14 14h-4M14 14v-4"
-              />
+              <path d="M0 0h3v1H1v2H0zM5 0h3v3H7V1H5zM0 5h1v2h2v1H0zM7 5h1v3H5V7h2z" />
             </svg>
           </button>
         )}
       </div>
 
       {active && (
-        <div className="mt-1.5 flex items-center gap-2 pl-7">
-          <span className="text-xs text-gray-400 w-14">Opacidad</span>
+        <div className="mt-1.5 flex items-center gap-2 pl-[3.25rem]">
+          <span className="w-14 font-ui text-[10px] uppercase tracking-wide text-muted">
+            Opacidad
+          </span>
           <input
             type="range"
             min={0.1}
@@ -397,27 +330,28 @@ function LayerItem({
             step={0.05}
             value={opacity}
             onChange={e => onOpacityChange(Number(e.target.value))}
-            className="flex-1 h-1"
-            style={{ accentColor: color }}
+            className="h-1 flex-1"
             aria-label={`Opacidad de ${layer.nombre}`}
           />
-          <span className="text-xs text-gray-400 w-8 text-right">{Math.round(opacity * 100)}%</span>
+          <span className="w-8 text-right font-mono text-[10px] text-muted">
+            {Math.round(opacity * 100)}%
+          </span>
         </div>
       )}
 
       {active && isWMS && status === 'error' && (
-        <p className="mt-1.5 ml-7 text-xs text-red-600 leading-snug" role="status">
+        <p className="mt-1.5 pl-[3.25rem] font-ui text-xs text-danger leading-snug" role="status">
           El servicio de {layer.fuente.entidad} no respondió. Revisa la conexión o intenta más
           tarde.
         </p>
       )}
 
       {active && isWMS && (
-        <div className="mt-1.5 pl-7">
+        <div className="mt-1.5 pl-[3.25rem]">
           <button
             onClick={() => setLegendOpen(v => !v)}
             aria-expanded={legendOpen}
-            className="text-xs text-azul-medio hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque rounded"
+            className="font-ui text-xs font-semibold text-accent hover:underline rounded"
           >
             {legendOpen ? 'Ocultar leyenda' : 'Ver leyenda'}
           </button>
@@ -433,9 +367,9 @@ function WmsLegend({ layer }: { layer: LayerConfig }) {
     return (
       <ul className="mt-1.5 space-y-1" aria-label={`Leyenda de ${layer.nombre}`}>
         {layer.leyenda.map(item => (
-          <li key={item.etiqueta} className="flex items-center gap-2 text-xs text-gris-texto">
+          <li key={item.etiqueta} className="flex items-center gap-2 font-ui text-xs text-ink">
             <span
-              className="w-3.5 h-3 rounded-sm border border-black/10 flex-shrink-0"
+              className="h-3 w-3.5 flex-shrink-0 rounded-sm border border-line/50"
               style={{ backgroundColor: item.color }}
               aria-hidden="true"
             />
@@ -449,7 +383,7 @@ function WmsLegend({ layer }: { layer: LayerConfig }) {
   // Sin leyenda propia: la imagen que publica el propio servicio (GetLegendGraphic)
   const subcapas = (layer.wmsLayers ?? '').split(',').filter(Boolean)
   return (
-    <div className="mt-1.5 max-h-56 overflow-y-auto rounded border border-gray-100 bg-white p-1">
+    <div className="mt-1.5 max-h-56 overflow-y-auto rounded-md border-2 border-line bg-white p-1">
       {subcapas.map(sub => (
         <img
           key={sub}

@@ -78,11 +78,15 @@ export default function MapViewer({
 }
 
 function MapBaseLayer({ base }: { base: 'osm' | 'esri' | 'topo' | 'dark' }) {
+  // En modo noche, global.css convierte el callejero y el topográfico en un mapa de fósforo
+  // verde; la imagen satelital solo se atenúa.
   return (
     <TileLayer
+      key={base}
       url={MAPA_BASE_URLS[base]}
       attribution={MAPA_BASE_ATTRIBUTION[base]}
       maxZoom={SEVILLA_MAX_ZOOM}
+      className={base === 'esri' ? 'mapa-base-satelite' : 'mapa-base-filtro'}
     />
   )
 }
@@ -323,7 +327,7 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
     .filter(k => props[k] != null)
     .map(
       k =>
-        `<tr><td class="text-gray-500 pr-2 text-xs align-top">${escapeHtml(etiqueta(k))}</td><td class="text-xs font-medium">${formatear(props[k])}</td></tr>`
+        `<tr><td class="text-muted pr-2 text-[11px] align-top">${escapeHtml(etiqueta(k))}</td><td class="text-[11px] font-semibold">${formatear(props[k])}</td></tr>`
     )
     .join('')
 
@@ -332,22 +336,22 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
     : ''
 
   const ilustrativo = layer.fuente.ilustrativo
-    ? `<div style="background:#FEF3C7;color:#92400E;border-radius:4px;padding:3px 6px;margin-bottom:6px;font-size:11px">Dato ilustrativo: no proviene de una fuente oficial</div>`
+    ? `<div class="popup-aviso">Dato ilustrativo: no proviene de una fuente oficial</div>`
     : ''
 
   return `
     <div>
       ${thumbnail}
-      <div class="font-semibold text-sm mb-1" style="color:${layer.estilo?.color ?? '#2D6A4F'}">${escapeHtml(layer.nombre)}</div>
+      <div class="popup-titulo"><span style="display:inline-block;width:9px;height:9px;margin-right:6px;border:1px solid currentColor;background:${layer.estilo?.fillColor ?? layer.estilo?.color ?? '#2F6B1F'}"></span>${escapeHtml(layer.nombre)}</div>
       ${ilustrativo}
       ${rows ? `<table class="w-full">${rows}</table>` : ''}
-      <div style="color:#6B7280;font-size:10px;margin-top:6px">Fuente: ${escapeHtml(layer.fuente.entidad)}</div>
+      <div class="popup-fuente">Fuente: ${escapeHtml(layer.fuente.entidad)}</div>
       <button
+        class="popup-btn"
         onclick="window.dispatchEvent(new CustomEvent('openFicha', { detail: '${layer.fichaId}' }))"
-        style="background:#2D6A4F;color:white;border:none;cursor:pointer;padding:4px 8px;border-radius:4px;width:100%;margin-top:8px;font-size:12px"
-        aria-label="Ver ficha pedagógica de ${layer.nombre}"
+        aria-label="Ver ficha pedagógica de ${escapeHtml(layer.nombre)}"
       >
-        Ver ficha pedagógica →
+        ▶ Ver ficha pedagógica
       </button>
     </div>
   `
@@ -510,8 +514,8 @@ function MeasurementController({ active, onClear }: { active: boolean; onClear: 
 
   return (
     <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-[1001] pointer-events-auto">
-      <div className="bg-white/95 rounded-lg shadow-lg border border-gray-200 px-4 py-2 flex items-center gap-4 text-sm whitespace-nowrap">
-        <span className="text-gris-texto">
+      <div className="dex-card px-4 py-2 flex items-center gap-4 font-ui text-sm whitespace-nowrap">
+        <span className="text-ink">
           {stats ||
             (points.length === 0
               ? 'Haz clic para agregar puntos'
@@ -522,7 +526,7 @@ function MeasurementController({ active, onClear }: { active: boolean; onClear: 
             clearAll()
             onClear()
           }}
-          className="text-red-500 hover:text-red-700 font-medium text-xs focus-visible:ring-2 focus-visible:ring-red-500 rounded"
+          className="text-danger hover:underline font-semibold text-xs rounded"
           aria-label="Limpiar medición y salir"
         >
           <span className="flex items-center gap-1">
@@ -562,7 +566,7 @@ function CoordinatesDisplay() {
   return (
     <div
       ref={coordsRef}
-      className="font-mono-coords absolute bottom-8 right-2 z-[1000] bg-white/90 px-2 py-0.5 rounded text-gray-600 shadow text-xs pointer-events-none"
+      className="font-mono-coords absolute bottom-8 right-2 z-[1000] rounded border border-line/40 bg-surface/90 px-2 py-0.5 text-ink-soft text-xs pointer-events-none"
       aria-live="polite"
       aria-label="Coordenadas del cursor"
     />

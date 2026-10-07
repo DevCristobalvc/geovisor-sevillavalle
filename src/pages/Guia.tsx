@@ -1,81 +1,84 @@
+import type { ReactNode } from 'react'
+import { PageHeader } from '../components/Dex'
+
 export default function Guia() {
   return (
-    <main className="overflow-y-auto h-full bg-gris-claro">
-      {/* Page header */}
-      <div className="bg-verde-bosque text-white px-6 py-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-verde-palido/70 text-xs font-medium uppercase tracking-widest mb-1">
-            Geovisor Ecopedagógico
-          </p>
-          <h1 className="text-2xl font-bold leading-tight mb-2">Guía de Uso</h1>
-          <p className="text-verde-palido/80 text-sm max-w-xl">
-            Aprende a navegar el Geovisor Ecopedagógico de Sevilla.
-          </p>
-        </div>
-      </div>
+    <main className="h-full overflow-y-auto">
+      <PageHeader
+        kicker="Manual de juego"
+        icono="brujula"
+        titulo="Guía de uso"
+        descripcion="Aprende a navegar el EcoDex de Sevilla en siete pasos."
+      />
 
-      <div className="max-w-3xl mx-auto px-6 py-8">
-        <div className="space-y-6">
-          <GuiaSection titulo="¿Cómo explorar el mapa?" numero={1}>
+      <div className="max-w-3xl mx-auto px-5 pb-10">
+        <ol className="space-y-4">
+          <GuiaSection titulo="Explora el mapa" numero={1}>
             <p>
-              En la pantalla del <strong>Visor</strong> verás el municipio de Sevilla centrado en
-              zoom 13. Puedes hacer zoom con la rueda del ratón o con gestos en pantalla táctil.
-              Arrastra el mapa para desplazarte.
+              El <strong>Visor</strong> abre mostrando todo el municipio de Sevilla. Acerca y aleja
+              con la rueda del ratón o con gestos en la pantalla, y arrastra el mapa para moverte.
             </p>
           </GuiaSection>
 
-          <GuiaSection titulo="Panel de capas" numero={2}>
+          <GuiaSection titulo="El dex de capas" numero={2}>
             <p>
-              A la izquierda encontrarás el <strong>Panel de Capas</strong> con 6 categorías
-              temáticas. Haz clic en el nombre de una categoría para expandirla, y activa las
-              subcapas con los interruptores. Puedes activar varias capas al mismo tiempo.
+              A la izquierda está el <strong>dex de capas</strong>: seis tipos (agua, biodiversidad,
+              clima, suelos, territorio y actores sociales) con 23 capas numeradas. Abre un tipo y
+              marca las capas que quieras ver; puedes combinar varias.
             </p>
             <p className="mt-2">
               Debajo de cada capa verás de qué entidad vienen sus datos (CVC, IDEAM o IGAC). Las
               capas marcadas como <strong>Ilustrativo</strong> son ejemplos preparados para el
               prototipo, no datos oficiales. En las capas WMS activas, el botón{' '}
-              <strong>Ver leyenda</strong> explica qué significa cada color.
+              <strong>Ver leyenda</strong> explica qué significa cada color, y una luz te indica si
+              el servicio respondió.
             </p>
           </GuiaSection>
 
-          <GuiaSection titulo="Consultar fichas pedagógicas" numero={3}>
+          <GuiaSection titulo="Abre la ficha" numero={3}>
             <p>
-              Haz clic sobre cualquier elemento del mapa (río, actor social, área protegida...).
-              Aparecerá un <strong>popup</strong> con información básica. Luego haz clic en "Ver
-              ficha pedagógica" para abrir el panel lateral con descripción completa, galería de
-              fotos, preguntas de reflexión y vocabulario clave.
+              Haz clic sobre un elemento del mapa: aparece su información y el botón{' '}
+              <strong>Ver ficha pedagógica</strong>. La ficha trae una descripción, por qué es
+              importante, una <strong>misión</strong> con preguntas para reflexionar, vocabulario y
+              galería.
             </p>
           </GuiaSection>
 
-          <GuiaSection titulo="Cambiar el mapa base" numero={4}>
+          <GuiaSection titulo="Cambia el mapa base" numero={4}>
             <p>
-              En la esquina superior derecha del mapa encontrarás los botones
-              <strong> Callejero</strong>, <strong>Satélite</strong> y <strong>Topográfico</strong>.
-              El modo satélite permite ver la cobertura del suelo real del municipio.
+              Arriba a la derecha puedes elegir <strong>Callejero</strong>,{' '}
+              <strong>Satélite</strong> o <strong>Topográfico</strong>. El satélite muestra la
+              cobertura real del suelo.
             </p>
           </GuiaSection>
 
-          <GuiaSection titulo="Uso sin conexión" numero={5}>
+          <GuiaSection titulo="Modo día y modo noche" numero={5}>
             <p>
-              Si abres el visor <strong>con conexión a internet</strong>, el navegador guardará
-              automáticamente las capas GeoJSON y los tiles del mapa para zoom 10–14. La próxima vez
-              podrás consultar el visor aunque no tengas señal. Los servicios WMS (capas raster)
-              requieren conexión.
+              El botón <strong>Noche</strong> de la barra superior activa el modo terminal: fondo
+              oscuro, letras de fósforo verde y mapa nocturno. El geovisor recuerda tu elección en
+              este navegador.
             </p>
           </GuiaSection>
 
-          <GuiaSection titulo="Recorridos guiados" numero={6}>
+          <GuiaSection titulo="Sin conexión" numero={6}>
             <p>
-              Los <strong>Recorridos</strong> son narrativas temáticas con paradas georeferenciadas.
-              El mapa vuela automáticamente a cada punto con información contextual. Ideal para
-              actividades escolares en campo.
+              Si abres el visor <strong>con internet</strong>, el navegador guarda las capas GeoJSON
+              y el mapa del municipio (niveles de acercamiento 10 a 14). La próxima vez podrás
+              consultarlo sin señal. Las capas WMS y los videos sí necesitan conexión.
             </p>
           </GuiaSection>
-        </div>
 
-        <div className="mt-8 bg-verde-palido rounded-xl p-4 text-sm text-verde-bosque">
-          <strong>¿Tienes preguntas?</strong> Este visor fue desarrollado como proyecto de grado en
-          la Universidad Santiago de Cali. Grupo de investigación COMBA I+D.
+          <GuiaSection titulo="Recorridos guiados" numero={7}>
+            <p>
+              Los <strong>Recorridos</strong> son rutas temáticas con paradas: el mapa vuela a cada
+              punto y te cuenta su historia. Ideales para actividades en clase o en campo.
+            </p>
+          </GuiaSection>
+        </ol>
+
+        <div className="dex-screen mt-6 p-4 font-ui text-sm">
+          <strong>¿Tienes preguntas?</strong> Este geovisor es un proyecto de grado de Ingeniería de
+          Sistemas de la Universidad Santiago de Cali, grupo de investigación COMBA I+D.
         </div>
       </div>
     </main>
@@ -89,19 +92,21 @@ function GuiaSection({
 }: {
   titulo: string
   numero: number
-  children: React.ReactNode
+  children: ReactNode
 }) {
   return (
-    <section className="bg-white rounded-xl p-5 shadow-sm">
-      <div className="flex items-start gap-3">
-        <div className="w-7 h-7 bg-verde-bosque text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-          {numero}
-        </div>
+    <li className="dex-card p-5">
+      <div className="flex items-start gap-4">
+        <span className="font-pixel text-2xl font-bold leading-none text-accent glow">
+          {String(numero).padStart(2, '0')}
+        </span>
         <div>
-          <h2 className="font-bold text-gris-texto text-base mb-1">{titulo}</h2>
-          <div className="text-sm text-gray-600 leading-relaxed font-pedagogica">{children}</div>
+          <h2 className="font-pixel text-lg font-bold text-ink">{titulo}</h2>
+          <div className="mt-1 font-pedagogica text-sm leading-relaxed text-ink-soft">
+            {children}
+          </div>
         </div>
       </div>
-    </section>
+    </li>
   )
 }

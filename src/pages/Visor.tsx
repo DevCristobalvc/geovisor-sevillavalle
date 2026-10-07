@@ -96,53 +96,56 @@ export default function Visor() {
   }, [])
 
   return (
-    <div className="relative flex overflow-hidden bg-gris-claro h-full">
-      {/* Panel de capas */}
-      <LayerPanel
-        collapsed={panelCollapsed}
-        onToggleCollapse={() => setPanelCollapsed(v => !v)}
-        highlightCategoria={searchParams.get('categoria')}
-      />
-
-      <MapViewer
-        onFeatureClick={(_feature, layer) => setFichaAbierta(layer.fichaId)}
-        flyTarget={
-          currentParada
-            ? { lat: currentParada.lat, lng: currentParada.lng, zoom: currentParada.zoom }
-            : null
-        }
-        isMeasuring={isMeasuring}
-        onMeasureClear={() => setIsMeasuring(false)}
-      />
-      <MapToolbar
-        panelCollapsed={panelCollapsed}
-        onTogglePanel={() => setPanelCollapsed(v => !v)}
-        isMeasuring={isMeasuring}
-        onToggleMeasure={() => setIsMeasuring(v => !v)}
-        onExportPNG={handleExportPNG}
-        isFeatureSearchOpen={isFeatureSearchOpen}
-        onToggleFeatureSearch={() => setIsFeatureSearchOpen(v => !v)}
-      />
-
-      {/* Feature search panel */}
-      <FeatureSearchPanel
-        isOpen={isFeatureSearchOpen}
-        onClose={() => setIsFeatureSearchOpen(false)}
-      />
-
-      {/* Recorrido HUD */}
-      {recorrido && (
-        <RecorridoHUD
-          recorrido={recorrido}
-          paradaIndex={paradaIndex}
-          onPrev={() => setParadaIndex(i => Math.max(0, i - 1))}
-          onNext={() => setParadaIndex(i => Math.min(recorrido.paradas.length - 1, i + 1))}
-          onExit={exitRecorrido}
+    // La "pantalla" del dex: el mapa enmarcado en un bisel sobre el fondo de papel
+    <div className="h-full p-1.5 sm:p-2.5">
+      <div className="relative flex h-full overflow-hidden rounded-2xl border-2 border-line bg-surface2 shadow-dex">
+        {/* Panel de capas */}
+        <LayerPanel
+          collapsed={panelCollapsed}
+          onToggleCollapse={() => setPanelCollapsed(v => !v)}
+          highlightCategoria={searchParams.get('categoria')}
         />
-      )}
 
-      {/* Panel de ficha pedagógica */}
-      <InfoPanel fichaId={fichaAbierta} onClose={() => setFichaAbierta(null)} />
+        <MapViewer
+          onFeatureClick={(_feature, layer) => setFichaAbierta(layer.fichaId)}
+          flyTarget={
+            currentParada
+              ? { lat: currentParada.lat, lng: currentParada.lng, zoom: currentParada.zoom }
+              : null
+          }
+          isMeasuring={isMeasuring}
+          onMeasureClear={() => setIsMeasuring(false)}
+        />
+        <MapToolbar
+          panelCollapsed={panelCollapsed}
+          onTogglePanel={() => setPanelCollapsed(v => !v)}
+          isMeasuring={isMeasuring}
+          onToggleMeasure={() => setIsMeasuring(v => !v)}
+          onExportPNG={handleExportPNG}
+          isFeatureSearchOpen={isFeatureSearchOpen}
+          onToggleFeatureSearch={() => setIsFeatureSearchOpen(v => !v)}
+        />
+
+        {/* Feature search panel */}
+        <FeatureSearchPanel
+          isOpen={isFeatureSearchOpen}
+          onClose={() => setIsFeatureSearchOpen(false)}
+        />
+
+        {/* Recorrido HUD */}
+        {recorrido && (
+          <RecorridoHUD
+            recorrido={recorrido}
+            paradaIndex={paradaIndex}
+            onPrev={() => setParadaIndex(i => Math.max(0, i - 1))}
+            onNext={() => setParadaIndex(i => Math.min(recorrido.paradas.length - 1, i + 1))}
+            onExit={exitRecorrido}
+          />
+        )}
+
+        {/* Panel de ficha pedagógica */}
+        <InfoPanel fichaId={fichaAbierta} onClose={() => setFichaAbierta(null)} />
+      </div>
     </div>
   )
 }

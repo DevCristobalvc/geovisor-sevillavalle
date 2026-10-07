@@ -464,8 +464,9 @@ export const MAPA_BASE_ATTRIBUTION = {
   dark: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 }
 
-export const SEVILLA_CENTER: [number, number] = [4.271, -75.9366]
-export const SEVILLA_DEFAULT_ZOOM = 13
+// Vista inicial: todo el municipio (límite oficial de la CVC), no solo el casco urbano
+export const SEVILLA_CENTER: [number, number] = [4.16, -75.89]
+export const SEVILLA_DEFAULT_ZOOM = 11
 export const SEVILLA_MIN_ZOOM = 10
 export const SEVILLA_MAX_ZOOM = 18
 // Extensión del límite municipal oficial (CVC): lat 3,90–4,41 · lon −76,04 a −75,74

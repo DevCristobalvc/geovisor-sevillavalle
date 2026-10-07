@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useOffline } from '../hooks/useOffline'
+import { useTema } from '../hooks/useTema'
+import { LogoDex } from './Dex'
 
 // ─── Geocoder ────────────────────────────────────────────────────────────────
 
@@ -50,21 +52,27 @@ function GeoSearch() {
   }
 
   return (
-    <div className="relative hidden md:block">
+    <div className="relative hidden lg:block">
+      <span
+        className="absolute left-2.5 top-1/2 -translate-y-1/2 font-mono text-xs text-accent"
+        aria-hidden="true"
+      >
+        &gt;
+      </span>
       <input
         type="search"
         value={query}
         onChange={e => search(e.target.value)}
-        placeholder="Buscar lugar..."
+        placeholder="buscar lugar…"
         aria-label="Buscar lugar en el mapa"
-        className="w-44 lg:w-56 bg-white/15 text-white placeholder-white/60 border border-white/30 rounded px-3 py-1 text-xs focus:outline-none focus:bg-white/25 focus:border-white/60 transition-colors"
+        className="w-48 xl:w-56 rounded-lg border-2 border-line bg-surface2 pl-6 pr-3 py-1 font-ui text-xs text-ink placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent"
       />
       {searching && (
-        <div className="absolute right-2 top-1/2 -translate-y-1/2 text-white/60 text-xs">…</div>
+        <div className="absolute right-2 top-1/2 -translate-y-1/2 text-muted text-xs">…</div>
       )}
       {results.length > 0 && (
         <ul
-          className="absolute top-full left-0 mt-1 bg-white rounded shadow-lg z-50 min-w-full max-w-xs"
+          className="dex-card absolute top-full left-0 mt-2 z-50 min-w-full max-w-xs overflow-hidden"
           role="listbox"
           aria-label="Resultados de búsqueda"
         >
@@ -72,7 +80,7 @@ function GeoSearch() {
             <li key={i}>
               <button
                 onClick={() => selectResult(r)}
-                className="w-full text-left px-3 py-2 text-xs text-gris-texto hover:bg-verde-palido transition-colors first:rounded-t last:rounded-b"
+                className="w-full text-left px-3 py-2 font-ui text-xs text-ink hover:bg-accent-soft transition-colors"
                 role="option"
               >
                 {r.display_name.split(',').slice(0, 2).join(', ')}
@@ -82,6 +90,39 @@ function GeoSearch() {
         </ul>
       )}
     </div>
+  )
+}
+
+// ─── Interruptor día / noche ──────────────────────────────────────────────────
+
+function TemaToggle() {
+  const { tema, alternar } = useTema()
+  const oscuro = tema === 'oscuro'
+  return (
+    <button
+      onClick={alternar}
+      aria-label={oscuro ? 'Cambiar a modo día' : 'Cambiar a modo noche (terminal)'}
+      aria-pressed={oscuro}
+      title={oscuro ? 'Modo día' : 'Modo noche'}
+      className="group flex items-center gap-1.5 rounded-lg border-2 border-line bg-surface2 px-2 py-1 font-ui text-[11px] font-bold uppercase tracking-wider text-ink shadow-dex-sm active:translate-x-0.5 active:translate-y-0.5 active:shadow-none"
+    >
+      <svg
+        viewBox="0 0 8 8"
+        className="w-3.5 h-3.5"
+        shapeRendering="crispEdges"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        {oscuro ? (
+          // Sol pixelado
+          <path d="M3 0h2v1H3zM3 7h2v1H3zM0 3h1v2H0zM7 3h1v2H7zM2 2h4v4H2zM1 1h1v1H1zM6 1h1v1H6zM1 6h1v1H1zM6 6h1v1H6z" />
+        ) : (
+          // Luna pixelada
+          <path d="M3 0h3v1H3zM2 1h2v1H2zM1 2h2v4H1zM2 6h2v1H2zM3 7h3v1H3zM4 6h3v1H4zM6 5h1v1H6z" />
+        )}
+      </svg>
+      <span className="hidden sm:inline">{oscuro ? 'Día' : 'Noche'}</span>
+    </button>
   )
 }
 
@@ -95,18 +136,19 @@ const NAV_LINKS = [
   { to: '/guia', label: 'Guía' },
 ]
 
+const esActivo = (to: string, pathname: string) =>
+  to === '/' ? pathname === '/' : pathname.startsWith(to)
+
 export default function Navbar() {
   const isOffline = useOffline()
   const { pathname } = useLocation()
   const [mobileOpen, setMobileOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
-  // Close menu when route changes
   useEffect(() => {
     setMobileOpen(false)
   }, [pathname])
 
-  // Close on Escape
   useEffect(() => {
     if (!mobileOpen) return
     const handler = (e: KeyboardEvent) => {
@@ -116,7 +158,6 @@ export default function Navbar() {
     return () => document.removeEventListener('keydown', handler)
   }, [mobileOpen])
 
-  // Close on outside click
   useEffect(() => {
     if (!mobileOpen) return
     const handler = (e: MouseEvent) => {
@@ -131,188 +172,113 @@ export default function Navbar() {
   return (
     <header
       ref={menuRef}
-      className="relative flex items-center justify-between px-4 text-white z-50"
-      style={{
-        height: 'var(--header-height)',
-        minHeight: 'var(--header-height)',
-        background: 'linear-gradient(90deg, #0c1c14 0%, #123526 100%)',
-        borderBottom: '1px solid rgba(82,183,136,0.22)',
-        boxShadow: '0 1px 12px rgba(0,0,0,0.25)',
-      }}
+      className="relative z-50 flex items-center justify-between gap-3 border-b-2 border-line bg-surface/95 px-3 sm:px-4 text-ink backdrop-blur"
+      style={{ height: 'var(--header-height)', minHeight: 'var(--header-height)' }}
     >
-      {/* Logo */}
-      <div className="flex items-center gap-3">
-        <Link to="/" className="flex items-center gap-2.5 hover:opacity-90 transition-opacity">
-          <svg viewBox="0 0 32 32" fill="none" className="w-9 h-9 flex-shrink-0" aria-hidden="true">
-            <defs>
-              <linearGradient
-                id="logoGrad"
-                x1="0"
-                y1="0"
-                x2="32"
-                y2="32"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#52B788" />
-                <stop offset="1" stopColor="#2D6A4F" />
-              </linearGradient>
-            </defs>
-            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
-            {/* Capas apiladas (glifo GIS) */}
-            <path d="M16 6l8 4-8 4-8-4 8-4z" fill="#fff" />
-            <path
-              d="M8 14l8 4 8-4"
-              stroke="#fff"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              opacity="0.9"
-            />
-            <path
-              d="M8 18l8 4 8-4"
-              stroke="#fff"
-              strokeWidth="1.7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              opacity="0.6"
-            />
-          </svg>
-          <div className="hidden sm:block">
-            <div className="font-bold text-sm leading-tight tracking-tight">
-              Geovisor Ecopedagógico
-            </div>
-            <div className="text-[11px] text-verde-claro/80 leading-tight tracking-wide">
-              Sevilla, Valle del Cauca
-            </div>
+      {/* Marca */}
+      <Link
+        to="/"
+        className="flex items-center gap-2.5 hover:opacity-90 transition-opacity"
+        aria-label="EcoDex Sevilla, inicio"
+      >
+        <LogoDex className="w-7 h-8 flex-shrink-0" />
+        <div className="leading-none">
+          <div className="font-pixel text-lg font-bold tracking-tight glow">
+            Eco<span className="text-accent">Dex</span>
           </div>
-        </Link>
-      </div>
+          <div className="dex-kicker mt-0.5 text-[9px] tracking-[0.2em]">Sevilla · Valle</div>
+        </div>
+      </Link>
 
-      {/* Desktop nav */}
+      {/* Navegación de escritorio */}
       <nav className="hidden md:flex items-center gap-1" aria-label="Navegación principal">
-        {NAV_LINKS.map(({ to, label }) => (
-          <NavLink key={to} to={to} current={pathname}>
-            {label}
-          </NavLink>
-        ))}
+        {NAV_LINKS.map(({ to, label }) => {
+          const activo = esActivo(to, pathname)
+          return (
+            <Link
+              key={to}
+              to={to}
+              aria-current={activo ? 'page' : undefined}
+              className={`rounded-md px-3 py-1.5 font-ui text-sm transition-colors ${
+                activo
+                  ? 'bg-ink text-bg font-semibold dark:bg-accent dark:text-on-accent'
+                  : 'text-ink-soft hover:bg-surface2 hover:text-ink'
+              }`}
+            >
+              {activo && <span aria-hidden="true">▸ </span>}
+              {label}
+            </Link>
+          )
+        })}
       </nav>
 
-      {/* Right side */}
+      {/* Lado derecho */}
       <div className="flex items-center gap-2">
         <GeoSearch />
-        {isOffline && (
-          <span className="text-xs bg-yellow-500 text-yellow-900 px-2 py-0.5 rounded-full font-medium">
-            Sin conexión
-          </span>
-        )}
-        <a
-          href="https://portal-geo.cvc.gov.co"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Ir a GeoCVC (abre en nueva pestaña)"
-          className="hidden md:block text-xs text-verde-palido hover:text-white transition-colors"
+        <span
+          className="hidden sm:flex items-center gap-1.5 font-ui text-[10px] font-semibold uppercase tracking-wider text-muted"
+          role="status"
         >
-          GeoCVC ↗
-        </a>
+          <span
+            className={`dex-led ${isOffline ? 'dex-led-warn' : 'dex-led-ok'}`}
+            aria-hidden="true"
+          />
+          {isOffline ? 'Sin conexión' : 'En línea'}
+        </span>
+        <TemaToggle />
 
-        {/* Hamburger button — mobile only */}
         <button
           onClick={() => setMobileOpen(v => !v)}
           aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={mobileOpen}
-          className="md:hidden p-2 rounded hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="md:hidden rounded-lg border-2 border-line bg-surface2 p-1.5"
         >
           <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="w-5 h-5"
+            viewBox="0 0 8 8"
+            className="w-4 h-4"
+            shapeRendering="crispEdges"
+            fill="currentColor"
+            aria-hidden="true"
           >
             {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+              <path d="M1 1h1v1H1zM2 2h1v1H2zM3 3h2v2H3zM5 2h1v1H5zM6 1h1v1H6zM2 5h1v1H2zM1 6h1v1H1zM5 5h1v1H5zM6 6h1v1H6z" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+              <path d="M0 1h8v1H0zM0 3.5h8v1H0zM0 6h8v1H0z" />
             )}
           </svg>
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Menú móvil */}
       <div
-        className="absolute top-full left-0 right-0 border-t border-white/10 shadow-lg z-40 overflow-hidden md:hidden"
+        className="absolute top-full left-0 right-0 z-40 overflow-hidden border-b-2 border-line bg-surface md:hidden"
         style={{
-          maxHeight: mobileOpen ? '320px' : '0',
+          maxHeight: mobileOpen ? '360px' : '0',
           transition: 'max-height 0.3s ease',
-          background: 'linear-gradient(90deg, #0c1c14 0%, #123526 100%)',
+          borderBottomWidth: mobileOpen ? 2 : 0,
         }}
         aria-hidden={!mobileOpen}
       >
         <nav className="flex flex-col py-2 px-4" aria-label="Navegación móvil">
-          {NAV_LINKS.map(({ to, label }) => (
-            <Link
-              key={to}
-              to={to}
-              aria-current={
-                (to === '/' ? pathname === '/' : pathname.startsWith(to)) ? 'page' : undefined
-              }
-              className={`py-3 px-2 text-sm font-medium border-b border-white/10 last:border-0 transition-colors ${
-                (to === '/' ? pathname === '/' : pathname.startsWith(to))
-                  ? 'text-verde-claro font-semibold'
-                  : 'text-white/80 hover:text-white'
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-          {/* Mobile geocoder */}
-          <div className="py-3">
-            <input
-              type="search"
-              placeholder="Buscar lugar en el mapa..."
-              aria-label="Buscar lugar en el mapa"
-              onChange={e => {
-                if (e.target.value.length >= 3) {
-                  // Reuse same search logic via event — navigation happens in visor
-                  window.dispatchEvent(
-                    new CustomEvent('mobileGeoSearch', { detail: e.target.value })
-                  )
-                }
-              }}
-              className="w-full bg-white/15 text-white placeholder-white/50 border border-white/20 rounded px-3 py-2 text-sm focus:outline-none focus:bg-white/25"
-            />
-          </div>
+          {NAV_LINKS.map(({ to, label }) => {
+            const activo = esActivo(to, pathname)
+            return (
+              <Link
+                key={to}
+                to={to}
+                tabIndex={mobileOpen ? 0 : -1}
+                aria-current={activo ? 'page' : undefined}
+                className={`py-3 px-2 font-ui text-sm border-b border-line-soft last:border-0 ${
+                  activo ? 'text-accent font-semibold' : 'text-ink-soft'
+                }`}
+              >
+                {activo ? '▸ ' : ''}
+                {label}
+              </Link>
+            )
+          })}
         </nav>
       </div>
     </header>
-  )
-}
-
-function NavLink({
-  to,
-  current,
-  children,
-}: {
-  to: string
-  current: string
-  children: React.ReactNode
-}) {
-  const isActive = to === '/' ? current === '/' : current.startsWith(to)
-  return (
-    <Link
-      to={to}
-      aria-current={isActive ? 'page' : undefined}
-      className={`px-3 py-1.5 rounded text-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${
-        isActive
-          ? 'bg-white/15 text-white font-semibold border-b-2 border-verde-claro rounded-b-none'
-          : 'text-verde-palido/90 hover:bg-white/10 hover:text-white'
-      }`}
-    >
-      {children}
-    </Link>
   )
 }

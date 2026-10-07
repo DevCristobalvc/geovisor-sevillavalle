@@ -1,47 +1,47 @@
 {
   "id": "agua_sevilla",
   "titulo": "El agua en Sevilla",
-  "descripcion": "Un viaje por el ciclo del agua en el municipio de Sevilla: desde los nacimientos en los páramos y bosques altoandinos, pasando por las cuencas medias y los sistemas de abastecimiento, hasta los humedales urbanos y las estaciones de monitoreo de calidad. El agua es el hilo conductor que conecta todos los ecosistemas del territorio.",
+  "descripcion": "Un viaje por el camino del agua en Sevilla: desde los páramos del suroriente, donde nace buena parte de ella, pasando por una estación que mide la lluvia y los predios que protegen las fuentes de los acueductos, hasta la quebrada San José y el humedal Siracusa, en la cabecera municipal. Todas las paradas corresponden a elementos registrados en la cartografía oficial de la CVC.",
   "paradas": [
     {
       "id": 1,
-      "titulo": "Nacimiento del Río Bugalagrande",
-      "narracion": "A más de 3.800 metros de altitud, en el corazón del complejo de páramos Chili-Barragán, nace el Río Bugalagrande. Las aguas que aquí emergen han sido filtradas durante décadas a través de las turberas y suelos esponjosos del páramo, acumulando minerales y nutrientes que las hacen especialmente aptas para el consumo humano y el riego. Este nacimiento abastece directamente a más de 80.000 personas en el norte del Valle del Cauca. Protegerlo es proteger la vida de todo el municipio.",
-      "lat": 4.38,
-      "lng": -76.01,
-      "zoom": 14
+      "titulo": "Páramo de Chilí-Barragán: donde nace el agua",
+      "narracion": "Empezamos en lo más alto del municipio, por encima de los 3.100 metros. Aquí está la parte sevillana del complejo de páramos Chilí-Barragán, delimitado por el Ministerio de Ambiente en 2016. Los frailejones, los pajonales y los musgos forman sobre el suelo una especie de esponja que atrapa la lluvia y la neblina y la suelta poco a poco. Así nacen quebradas de la cuenca del río Bugalagrande, la más extensa de Sevilla. Activa la capa Páramos y observa: ¿qué tan lejos está este ecosistema de la cabecera municipal?",
+      "lat": 4.0285,
+      "lng": -75.7929,
+      "zoom": 12
     },
     {
       "id": 2,
-      "titulo": "Cuenca Alta - El páramo como fábrica de agua",
-      "narracion": "Los páramos de Las Hermosas son la verdadera 'fábrica de agua' del municipio. Los frailejones (Espeletia spp.) capturan la humedad de las nubes y la niebla a través de sus hojas velludas, liberándola lentamente hacia el suelo. Las turberas almacenan el agua como una esponja gigante, regulando los caudales en épocas secas. Se estima que este ecosistema regula más del 70% del agua dulce que abastece los acueductos municipales. Sin embargo, la ganadería extensiva y el cambio climático amenazan su capacidad de regulación hídrica.",
-      "lat": 4.35,
-      "lng": -75.99,
+      "titulo": "Estación Alegrías: medir la lluvia",
+      "narracion": "Bajamos al corregimiento de Alegrías, a 2.290 metros de altitud. En este punto la CVC tiene una estación pluviométrica automática, en operación desde 1971. Una estación con tantos años de funcionamiento permite comparar la lluvia de hoy con la de hace décadas y reconocer años muy secos o muy lluviosos, como los asociados a El Niño y La Niña. Esa información sirve para planear acueductos, cosechas y la gestión del riesgo. Activa la capa Estaciones Hidroclimatológicas: ¿cuántas estaciones tiene la CVC en Sevilla y a qué altitud está cada una?",
+      "lat": 4.08048,
+      "lng": -75.86357,
       "zoom": 14
     },
     {
       "id": 3,
-      "titulo": "Embalse La Paila",
-      "narracion": "El sistema de almacenamiento hídrico en la cuenca media del Río Bugalagrande representa uno de los puntos clave de la infraestructura de agua del municipio. Aquí confluyen las aguas de varias quebradas provenientes de los bosques andinos para ser reguladas antes de su distribución hacia zonas agrícolas y urbanas. Este sector es también un corredor importante para aves migratorias y espacio de pesca artesanal para las comunidades ribeireñas. La gestión integrada del recurso hídrico en este punto es fundamental para garantizar el suministro en épocas de sequía.",
-      "lat": 4.28,
-      "lng": -75.96,
-      "zoom": 14
+      "titulo": "Predios que protegen el agua",
+      "narracion": "En el corregimiento de Cebollal, al sur de la cabecera, la CVC registra varios predios adquiridos para proteger el agua. La Ley 99 de 1993, en su artículo 111, obliga a municipios y departamentos a invertir al menos el 1 % de sus ingresos corrientes en comprar y mantener las tierras que abastecen los acueductos, o en pagar a sus dueños por conservarlas. La CVC clasifica estos predios como ecosistemas de bosque húmedo de montaña. Activa la capa Predios Art. 111 y pregúntate: ¿por qué es mejor proteger el bosque donde nace el agua que tratarla cuando ya está contaminada?",
+      "lat": 4.214,
+      "lng": -75.902,
+      "zoom": 13
     },
     {
       "id": 4,
-      "titulo": "Estación de monitoreo - Quebrada San José",
-      "narracion": "Esta estación de monitoreo de la CVC y el municipio registra en tiempo real los principales parámetros fisicoquímicos y bacteriológicos del agua de la Quebrada San José, que atraviesa la zona urbana de Sevilla. Los datos muestran un deterioro significativo de la calidad del agua en su paso por el casco urbano: el índice de calidad del agua (ICA) cae de 'aceptable' en la parte alta a 'crítico' en la parte baja, evidenciando el impacto de las aguas residuales domésticas no tratadas. Esta información es insumo clave para la Alcaldía en la gestión del Plan de Saneamiento y Manejo de Vertimientos (PSMV).",
-      "lat": 4.271,
-      "lng": -75.937,
-      "zoom": 15
+      "titulo": "Quebrada San José: antes y después de la ciudad",
+      "narracion": "La quebrada San José atraviesa la cabecera de Sevilla. La CVC tiene tres puntos de muestreo sobre ella: uno antes de la zona urbana, en el sector Los Alpes; otro dentro de la ciudad, en la calle 55 con carrera 50; y otro después, en el puente de la vía a Manzanillo. Comparar el agua en esos tres lugares permite saber cuánto cambia su calidad al recibir las aguas residuales y los residuos de la ciudad. Activa la capa Calidad del Agua: ¿qué crees que le pasa al oxígeno disuelto del agua aguas abajo de la ciudad?",
+      "lat": 4.2816,
+      "lng": -75.9282,
+      "zoom": 13
     },
     {
       "id": 5,
-      "titulo": "Humedal La Cristalina",
-      "narracion": "En la periferia urbana de Sevilla, el Humedal La Cristalina es un ecosistema de 12 hectáreas que cumple funciones vitales frecuentemente ignoradas: retiene las aguas lluvias evitando inundaciones en el casco urbano, depura naturalmente los contaminantes mediante sus plantas acuáticas, y es refugio de aves acuáticas y anfibios. A pesar de estar en estado de conservación regular por la invasión de especies foráneas y el vertimiento de residuos sólidos, este humedal es sujeto de un plan de restauración liderado por la comunidad y la Fundación Río Vivo. Su recuperación es un ejemplo de educación ambiental en acción.",
-      "lat": 4.248,
-      "lng": -75.961,
-      "zoom": 15
+      "titulo": "Humedal Siracusa y el agua subterránea",
+      "narracion": "Terminamos en el humedal Siracusa, el único que la CVC tiene inventariado en Sevilla: un cuerpo de agua de 1,11 hectáreas alimentado por un afluente de la quebrada San José. Aunque es pequeño, observadores de aves han reportado en sus alrededores especies como la garcita rayada y el martín pescador verde. Muy cerca, la CVC registra el pozo de monitoreo vs-pm-1, de cinco metros de profundidad, asociado a la vigilancia de estaciones de servicio. Activa las capas Humedales y Monitoreo Subterráneo: el agua que no vemos también necesita cuidado.",
+      "lat": 4.2699,
+      "lng": -75.9315,
+      "zoom": 16
     }
   ]
 }

@@ -1,6 +1,8 @@
 # Geovisor Ecopedagógico — Sevilla, Valle del Cauca
 
 > A static web GIS application for exploring the socio-ecosystemic transformations of Sevilla municipality through interactive geographic layers, pedagogical sheets, and guided tours.
+>
+> Its interface, **EcoDex**, borrows the language of a pocket field console: a light "field" theme in leaf greens and earth tones, and a dark "terminal" theme in phosphor green. Motto: *Explora · Pregunta · Cuida*.
 
 **Bachelor's Thesis — Systems Engineering · Universidad Santiago de Cali**  
 Cristóbal Valencia Cerón · José David Molina Delgado  
@@ -107,7 +109,7 @@ See also the original [Requirements Document v2.0](./Documento%20de%20Requerimie
 | Styling | Tailwind CSS | 3.x |
 | Routing | React Router | 6.x |
 | Offline / PWA | Workbox (vite-plugin-pwa) | 7.x |
-| UI primitives | Radix UI | 1.x |
+| Design system | CSS-variable tokens for light/dark themes (WCAG AA) · Pixelify Sans, Inter, JetBrains Mono | — |
 | Deployment | Vercel | — |
 
 ---
@@ -139,6 +141,18 @@ npm run build        # output → dist/
 # Preview the production build locally
 npm run preview      # → http://localhost:4173/
 ```
+
+### End-to-end tests
+
+`tests/e2e/validar.mjs` drives the system Chrome with Playwright and checks ~70 points: home and credits content, the 16 GeoJSON layers (inside the municipality, no personal data, 13 with CVC provenance), shared-link view (RF-18), popups and pedagogical sheets, legends, the 7 WMS services, the day/night theme (RF-06), the 23 sheets (3–5 questions, images only from Wikimedia Commons) and a clean console.
+
+```bash
+npm run build && npx vite preview --port 4173      # terminal 1
+npm run test:e2e                                    # terminal 2 — visible browser
+BASE=https://www.refiup.app HEADLESS=1 npm run test:e2e -- --sin-cvc
+```
+
+`--sin-cvc` skips the CVC WMS layers: the CVC firewall blocks an IP that sends bursts of requests.
 
 ### Deployment
 
@@ -174,7 +188,8 @@ geovisor-sevillavalle/
 │   │   ├── MapToolbar.tsx       # Base map selector, measure, export, search
 │   │   ├── FeatureSearchPanel.tsx # Attribute search across active layers (RF-09)
 │   │   ├── RecorridoHUD.tsx     # Guided tour stop navigation (RF-14)
-│   │   ├── Navbar.tsx           # Top navigation bar + Nominatim geocoder
+│   │   ├── Navbar.tsx           # Top navigation bar, Nominatim geocoder, day/night switch
+│   │   ├── Dex.tsx              # EcoDex pieces: pixel icons, console logo, page header
 │   │   └── Footer.tsx           # Attribution footer
 │   ├── pages/
 │   │   ├── Home.tsx             # Landing page with territory context
@@ -192,6 +207,7 @@ geovisor-sevillavalle/
 │   │   ├── useMapLayers.ts      # Layer access + toggle helpers
 │   │   ├── useMediaQuery.ts     # Responsive breakpoint detection
 │   │   ├── useUrlSync.ts        # Serializes map state into query params (RF-18)
+│   │   ├── useTema.ts           # Day/night theme (RF-06), remembered per browser
 │   │   └── useOffline.ts        # Online/offline status tracker
 │   ├── sw.ts                    # Service Worker (Workbox injectManifest)
 │   └── types/

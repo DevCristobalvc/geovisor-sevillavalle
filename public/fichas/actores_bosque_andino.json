@@ -2,63 +2,63 @@
   "id": "actores_bosque_andino",
   "titulo": "Guardianes del Bosque Andino",
   "categoria": "actores",
-  "descripcion": "El bosque andino de Sevilla, Valle del Cauca, es uno de los ecosistemas más biodiversos y amenazados del planeta. Su protección y estudio involucra a una gran variedad de actores sociales que trabajan desde diferentes perspectivas. La academia, representada por universidades como la Universidad Santiago de Cali (USC) y la Universidad del Valle, realiza investigaciones científicas sobre biodiversidad, flora, fauna y servicios ecosistémicos, generando el conocimiento necesario para tomar decisiones de conservación bien fundamentadas. Las Organizaciones No Gubernamentales (ONGs) como la Fundación Ecohabitats y la Federación Colombiana de Reservas Naturales de la Sociedad Civil (Resnatur) trabajan en la creación y gestión de reservas naturales privadas, donde propietarios de predios deciden voluntariamente proteger sus bosques y abrirlos a procesos de educación ambiental y ecoturismo. Los dueños de reservas son actores clave: son ciudadanos comprometidos que renuncian a usos económicos más lucrativos de sus tierras para mantener la cobertura boscosa. Finalmente, los agricultores de la zona, especialmente los cafeteros, son fundamentales porque sus decisiones de manejo del paisaje —usar sombrío arbóreo, mantener cercas vivas, respetar las quebradas— determinan en gran medida la conectividad del bosque andino a escala de paisaje. La suma de estos esfuerzos colectivos es lo que mantiene vivo el bosque andino sevillano.",
-  "importancia": "El bosque andino alberga una riqueza biológica excepcional: cientos de especies de aves, mamíferos, anfibios y plantas que no existen en ningún otro lugar del mundo. Además, regula el ciclo del agua, protege los suelos de la erosión y captura carbono, contribuyendo así a mitigar el cambio climático. Los actores que lo protegen —investigadores, ONGs, reservistas y agricultores comprometidos— forman una red de cuidado que es indispensable para la supervivencia de este ecosistema. Sin su trabajo coordinado, la fragmentación del bosque avanzaría rápidamente, aislando poblaciones de animales y plantas hasta llevarlas a la extinción local. La educación ambiental y la investigación científica que estos actores impulsan también permiten que las futuras generaciones conozcan y valoren su patrimonio natural.",
+  "descripcion": "El bosque andino cubre buena parte de las laderas de la cordillera Central en Sevilla y de él dependen muchas de sus quebradas. Su cuidado no depende de una sola persona o entidad: es el resultado de las decisiones de muchos actores sociales. La capa oficial de la CVC registra en Sevilla dos actores con competencia sobre este ecosistema: la Administración municipal, que ordena el uso del suelo, y el CIDEA de Sevilla (Comité Técnico Interinstitucional de Educación Ambiental), que coordina la educación ambiental en el municipio. A ellos se suman otros actores que la capa no muestra: la CVC, autoridad ambiental del Valle del Cauca; los propietarios que registraron sus predios como Reservas Naturales de la Sociedad Civil ante Parques Nacionales Naturales (en Sevilla hay cuatro: La Mina, El Mirador, Mata de Guadua y La Esperanza); las familias campesinas y cafeteras, cuyas prácticas —dejar árboles en los potreros, proteger los nacimientos, no talar las orillas de las quebradas— determinan si los parches de bosque siguen conectados; y las instituciones educativas, que forman a quienes cuidarán el territorio.",
+  "importancia": "El bosque andino regula el agua: atrapa la lluvia y la neblina, alimenta nacimientos y quebradas, y sus raíces sujetan el suelo de las laderas. También es el hogar de especies registradas en Sevilla como el roble andino (Quercus humboldtii), el cedro negro (Juglans neotropica) y el quetzal colinegro (Pharomachrus auriceps). Cuando el bosque queda dividido en parches aislados, los animales y las semillas ya no pueden moverse entre ellos. Por eso la coordinación entre autoridades, propietarios, productores y colegios es tan importante como cualquier norma: el bosque se conserva cuando muchos actores deciden cuidarlo al mismo tiempo.",
   "preguntas_reflexivas": [
-    "¿Qué ventajas tiene que los dueños de predios decidan voluntariamente proteger sus bosques en lugar de ser obligados por la ley?",
-    "¿Cómo puede la investigación científica de las universidades ayudar a mejorar las decisiones de las comunidades sobre el bosque?",
-    "¿De qué manera los caficultores pueden convertirse en guardianes del bosque andino a través de sus prácticas agrícolas?",
-    "¿Qué papel pueden jugar los jóvenes estudiantes de Sevilla en la protección del bosque andino?"
+    "¿Qué ventajas tiene que un propietario decida voluntariamente registrar su predio como reserva natural de la sociedad civil?",
+    "¿Qué hace el CIDEA de un municipio y cómo podría participar tu colegio en sus actividades?",
+    "¿Qué prácticas de una finca cafetera ayudan a que los parches de bosque andino sigan conectados?",
+    "¿Qué actor que no aparece en la capa del visor consideras importante para cuidar el bosque? ¿Por qué?"
   ],
   "vocabulario": [
     {
       "termino": "Bosque andino",
-      "definicion": "Ecosistema forestal ubicado en las laderas de los Andes entre los 1.000 y 3.500 metros de altitud, caracterizado por su alta humedad, gran diversidad de especies y presencia de niebla frecuente."
+      "definicion": "Bosque de montaña de los Andes, aproximadamente entre 1.000 y 3.500 m de altitud según la región, con alta humedad, neblina frecuente y gran diversidad de especies."
     },
     {
-      "termino": "Reserva natural de la sociedad civil",
-      "definicion": "Área protegida ubicada en un predio privado cuyos dueños deciden voluntariamente conservar y manejar de forma sostenible para proteger la biodiversidad y los servicios ecosistémicos."
+      "termino": "Actor social",
+      "definicion": "Persona, grupo u organización que tiene intereses, conocimientos o capacidad de decisión sobre un territorio o un recurso natural."
     },
     {
-      "termino": "Servicios ecosistémicos",
-      "definicion": "Beneficios que los ecosistemas proveen gratuitamente a las personas: agua limpia, aire puro, suelo fértil, regulación del clima, polinización de cultivos, entre otros."
+      "termino": "Reserva Natural de la Sociedad Civil",
+      "definicion": "Predio privado que, por decisión de su propietario, se dedica a conservar una muestra de un ecosistema natural y se registra ante Parques Nacionales Naturales de Colombia."
+    },
+    {
+      "termino": "CIDEA",
+      "definicion": "Comité Técnico Interinstitucional de Educación Ambiental: espacio donde entidades públicas, instituciones educativas y organizaciones coordinan la educación ambiental de un departamento o municipio."
     },
     {
       "termino": "Conectividad ecológica",
-      "definicion": "Capacidad del paisaje para permitir el movimiento de animales, plantas (por dispersión de semillas) y flujos ecológicos entre diferentes fragmentos de hábitat."
-    },
-    {
-      "termino": "Sombrío",
-      "definicion": "En el cultivo de café, se refiere a los árboles que se siembran sobre el cafetal para protegerlo del sol directo; estos árboles también proporcionan hábitat para aves y otros animales del bosque."
+      "definicion": "Capacidad del paisaje para permitir el movimiento de animales, semillas y otros flujos naturales entre fragmentos de hábitat."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bosque_andino_colombiano_antioquia.jpg",
-      "titulo": "Bosque andino colombiano en Antioquia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Subiendo_al_P%C3%A1ramo_de_las_Hermosas.jpg/1280px-Subiendo_al_P%C3%A1ramo_de_las_Hermosas.jpg",
+      "titulo": "Bosque altoandino camino al páramo de Las Hermosas (Valle del Cauca)",
+      "credito": "Carolaragon68 · CC BY-SA 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bosque_andino_colombiano_antioquia2.jpg",
-      "titulo": "Bosque andino en Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Roble_%28Quercus_humboldtii%29_-_Flickr_-_Alejandro_Bayer.jpg/1280px-Roble_%28Quercus_humboldtii%29_-_Flickr_-_Alejandro_Bayer.jpg",
+      "titulo": "Roble andino (Quercus humboldtii), especie registrada por la CVC en Sevilla",
+      "credito": "Alejandro Bayer Tamayo · CC BY-SA 2.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Bosque_de_niebla_andino.JPG/1280px-Bosque_de_niebla_andino.JPG",
-      "titulo": "Bosque de niebla andino colombiano",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Desde_el_mirador_Alto_de_la_Cruz_Sevilla_16.jpg/1280px-Desde_el_mirador_Alto_de_la_Cruz_Sevilla_16.jpg",
+      "titulo": "Bosques, cultivos y potreros vistos desde el mirador Alto de la Cruz, Sevilla",
+      "credito": "Remux · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "CFRKd2Wn4Cc",
-      "titulo": "Características de los Bosques de Niebla — TvAgro"
+      "youtube_id": "CKW8dJqd6fs",
+      "titulo": "Reservas Naturales de la Sociedad Civil — Parques Nacionales Naturales de Colombia"
     },
     {
-      "youtube_id": "k_xPDEDnlP0",
-      "titulo": "Fauna y Flora del Bosque Andino"
+      "youtube_id": "CFRKd2Wn4Cc",
+      "titulo": "Características de los Bosques de Niebla (El Retiro - Antioquia) - TvAgro por Juan Gonzalo Angel — TvAgro"
     }
   ],
-  "fuente_datos": "Instituto Humboldt – Catálogo Biodiversidad Colombia; CVC – Plan de Gestión Ambiental Regional 2015–2036; Resnatur – Registro reservas privadas Valle del Cauca",
+  "fuente_datos": "CVC – Actores sociales del bosque de zona andina y Sistema de áreas protegidas (Portal GeoCVC, recorte a Sevilla, 2026); Decreto 1996 de 1999 (Reservas Naturales de la Sociedad Civil); Política Nacional de Educación Ambiental (2002) y Ley 1549 de 2012 (CIDEA); GBIF.org – registros de ocurrencia dentro del límite de Sevilla (consulta de octubre de 2026)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

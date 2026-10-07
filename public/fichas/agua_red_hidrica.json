@@ -2,63 +2,63 @@
   "id": "agua_red_hidrica",
   "titulo": "Red Hídrica de Sevilla",
   "categoria": "agua",
-  "descripcion": "Sevilla, Valle del Cauca, es un municipio privilegiado en términos hídricos. Su territorio es surcado por una extensa red de ríos y quebradas que nacen en los páramos y bosques altoandinos de la cordillera Central y fluyen hacia el occidente para desembocar en el río Cauca. Los principales cuerpos de agua del municipio son el río Bugalagrande, que drena las estribaciones de la cordillera hacia el norte del municipio; el río La Paila, importante afluente del Cauca que marca parcialmente los límites municipales; el río La Vieja, uno de los más emblemáticos del Eje Cafetero, que nace en el páramo de Chili y atraviesa los municipios del norte del Valle del Cauca antes de unirse al Cauca; y la Quebrada Las Cañas, fuente de abastecimiento de agua para muchas veredas del municipio. Esta red hídrica es la columna vertebral del sistema ambiental de Sevilla: transporta el agua desde los ecosistemas de montaña hasta los valles donde vive la mayor parte de la población. La Corporación Autónoma Regional del Valle del Cauca (CVC), a partir de la cartografía básica del Instituto Geográfico Agustín Codazzi (IGAC), publica un servicio de mapas (WMS) con el trazado de estos ríos y quebradas, permitiendo visualizarlos en sistemas de información geográfica y entender mejor su distribución espacial. Conocer la red hídrica es fundamental para planificar el uso del agua, proteger las cuencas y gestionar los riesgos asociados a inundaciones y sequías.",
-  "importancia": "Los ríos y quebradas de Sevilla son mucho más que simples corrientes de agua: son las arterias que dan vida al municipio. Proveen agua para consumo humano, riego de cultivos de café y otros productos, bebida para el ganado y hábitat para cientos de especies acuáticas. La salud de esta red hídrica depende directamente del estado de los bosques en sus cuencas altas: cuando se tala el bosque, los ríos se secan en verano y se desbordan en invierno. Proteger los ríos y quebradas es, en última instancia, proteger la calidad de vida de todos los sevillanos, presentes y futuros. El conocimiento de la red hídrica también permite anticipar y reducir riesgos de inundaciones en las zonas bajas del municipio.",
+  "descripcion": "La red hídrica es el conjunto de ríos, quebradas y drenajes de un territorio. En Sevilla, el agua nace en los páramos y bosques de la cordillera Central y desciende por laderas empinadas hacia las cuencas de los ríos Bugalagrande, La Paila y La Vieja, y de los ríos Las Cañas, Los Micos y Obando, todas tributarias del río Cauca. Entre sus corrientes están la quebrada San José, que atraviesa la cabecera, y la quebrada Las Cañas, ambas vigiladas por la CVC con puntos de muestreo de calidad del agua, y la quebrada Ballesteros, en la vereda El Billar, que en su parte baja forma varias cascadas. Esta capa es un servicio de mapas (WMS) de la CVC que dibuja la red de drenajes del Valle del Cauca; al acercarte al municipio podrás seguir cada quebrada desde su nacimiento hasta su desembocadura.",
+  "importancia": "Los ríos y quebradas llevan el agua que usan las personas, los cultivos y los animales, y son hábitat de peces, anfibios e insectos acuáticos. Su caudal depende del estado de las partes altas: con bosques y páramos sanos, el agua fluye de forma más regular durante el año; sin ellos, las quebradas bajan mucho en verano y crecen con violencia en invierno. Conocer el trazado de la red hídrica ayuda a ubicar las rondas que deben protegerse, a planear dónde construir y a reducir el riesgo de crecientes y avenidas torrenciales en las laderas.",
   "preguntas_reflexivas": [
-    "¿Por qué es importante que los bosques en las partes altas de las cuencas se mantengan bien conservados para que los ríos tengan agua todo el año?",
-    "¿Qué actividades humanas pueden contaminar o reducir el caudal de los ríos y quebradas de Sevilla?",
-    "¿Cómo se puede usar la información geográfica (mapas) para tomar mejores decisiones sobre el uso del agua en el municipio?",
-    "¿Qué pasaría con el cultivo de café en Sevilla si los ríos y quebradas se contaminaran gravemente?"
+    "¿Por qué un río tiene un caudal más estable cuando su cuenca alta conserva bosques y páramos?",
+    "¿Qué actividades humanas pueden contaminar o reducir el caudal de las quebradas de Sevilla?",
+    "Busca en el mapa la quebrada más cercana a tu casa o a tu colegio: ¿a qué río llega?",
+    "¿Por qué la ley exige proteger una franja de vegetación a cada lado de los ríos y quebradas?"
   ],
   "vocabulario": [
     {
-      "termino": "Cuenca hidrográfica",
-      "definicion": "Área de terreno desde donde toda el agua lluvia escurre hacia un mismo río o quebrada. Es como un gran embudo natural definido por las montañas y lomas que rodean un río."
+      "termino": "Red de drenaje",
+      "definicion": "Conjunto de ríos, quebradas y cauces por los que escurre el agua de un territorio."
     },
     {
       "termino": "Caudal",
-      "definicion": "Volumen de agua que pasa por un punto de un río en un tiempo determinado, generalmente medido en metros cúbicos por segundo (m³/s)."
+      "definicion": "Volumen de agua que pasa por un punto de un río en un tiempo determinado, medido en metros cúbicos por segundo (m³/s)."
     },
     {
       "termino": "Afluente",
-      "definicion": "Río o quebrada más pequeño que desemboca en otro río de mayor tamaño, aportando su caudal a este."
+      "definicion": "Río o quebrada más pequeño que desemboca en otro de mayor tamaño."
+    },
+    {
+      "termino": "Ronda hídrica",
+      "definicion": "Franja de terreno a lado y lado de un río o quebrada que debe protegerse para conservar el cauce, la vegetación de la orilla y la calidad del agua."
     },
     {
       "termino": "WMS (Web Map Service)",
-      "definicion": "Servicio de mapas en internet que permite acceder y visualizar capas de información geográfica publicadas por entidades oficiales como el IGAC a través de programas especializados."
-    },
-    {
-      "termino": "IGAC",
-      "definicion": "Instituto Geográfico Agustín Codazzi. Entidad del Estado colombiano responsable de producir los mapas oficiales del país, los datos catastrales y la información geográfica nacional."
+      "definicion": "Estándar que permite pedir a un servidor, por internet, imágenes de mapas generadas para el área y la escala que se están viendo."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Ciclo_da_%C3%A1gua.jpg",
-      "titulo": "Ciclo hidrológico del agua",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/CASCADA_BALLESTEROS.JPG/1280px-CASCADA_BALLESTEROS.JPG",
+      "titulo": "Cascada de la quebrada Ballesteros, vereda El Billar, Sevilla",
+      "credito": "Diego Fernando Melo Galindo · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rio_Cauca_serpentea.JPG/1280px-Rio_Cauca_serpentea.JPG",
-      "titulo": "Río Cauca serpenteando por el Valle",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/R%C3%ADo_La_Vieja_7._Cartago%2C_Valle%2C_Colombia.JPG/1280px-R%C3%ADo_La_Vieja_7._Cartago%2C_Valle%2C_Colombia.JPG",
+      "titulo": "Río La Vieja en Cartago, Valle del Cauca",
+      "credito": "Hoako · CC BY-SA 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Valle_geografico_del_rio_Cauca_Colombia.png",
-      "titulo": "Red hídrica del Valle geográfico del Río Cauca",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/R%C3%ADo_y_guaduas.JPG/1280px-R%C3%ADo_y_guaduas.JPG",
+      "titulo": "Quebrada con guaduales en Sevilla",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "6Y_edHlbayk",
-      "titulo": "Colombia frente al recurso hídrico"
+      "titulo": "04 Colombia frente al recurso hídrico — Ministerio de Ambiente y Desarrollo Sostenible"
     },
     {
-      "youtube_id": "7Pbsw9DlHQQ",
-      "titulo": "Recursos hídricos de Colombia"
+      "youtube_id": "hduhX9OgqZs",
+      "titulo": "Hidrografía de Colombia — Geografía Didáctica"
     }
   ],
-  "fuente_datos": "CVC – Servicio WMS Red Hídrica del Valle del Cauca, con base en la cartografía del IGAC (Portal GeoCVC); IDEAM – Red Hidrométrica Nacional; CVC – Diagnóstico cuencas hidrográficas Sevilla 2021",
+  "fuente_datos": "CVC – Red hídrica (servicio WMS, Portal GeoCVC); CVC – Estaciones de muestreo de calidad del agua y Cuencas hidrográficas; IDEAM – Estudio Nacional del Agua 2022; Decreto 2245 de 2017 (acotamiento de rondas hídricas)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

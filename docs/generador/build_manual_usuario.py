@@ -118,6 +118,11 @@ body(doc,
      "IDEAM o IGAC); las capas rotuladas como Ilustrativo son ejemplos preparados para "
      "el prototipo y no datos oficiales.")
 
+body(doc,
+     "La barra superior incluye el interruptor de modo día y modo noche. El modo noche "
+     "oscurece la interfaz y el mapa base para trabajar con poca luz; el Geovisor "
+     "recuerda la elección en ese navegador.")
+
 h2(doc, "Área central")
 body(doc,
      "Es el mapa. Permite acercar y alejar con la rueda del ratón o con los botones de "

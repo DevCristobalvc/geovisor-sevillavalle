@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { PageHeader } from '../components/Dex'
 
 const TERMINOS = [
   {
@@ -19,28 +20,28 @@ const TERMINOS = [
   {
     termino: 'Páramo',
     definicion:
-      'Ecosistema de alta montaña con clima frío y húmedo, regula el ciclo del agua y alberga flora y fauna únicas como los frailejones.',
+      'Ecosistema de alta montaña de los Andes del norte, por encima del límite del bosque (en Colombia, aproximadamente desde los 3.000 m), con clima frío y húmedo; regula el agua y alberga especies únicas como los frailejones.',
     categoria: 'biodiversidad',
     visorCategoria: 'biodiversidad',
   },
   {
     termino: 'Bosque andino',
     definicion:
-      'Tipo de bosque que crece en las laderas de los Andes entre los 1000 y 3500 m.s.n.m., caracterizado por niebla y gran biodiversidad.',
+      'Bosque de las laderas de los Andes, aproximadamente entre 1.000 y 3.500 m s. n. m. según la región, caracterizado por la neblina frecuente y una gran biodiversidad.',
     categoria: 'biodiversidad',
     visorCategoria: 'biodiversidad',
   },
   {
     termino: 'CORINE Land Cover',
     definicion:
-      'Sistema europeo de clasificación de coberturas del suelo adoptado en Colombia. Identifica superficies construidas, agrícolas y naturales.',
+      'Metodología de origen europeo para clasificar y mapear la cobertura de la tierra con imágenes de satélite, adaptada para Colombia por el IDEAM. Su nivel más general distingue territorios artificializados, territorios agrícolas, bosques y áreas seminaturales, áreas húmedas y superficies de agua.',
     categoria: 'biodiversidad',
     visorCategoria: 'biodiversidad',
   },
   {
     termino: 'WMS',
     definicion:
-      'Web Map Service: estándar OGC que permite obtener imágenes de mapas desde un servidor a través de internet, en tiempo real.',
+      'Web Map Service: estándar del Open Geospatial Consortium (OGC) que permite pedir a un servidor, a través de internet, imágenes de mapas generadas al momento para el área y la escala que se están viendo.',
     categoria: 'tecnologia',
     visorCategoria: null,
   },
@@ -68,21 +69,21 @@ const TERMINOS = [
   {
     termino: 'Conflicto de uso del suelo',
     definicion:
-      'Situación donde el uso actual de un terreno no coincide con su vocación o uso potencial natural, lo que puede causar degradación ambiental.',
+      'Situación en la que el uso actual de la tierra no corresponde con su vocación o uso potencial. El IGAC distingue el uso adecuado, la subutilización y la sobreutilización (cuando se exige a la tierra más de lo que soporta, lo que la degrada).',
     categoria: 'suelos',
     visorCategoria: 'suelos',
   },
   {
     termino: 'Paisaje Cultural Cafetero',
     definicion:
-      'Patrimonio Cultural de la Humanidad (UNESCO 2011) que reconoce la cultura cafetera de seis departamentos colombianos, incluyendo parte del Valle del Cauca.',
+      'Patrimonio Mundial inscrito por la UNESCO en 2011 que reconoce el paisaje y la cultura cafetera de 47 municipios de cuatro departamentos: Caldas, Quindío, Risaralda y Valle del Cauca, entre ellos Sevilla.',
     categoria: 'territorio',
     visorCategoria: 'territorio',
   },
   {
     termino: 'Resguardo indígena',
     definicion:
-      'Institución legal que ampara la propiedad colectiva de una comunidad indígena sobre un territorio reconocido por el Estado colombiano.',
+      'Institución legal y sociopolítica: territorio de propiedad colectiva de una comunidad indígena, reconocido por el Estado, que según la Constitución de 1991 es inalienable, imprescriptible e inembargable (arts. 63 y 329).',
     categoria: 'territorio',
     visorCategoria: 'territorio',
   },
@@ -94,16 +95,16 @@ const TERMINOS = [
     visorCategoria: null,
   },
   {
-    termino: 'Área Protegida',
+    termino: 'Área protegida',
     definicion:
-      'Zona del territorio declarada por el Estado para conservar la naturaleza y sus servicios ecosistémicos, con restricciones de uso.',
+      'Área definida geográficamente que ha sido designada, regulada y administrada para alcanzar objetivos específicos de conservación (Decreto 1076 de 2015). En Colombia integran el Sistema Nacional de Áreas Protegidas (SINAP).',
     categoria: 'biodiversidad',
     visorCategoria: 'biodiversidad',
   },
   {
     termino: 'Piso térmico',
     definicion:
-      'Zona altitudinal con características climáticas similares. En Colombia se distinguen: cálido, templado, frío, páramo y pico de nieve.',
+      'Franja de altitud con una temperatura media similar. Según la clasificación de Caldas que usa el IGAC: cálido (menos de 1.000 m), templado (1.000–2.000 m), frío (2.000–3.000 m) y páramo (desde unos 3.000 m); en las cumbres más altas está el piso nival.',
     categoria: 'clima',
     visorCategoria: 'clima',
   },
@@ -129,63 +130,69 @@ export default function Glosario() {
   )
 
   return (
-    <main className="overflow-y-auto h-full bg-gris-claro">
-      {/* Page header */}
-      <div className="bg-verde-bosque text-white px-6 py-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-verde-palido/70 text-xs font-medium uppercase tracking-widest mb-1">
-            Geovisor Ecopedagógico
-          </p>
-          <h1 className="text-2xl font-bold leading-tight mb-2">Glosario Territorial</h1>
-          <p className="text-verde-palido/80 text-sm max-w-xl">
-            Términos clave ecopedagógicos, ecosistémicos y cartográficos del Geovisor.
-          </p>
-        </div>
-      </div>
+    <main className="h-full overflow-y-auto">
+      <PageHeader
+        kicker="Enciclopedia de bolsillo"
+        icono="libro"
+        titulo="Glosario"
+        descripcion="Términos clave del territorio, los ecosistemas y la cartografía del geovisor."
+      />
 
-      <div className="max-w-3xl mx-auto px-6 py-8">
-        <input
-          type="search"
-          value={busqueda}
-          onChange={e => setBusqueda(e.target.value)}
-          placeholder="Buscar término..."
-          className="w-full border border-gray-200 rounded-lg px-4 py-2 text-sm mb-6 focus:outline-none focus:ring-2 focus:ring-verde-bosque"
-          aria-label="Buscar en el glosario"
-        />
+      <div className="max-w-3xl mx-auto px-5 pb-10">
+        <div className="relative mb-5">
+          <span
+            className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-accent"
+            aria-hidden="true"
+          >
+            &gt;
+          </span>
+          <input
+            type="search"
+            value={busqueda}
+            onChange={e => setBusqueda(e.target.value)}
+            placeholder="buscar término…"
+            className="dex-input pl-7"
+            aria-label="Buscar en el glosario"
+          />
+        </div>
+
+        <p className="mb-3 font-ui text-xs text-muted" aria-live="polite">
+          {filtrados.length} de {TERMINOS.length} términos
+        </p>
 
         <div className="space-y-3">
           {filtrados.length === 0 && (
-            <p className="text-sm text-gray-400">No se encontraron términos para "{busqueda}".</p>
+            <p className="font-ui text-sm text-muted">
+              No se encontraron términos para «{busqueda}».
+            </p>
           )}
-          {filtrados.map((t, i) => (
-            <article
-              key={i}
-              className="bg-white rounded-xl p-4 shadow-sm border-l-4"
-              style={{ borderColor: CATEGORIAS_GLOSARIO[t.categoria] ?? '#ccc' }}
-            >
-              <div className="flex items-start justify-between gap-2">
-                <h2 className="font-bold text-gris-texto text-base">{t.termino}</h2>
-                <span
-                  className="text-xs px-2 py-0.5 rounded-full text-white flex-shrink-0"
-                  style={{ backgroundColor: CATEGORIAS_GLOSARIO[t.categoria] ?? '#ccc' }}
-                >
-                  {t.categoria}
-                </span>
-              </div>
-              <p className="text-sm text-gray-600 mt-1 leading-relaxed font-pedagogica">
-                {t.definicion}
-              </p>
-              {t.visorCategoria && (
-                <Link
-                  to={`/visor?categoria=${t.visorCategoria}`}
-                  className="inline-flex items-center gap-1 text-xs mt-2 font-medium"
-                  style={{ color: CATEGORIAS_GLOSARIO[t.categoria] }}
-                >
-                  Ver en visor →
-                </Link>
-              )}
-            </article>
-          ))}
+          {filtrados.map((t, i) => {
+            const color = CATEGORIAS_GLOSARIO[t.categoria] ?? '#888'
+            return (
+              <article key={i} className="dex-card p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <h2 className="font-pixel text-lg font-bold text-ink">{t.termino}</h2>
+                  <span
+                    className="dex-chip flex-shrink-0 text-ink"
+                    style={{ backgroundColor: `${color}26`, borderColor: color }}
+                  >
+                    {t.categoria}
+                  </span>
+                </div>
+                <p className="mt-1 font-pedagogica text-sm leading-relaxed text-ink-soft">
+                  {t.definicion}
+                </p>
+                {t.visorCategoria && (
+                  <Link
+                    to={`/visor?categoria=${t.visorCategoria}`}
+                    className="mt-2 inline-flex items-center gap-1 font-ui text-xs font-semibold text-accent hover:underline"
+                  >
+                    ▶ Ver en el visor
+                  </Link>
+                )}
+              </article>
+            )
+          })}
         </div>
       </div>
     </main>

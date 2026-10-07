@@ -1,74 +1,81 @@
+import type { ReactNode } from 'react'
+import { PageHeader } from '../components/Dex'
+
+function Seccion({ titulo, children }: { titulo: string; children: ReactNode }) {
+  return (
+    <section className="dex-card p-5">
+      <h2 className="mb-2 font-pixel text-lg font-bold text-ink">{titulo}</h2>
+      <div className="font-pedagogica text-sm leading-relaxed text-ink-soft">{children}</div>
+    </section>
+  )
+}
+
 export default function Privacidad() {
   return (
-    <main className="overflow-y-auto h-full bg-gris-claro">
-      <div className="bg-verde-bosque text-white px-6 py-8">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-verde-palido/70 text-xs font-medium uppercase tracking-widest mb-1">
-            Geovisor Ecopedagógico
+    <main className="h-full overflow-y-auto">
+      <PageHeader
+        kicker="Ley 1581 de 2012 · Protección de datos personales"
+        titulo="Política de privacidad"
+        descripcion="Última actualización: octubre de 2026"
+      />
+
+      <div className="max-w-3xl mx-auto px-5 pb-10 space-y-5">
+        <Seccion titulo="1. Información general">
+          <p>
+            El EcoDex de Sevilla es una aplicación web estática de carácter educativo, desarrollada
+            como proyecto de grado en la Universidad Santiago de Cali.
+            <strong className="text-ink"> No recopila ni almacena datos personales</strong> de sus
+            usuarios.
           </p>
-          <h1 className="text-2xl font-bold leading-tight mb-2">Política de Privacidad</h1>
-          <p className="text-verde-palido/80 text-sm">Última actualización: enero de 2025</p>
-        </div>
-      </div>
+        </Seccion>
 
-      <div className="max-w-3xl mx-auto px-6 py-8">
-        <div className="space-y-6 text-sm text-gris-texto leading-relaxed font-pedagogica">
-          <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-2">1. Información general</h2>
-            <p>
-              El Geovisor Ecopedagógico de Sevilla es una aplicación web estática de carácter
-              educativo, desarrollada como proyecto de grado en la Universidad Santiago de Cali.
-              <strong> No recopila ni almacena datos personales</strong> de sus usuarios.
-            </p>
-          </section>
+        <Seccion titulo="2. Datos que NO recopilamos">
+          <ul className="list-disc list-inside space-y-1">
+            <li>No se crean cuentas de usuario ni se solicita registro.</li>
+            <li>No se almacenan datos de geolocalización del dispositivo.</li>
+            <li>No se usan cookies de seguimiento ni plataformas de analítica.</li>
+            <li>No se transmite información a servidores propios de la aplicación.</li>
+            <li>
+              Las capas publicadas no contienen datos personales de terceros: los nombres de
+              contacto, teléfonos y correos de las fuentes se omiten.
+            </li>
+          </ul>
+        </Seccion>
 
-          <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-2">
-              2. Datos que NO recopilamos
-            </h2>
-            <ul className="list-disc list-inside space-y-1">
-              <li>No se crean cuentas de usuario ni se solicita registro.</li>
-              <li>No se almacenan datos de geolocalización del dispositivo.</li>
-              <li>No se usan cookies de seguimiento ni plataformas de analítica.</li>
-              <li>No se transmite información a servidores propios de la aplicación.</li>
-            </ul>
-          </section>
+        <Seccion titulo="3. Servicios de terceros">
+          <p>La aplicación consulta servicios externos de mapas:</p>
+          <ul className="list-disc list-inside mt-2 space-y-1">
+            <li>
+              <strong className="text-ink">OpenStreetMap / OpenTopoMap / Esri:</strong> teselas del
+              mapa base. Las solicitudes incluyen la IP del usuario según las políticas de cada
+              proveedor.
+            </li>
+            <li>
+              <strong className="text-ink">Geoservicios de la CVC, el IDEAM y el IGAC:</strong>{' '}
+              capas WMS públicas de entidades del Estado colombiano.
+            </li>
+            <li>
+              <strong className="text-ink">Nominatim (OpenStreetMap):</strong> geocodificación de
+              búsquedas.
+            </li>
+          </ul>
+        </Seccion>
 
-          <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-2">3. Servicios de terceros</h2>
-            <p>La aplicación consulta servicios externos de mapas:</p>
-            <ul className="list-disc list-inside mt-2 space-y-1">
-              <li>
-                <strong>OpenStreetMap / CARTO / OpenTopoMap / ESRI:</strong> tiles del mapa base.
-                Las solicitudes incluyen la IP del usuario según las políticas de cada proveedor.
-              </li>
-              <li>
-                <strong>Geoservicios IGAC / CVC / IDEAM:</strong> capas WMS públicas del gobierno
-                colombiano.
-              </li>
-              <li>
-                <strong>Nominatim (OpenStreetMap):</strong> geocodificación de búsquedas.
-              </li>
-            </ul>
-          </section>
+        <Seccion titulo="4. Almacenamiento local">
+          <p>
+            La aplicación es una PWA (aplicación web progresiva). El navegador puede guardar
+            localmente teselas y recursos estáticos para funcionar sin conexión, y la preferencia de
+            tema (día o noche). Esta información permanece en el dispositivo del usuario y no se
+            comparte.
+          </p>
+        </Seccion>
 
-          <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-2">4. Almacenamiento local</h2>
-            <p>
-              La aplicación es un PWA (Progressive Web App). El navegador puede almacenar localmente
-              tiles y recursos estáticos para su funcionamiento sin conexión. Esta información
-              permanece en el dispositivo del usuario y no se comparte.
-            </p>
-          </section>
-
-          <section className="bg-white rounded-xl p-5 shadow-sm">
-            <h2 className="font-bold text-base text-gris-texto mb-2">5. Contacto</h2>
-            <p>
-              Para inquietudes sobre esta política, puede contactar al equipo de desarrollo a través
-              del repositorio del proyecto en GitHub.
-            </p>
-          </section>
-        </div>
+        <Seccion titulo="5. Contacto">
+          <p>
+            Para inquietudes sobre esta política, puede contactar al equipo de desarrollo a través
+            del repositorio del proyecto en GitHub.
+          </p>
+        </Seccion>
       </div>
     </main>
   )

@@ -2,63 +2,59 @@
   "id": "territorio_division",
   "titulo": "División Político-Administrativa",
   "categoria": "territorio",
-  "descripcion": "La división político-administrativa de Sevilla organiza el territorio municipal en unidades de gobierno que facilitan la administración, la prestación de servicios públicos y la participación ciudadana. Sevilla es un municipio del departamento del Valle del Cauca, Colombia, ubicado en la vertiente occidental de la cordillera Central. Según las estadísticas del DANE (Departamento Administrativo Nacional de Estadística) con cifras del Censo 2018 y proyecciones 2022, el municipio tenía una población de aproximadamente 42.000 personas, de las cuales cerca del 55% residía en el casco urbano y el 45% en el área rural, lo que lo convierte en un municipio con una importante población campesina. El territorio rural de Sevilla está organizado en veredas, que son las unidades administrativas básicas del campo colombiano, agrupadas en corregimientos que tienen funciones de gobierno local. El municipio cuenta con más de 70 veredas distribuidas en varios corregimientos, lo que refleja la extensión y la diversidad del territorio. Entre los corregimientos más conocidos están Coloradas, La Marina, El Cairo y La Quiebra. El casco urbano de Sevilla, conocido popularmente como la 'Ciudad de las Puertas Abiertas', es el centro de los servicios municipales, el comercio y la cultura cafetera. Conocer la división político-administrativa del municipio es fundamental para entender cómo se organiza la comunidad, cómo se distribuyen los recursos del Estado y cómo participar en las decisiones que afectan el territorio.",
-  "importancia": "La organización político-administrativa del municipio define cómo se gobiernan el territorio y las comunidades que lo habitan. Las veredas y corregimientos son los espacios donde las comunidades se organizan para gestionar sus necesidades, elegir a sus representantes y participar en la toma de decisiones sobre los recursos naturales, la infraestructura y los servicios. Conocer el mapa político-administrativo de Sevilla permite entender la distribución de la población en el territorio, identificar las veredas con mayores necesidades o con mayor riqueza natural, y planificar mejor las inversiones públicas en educación, salud, agua y ambiente.",
+  "descripcion": "Sevilla es un municipio del nororiente del Valle del Cauca, en la vertiente occidental de la cordillera Central. Según la cartografía oficial de la CVC, su territorio, de unos 538 km², se organiza en la cabecera municipal (la zona urbana, de unos 4 km²) y 16 corregimientos: Alegrías, Cebollal, Coloradas, Corozal, Cumbarco, El Manzanillo, La Cuchilla, La Estrella, La Melva, Palomino, Purnio, Quebradanueva, Sabanazo, San Antonio, Totoro y Venado. El más extenso es Alegrías (unos 184 km², cerca de un tercio del municipio), que abarca los páramos y las áreas protegidas del suroriente. Los corregimientos agrupan veredas, la unidad básica de organización rural. Según las proyecciones del DANE, en 2026 Sevilla tiene unos 44.200 habitantes, de los cuales cerca del 78 % vive en la cabecera y el 22 % en centros poblados y zona rural dispersa. El poblado fue fundado en 1903 por colonos antioqueños y caldenses y se erigió como municipio en 1914; hoy es conocido como el «Balcón del Valle» por sus vistas sobre el valle del río Cauca.",
+  "importancia": "La organización político-administrativa define cómo se gobierna el territorio: dónde se prestan los servicios, cómo se distribuyen las inversiones y cómo participan las comunidades. Las juntas de acción comunal de las veredas y los barrios son espacios donde la ciudadanía gestiona sus necesidades y toma decisiones sobre agua, vías, escuelas y ambiente. Conocer en qué corregimiento y vereda vives, y qué ecosistemas hay en ellos, es el primer paso para participar en las decisiones que afectan tu territorio.",
   "preguntas_reflexivas": [
-    "¿En qué vereda o barrio vives tú y qué características ambientales o sociales la hacen especial?",
-    "¿Cómo la distribución de la población entre el casco urbano y las veredas rurales afecta la planificación del municipio?",
-    "¿Qué diferencias hay entre vivir en una vereda rural de Sevilla y vivir en el casco urbano en términos de acceso al agua, la naturaleza y los servicios?",
-    "¿Por qué es importante que los estudiantes conozcan la organización político-administrativa de su municipio?"
+    "¿En qué corregimiento y vereda (o barrio) vives? Ubícalo en el mapa.",
+    "Si cerca del 78 % de la población vive en la cabecera, ¿qué retos tiene el municipio para llevar servicios a la zona rural?",
+    "¿Por qué crees que el corregimiento de Alegrías, el más extenso, concentra los páramos y las áreas protegidas?",
+    "¿Qué diferencias hay entre vivir en una vereda y vivir en la cabecera en cuanto al acceso al agua, a la naturaleza y a los servicios?"
   ],
   "vocabulario": [
     {
       "termino": "Vereda",
-      "definicion": "Unidad administrativa básica del área rural de un municipio colombiano, conformada por un conjunto de predios y familias que comparten un territorio y servicios comunes como escuela, acueducto y vía de acceso."
+      "definicion": "Unidad territorial básica del área rural de un municipio colombiano, formada por un conjunto de predios y familias que comparten servicios como la escuela, el acueducto o la vía."
     },
     {
       "termino": "Corregimiento",
-      "definicion": "División administrativa rural de un municipio colombiano que agrupa varias veredas y tiene un centro poblado como cabecera, con funciones de administración local y prestación de servicios."
+      "definicion": "División del área rural de un municipio que agrupa varias veredas y suele tener un centro poblado."
+    },
+    {
+      "termino": "Cabecera municipal",
+      "definicion": "Área urbana donde se ubica la sede de la alcaldía y se concentran las viviendas, el comercio y los servicios del municipio."
     },
     {
       "termino": "DANE",
-      "definicion": "Departamento Administrativo Nacional de Estadística. Entidad del gobierno colombiano responsable de producir información estadística oficial del país, incluyendo el Censo Nacional de Población y Vivienda."
-    },
-    {
-      "termino": "Casco urbano",
-      "definicion": "Area del municipio donde se concentran las viviendas, los comercios, las instituciones y los servicios públicos, en contraposición al área rural dispersa de las veredas."
+      "definicion": "Departamento Administrativo Nacional de Estadística: entidad que produce la información estadística oficial de Colombia, como el censo y las proyecciones de población."
     },
     {
       "termino": "Ordenamiento territorial",
-      "definicion": "Proceso de planificación participativa mediante el cual un municipio organiza el uso del suelo, la localización de actividades y la distribución de la población en su territorio, plasmado en el Plan de Ordenamiento Territorial (POT)."
+      "definicion": "Planificación del uso del suelo y de la ocupación del territorio de un municipio, que se plasma en un plan de ordenamiento (POT, PBOT o EOT, según el tamaño del municipio)."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/ATARDECER_EN_SEVILLA_VALLE.JPG/1280px-ATARDECER_EN_SEVILLA_VALLE.JPG",
-      "titulo": "Atardecer en Sevilla, Valle del Cauca",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Colombia_-_Valle_del_Cauca_-_Sevilla.svg/1280px-Colombia_-_Valle_del_Cauca_-_Sevilla.svg.png",
+      "titulo": "Ubicación de Sevilla en el Valle del Cauca",
+      "credito": "Milenioscuro · CC BY-SA 3.0 · Wikimedia Commons"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Sevilla_de_lejos.JPG/1280px-Sevilla_de_lejos.JPG",
+      "titulo": "Cabecera municipal de Sevilla",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Panor%C3%A1mica_Sevilla_2304_MegsXplosion.jpg/1280px-Panor%C3%A1mica_Sevilla_2304_MegsXplosion.jpg",
-      "titulo": "Panorámica de Sevilla, Valle del Cauca",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Mapa_de_Valle_del_Cauca_%28subregiones%29.svg/1280px-Mapa_de_Valle_del_Cauca_%28subregiones%29.svg.png",
-      "titulo": "Mapa del Valle del Cauca con subregiones",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "titulo": "Panorámica de la cabecera de Sevilla",
+      "credito": "MegsXplosion · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "AR_ngJHccXk",
-      "titulo": "Sevilla Valle, El Balcón del Valle del Cauca"
-    },
-    {
       "youtube_id": "BM75lFFWSIQ",
-      "titulo": "Sevilla, municipio de Valle del Cauca, Colombia"
+      "titulo": "Sevilla. Municipio de Valle del Cauca, Colombia — Drone Carlos Moto"
     }
   ],
-  "fuente_datos": "CVC – División político-administrativa del Valle del Cauca (Portal GeoCVC); DANE – Censo Nacional de Población y Vivienda 2018; DANE – Proyecciones municipales 2022; IGAC – División Político-Administrativa Colombia (DIVIPOLA); Municipio de Sevilla – Plan de Ordenamiento Territorial vigente",
+  "fuente_datos": "CVC – División político-administrativa (Portal GeoCVC: corregimientos ajustados en 2022 y cabecera según el Acuerdo Municipal 011 de 2020); DANE – Proyecciones de población municipales por área 2018–2042 (actualización de julio de 2025); Wikipedia – Sevilla (Valle del Cauca), como apoyo para los datos históricos",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

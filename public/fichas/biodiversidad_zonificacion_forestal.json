@@ -2,63 +2,58 @@
   "id": "biodiversidad_zonificacion_forestal",
   "titulo": "Zonificación Forestal",
   "categoria": "biodiversidad",
-  "descripcion": "La zonificación forestal es una herramienta técnica y legal que clasifica el territorio de acuerdo con la aptitud y el uso potencial de sus bosques y suelos de vocación forestal. En Colombia, el IGAC y la CVC elaboran mapas de zonificación forestal a escalas de 1:50.000 y 1:100.000 que dividen el territorio en diferentes categorías según las características del suelo, la pendiente, el clima y la cobertura vegetal actual. Las principales categorías de zonificación forestal son: las áreas de bosque de protección, donde la vegetación boscosa debe mantenerse o restaurarse para proteger el suelo, el agua y la biodiversidad, y donde no se permite el aprovechamiento forestal comercial; las áreas de bosque de producción, donde existen condiciones para manejar el bosque de forma sostenible para obtener madera, resinas, frutos u otros productos forestales, siempre dentro de límites que garanticen la regeneración del bosque; y las áreas de uso múltiple, donde se pueden combinar usos forestales y agropecuarios sostenibles bajo normas específicas. También existen restricciones particulares para zonas de alta pendiente (más de 45°), suelos altamente erosionables o corredores riparios (franjas de bosque a lo largo de ríos y quebradas) donde cualquier tipo de aprovechamiento está prohibido. La zonificación forestal es fundamental para orientar las decisiones de los propietarios, la planificación del ordenamiento territorial y la identificación de los conflictos entre el uso actual del suelo y su aptitud real.",
-  "importancia": "Muchas de las crisis ambientales que enfrenta Sevilla —erosión del suelo, reducción del caudal de los ríos, pérdida de biodiversidad— tienen como causa de fondo el uso inadecuado del suelo: sembrar cultivos o pastorear ganado en zonas que debían permanecer como bosque de protección. La zonificación forestal ofrece una guía técnica basada en la ciencia para que los propietarios, las comunidades y las autoridades sepan qué puede hacerse en cada parte del territorio sin comprometer los recursos naturales del futuro. Respetar la zonificación forestal es respetar los límites que la naturaleza misma impone para garantizar su propia sostenibilidad.",
+  "descripcion": "La zonificación forestal clasifica el territorio según la aptitud de sus tierras para mantener bosques y según el uso que pueden soportar sin degradarse. Esta capa de la CVC combina el uso potencial del suelo con la zonificación forestal del Valle del Cauca a escala 1:100.000. En este tipo de zonificación se distinguen, por lo general, áreas que deben permanecer con bosque para proteger el suelo y el agua (bosque protector), áreas donde es posible un aprovechamiento forestal sostenible (bosque productor) y áreas que admiten combinaciones de usos agrícolas, ganaderos y forestales. Algunas zonas tienen además una protección definida por la norma nacional: el Decreto 1076 de 2015 establece como áreas forestales protectoras los nacimientos de agua (en un radio de al menos 100 metros), una franja no inferior a 30 metros a cada lado de ríos y quebradas, y los terrenos con pendientes superiores al 100 % (45°).",
+  "importancia": "Muchos problemas ambientales de las laderas —erosión, deslizamientos, quebradas que se secan— empiezan cuando se usa la tierra para algo que no puede soportar, como cultivar o pastorear en pendientes muy fuertes o talar las orillas de las quebradas. La zonificación forestal es una guía técnica para que propietarios, comunidades y autoridades sepan qué conviene hacer en cada parte del territorio. En un municipio de montaña como Sevilla, respetar las franjas protectoras de quebradas y nacimientos es una de las formas más sencillas y eficaces de cuidar el agua.",
   "preguntas_reflexivas": [
-    "¿Por qué los suelos con pendientes muy pronunciadas deberían mantenerse con cobertura forestal y no usarse para agricultura?",
-    "¿Cuál es la diferencia entre un bosque de protección y un bosque de producción, y por qué es importante distinguirlos?",
-    "¿Qué problemas ambientales podría causar talar los bosques que crecen a lo largo de las quebradas y ríos?",
-    "¿Cómo puede la zonificación forestal ayudar a resolver conflictos entre los dueños de tierras y las entidades ambientales?"
+    "¿Por qué los terrenos con pendientes muy fuertes deberían mantenerse con bosque?",
+    "¿Qué diferencia hay entre un bosque protector y un bosque productor, y por qué es importante distinguirlos?",
+    "¿Qué le pasaría a una quebrada si se talara la vegetación de sus orillas?",
+    "¿Qué tan ancha es una franja de 30 metros? Compárala con algo que conozcas, como una cancha, e imagínala a cada lado de una quebrada de tu vereda."
   ],
   "vocabulario": [
     {
       "termino": "Zonificación forestal",
-      "definicion": "Clasificación técnica del territorio basada en las características del suelo, la pendiente y el clima, que determina el uso más adecuado para cada zona: bosque de protección, bosque de producción o uso múltiple."
+      "definicion": "Clasificación técnica del territorio, basada en el suelo, la pendiente y el clima, que orienta qué zonas deben ser bosque protector, bosque productor o de uso múltiple."
     },
     {
-      "termino": "Bosque de producción",
-      "definicion": "Área forestal donde se permite el aprovechamiento controlado y sostenible de productos del bosque (madera, resinas, frutos) bajo planes de manejo que garantizan la regeneración del ecosistema."
+      "termino": "Bosque protector",
+      "definicion": "Bosque cuya función principal es proteger el suelo, el agua y la biodiversidad; en él no se permite el aprovechamiento comercial de la madera."
     },
     {
-      "termino": "Corredor ripario",
-      "definicion": "Franja de vegetación natural que se mantiene a lo largo de las orillas de ríos, quebradas y humedales. Protege las riberas de la erosión, filtra contaminantes y provee hábitat a numerosas especies acuáticas y terrestres."
+      "termino": "Bosque productor",
+      "definicion": "Área forestal donde se permite aprovechar productos del bosque (madera, frutos, resinas) con planes de manejo que garantizan su regeneración."
     },
     {
-      "termino": "Aptitud del suelo",
-      "definicion": "Capacidad natural de un suelo para soportar un uso determinado sin degradarse. Un suelo con aptitud forestal puede mantener bosques sin erosión, pero se degrada rápidamente si se usa para agricultura intensiva."
+      "termino": "Área forestal protectora",
+      "definicion": "Zona que la norma ordena mantener con cobertura boscosa, como los nacimientos de agua, las franjas a lado y lado de los cauces y los terrenos muy empinados."
     },
     {
-      "termino": "Erosión",
-      "definicion": "Proceso de desgaste y transporte del suelo por el agua de lluvia o el viento. Ocurre principalmente cuando el suelo pierde su cobertura vegetal, especialmente en zonas de alta pendiente."
+      "termino": "Pendiente",
+      "definicion": "Inclinación del terreno. Una pendiente del 100 % equivale a 45°: por cada metro de avance horizontal, el terreno sube un metro."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bosque_andino_colombiano_antioquia.jpg",
-      "titulo": "Bosque andino colombiano, zona forestal protectora",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/R%C3%ADo_y_guaduas.JPG/1280px-R%C3%ADo_y_guaduas.JPG",
+      "titulo": "Vegetación protectora en la orilla de una quebrada de Sevilla",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Bosque_andino_colombiano_antioquia33.jpg",
-      "titulo": "Cobertura forestal en los Andes colombianos",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Cloud_Forest_Trees.jpg/1280px-Cloud_Forest_Trees.jpg",
-      "titulo": "Bosque de niebla como zona forestal protectora",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Colinas_cafeteras.JPG/1280px-Colinas_cafeteras.JPG",
+      "titulo": "Laderas de Sevilla con distintos usos del suelo",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "k_xPDEDnlP0",
-      "titulo": "Fauna y Flora del Bosque Andino"
+      "youtube_id": "ygfJV5FtRkg",
+      "titulo": "Rondas hídricas requieren mejor normatividad - Universidad Nacional de Colombia — Unimedios - UNAL"
     },
     {
-      "youtube_id": "yDbHtrhr0Yc",
-      "titulo": "Paisajes Sonoros — Bosque Andino Insular Lacustre"
+      "youtube_id": "NcLfsV-yO2Y",
+      "titulo": "Restauración de Fuentes Hídricas a través de Reforestación  - TvAgro por Juan Gonzalo Angel — TvAgro"
     }
   ],
-  "fuente_datos": "CVC – Uso potencial y zonificación forestal del Valle del Cauca, escala 1:100.000 (Portal GeoCVC, servicio WMS); MADS – Manual de Clasificación de Tierras de Colombia",
+  "fuente_datos": "CVC – Uso potencial y zonificación forestal del Valle del Cauca, escala 1:100.000 (servicio WMS, Portal GeoCVC); Decreto 1076 de 2015, art. 2.2.1.1.18.2 (áreas forestales protectoras)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

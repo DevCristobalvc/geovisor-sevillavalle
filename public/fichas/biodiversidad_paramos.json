@@ -1,64 +1,64 @@
 {
   "id": "biodiversidad_paramos",
-  "titulo": "Páramos de Sevilla: Chili-Barragán y Las Hermosas",
+  "titulo": "Páramos de Sevilla: Chilí-Barragán y Las Hermosas",
   "categoria": "biodiversidad",
-  "descripcion": "Los páramos son ecosistemas de alta montaña, únicos en el mundo, que se encuentran entre los 3000 y 4500 metros sobre el nivel del mar. En Sevilla existen dos complejos de páramo: Chili-Barragán y Las Hermosas. Son reconocidos como 'fábricas de agua' porque captan la humedad de las nubes y la filtran lentamente hacia los ríos y acuíferos que abastecen a las comunidades del municipio.",
-  "importancia": "El páramo regula el ciclo del agua de toda la región. Sin los páramos, los ríos de Sevilla se secarían en verano. Además, albergan especies de flora y fauna que no existen en ningún otro lugar del planeta, como el frailejón (Espeletia spp.), símbolo del páramo andino.",
+  "descripcion": "Los páramos son ecosistemas de alta montaña de los Andes del norte, con clima frío, neblina frecuente y suelos que retienen grandes cantidades de agua. En Sevilla aparecen por encima de unos 3.100 m, en el suroriente del municipio, y pertenecen a dos complejos delimitados por el Ministerio de Ambiente: Chilí-Barragán (Resolución 1553 de 2016), con unas 6.110 ha dentro de Sevilla, y Las Hermosas (Resolución 0211 de 2017), con unas 1.240 ha en el municipio. Allí crecen frailejones como Espeletia hartwegiana, pajonales de paja de páramo (Calamagrostis effusa) y musgos que forman una especie de esponja sobre el suelo.",
+  "importancia": "Los páramos regulan el agua: la vegetación y los suelos captan la lluvia y la neblina y la liberan lentamente hacia nacimientos y quebradas, incluso en temporadas secas. Los de Sevilla hacen parte de la cuenca del río Bugalagrande. Son ecosistemas frágiles: un frailejón crece alrededor de un centímetro por año, de modo que la vegetación tarda décadas en recuperarse de una quema o del pisoteo del ganado. Por eso la Ley 1930 de 2018 prohíbe en los páramos la minería y la explotación de hidrocarburos, y ordena reconvertir las actividades agropecuarias de alto impacto.",
   "preguntas_reflexivas": [
-    "¿Por qué se dice que los páramos son 'fábricas de agua'?",
-    "¿Qué actividades humanas amenazan los páramos de Sevilla?",
-    "¿Cómo afecta el cambio climático a los ecosistemas de páramo?",
-    "¿Qué medidas podría tomar tu comunidad para proteger los páramos?"
+    "¿Por qué se dice que los páramos funcionan como esponjas?",
+    "Si un frailejón crece cerca de un centímetro por año, ¿cuántos años tardaría en crecer de nuevo uno de 1,5 metros destruido por una quema?",
+    "¿Qué actividades humanas amenazan los páramos y qué alternativas existen para quienes viven cerca?",
+    "¿Cómo puede afectar el cambio climático a un ecosistema que solo existe en las partes más altas de las montañas?"
   ],
   "vocabulario": [
     {
       "termino": "Páramo",
-      "definicion": "Ecosistema de alta montaña (3000-4500 msnm) con clima frío y húmedo, especializado en captar y regular el agua de ríos y acuíferos."
+      "definicion": "Ecosistema de alta montaña de los Andes del norte, por encima del límite del bosque (en Colombia, aproximadamente desde los 3.000 m), con clima frío y gran capacidad de regular el agua."
     },
     {
       "termino": "Frailejón",
-      "definicion": "Planta característica del páramo (Espeletia spp.) con hojas cubiertas de pelillos que captan la humedad de la niebla."
+      "definicion": "Planta típica del páramo (género Espeletia y afines) con hojas cubiertas de pelos que la protegen del frío y de la radiación; crece muy lentamente."
     },
     {
-      "termino": "Acuífero",
-      "definicion": "Depósito subterráneo de agua que se recarga lentamente a partir del agua filtrada por el suelo del páramo."
+      "termino": "Pajonal",
+      "definicion": "Vegetación de páramo dominada por gramíneas que crecen en macolla, como la paja de páramo (Calamagrostis effusa)."
     },
     {
       "termino": "Delimitación de páramos",
-      "definicion": "Proceso legal por el cual el Instituto Humboldt define los límites exactos de un páramo para protegerlo de actividades extractivas."
+      "definicion": "Proceso mediante el cual el Ministerio de Ambiente fija por resolución el límite de un páramo, con base en la cartografía de referencia del Instituto Humboldt."
     },
     {
-      "termino": "IAvH",
-      "definicion": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt, entidad colombiana que estudia y delimita los páramos del país."
+      "termino": "Instituto Humboldt (IAvH)",
+      "definicion": "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt: entidad que investiga la biodiversidad de Colombia y elaboró la cartografía de referencia de los páramos."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Frailejones_Sumapaz%2C_Colombia.jpg/1280px-Frailejones_Sumapaz%2C_Colombia.jpg",
-      "titulo": "Frailejones en el Páramo de Sumapaz, Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Espeletia_hartwegiana.jpg/1280px-Espeletia_hartwegiana.jpg",
+      "titulo": "Frailejón Espeletia hartwegiana, especie con registros en Sevilla (foto: PNN Los Nevados)",
+      "credito": "Cizalla · CC BY 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Frailejones_in_Chingaza_National_Park_2.jpg/1280px-Frailejones_in_Chingaza_National_Park_2.jpg",
-      "titulo": "Frailejones en el Parque Nacional Chingaza",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Disfrutando_el_panorama_de_camino_al_P%C3%A1ramo_de_las_Hermosas.jpg/1280px-Disfrutando_el_panorama_de_camino_al_P%C3%A1ramo_de_las_Hermosas.jpg",
+      "titulo": "Montañas en el camino al páramo de Las Hermosas (Valle del Cauca)",
+      "credito": "Carolaragon68 · CC BY-SA 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Valle_de_Frailejones%2C_Sierra_Nevada_del_Cocuy.JPG/1280px-Valle_de_Frailejones%2C_Sierra_Nevada_del_Cocuy.JPG",
-      "titulo": "Valle de frailejones, Sierra Nevada del Cocuy",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cobertura_de_frailejones_en_los_pajonales_del_Parque_Los_Nevados.jpg/1280px-Cobertura_de_frailejones_en_los_pajonales_del_Parque_Los_Nevados.jpg",
+      "titulo": "Frailejones y pajonales en la cordillera Central (PNN Los Nevados)",
+      "credito": "Johan Andrés Toro · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "IGOkd9YuFWM",
-      "titulo": "El Instituto Humboldt y el estudio de los páramos colombianos"
+      "titulo": "El Instituto Humboldt y el estudio de los páramos colombianos — Instituto Humboldt"
     },
     {
-      "youtube_id": "pcANXhbAQZM",
-      "titulo": "En peligro, los páramos colombianos — Telemundo"
+      "youtube_id": "aw_h-NEwM14",
+      "titulo": "Páramo de Barragán, en Tuluá, Valle, reverdecido con frailejones — Fuerzas Militares de Colombia"
     }
   ],
-  "fuente_datos": "CVC – Páramos (Portal GeoCVC); MADS – Resolución 0211 de 2017 (complejo Las Hermosas) y Resolución 1553 de 2016 (complejo Chilí-Barragán); Instituto Humboldt – Estudios técnicos para la delimitación de páramos",
-  "nivel_educativo": "Básica secundaria (grados 8–11)"
+  "fuente_datos": "CVC – Páramos y Registro de especies (Portal GeoCVC, recorte a Sevilla); MinAmbiente – Resolución 1553 de 2016 (Chilí-Barragán) y Resolución 0211 de 2017 (Las Hermosas); Ley 1930 de 2018; CVC – «En batallón de alta montaña hacen germinar frailejón para restaurar páramo de Barragán» (cvc.gov.co)",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

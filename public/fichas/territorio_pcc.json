@@ -2,59 +2,63 @@
   "id": "territorio_pcc",
   "titulo": "Paisaje Cultural Cafetero — Sevilla",
   "categoria": "territorio",
-  "descripcion": "El Paisaje Cultural Cafetero (PCC) fue declarado Patrimonio Cultural de la Humanidad por la UNESCO en 2011. Reconoce la cultura, el esfuerzo humano y la tradición centenaria de los cultivadores de café en seis departamentos colombianos, incluyendo el norte del Valle del Cauca. Sevilla es uno de los municipios nucleares de este patrimonio.",
-  "importancia": "La declaratoria del PCC protege no solo el paisaje natural, sino también la identidad cultural de las familias cafeteras: sus técnicas de cultivo, su arquitectura de bahareque, sus tradiciones y sus formas de vida. Sevilla, conocida como la 'Ciudad de las Araucarias', es un ejemplo vivo de este patrimonio.",
+  "descripcion": "El Paisaje Cultural Cafetero de Colombia (PCC) fue inscrito por la UNESCO en la Lista del Patrimonio Mundial el 25 de junio de 2011. Reconoce un paisaje productivo y cultural excepcional, construido por generaciones de familias que cultivan café en pequeñas fincas de ladera, con una arquitectura propia —como las casas de bahareque— y tradiciones ligadas a la colonización antioqueña. El PCC abarca 47 municipios de cuatro departamentos —Caldas, Quindío, Risaralda y Valle del Cauca— y se organiza en una zona principal y una zona de amortiguamiento. Según la cartografía de la CVC, en Sevilla la zona principal ocupa unas 4.360 ha, al sur y al oriente de la cabecera, aproximadamente entre 1.350 y 2.400 m de altitud, y la zona de amortiguamiento unas 8.650 ha. El Ministerio de Cultura adoptó la delimitación con la Resolución 2079 de 2011, modificada por la Resolución 2963 de 2012.",
+  "importancia": "La declaratoria reconoce que el valor del paisaje no está solo en sus montañas, sino en la forma en que las familias cafeteras lo han trabajado: fincas pequeñas, cultivos en ladera, guaduales y bosques en las cañadas, pueblos con arquitectura tradicional y una cultura asociada al café. Ser parte del PCC también implica responsabilidades: conservar esos valores frente a cambios como la sustitución del café por otros usos, el abandono del campo o construcciones que alteren el paisaje. Para Sevilla, conocida como el «Balcón del Valle» y llamada también «capital cafetera de Colombia», el PCC es una oportunidad para el turismo cultural y de naturaleza.",
   "preguntas_reflexivas": [
-    "¿Qué hace especial al café de Sevilla frente al de otros municipios?",
-    "¿Cómo influye la crisis cafetera en la identidad cultural del municipio?",
-    "¿Qué elementos de tu cotidianidad son parte del Paisaje Cultural Cafetero?",
-    "¿De qué manera el turismo puede ser una oportunidad para Sevilla?"
+    "¿Qué elementos de tu vida diaria hacen parte del Paisaje Cultural Cafetero?",
+    "¿Por qué crees que la UNESCO valora tanto las fincas pequeñas de ladera?",
+    "¿Qué diferencia hay entre la zona principal y la zona de amortiguamiento del PCC? Búscalas en el mapa.",
+    "¿Cómo puede el turismo ser una oportunidad para Sevilla sin dañar el paisaje ni la cultura cafetera?"
   ],
   "vocabulario": [
     {
-      "termino": "Patrimonio Cultural de la Humanidad",
-      "definicion": "Reconocimiento de la UNESCO a lugares, tradiciones y expresiones culturales de valor universal excepcional que deben ser conservados."
+      "termino": "Patrimonio Mundial",
+      "definicion": "Bienes culturales o naturales de valor universal excepcional inscritos por la UNESCO en la Lista del Patrimonio Mundial."
     },
     {
       "termino": "Bahareque",
-      "definicion": "Técnica constructiva tradicional de la región cafetera que usa madera, guadua y barro. Presente en la arquitectura típica de Sevilla."
+      "definicion": "Técnica constructiva tradicional que combina una estructura de madera o guadua con paredes de esterilla recubiertas de barro o de cemento; es característica de la arquitectura cafetera."
     },
     {
-      "termino": "Araucaria",
-      "definicion": "Árbol símbolo de Sevilla, de gran altura y copa piramidal, plantado históricamente en parques y calles del municipio."
+      "termino": "Zona de amortiguamiento",
+      "definicion": "Área que rodea la zona principal del PCC y ayuda a protegerla; en ella se orientan los usos para no afectar los valores del paisaje declarado."
     },
     {
-      "termino": "Zona buffer",
-      "definicion": "Área de amortiguación alrededor de la zona núcleo del PCC, con restricciones de uso para proteger el paisaje declarado."
+      "termino": "Guadua",
+      "definicion": "Bambú nativo (Guadua angustifolia) muy usado en la construcción tradicional; los guaduales protegen las orillas de las quebradas."
+    },
+    {
+      "termino": "Colonización antioqueña",
+      "definicion": "Proceso de poblamiento de los siglos XIX y XX en el que familias de Antioquia y de otras regiones fundaron pueblos y fincas en las vertientes de la cordillera Central, entre ellos Sevilla."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/View_of_Salento%2C_Colombia_01.jpg/1280px-View_of_Salento%2C_Colombia_01.jpg",
-      "titulo": "Vista de Salento, Quindío, Paisaje Cultural Cafetero",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Paisaje_Sevilla.JPG/1280px-Paisaje_Sevilla.JPG",
+      "titulo": "Cabecera de Sevilla rodeada de cafetales",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Palma_de_cera_del_Quind%C3%ADo_%28Ceroxylon_quindiuense%29_%2814334219548%29.jpg/1280px-Palma_de_cera_del_Quind%C3%ADo_%28Ceroxylon_quindiuense%29_%2814334219548%29.jpg",
-      "titulo": "Palma de cera del Quindío, símbolo del PCC",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Casa_estilo_finca_cafetera.JPG/1280px-Casa_estilo_finca_cafetera.JPG",
+      "titulo": "Casa de finca cafetera en Sevilla",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Cafetales%2C_en_Colombia.jpg",
-      "titulo": "Cafetales en el Paisaje Cultural Cafetero colombiano",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Naturaleza_y_finca.JPG/1280px-Naturaleza_y_finca.JPG",
+      "titulo": "Finca en las laderas de Sevilla",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "27kYrXFsXmQ",
-      "titulo": "Paisaje Cultural Cafetero de Colombia — Patrimonio UNESCO"
+      "titulo": "Paisaje Cultural Cafetero de Colombia, Patrimonio de la Humanidad VC — Federación Nacional de Cafeteros de Colombia"
     },
     {
       "youtube_id": "281e7K1BNZc",
-      "titulo": "10 años de la declaratoria del Paisaje Cultural Cafetero"
+      "titulo": "10 Años de la declaratoria del Paisaje Cultural Cafetero, como Patrimonio Mundial de la Unesco — Federación Nacional de Cafeteros de Colombia"
     }
   ],
-  "fuente_datos": "MinCultura / Federación Nacional de Cafeteros — PCC Colombia",
-  "nivel_educativo": "Básica secundaria (grados 6–11)"
+  "fuente_datos": "UNESCO – Coffee Cultural Landscape of Colombia, Decisión 35 COM 8B.43 (2011); MinCultura – Resolución 2079 de 2011, modificada por la Resolución 2963 de 2012; paisajeculturalcafetero.org.co – Descripción del PCC; CVC – Paisaje Cultural Cafetero (Portal GeoCVC, recorte a Sevilla)",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

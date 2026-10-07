@@ -1,64 +1,54 @@
 {
   "id": "actores_bosque_seco",
-  "titulo": "Actores del Bosque Seco Tropical",
+  "titulo": "Actores del Bosque Seco y el Enclave Seco",
   "categoria": "actores",
-  "descripcion": "El bosque seco tropical (BST) es uno de los ecosistemas más amenazados del mundo y de Colombia. En Sevilla, las zonas de menor altitud de la vertiente oriental hacia el río Cauca y el valle geográfico albergan remanentes de este valioso ecosistema. Los actores que interactúan con él son múltiples y tienen intereses y capacidades muy distintas. Las entidades gubernamentales como la CVC, el Ministerio de Ambiente y las alcaldías tienen la responsabilidad legal de proteger estas áreas, elaborar planes de restauración y sancionar actividades ilegales como la tala y las quemas. Sin embargo, su presencia en el territorio no siempre es suficiente para cubrir toda la extensión de este ecosistema fragmentado. Las comunidades locales y las Juntas de Acción Comunal de las veredas ubicadas en la zona baja del municipio viven en contacto directo con el bosque seco y dependen de sus recursos para leña, madera y pastoreo. Son actores fundamentales cuyo conocimiento del territorio y cuya participación activa en los programas de restauración es indispensable. El sector avícola y ganadero, que ocupa grandes extensiones en la zona, representa una presión importante sobre el BST, ya que la expansión de galpones y potreros ha sido históricamente la causa principal de su deforestación. Sin embargo, algunos empresarios del sector han comenzado a incorporar prácticas de ganadería silvopastoril que permiten la recuperación de cobertura arbórea en sus predios. La participación de todos estos actores en diálogos de concertación es esencial para lograr la recuperación del BST en Sevilla.",
-  "importancia": "El bosque seco tropical en Colombia ha perdido más del 90% de su cobertura original, lo que lo convierte en uno de los ecosistemas más destruidos del país. Los fragmentos que quedan en municipios como Sevilla son refugios irremplazables para especies de flora y fauna adaptadas a condiciones de alta temperatura y sequía estacional. Además, el BST protege suelos altamente erosionables, regula microclimas locales y provee servicios como la polinización de cultivos en zonas bajas. Los actores que trabajan por su conservación —entidades del Estado, comunidades y sectores productivos responsables— están contribuyendo a salvar uno de los patrimonios naturales más únicos y escasos de Colombia.",
+  "descripcion": "El bosque seco tropical es un ecosistema de tierras cálidas con una temporada seca marcada, durante la cual muchos árboles pierden sus hojas para ahorrar agua. En el Valle del Cauca ocupaba buena parte del fondo del valle del río Cauca y hoy sobrevive en fragmentos. Sevilla está casi toda por encima de los 1.000 m de altitud, así que no tiene el bosque seco típico del fondo del valle; sin embargo, la CVC reconoce en su territorio un enclave seco: una zona de montaña donde llueve menos que en sus alrededores y la vegetación está adaptada a la sequía. Ese enclave forma parte del Distrito Regional de Manejo Integrado (DRMI) Bosque Seco Alegrías y Páramo El Tibí y Miraflores, declarado por la CVC en 2022 (Acuerdo CD 061), que conecta en un mismo corredor páramos, bosques andinos y el enclave seco. Esta capa es ilustrativa: muestra tipos de actores —autoridad ambiental, juntas de acción comunal, organizaciones y productores— en ubicaciones aproximadas, mientras se construye la cartografía social del proyecto.",
+  "importancia": "Según el Instituto Humboldt, en Colombia queda apenas cerca del 8 % de la extensión original del bosque seco tropical, lo que lo convierte en uno de los ecosistemas más amenazados del país. Sus especies están adaptadas a la escasez de agua y muchas no viven en otros ecosistemas. En Sevilla, el enclave seco del DRMI es una rareza dentro de un municipio húmedo y montañoso. Como el DRMI permite usos sostenibles, su conservación depende de acuerdos entre la autoridad ambiental, las comunidades vecinas y los productores sobre la ganadería, los cultivos y las quemas.",
   "preguntas_reflexivas": [
-    "¿Por qué crees que el bosque seco tropical ha perdido más del 90% de su cobertura en Colombia?",
-    "¿Cómo pueden las empresas avícolas y ganaderas cambiar sus prácticas para que sean más amigables con el bosque seco?",
-    "¿Qué papel tienen las Juntas de Acción Comunal en la protección de los fragmentos de bosque seco que quedan?",
-    "¿Qué pasaría con las aves y otros animales del bosque seco si los últimos fragmentos desaparecieran?"
+    "¿Por qué puede existir un enclave seco en medio de montañas húmedas como las de Sevilla?",
+    "¿Por qué crees que en Colombia se ha perdido más del 90 % del bosque seco tropical?",
+    "¿Qué ventajas y qué retos tiene un DRMI, donde se permiten algunos usos productivos sostenibles?",
+    "¿Qué papel puede tener una junta de acción comunal en el cuidado de un área protegida cercana?"
   ],
   "vocabulario": [
     {
       "termino": "Bosque seco tropical",
-      "definicion": "Ecosistema forestal tropical caracterizado por una marcada estación seca de varios meses al año, en la que muchos árboles pierden sus hojas. Presente en zonas cálidas por debajo de los 1.000 metros de altitud."
+      "definicion": "Ecosistema de tierras cálidas, generalmente por debajo de 1.000 m, con una temporada seca de varios meses en la que muchos árboles pierden sus hojas."
+    },
+    {
+      "termino": "Enclave seco",
+      "definicion": "Zona pequeña, rodeada de ecosistemas más húmedos, donde llueve menos por efecto del relieve y la vegetación está adaptada a la sequía."
+    },
+    {
+      "termino": "DRMI (Distrito Regional de Manejo Integrado)",
+      "definicion": "Área protegida regional, declarada por una corporación autónoma regional, en la que se permiten usos sostenibles bajo reglas que protegen el ecosistema."
     },
     {
       "termino": "Ganadería silvopastoril",
-      "definicion": "Sistema de producción ganadera que combina pastos con árboles y arbustos en el mismo potrero, beneficiando tanto al ganado con sombra y alimento como al ecosistema con cobertura y biodiversidad."
+      "definicion": "Sistema que combina pastos con árboles y arbustos en el mismo potrero; da sombra y alimento al ganado y mejora la cobertura y la biodiversidad."
     },
     {
       "termino": "Fragmentación de hábitat",
-      "definicion": "División de un ecosistema continuo en parches aislados más pequeños, generalmente causada por actividades humanas como la agricultura, la ganadería o la construcción de vías."
-    },
-    {
-      "termino": "Concertación",
-      "definicion": "Proceso de diálogo y acuerdo entre diferentes actores con intereses distintos para llegar a decisiones colectivas sobre el manejo de un territorio o recurso natural."
-    },
-    {
-      "termino": "Restauración activa",
-      "definicion": "Estrategia de recuperación de ecosistemas degradados que implica intervenciones humanas directas como la siembra de plantas nativas y el control de especies invasoras."
+      "definicion": "División de un ecosistema continuo en parches más pequeños y aislados, causada por actividades como la agricultura, la ganadería o la construcción de vías."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Ara%C3%B1a_Bosque_Seco_Tropical.jpg",
-      "titulo": "Araña del bosque seco tropical colombiano",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/El_sabor_del_la_biodiversidad_del_bosque_seco_tropical_colombiano.jpg/1280px-El_sabor_del_la_biodiversidad_del_bosque_seco_tropical_colombiano.jpg",
-      "titulo": "Biodiversidad del bosque seco tropical colombiano",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ecoregion_NT0221.png",
-      "titulo": "Ecorregión de bosque seco tropical en Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Ecoregion_NT0207.png",
+      "titulo": "Ecorregión de los bosques secos del valle del Cauca (en morado)",
+      "credito": "Every-leaf-that-trembles · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "aDxuzcuJ0pQ",
-      "titulo": "Bosque seco tropical — Colombia"
+      "titulo": "Bosque seco tropical - Colombia — OFICINA DE COMUNICACIONES FACULTAD DE CIENCIAS"
     },
     {
       "youtube_id": "aJlv-asAx8k",
-      "titulo": "Misión Ciencia: Bosque seco tropical"
+      "titulo": "Misión Ciencia: Bosque seco tropical — Minciencias Canal Oficial"
     }
   ],
-  "fuente_datos": "Instituto Humboldt – Caracterización del Bosque Seco Tropical en Colombia; CVC – Inventario Ecosistemas Valle del Cauca; IDEAM – Mapa Ecosistemas Continentales 2017",
+  "fuente_datos": "CVC – Acuerdo CD 061 de 2022 (DRMI Bosque Seco Alegrías y Páramo El Tibí y Miraflores) y SIDAP Valle del Cauca; Instituto Humboldt – Bosques secos tropicales en Colombia; capa de actores ilustrativa elaborada por el proyecto",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

@@ -9,7 +9,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          swiper: ['swiper'],
           turf: ['@turf/turf'],
         },
       },
@@ -26,11 +25,12 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,json}'],
       },
       manifest: {
-        name: 'Geovisor Ecopedagógico — Sevilla',
-        short_name: 'Geovisor Sevilla',
-        description: 'Geovisor web ecopedagógico para el municipio de Sevilla, Valle del Cauca',
-        theme_color: '#2D6A4F',
-        background_color: '#F5F5F5',
+        name: 'Geovisor Ecopedagógico · Sevilla, Valle del Cauca',
+        short_name: 'EcoDex Sevilla',
+        description:
+          'Geovisor ecopedagógico del municipio de Sevilla, Valle del Cauca: explora, pregunta y cuida tu territorio',
+        theme_color: '#F2EEE1',
+        background_color: '#F2EEE1',
         display: 'standalone',
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },

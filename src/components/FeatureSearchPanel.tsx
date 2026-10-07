@@ -103,17 +103,17 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
 
   return (
     <div
-      className="absolute top-3 left-1/2 -translate-x-1/2 z-[999] bg-white rounded-lg shadow-xl border border-gray-200 w-80"
+      className="dex-card absolute top-3 left-1/2 -translate-x-1/2 z-[999] w-80 overflow-hidden"
       role="dialog"
       aria-label="Buscar en capas activas"
     >
-      <div className="flex items-center gap-2 px-3 py-2 border-b border-gray-100">
+      <div className="flex items-center gap-2 border-b-2 border-line bg-surface2 px-3 py-2">
         <svg
           viewBox="0 0 16 16"
           fill="none"
           stroke="currentColor"
           strokeWidth="1.5"
-          className="w-4 h-4 text-gray-400 flex-shrink-0"
+          className="w-4 h-4 text-accent flex-shrink-0"
           aria-hidden="true"
         >
           <circle cx="6.5" cy="6.5" r="4" />
@@ -124,15 +124,15 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
           type="search"
           value={query}
           onChange={e => setQuery(e.target.value)}
-          placeholder="Buscar vereda, especie, municipio…"
-          className="flex-1 text-sm outline-none text-gris-texto placeholder-gray-400 bg-transparent"
+          placeholder="> buscar corregimiento, especie…"
+          className="flex-1 bg-transparent font-ui text-sm text-ink outline-none placeholder:text-muted"
           aria-label="Buscar dentro de capas activas"
           autoComplete="off"
         />
         <button
           onClick={onClose}
           aria-label="Cerrar búsqueda"
-          className="text-gray-400 hover:text-gris-texto p-0.5 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-verde-bosque"
+          className="rounded p-0.5 text-muted hover:text-ink"
         >
           <svg
             viewBox="0 0 16 16"
@@ -147,17 +147,17 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
       </div>
 
       {activeGeoJsonCount === 0 && (
-        <p className="px-4 py-3 text-sm text-gray-400">
+        <p className="px-4 py-3 font-ui text-sm text-muted">
           Activa alguna capa GeoJSON para buscar en ella.
         </p>
       )}
 
       {activeGeoJsonCount > 0 && query.length >= 2 && results.length === 0 && (
-        <p className="px-4 py-3 text-sm text-gray-400">Sin resultados para «{query}»</p>
+        <p className="px-4 py-3 font-ui text-sm text-muted">Sin resultados para «{query}»</p>
       )}
 
       {activeGeoJsonCount > 0 && query.length < 2 && (
-        <p className="px-4 py-3 text-xs text-gray-400">
+        <p className="px-4 py-3 font-ui text-xs text-muted">
           Busca en {activeGeoJsonCount} capa{activeGeoJsonCount > 1 ? 's' : ''} activa
           {activeGeoJsonCount > 1 ? 's' : ''} — escribe al menos 2 caracteres.
         </p>
@@ -169,11 +169,11 @@ export default function FeatureSearchPanel({ isOpen, onClose }: Props) {
             <li key={i}>
               <button
                 onClick={() => select(r)}
-                className="w-full text-left px-4 py-2.5 hover:bg-gray-50 transition-colors border-b border-gray-50 last:border-0"
+                className="w-full border-b border-line-soft px-4 py-2.5 text-left transition-colors last:border-0 hover:bg-accent-soft"
                 role="option"
               >
-                <div className="text-sm font-medium text-gris-texto truncate">{r.label}</div>
-                <div className="text-xs text-gray-400 mt-0.5">{r.layerName}</div>
+                <div className="truncate font-ui text-sm font-semibold text-ink">{r.label}</div>
+                <div className="mt-0.5 font-ui text-[11px] text-muted">{r.layerName}</div>
               </button>
             </li>
           ))}

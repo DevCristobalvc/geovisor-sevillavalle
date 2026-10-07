@@ -2,63 +2,58 @@
   "id": "agua_cuencas",
   "titulo": "Cuencas Hidrográficas de Sevilla",
   "categoria": "agua",
-  "descripcion": "Las cuencas hidrográficas son territorios delimitados por las montañas y cerros, por donde fluyen todas las aguas de lluvia hacia un mismo río. En Sevilla, las cuatro cuencas principales son el Río Bugalagrande, el Río La Paila, el Río La Vieja y la Quebrada Las Cañas. Cada cuenca es como el tazón que recoge el agua de toda una zona del municipio.",
-  "importancia": "En Sevilla, las cuencas del Río Bugalagrande y sus afluentes abastecen de agua potable a miles de familias cafeteras. Los cambios en el uso del suelo — como la deforestación para ganadería o cultivos — reducen la cantidad y calidad del agua que llega a los ríos. Proteger las cuencas es proteger la vida del municipio.",
+  "descripcion": "Una cuenca hidrográfica es el territorio cuyas aguas de lluvia escurren hacia un mismo río; la delimitan las partes más altas del relieve, llamadas divisorias de aguas. Según la cartografía oficial de la CVC, el territorio de Sevilla se reparte entre cuatro cuencas, todas tributarias del río Cauca: la del río Bugalagrande, la más extensa (unas 22.450 ha, cerca del 42 % del municipio), que ocupa el sur y el suroriente e incluye los páramos; la del río La Paila (unas 15.210 ha, 28 %), en el occidente, donde está la cabecera municipal; la del río La Vieja (unas 14.220 ha, 26 %), en el oriente; y la de los ríos Las Cañas, Los Micos y Obando (unas 1.910 ha, 4 %), en el norte. Las cuatro suman cerca de 538 km², el área del municipio.",
+  "importancia": "Todo lo que ocurre en una cuenca llega a su río: si se tala el bosque en la parte alta o se vierten aguas residuales en la parte media, las consecuencias se sienten aguas abajo, incluso en otros municipios. Por eso el agua se planifica por cuencas, mediante los Planes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA) que elaboran las corporaciones autónomas regionales. Saber en qué cuenca está tu vereda o tu colegio es el primer paso para entender de dónde viene tu agua y hacia dónde va.",
   "preguntas_reflexivas": [
-    "¿Qué actividades humanas afectan la calidad del agua en tu vereda?",
-    "¿Por qué proteger las cuencas es también proteger la economía cafetera?",
-    "¿Cómo se conecta el agua de tu escuela con el Río Bugalagrande?",
-    "¿Qué pasaría si los páramos que alimentan estas cuencas desaparecieran?"
+    "¿En cuál de las cuatro cuencas está tu vereda o tu colegio? Búscalo en el mapa.",
+    "¿Por qué la tala de bosque en la parte alta de una cuenca afecta a quienes viven aguas abajo?",
+    "¿Qué relación hay entre los páramos del suroriente de Sevilla y la cuenca del río Bugalagrande?",
+    "¿Qué actividades humanas afectan la cantidad y la calidad del agua en tu cuenca?"
   ],
   "vocabulario": [
     {
       "termino": "Cuenca hidrográfica",
-      "definicion": "Territorio que drena sus aguas hacia un mismo río, delimitado por divisorias de aguas como montañas y cerros."
+      "definicion": "Territorio cuyas aguas superficiales escurren hacia un mismo río, delimitado por divisorias de aguas como montañas y cerros."
+    },
+    {
+      "termino": "Divisoria de aguas",
+      "definicion": "Línea imaginaria que separa dos cuencas; generalmente coincide con las cimas de las montañas."
     },
     {
       "termino": "Afluente",
-      "definicion": "Río o quebrada que desemboca en otro río más grande, aportando su caudal de agua."
+      "definicion": "Río o quebrada que desemboca en otro más grande y le aporta su caudal."
     },
     {
       "termino": "Caudal",
       "definicion": "Volumen de agua que pasa por un punto de un río en una unidad de tiempo, expresado en metros cúbicos por segundo (m³/s)."
     },
     {
-      "termino": "Divisoria de aguas",
-      "definicion": "Línea imaginaria que separa dos cuencas hidrográficas, generalmente coincide con las cimas de montañas."
-    },
-    {
-      "termino": "Deforestación",
-      "definicion": "Eliminación de bosques para convertir el suelo en zonas agrícolas, ganaderas o urbanas, reduciendo la captación de agua."
+      "termino": "POMCA",
+      "definicion": "Plan de Ordenación y Manejo de Cuencas Hidrográficas: instrumento con el que las corporaciones autónomas regionales planifican el uso del suelo, el agua y los demás recursos de una cuenca."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/R%C3%ADo_Cauca._Puente_Anacaro_%281%29._Cartago_-_Ansermanuevo%2C_Valle%2C_Colombia.JPG/1280px-R%C3%ADo_Cauca._Puente_Anacaro_%281%29._Cartago_-_Ansermanuevo%2C_Valle%2C_Colombia.JPG",
-      "titulo": "Río Cauca — Puente Anacaro, Valle del Cauca",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Colinas_cafeteras.JPG/1280px-Colinas_cafeteras.JPG",
+      "titulo": "Relieve montañoso de Sevilla: las cimas marcan las divisorias de aguas",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Valle_geografico_del_rio_Cauca_Colombia.png",
-      "titulo": "Valle geográfico del Río Cauca, Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Ciclo_da_%C3%A1gua.jpg",
-      "titulo": "Ciclo hidrológico del agua",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/R%C3%ADo_La_Vieja_5._Cartago%2C_Valle%2C_Colombia.JPG/1280px-R%C3%ADo_La_Vieja_5._Cartago%2C_Valle%2C_Colombia.JPG",
+      "titulo": "Río La Vieja en Cartago (Valle del Cauca), aguas abajo de Sevilla",
+      "credito": "Hoako · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "UmLLv7hz6Ss",
-      "titulo": "Las cuencas hidrográficas de Colombia explicadas"
+      "titulo": "Las cuencas hidrográficas de Colombia, explicadas en 5 minutos — Banrepcultural"
     },
     {
       "youtube_id": "hduhX9OgqZs",
-      "titulo": "Hidrografía de Colombia"
+      "titulo": "Hidrografía de Colombia — Geografía Didáctica"
     }
   ],
-  "fuente_datos": "CVC – Cuencas hidrográficas del Valle del Cauca (Portal GeoCVC); IDEAM – Zonificación hidrográfica de Colombia",
+  "fuente_datos": "CVC – Cuencas hidrográficas (Portal GeoCVC, recorte a Sevilla, 2026); IDEAM (2013) – Zonificación y codificación de unidades hidrográficas e hidrogeológicas de Colombia; Decreto 1640 de 2012 (POMCA)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

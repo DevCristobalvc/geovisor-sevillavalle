@@ -64,3 +64,6 @@ docs/generador/img/
 
 # Python
 __pycache__/
+
+# Pruebas end-to-end: capturas y resultados locales
+tests/e2e/capturas/

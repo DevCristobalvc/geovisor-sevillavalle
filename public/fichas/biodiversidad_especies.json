@@ -2,64 +2,64 @@
   "id": "biodiversidad_especies",
   "titulo": "Registro de Especies de Sevilla",
   "categoria": "biodiversidad",
-  "descripcion": "Sevilla, Valle del Cauca, es un municipio con una riqueza biológica excepcional gracias a la diversidad de ecosistemas que alberga: desde el páramo y el bosque andino en las alturas hasta el bosque seco tropical en las zonas más cálidas. El Sistema de Información sobre Biodiversidad de Colombia (SiB Colombia) y la plataforma global GBIF (Global Biodiversity Information Facility) reúnen miles de registros de ocurrencia de especies observadas en el municipio, reportados por investigadores, naturalistas aficionados, comunidades y estudiantes a través de aplicaciones como iNaturalist. Entre las especies más emblemáticas del territorio sevillano se encuentran el oso de anteojos (Tremarctos ornatus), único oso nativo de Suramérica y especie en peligro, que habita los bosques altoandinos y el páramo; la danta de páramo o tapir de montaña (Tapirus pinchaque), el mamífero terrestre más grande de los Andes colombianos y una especie en peligro crítico que cumple un papel fundamental en la dispersión de semillas de árboles grandes; y el quetzal colombiano (Pharomachrus fulgidus), una de las aves más hermosas del bosque andino, cuyo canto y plumaje iridiscente lo convierten en un símbolo de la naturaleza tropical. También se registran en Sevilla el puma (Puma concolor), el ocelote (Leopardus pardalis), el mono aullador (Alouatta seniculus), cientos de especies de aves migratorias y residentes, y una enorme diversidad de anfibios y plantas endémicas de los Andes colombianos. Muchas de estas especies se encuentran en categorías de amenaza nacional o global y dependen de que los ecosistemas de Sevilla se mantengan en buen estado.",
-  "importancia": "Cada especie que habita en Sevilla cumple una función en el ecosistema: los grandes mamíferos dispersan semillas y controlan poblaciones de herbívoros; las aves polinizan flores y controlan insectos; los anfibios son indicadores de la calidad del agua y del ambiente. La pérdida de cualquiera de estas especies tiene consecuencias en cadena sobre todo el ecosistema. Registrar, conocer y divulgar la biodiversidad de Sevilla es el primer paso para protegerla. Los datos de GBIF y SiB Colombia son herramientas poderosas que permiten a cualquier ciudadano, investigador o gobernante conocer qué vive en su territorio y tomar decisiones informadas para conservarlo.",
+  "descripcion": "La capa oficial de la CVC reúne 190 registros de flora en Sevilla —árboles, arbustos, hierbas, palmas y helechos—; 186 de ellos provienen de una salida de campo de 1996 a la reserva Chupaderos, en la cuenca del río Bugalagrande, en el suroriente del municipio. Entre las especies registradas hay algunas emblemáticas: el frailejón Espeletia hartwegiana, la palma de cera del Quindío (Ceroxylon quindiuense), árbol nacional de Colombia, el roble andino (Quercus humboldtii), el cedro negro (Juglans neotropica) y el chaquiro (Podocarpus oleifolius). Otras plataformas abiertas completan la información: en GBIF, que reúne datos de museos, investigadores y ciencia ciudadana (eBird, iNaturalist), hay registros de más de 450 especies de aves dentro del límite de Sevilla, entre ellas el loro orejiamarillo (Ognorhynchus icterotis), el periquito de los nevados (Bolborhynchus ferrugineifrons) y el quetzal colinegro (Pharomachrus auriceps), además de anfibios como la rana rubí (Andinobates bombetes).",
+  "importancia": "Cada especie cumple una función: las aves y los murciélagos dispersan semillas y polinizan flores; los anfibios son sensibles a la contaminación del agua y sirven como indicadores; árboles como el roble y el cedro sostienen redes enteras de vida. Varias especies con registros en Sevilla están amenazadas según la Lista Roja de la UICN: la palma de cera está en peligro crítico; el cedro negro, en peligro; y el loro orejiamarillo, el periquito de los nevados y la rana rubí son vulnerables. El loro orejiamarillo, además, anida en los troncos de la palma de cera. Registrar y compartir observaciones ayuda a saber qué vive en el territorio y a tomar mejores decisiones para conservarlo.",
   "preguntas_reflexivas": [
-    "¿Por qué el oso de anteojos necesita grandes extensiones de bosque andino para sobrevivir y no puede vivir en un parche de bosque pequeño?",
-    "¿Cómo la danta de páramo contribuye a la regeneración del bosque al dispersar las semillas de los árboles?",
-    "¿Qué podrías hacer tú para contribuir al registro de especies en Sevilla usando aplicaciones como iNaturalist?",
-    "¿Por qué la pérdida de un anfibio puede indicar que algo está mal con la calidad del agua de una quebrada?",
-    "¿Qué relación hay entre la biodiversidad de Sevilla y el turismo de naturaleza que puede beneficiar a las comunidades locales?"
+    "¿Por qué la supervivencia del loro orejiamarillo depende de la palma de cera?",
+    "¿Qué podrías hacer para aportar registros de especies de Sevilla en plataformas como iNaturalist o eBird?",
+    "¿Por qué la desaparición de los anfibios puede indicar que algo anda mal con el agua de una quebrada?",
+    "¿Qué diferencia hay entre una especie vulnerable, una en peligro y una en peligro crítico?",
+    "¿Cómo podría el turismo de naturaleza beneficiar a las comunidades y, a la vez, proteger estas especies?"
   ],
   "vocabulario": [
     {
-      "termino": "Especie endémica",
-      "definicion": "Especie que solo existe en una región geográfica específica y en ningún otro lugar del mundo. Colombia es el país con mayor número de especies endémicas de aves y anfibios en el planeta."
+      "termino": "Registro biológico",
+      "definicion": "Dato que documenta que una especie fue observada o recolectada en un lugar y una fecha determinados."
     },
     {
-      "termino": "Especie en peligro",
-      "definicion": "Especie cuyas poblaciones han disminuido tanto que enfrenta un riesgo muy alto de extinción si no se toman medidas de conservación urgentes. Las categorías de la IUCN son: Vulnerable, En Peligro y En Peligro Crítico."
+      "termino": "Especie endémica",
+      "definicion": "Especie que vive de forma natural solo en una región determinada del mundo."
+    },
+    {
+      "termino": "Lista Roja de la UICN",
+      "definicion": "Inventario de la Unión Internacional para la Conservación de la Naturaleza que clasifica las especies según su riesgo de extinción: preocupación menor, casi amenazada, vulnerable, en peligro y en peligro crítico, entre otras categorías."
     },
     {
       "termino": "GBIF",
-      "definicion": "Global Biodiversity Information Facility (Instalación Global de Información sobre Biodiversidad). Plataforma internacional de acceso libre que reúne millones de registros de ocurrencia de especies de todo el mundo."
+      "definicion": "Global Biodiversity Information Facility: infraestructura internacional de acceso abierto que reúne registros de especies de todo el mundo, incluidos los publicados por el SiB Colombia."
     },
     {
-      "termino": "SiB Colombia",
-      "definicion": "Sistema de Información sobre Biodiversidad de Colombia. Plataforma nacional que centraliza los datos de biodiversidad del país, articulada con el Instituto Humboldt y GBIF."
-    },
-    {
-      "termino": "Dispersor de semillas",
-      "definicion": "Animal que come frutos y deposita las semillas en lugares lejanos a través de sus heces, contribuyendo a la regeneración del bosque. Los grandes mamíferos como la danta son dispersores esenciales para semillas grandes."
+      "termino": "Ciencia ciudadana",
+      "definicion": "Participación de personas no especialistas en la recolección de datos científicos, por ejemplo al fotografiar y compartir observaciones de especies."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg/1280px-Tremarctos_ornatus_in_Jardim_Zool%C3%B3gico_de_Curitiba.jpg",
-      "titulo": "Oso de anteojos (Tremarctos ornatus)",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Rana_Rub%C3%AD_%2824588%29.jpg/1280px-Rana_Rub%C3%AD_%2824588%29.jpg",
+      "titulo": "Rana rubí (Andinobates bombetes) fotografiada en Sevilla",
+      "credito": "AmiGueko · CC0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Tapirus_pinchaque_133819945.jpg/1280px-Tapirus_pinchaque_133819945.jpg",
-      "titulo": "Tapir de montaña (Tapirus pinchaque)",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ognorhynchus_icterotis%2C_loro_orejiamarillo_en_su_nido.jpg/1280px-Ognorhynchus_icterotis%2C_loro_orejiamarillo_en_su_nido.jpg",
+      "titulo": "Loro orejiamarillo (Ognorhynchus icterotis) en su nido en una palma de cera",
+      "credito": "Luisalberto p · CC BY-SA 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Pharomachrus_auriceps_Manizales%2C_Colombia.jpg",
-      "titulo": "Quetzal crestado, Manizales, Colombia",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pharomachrus_auriceps_Quetzal_colinegro_Golden-headed_Quetzal_%288447409025%29.jpg/960px-Pharomachrus_auriceps_Quetzal_colinegro_Golden-headed_Quetzal_%288447409025%29.jpg",
+      "titulo": "Quetzal colinegro (Pharomachrus auriceps), Valle del Cauca",
+      "credito": "Félix Uribe · CC BY-SA 2.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "1cdGUxXuSYM",
-      "titulo": "Oso de anteojos, el guardián de los páramos"
+      "youtube_id": "yQQQgzRRqVI",
+      "titulo": "En el Valle del Cauca buscan salvar la Palma de Cera | El Tiempo — EL TIEMPO"
     },
     {
-      "youtube_id": "ll1g9M2tHyU",
-      "titulo": "10 Animales en peligro de extinción en Colombia"
+      "youtube_id": "NeCQuoz6-08",
+      "titulo": "Pacto por los Bosques Cap. 8 - Loro Orejiamarillo y Palma de cera — Pactobosques Antioquia"
     }
   ],
-  "fuente_datos": "CVC – Registro de especies (Portal GeoCVC); SiB Colombia – Catálogo de Biodiversidad Colombia; Instituto Humboldt – Libro Rojo de Mamíferos y Aves de Colombia",
+  "fuente_datos": "CVC – Registro de especies (Portal GeoCVC, 190 registros de flora en Sevilla); GBIF.org – registros de ocurrencia dentro del límite de Sevilla (consulta de octubre de 2026; fuentes principales: eBird, iNaturalist y estudios bióticos de los complejos de páramo); UICN – Lista Roja de Especies Amenazadas; Ley 61 de 1985 (palma de cera, árbol nacional)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

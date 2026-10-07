@@ -2,63 +2,58 @@
   "id": "clima_estaciones",
   "titulo": "Estaciones Hidroclimatológicas de Sevilla",
   "categoria": "clima",
-  "descripcion": "Las estaciones hidroclimatológicas son puntos de monitoreo donde se miden variables del clima y del agua: temperatura, lluvia, humedad y nivel de los ríos. En Sevilla, la red de monitoreo del IDEAM y la CVC permite conocer cómo cambian estas variables a lo largo del tiempo, alertar sobre crecidas y planificar el uso del agua.",
-  "importancia": "Los datos de las estaciones son esenciales para entender el cambio climático local. En Sevilla, los registros históricos muestran cambios en los patrones de lluvia que afectan directamente los cultivos de café y la disponibilidad de agua para las comunidades.",
+  "descripcion": "Las estaciones hidroclimatológicas son puntos donde se miden variables del clima y del agua, como la lluvia, la temperatura o el nivel de los ríos. La red de la CVC tiene en Sevilla dos estaciones activas y automáticas que miden la lluvia: la estación Alegrías, pluviométrica, a 2.290 m de altitud en el corregimiento de Alegrías, en operación desde 1971; y la estación Heraclio Uribe, pluviográfica, a 1.540 m en el corregimiento de La Melva, en operación desde 2001. Un pluviómetro mide cuánta lluvia cae en un periodo; un pluviógrafo, además, registra cómo se distribuye en el tiempo, lo que permite conocer la intensidad de los aguaceros. Con datos de muchos años es posible calcular promedios, identificar las temporadas secas y lluviosas y reconocer años anormalmente secos o húmedos.",
+  "importancia": "Sin datos no hay buenas decisiones. Los registros de lluvia sirven para planear siembras y cosechas, diseñar acueductos y obras, alertar sobre crecientes y deslizamientos, y estudiar cómo cambia el clima. Una estación que funciona desde 1971, como la de Alegrías, es especialmente valiosa porque permite comparar el presente con el pasado. Fenómenos como El Niño y La Niña, que alteran las lluvias en Colombia, se detectan y estudian gracias a redes de estaciones como estas.",
   "preguntas_reflexivas": [
-    "¿Cómo afecta la falta de lluvia a los cafetales de tu región?",
-    "¿Por qué es importante monitorear el nivel de los ríos?",
-    "¿Qué diferencia hay entre el clima de la zona cálida y la zona fría de Sevilla?",
-    "¿Cómo usarías los datos de temperatura para planificar una cosecha de café?"
+    "¿Qué diferencia hay entre un pluviómetro y un pluviógrafo?",
+    "¿Por qué es valioso que una estación lleve funcionando desde 1971?",
+    "¿Cómo usarías los datos de lluvia para planear la cosecha de café o el cuidado de un cultivo?",
+    "¿Por qué crees que la lluvia medida en Alegrías (2.290 m) puede ser distinta de la medida en La Melva (1.540 m)?"
   ],
   "vocabulario": [
     {
       "termino": "Estación pluviométrica",
-      "definicion": "Punto de monitoreo que solo mide la cantidad de lluvia que cae en un lugar (pluviómetro)."
+      "definicion": "Estación que mide con un pluviómetro la cantidad de lluvia acumulada en un periodo, por ejemplo un día."
     },
     {
-      "termino": "Estación limnigráfica",
-      "definicion": "Punto de monitoreo que mide el nivel y caudal de un río continuamente mediante sensores automatizados."
+      "termino": "Estación pluviográfica",
+      "definicion": "Estación que registra la lluvia de forma continua, de modo que se sabe cuándo cayó y con qué intensidad."
     },
     {
-      "termino": "Isoyeta",
-      "definicion": "Línea en un mapa que une puntos con igual cantidad de lluvia en un período determinado."
+      "termino": "Serie de datos",
+      "definicion": "Conjunto de mediciones de una misma variable tomadas en un lugar durante muchos años."
     },
     {
       "termino": "Anomalía climática",
-      "definicion": "Desviación del valor de una variable climática respecto a su promedio histórico, indicador de cambio climático."
+      "definicion": "Diferencia entre el valor observado de una variable, como la lluvia de un mes, y su promedio histórico."
     },
     {
       "termino": "IDEAM",
-      "definicion": "Instituto de Hidrología, Meteorología y Estudios Ambientales de Colombia, responsable del monitoreo del clima y el agua."
+      "definicion": "Instituto de Hidrología, Meteorología y Estudios Ambientales: entidad nacional encargada de la información sobre el tiempo, el clima y el agua en Colombia."
     }
   ],
   "galeria": [
     {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Rain_gauge_Hellmann.jpg/1280px-Rain_gauge_Hellmann.jpg",
+      "titulo": "Pluviómetro tipo Hellmann, instrumento para medir la lluvia",
+      "credito": "Bocholter · Dominio público · Wikimedia Commons"
+    },
+    {
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GEONICA_-_METEODATA_and_DATARAIN.jpg/1280px-GEONICA_-_METEODATA_and_DATARAIN.jpg",
-      "titulo": "Estación hidrometeorológica automática",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Germi_Met.jpg",
-      "titulo": "Estación meteorológica de monitoreo climático",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Paisaje_monta%C3%B1oso_Andino.jpg/1280px-Paisaje_monta%C3%B1oso_Andino.jpg",
-      "titulo": "Paisaje andino colombiano en zona de monitoreo climático",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "titulo": "Estación meteorológica automática con pluviómetro",
+      "credito": "Geonica · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
-      "youtube_id": "NT5eq9SRc70",
-      "titulo": "Descargar datos de estaciones climatológicas IDEAM"
+      "youtube_id": "Dod8ngsDNqY",
+      "titulo": "¿Qué hace el Ideam? Así funciona el monitoreo ambiental en Colombia — IDEAM Colombia"
     },
     {
-      "youtube_id": "dgbXn60JDmE",
-      "titulo": "Espacializar estaciones hidrometeorológicas del IDEAM"
+      "youtube_id": "XTFDszWA3OM",
+      "titulo": "Pronóstico del tiempo y alertas tempranas del IDEAM para Colombia | #RendiciónDeCuentas #IDEAM2026 — IDEAM Colombia"
     }
   ],
-  "fuente_datos": "CVC – Red hidroclimatológica del Valle del Cauca (Portal GeoCVC); IDEAM – Catálogo nacional de estaciones",
-  "nivel_educativo": "Básica secundaria (grados 7–11)"
+  "fuente_datos": "CVC – Red hidroclimatológica (Portal GeoCVC: estaciones Alegrías y Heraclio Uribe); IDEAM – Catálogo nacional de estaciones",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

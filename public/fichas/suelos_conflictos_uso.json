@@ -2,63 +2,58 @@
   "id": "suelos_conflictos_uso",
   "titulo": "Conflictos de Uso del Suelo en Sevilla",
   "categoria": "suelos",
-  "descripcion": "El conflicto de uso del suelo ocurre cuando la actividad humana en un terreno no corresponde con su vocación natural o potencial. En Sevilla, zonas de alto valor ambiental (laderas con bosque, páramos, cuencas) son usadas para ganadería extensiva o cultivos en pendientes pronunciadas, generando erosión, pérdida de suelo fértil y contaminación de fuentes de agua.",
-  "importancia": "Entender los conflictos de uso del suelo es clave para planificar el territorio de manera sostenible. Un suelo mal usado pierde su fertilidad en pocos años, afectando directamente la economía cafetera de Sevilla. La capa de conflictos usa la escala CORINE 1:50.000 del IGAC.",
+  "descripcion": "Hay conflicto de uso cuando lo que se hace en una tierra no coincide con lo que esa tierra puede soportar según su vocación. El IGAC compara el uso actual con la vocación de uso y clasifica el territorio en tres grandes situaciones: uso adecuado o sin conflicto, cuando ambos coinciden; subutilización, cuando la tierra se usa con menos intensidad de la que podría soportar; y sobreutilización, cuando se le exige más de lo que aguanta, por ejemplo con cultivos limpios o ganadería en laderas que deberían tener bosque. Esta capa muestra el mapa nacional de conflictos de uso del IGAC (2012) a escala 1:100.000; al acercarte a Sevilla podrás ver dónde predomina cada situación.",
+  "importancia": "La sobreutilización de laderas empinadas acelera la erosión: la lluvia arrastra el suelo fértil, que puede tardar siglos en formarse, y lo lleva a las quebradas, donde enturbia el agua. A largo plazo esto reduce la productividad de las fincas y aumenta el riesgo de deslizamientos. La subutilización, en cambio, puede significar oportunidades productivas desaprovechadas. Entender los conflictos de uso ayuda a planear el territorio: decidir dónde producir, dónde restaurar y dónde conservar.",
   "preguntas_reflexivas": [
-    "¿Qué cultivos o usos del suelo conoces en tu vereda? ¿Son apropiados para la zona?",
-    "¿Cómo se relaciona la deforestación con la erosión del suelo?",
-    "¿Qué ocurre con los cafetales cuando el suelo pierde nutrientes?",
-    "¿Qué alternativas productivas reducirían los conflictos de uso en Sevilla?"
+    "¿Qué usos de la tierra conoces en tu vereda? ¿Crees que son adecuados para el terreno?",
+    "¿Cómo se relaciona la deforestación de las laderas con la erosión del suelo?",
+    "¿Qué diferencia hay entre sobreutilizar y subutilizar una tierra? Da un ejemplo de cada caso.",
+    "¿Qué alternativas productivas podrían reducir los conflictos de uso en Sevilla?"
   ],
   "vocabulario": [
     {
-      "termino": "Vocación del suelo",
-      "definicion": "Uso más apropiado para un terreno según sus características físicas, climáticas y ecológicas naturales."
+      "termino": "Vocación de uso",
+      "definicion": "Uso más apropiado para una tierra según sus características de suelo, clima y relieve."
+    },
+    {
+      "termino": "Uso actual",
+      "definicion": "Actividad que se desarrolla hoy en un terreno, como cultivos, pastos, bosque o vivienda."
+    },
+    {
+      "termino": "Sobreutilización",
+      "definicion": "Conflicto en el que el uso actual es más intenso que el que la tierra puede soportar, lo que la degrada."
+    },
+    {
+      "termino": "Subutilización",
+      "definicion": "Conflicto en el que el uso actual es menos intenso que el que la tierra podría soportar sin degradarse."
     },
     {
       "termino": "Erosión",
-      "definicion": "Desgaste y arrastre de las capas superficiales del suelo por el agua o el viento, acelerado por la deforestación."
-    },
-    {
-      "termino": "CORINE Land Cover",
-      "definicion": "Sistema de clasificación de coberturas del suelo adoptado en Colombia para mapear y monitorizar los cambios en el uso de la tierra."
-    },
-    {
-      "termino": "Uso potencial",
-      "definicion": "El uso que maximiza la productividad de un terreno sin degradarlo, según sus condiciones naturales."
-    },
-    {
-      "termino": "IGAC",
-      "definicion": "Instituto Geográfico Agustín Codazzi, entidad colombiana responsable de la cartografía y el catastro nacional."
+      "definicion": "Desgaste y arrastre del suelo por el agua o el viento; se acelera cuando el suelo pierde su cobertura vegetal, sobre todo en pendientes fuertes."
     }
   ],
   "galeria": [
     {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Colinas_cafeteras.JPG/1280px-Colinas_cafeteras.JPG",
+      "titulo": "Laderas de Sevilla con cafetales, potreros y bosque",
+      "credito": "Paco Godoy · CC BY-SA 3.0 · Wikimedia Commons"
+    },
+    {
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/El_%C3%81guila_%287%29%2C_Valle%2C_Colombia.JPG/1280px-El_%C3%81guila_%287%29%2C_Valle%2C_Colombia.JPG",
-      "titulo": "Paisaje rural con usos del suelo, El Águila, Valle",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Cafetales%2C_en_Colombia.jpg",
-      "titulo": "Cafetales en laderas colombianas, uso agrícola del suelo",
-      "credito": "CC-BY-SA Wikimedia Commons"
-    },
-    {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Paisaje_monta%C3%B1oso_Andino.jpg/1280px-Paisaje_monta%C3%B1oso_Andino.jpg",
-      "titulo": "Conflictos de uso del suelo en paisaje andino",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "titulo": "Zona cafetera de ladera en El Águila, norte del Valle del Cauca",
+      "credito": "Hoako · CC BY-SA 3.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "sJ25zmwBIE4",
-      "titulo": "Conflictos de uso del suelo"
+      "titulo": "Conflictos de uso de suelo — Ecosistema de Recursos Educativos Digitales SENA"
     },
     {
       "youtube_id": "OXC0sT_P5jw",
-      "titulo": "IDEAM: cooperación contra desertificación y degradación de suelos"
+      "titulo": "Ideam lidera cooperación internacional contra la desertificación y degradación de suelos en Colombia — IDEAM Colombia"
     }
   ],
-  "fuente_datos": "IGAC – Conflictos de uso de la tierra en Colombia 2012, escala 1:100.000 (servicio WMS)",
-  "nivel_educativo": "Básica secundaria (grados 8–11)"
+  "fuente_datos": "IGAC (2012) – Conflictos de uso del territorio colombiano, escala 1:100.000 (servicio WMS)",
+  "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

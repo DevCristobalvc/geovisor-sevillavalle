@@ -2,63 +2,59 @@
   "id": "biodiversidad_ecosistemas",
   "titulo": "Ecosistemas y Fragmentación",
   "categoria": "biodiversidad",
-  "descripcion": "Un ecosistema es la unidad funcional de la naturaleza formada por la comunidad de seres vivos (plantas, animales, hongos, microorganismos) y el ambiente físico (suelo, agua, clima, luz) en el que viven, y las relaciones que existen entre todos ellos. En Sevilla, el territorio alberga tres grandes tipos de ecosistemas determinados principalmente por la altitud: el páramo (por encima de los 3.000 metros), el bosque andino (entre 1.500 y 3.000 metros) y el bosque seco tropical (por debajo de los 1.000 metros en las zonas más bajas). Cada uno de estos ecosistemas tiene una composición de especies, condiciones climáticas y funciones ecológicas particulares e irremplazables. Sin embargo, todos estos ecosistemas han sufrido un proceso de fragmentación severa: es decir, la acción humana (principalmente la agricultura, la ganadería y la urbanización) los ha reducido y dividido en parches o fragmentos más pequeños y aislados entre sí. El índice de fragmentación mide cuán dividido y aislado está un ecosistema, en una escala de 1 a 5, donde 1 indica poco fragmentado (ecosistema bien conservado y continuo) y 5 indica altamente fragmentado (parches pequeños y muy aislados). Un bosque altamente fragmentado no puede mantener las mismas poblaciones de animales y plantas que un bosque continuo: las especies grandes como el jaguar, el oso de anteojos y el águila de cresta necesitan grandes extensiones de hábitat para sobrevivir. Los corredores de conectividad son franjas de vegetación que unen los fragmentos y permiten el movimiento de los animales entre ellos.",
-  "importancia": "La fragmentación de los ecosistemas es una de las principales causas de pérdida de biodiversidad en Colombia y en el mundo. Cuando un bosque se divide en parches aislados, las poblaciones de animales quedan atrapadas en espacios cada vez más pequeños, con menos alimento, menos individuos para reproducirse y mayor riesgo de enfermedades. Con el tiempo, estas poblaciones pequeñas se extinguen localmente, empobreciendo irreversiblemente el ecosistema. Los corredores de conectividad son una solución fundamental: permiten que los animales se muevan entre fragmentos, busquen pareja, colonicen nuevos hábitats y que las plantas intercambien semillas, manteniendo vivos los procesos ecológicos esenciales. Entender la fragmentación y actuar para reducirla es uno de los mayores retos ambientales de Sevilla.",
+  "descripcion": "Un ecosistema es el conjunto de seres vivos de un lugar, el ambiente físico en el que viven (suelo, agua, clima) y las relaciones entre ellos. La CVC clasifica los ecosistemas del Valle del Cauca combinando el clima, el relieve y el suelo; por eso sus nombres describen esas tres cosas, como «bosque frío húmedo en montaña fluvio-gravitacional», el ecosistema de varios predios de protección del agua en Sevilla. Por su rango de altitud —desde menos de 1.000 m en el extremo occidental hasta más de 4.000 m en el suroriente—, Sevilla reúne ecosistemas muy distintos: bosques de montaña, páramos y un enclave seco. En paisajes transformados por la ganadería, los cultivos y las vías, los bosques suelen quedar divididos en parches más pequeños y aislados: a eso se le llama fragmentación.",
+  "importancia": "La fragmentación es una de las principales causas de pérdida de biodiversidad. En parches pequeños y aislados, las poblaciones de animales y plantas tienen menos alimento, menos parejas para reproducirse y más riesgo de desaparecer localmente. Los corredores de vegetación —cercas vivas, bosques en las orillas de las quebradas, árboles en los potreros— permiten que la fauna y las semillas se muevan entre fragmentos. Por eso el DRMI de Sevilla se planteó como un área que conecta ecosistemas de distintas altitudes, desde el páramo hasta el enclave seco.",
   "preguntas_reflexivas": [
-    "¿Por qué un animal grande como el oso de anteojos no puede sobrevivir en un parche de bosque muy pequeño?",
-    "¿Cómo pueden las cercas vivas y los árboles en los potreros funcionar como corredores de conectividad para las aves?",
-    "¿Cuál de los tres ecosistemas de Sevilla (páramo, bosque andino o bosque seco) crees que está más fragmentado y por qué?",
-    "¿Qué medidas concretas podrías tomar en tu finca o vereda para reducir la fragmentación del bosque?"
+    "¿Por qué un animal que necesita grandes territorios no puede sobrevivir en un parche de bosque muy pequeño?",
+    "¿Cómo pueden las cercas vivas y los árboles en los potreros funcionar como corredores para las aves?",
+    "Busca en el mapa un ecosistema de Sevilla y explica qué te dice su nombre sobre su clima, su relieve y su suelo.",
+    "¿Qué medidas podría tomar una finca o una vereda para reducir la fragmentación del bosque?"
   ],
   "vocabulario": [
     {
       "termino": "Ecosistema",
-      "definicion": "Sistema formado por todos los seres vivos de un lugar (biocenosis) y el ambiente físico que los rodea (biotopo), incluyendo todas las interacciones entre ellos como la cadena alimentaria, la polinización y la descomposición."
+      "definicion": "Sistema formado por los seres vivos de un lugar, el ambiente físico que los rodea y las relaciones entre ellos, como la alimentación, la polinización y la descomposición."
     },
     {
       "termino": "Fragmentación",
-      "definicion": "Proceso por el cual un ecosistema continuo es dividido en partes más pequeñas y aisladas por actividades humanas como la deforestación, la construcción de carreteras o la expansión agrícola."
+      "definicion": "Proceso por el cual un ecosistema continuo queda dividido en partes más pequeñas y aisladas por la deforestación, las vías o la expansión agropecuaria."
     },
     {
       "termino": "Corredor de conectividad",
-      "definicion": "Franja de vegetación nativa que conecta dos fragmentos de hábitat, permitiendo el movimiento de animales y el flujo de genes entre poblaciones de plantas y animales que de otro modo quedarían aisladas."
+      "definicion": "Franja de vegetación que une dos fragmentos de hábitat y permite el paso de animales y el intercambio de semillas entre poblaciones."
     },
     {
-      "termino": "Índice de fragmentación",
-      "definicion": "Medida numérica (en escala 1-5) que cuantifica el grado de división y aislamiento de un ecosistema. Un índice 1 corresponde a un ecosistema poco fragmentado y 5 a uno muy fragmentado y degradado."
+      "termino": "Montaña fluvio-gravitacional",
+      "definicion": "Relieve de montaña modelado por la acción de los ríos y por la gravedad, que provoca deslizamientos y caída de materiales en las laderas."
     },
     {
       "termino": "Extinción local",
-      "definicion": "Desaparición de una especie de un área geográfica específica (como un municipio o una cuenca) aunque la especie siga existiendo en otras partes del mundo. También llamada extirpación."
+      "definicion": "Desaparición de una especie en un área determinada, como un municipio o una cuenca, aunque siga existiendo en otros lugares."
     }
   ],
   "galeria": [
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bosque_andino_colombiano_antioquia.jpg",
-      "titulo": "Ecosistema de bosque andino colombiano",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cobertura_de_frailejones_en_los_pajonales_del_Parque_Los_Nevados.jpg/1280px-Cobertura_de_frailejones_en_los_pajonales_del_Parque_Los_Nevados.jpg",
+      "titulo": "Páramo con frailejones en la cordillera Central (PNN Los Nevados)",
+      "credito": "Johan Andrés Toro · CC BY-SA 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Selva_h%C3%BAmeda_tropical_de_Guapi.jpg/1280px-Selva_h%C3%BAmeda_tropical_de_Guapi.jpg",
-      "titulo": "Selva húmeda tropical, ecosistema colombiano",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Subiendo_al_P%C3%A1ramo_de_las_Hermosas.jpg/1280px-Subiendo_al_P%C3%A1ramo_de_las_Hermosas.jpg",
+      "titulo": "Bosque altoandino en el ascenso al páramo de Las Hermosas (Valle del Cauca)",
+      "credito": "Carolaragon68 · CC BY-SA 4.0 · Wikimedia Commons"
     },
     {
-      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Biodiversidad_pura_y_viva_2019-05-16_at_5.56.44_PM.jpg",
-      "titulo": "Biodiversidad de ecosistemas colombianos",
-      "credito": "CC-BY-SA Wikimedia Commons"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Desde_el_mirador_Alto_de_la_Cruz_Sevilla_16.jpg/1280px-Desde_el_mirador_Alto_de_la_Cruz_Sevilla_16.jpg",
+      "titulo": "Parches de bosque entre cultivos y potreros, Sevilla",
+      "credito": "Remux · CC BY-SA 4.0 · Wikimedia Commons"
     }
   ],
   "videos": [
     {
       "youtube_id": "DBTtxpEGM4o",
-      "titulo": "Parques Nacionales de Colombia — conócelos y valóralos"
-    },
-    {
-      "youtube_id": "gRqCA7e2XrE",
-      "titulo": "Parques Nacionales Naturales de Colombia"
+      "titulo": "Parques Nacionales Naturales de Colombia ¡Conócelos, valóralos, protégelos! — Parques Nacionales Naturales de Colombia"
     }
   ],
-  "fuente_datos": "Instituto Humboldt – Mapa de Ecosistemas Continentales Costeros y Marinos de Colombia 2017; IDEAM – Análisis de Fragmentación de Ecosistemas; CVC – Plan de Gestión Ambiental Regional 2015–2036",
+  "fuente_datos": "CVC – Ecosistemas del Valle del Cauca (servicio WMS, Portal GeoCVC) y Predios Art. 111; CVC – Acuerdo CD 061 de 2022 (DRMI); IDEAM y otros (2017) – Mapa de Ecosistemas Continentales, Costeros y Marinos de Colombia; NASA – Modelo de elevación SRTM (rango altitudinal)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }
