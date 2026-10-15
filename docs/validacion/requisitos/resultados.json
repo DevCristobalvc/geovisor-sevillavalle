@@ -4,22 +4,22 @@
   "resultados": {
     "RF-01": {
       "estado": "Cumple",
-      "medicion": "primera tesela en 1156 ms · zoom responde en 6 ms · rango 10–18: sí",
+      "medicion": "primera tesela en 1125 ms · zoom responde en 11 ms · rango 10–18: sí",
       "nota": "Medido con la conexión del equipo de prueba, no con un enlace de 10 Mbps controlado"
     },
     "RF-02": {
       "estado": "Cumple",
-      "medicion": "6 categorías · aparece en 109 ms (incluye descargar el GeoJSON) · desaparece en 3 ms · categoría Agua activa 6/6 capas",
+      "medicion": "6 categorías · aparece en 210 ms (incluye descargar el GeoJSON) · desaparece en 4 ms · categoría Agua activa 6/6 capas",
       "nota": ""
     },
     "RF-03": {
       "estado": "Cumple",
-      "medicion": "5 cambios de opacidad · peor caso 1.3 ms (un cuadro a 60 fps = 16,7 ms)",
+      "medicion": "5 cambios de opacidad · peor caso 1.2 ms (un cuadro a 60 fps = 16,7 ms)",
       "nota": ""
     },
     "RF-04": {
       "estado": "Parcial",
-      "medicion": "GetLegendGraphic del IDEAM en 416 ms · leyenda visible al activar la capa: no",
+      "medicion": "GetLegendGraphic del IDEAM en 1019 ms · leyenda visible al activar la capa: no",
       "nota": "En las capas WMS la leyenda se abre con el botón \"Ver leyenda\"; las GeoJSON muestran su color junto al nombre"
     },
     "RF-05": {
@@ -29,17 +29,17 @@
     },
     "RF-06": {
       "estado": "Cumple",
-      "medicion": "mediana de 3 cambios: Satélite 29 ms · Topográfico 22 ms · Callejero 18 ms · capas activas conservadas: sí",
+      "medicion": "mediana de 3 cambios: Satélite 22 ms · Topográfico 26 ms · Callejero 17 ms · capas activas conservadas: sí",
       "nota": ""
     },
     "RF-07": {
       "estado": "Parcial",
-      "medicion": "popup GeoJSON en 13 ms · 3 atributos · botón de ficha: sí · GetFeatureInfo WMS: no implementado",
+      "medicion": "popup GeoJSON en 15 ms · 3 atributos · botón de ficha: sí · GetFeatureInfo WMS: no implementado",
       "nota": "Las 7 capas WMS solo tienen leyenda; no consultan atributos al clic"
     },
     "RF-08": {
       "estado": "Cumple",
-      "medicion": "sugerencias 829 ms después de la última tecla (escritura 372 ms) · vuelo al lugar: 1227 ms",
+      "medicion": "sugerencias 826 ms después de la última tecla (escritura 372 ms) · vuelo al lugar: 1228 ms",
       "nota": "Incluye la espera de 400 ms antes de consultar Nominatim (servicio externo)"
     },
     "RF-09": {
@@ -69,7 +69,7 @@
     },
     "RF-14": {
       "estado": "Parcial",
-      "medicion": "Siguiente/Anterior: sí · vuelo a la parada en 1434 ms (SRS: 800 ms ± 200)",
+      "medicion": "Siguiente/Anterior: sí · vuelo a la parada en 1427 ms (SRS: 800 ms ± 200)",
       "nota": "El uso sin conexión se verifica en RF-19"
     },
     "RF-15": {
@@ -84,7 +84,7 @@
     },
     "RF-17": {
       "estado": "Parcial",
-      "medicion": "PNG descargado en 1461 ms · 1416 × 780 px (ventana de 1440 × 900)",
+      "medicion": "PNG descargado en 1095 ms · 1416 × 780 px (ventana de 1440 × 900)",
       "nota": "La imagen tiene el tamaño del mapa en pantalla; no alcanza 1920 × 1080"
     },
     "RF-18": {
@@ -93,8 +93,8 @@
       "nota": ""
     },
     "RF-19": {
-      "estado": "Parcial",
-      "medicion": "571 teselas precargadas · sin conexión: inicio abre, enlace directo al visor no abre, visor desde el menú abre · en z13: 21 elementos GeoJSON, 4 teselas OSM cargadas y 41 sin cargar · aviso WMS: sí",
+      "estado": "Cumple",
+      "medicion": "571 teselas precargadas · sin conexión: inicio abre, enlace directo al visor abre, visor desde el menú abre · en z13: 21 elementos GeoJSON, 35 teselas OSM cargadas y 0 sin cargar dentro de la zona precargada · aviso WMS: sí",
       "nota": ""
     },
     "RF-20": {
