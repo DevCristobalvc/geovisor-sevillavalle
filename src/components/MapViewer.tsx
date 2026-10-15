@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import {
   MapContainer,
   TileLayer,
@@ -221,6 +221,8 @@ function GeoJSONLayer({
     return () => window.removeEventListener(`zoomToLayer:${layer.id}`, handler)
   }, [map, data, layer.id])
 
+  const puntos = useMemo(() => agruparPorPunto(data), [data])
+
   if (!data) return null
 
   const style: Partial<LayerStyle> = layer.estilo ?? {}
@@ -250,7 +252,12 @@ function GeoJSONLayer({
           path.setStyle({ fillOpacity: (style.fillOpacity ?? 0.45) * opacity })
         )
         if (feature.properties) {
-          const popupContent = buildPopupContent(feature, layer)
+          // Si otros puntos de la capa caen en el mismo sitio, la ventana los muestra todos
+          const enElPunto =
+            feature.geometry?.type === 'Point'
+              ? puntos.get(feature.geometry.coordinates.join(','))
+              : undefined
+          const popupContent = buildPopupContent(enElPunto ?? [feature], layer)
           leafletLayer.bindPopup(popupContent, { maxWidth: 320 })
         }
       }}
@@ -320,16 +327,39 @@ function formatear(valor: unknown): string {
   return escapeHtml(valor)
 }
 
-function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string {
+/** Agrupa los puntos de una capa que comparten coordenadas exactas. */
+function agruparPorPunto(data: GeoJSON.FeatureCollection | null): Map<string, GeoJSON.Feature[]> {
+  const grupos = new Map<string, GeoJSON.Feature[]>()
+  for (const f of data?.features ?? []) {
+    if (f.geometry?.type !== 'Point') continue
+    const clave = f.geometry.coordinates.join(',')
+    grupos.set(clave, [...(grupos.get(clave) ?? []), f])
+  }
+  return grupos
+}
+
+function filasAtributos(feature: GeoJSON.Feature, layer: LayerConfig): string {
   const props = feature.properties ?? {}
   const atributos = layer.atributosPopup ?? Object.keys(props).slice(0, 4)
-  const rows = atributos
+  return atributos
     .filter(k => props[k] != null)
     .map(
       k =>
         `<tr><td class="text-muted pr-2 text-[11px] align-top">${escapeHtml(etiqueta(k))}</td><td class="text-[11px] font-semibold">${formatear(props[k])}</td></tr>`
     )
     .join('')
+}
+
+function buildPopupContent(features: GeoJSON.Feature[], layer: LayerConfig): string {
+  const tablas = features
+    .map(f => filasAtributos(f, layer))
+    .filter(Boolean)
+    .map(rows => `<table class="w-full">${rows}</table>`)
+    .join('<hr class="popup-separador" />')
+  const varios =
+    features.length > 1
+      ? `<div class="popup-fuente">${features.length} registros en este mismo punto</div>`
+      : ''
 
   const thumbnail = layer.miniatura
     ? `<img src="${layer.miniatura}" alt="Miniatura de ${escapeHtml(layer.nombre)}" style="width:100%;height:80px;object-fit:cover;border-radius:4px;margin-bottom:8px" onerror="this.style.display='none'" />`
@@ -344,7 +374,8 @@ function buildPopupContent(feature: GeoJSON.Feature, layer: LayerConfig): string
       ${thumbnail}
       <div class="popup-titulo"><span style="display:inline-block;width:9px;height:9px;margin-right:6px;border:1px solid currentColor;background:${layer.estilo?.fillColor ?? layer.estilo?.color ?? '#2F6B1F'}"></span>${escapeHtml(layer.nombre)}</div>
       ${ilustrativo}
-      ${rows ? `<table class="w-full">${rows}</table>` : ''}
+      ${varios}
+      ${tablas}
       <div class="popup-fuente">Fuente: ${escapeHtml(layer.fuente.entidad)}</div>
       <button
         class="popup-btn"

@@ -218,6 +218,9 @@
   .popup-fuente {
     @apply mt-1.5 text-[10px] text-muted;
   }
+  .popup-separador {
+    @apply my-1.5 border-t border-line-soft;
+  }
   .popup-btn {
     @apply mt-2 w-full rounded-md border-2 border-line bg-accent px-2 py-1 text-xs font-semibold text-on-accent;
   }

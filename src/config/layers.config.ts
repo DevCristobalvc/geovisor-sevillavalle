@@ -109,9 +109,9 @@ export const LAYERS: LayerConfig[] = [
     estilo: { color: '#5D4037', fillColor: '#5D4037', fillOpacity: 0.7, weight: 1.5, radius: 8 },
     visibleDefault: false,
     fichaId: 'actores_bosque_andino',
-    atributosPopup: ['nombre', 'categoria', 'rol', 'ambito'],
+    atributosPopup: ['nombre', 'categoria', 'tipologia', 'rol', 'ambito'],
     miniatura: '/images/actores/bosque_andino_thumb.webp',
-    descripcionBreve: 'Entidades públicas registradas por la CVC en Sevilla',
+    descripcionBreve: 'Entidades públicas y actores productivos registrados por la CVC en Sevilla',
     fuente: cvc('Actores sociales del bosque de zona andina'),
   },
   {
