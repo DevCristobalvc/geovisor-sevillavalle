@@ -1,5 +1,13 @@
 # Post-Mortem Sprint v2 — Geovisor Ecopedagógico Sevilla
 
+> **Documento histórico.** Describe el estado del proyecto al cierre del sprint v2 (abril de
+> 2026) y no se actualiza. Sus cifras ya no corresponden a la versión publicada: hoy hay
+> 23 capas (16 GeoJSON y 7 WMS), la medición y la exportación están implementadas, el
+> despliegue es en Vercel y el portal de la CVC es `portal-geo.cvc.gov.co`. Además, su tabla de
+> RF usa una numeración propia que no coincide con el SRS (por ejemplo, aquí "RF-06" es el
+> modo oscuro; en el SRS v2, RF-06 es el selector de mapa base). Para el estado actual ver el
+> [README](README.md) y [`docs/validacion/trazabilidad-rf.md`](docs/validacion/trazabilidad-rf.md).
+
 > **Fecha de cierre:** 2026-04-25  
 > **Rama:** `feature/rf-implementation`  
 > **Autores:** Cristóbal Valencia Cerón · José David Molina Delgado  

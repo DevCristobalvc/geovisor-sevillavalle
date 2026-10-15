@@ -231,7 +231,7 @@ const legImg = await page.locator('aside img[alt^="Leyenda de"]').evaluateAll(el
 ok('Leyenda GetLegendGraphic (IDEAM cobertura) carga', legImg.some(w => w > 0), `anchos: ${legImg.join(',')}`)
 await page.locator('aside[aria-label="Panel de capas geográficas"]').screenshot({ path: SHOTS + '07-leyendas.png' })
 
-// ── 6b. Tema día/noche (RF-06): abre en día, se alterna, dura en la pestaña ──────
+// ── 6b. Tema día/noche (mejora de interfaz; no es un RF del SRS): abre en día, se alterna, dura en la pestaña
 {
   // Visita nueva con el sistema en modo oscuro y una preferencia vieja en localStorage:
   // debe abrir igual en modo día.

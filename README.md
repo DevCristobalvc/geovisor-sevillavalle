@@ -144,7 +144,7 @@ npm run preview      # → http://localhost:4173/
 
 ### End-to-end tests
 
-`tests/e2e/validar.mjs` drives the system Chrome with Playwright and checks ~70 points: home and credits content, the 16 GeoJSON layers (inside the municipality, no personal data, 13 with CVC provenance), shared-link view (RF-18), popups and pedagogical sheets, legends, the 7 WMS services, the day/night theme (RF-06), the 23 sheets (3–5 questions, images only from Wikimedia Commons) and a clean console.
+`tests/e2e/validar.mjs` drives the system Chrome with Playwright and checks ~70 points: home and credits content, the 16 GeoJSON layers (inside the municipality, no personal data, 13 with CVC provenance), shared-link view (RF-18), popups and pedagogical sheets, legends, the 7 WMS services, the day/night theme (an interface addition, not an SRS requirement), the 23 sheets (3–5 questions, images only from Wikimedia Commons) and a clean console.
 
 ```bash
 npm run build && npx vite preview --port 4173      # terminal 1
@@ -215,7 +215,7 @@ geovisor-sevillavalle/
 │   │   ├── useMapLayers.ts      # Layer access + toggle helpers
 │   │   ├── useMediaQuery.ts     # Responsive breakpoint detection
 │   │   ├── useUrlSync.ts        # Serializes map state into query params (RF-18)
-│   │   ├── useTema.ts           # Day/night theme (RF-06): always opens in day mode; night lasts per tab
+│   │   ├── useTema.ts           # Day/night theme (not an SRS RF): always opens in day mode; night lasts per tab
 │   │   └── useOffline.ts        # Online/offline status tracker
 │   ├── sw.ts                    # Service Worker (Workbox injectManifest)
 │   └── types/
@@ -223,7 +223,8 @@ geovisor-sevillavalle/
 │
 ├── docs/                        # User and technical manuals (.docx + .pdf)
 │   ├── generador/               # Scripts and Mermaid sources that build them
-│   └── validacion/              # Lighthouse reports and RF traceability (Phase 3)
+│   ├── validacion/              # Lighthouse reports and RF traceability (Phase 3)
+│   └── wireframes/              # Wireframes of every screen, generated from the live UI
 │
 ├── scripts/
 │   └── datos/                   # build_capas_oficiales.py — rebuilds the 13 official GeoJSON from CVC

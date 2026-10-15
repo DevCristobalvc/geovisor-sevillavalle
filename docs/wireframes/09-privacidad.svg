@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="506" viewBox="0 0 720 506" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="506" fill="#ffffff"/>
+<text x="12" y="24" font-size="15" font-weight="bold" fill="#222">Privacidad</text>
+<text x="12" y="44" font-size="10" fill="#777">Wireframe generado desde https://www.refiup.app · 1440 px de ancho</text>
+<g transform="translate(0 56) scale(0.5)">
+<rect x="0" y="0" width="1440" height="900" fill="#fafafa" stroke="#999" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="64" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="414.671875" y="15" width="362.015625" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="64" width="1440" height="151.25" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="215.25" width="728" height="125.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="360.75" width="728" height="232.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="613.25" width="728" height="209.75" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="843" width="728" height="148.25" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="868" width="1440" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="1269.828125" y="27.5" width="63.515625" height="8" fill="#dddddd" rx="3"/>
+<rect x="336" y="100" width="768" height="8" fill="#dddddd" rx="3"/>
+<rect x="336" y="172.5" width="576" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="277.25" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="300" width="410.4" height="8" fill="#dddddd" rx="3"/>
+<rect x="636.203125" y="301" width="273.84375" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="422.75" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="449.5" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="476.25" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="503" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="529.75" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="552.5" width="410.4" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="675.25" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="706" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="728.75" width="410.4" height="8" fill="#dddddd" rx="3"/>
+<rect x="398" y="707" width="250.53125" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="755.5" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="398" y="756.5" width="287.1875" height="8" fill="#dddddd" rx="3"/>
+<rect x="378" y="782.25" width="684" height="8" fill="#dddddd" rx="3"/>
+<rect x="398" y="783.25" width="192.109375" height="8" fill="#dddddd" rx="3"/>
+<rect x="16" y="882.25" width="39.46875" height="8" fill="#dddddd" rx="3"/>
+<rect x="55.46875" y="881.25" width="144.09375" height="8" fill="#dddddd" rx="3"/>
+<rect x="629.9375" y="880.75" width="185.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="336" y="120.5" width="768" height="40" fill="#f0f0f0" rx="3"/>
+<text x="340" y="147.5" font-size="22" font-weight="bold" fill="#333">Política de privacidad</text>
+<rect x="378" y="237.25" width="684" height="28" fill="#f0f0f0" rx="3"/>
+<text x="382" y="258.25" font-size="19.599999999999998" font-weight="bold" fill="#333">1. Información general</text>
+<rect x="378" y="382.75" width="684" height="28" fill="#f0f0f0" rx="3"/>
+<text x="382" y="403.75" font-size="19.599999999999998" font-weight="bold" fill="#333">2. Datos que NO recopilamos</text>
+<rect x="378" y="635.25" width="684" height="28" fill="#f0f0f0" rx="3"/>
+<text x="382" y="656.25" font-size="19.599999999999998" font-weight="bold" fill="#333">3. Servicios de terceros</text>
+<rect x="1037.828125" y="17" width="224" height="28" fill="#ffffff" stroke="#666" stroke-width="2" rx="4"/>
+<text x="1045.828125" y="36" font-size="14" fill="#999">Buscar lugar en el mapa</text>
+<rect x="414.671875" y="15" width="59.21875" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="444.28125" y="36" font-size="14" fill="#222" text-anchor="middle">Inicio</text>
+<rect x="477.890625" y="15" width="58.109375" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="506.9453125" y="36" font-size="14" fill="#222" text-anchor="middle">Visor</text>
+<rect x="540" y="15" width="96.015625" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="588.0078125" y="36" font-size="14" fill="#222" text-anchor="middle">Recorridos</text>
+<rect x="640.015625" y="15" width="78.6875" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="679.359375" y="36" font-size="14" fill="#222" text-anchor="middle">Glosario</text>
+<rect x="722.703125" y="15" width="53.984375" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="749.6953125" y="36" font-size="14" fill="#222" text-anchor="middle">Guía</text>
+<rect x="1341.34375" y="16.75" width="82.65625" height="28.5" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="1382.671875" y="36" font-size="14" fill="#222" text-anchor="middle">NOCHE</text>
+<rect x="1362.8" y="4" width="71.2" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1368.8" y="18" font-size="13" font-style="italic" fill="#7a7a7a">Cabecera</text>
+<rect x="1362.8" y="68" width="71.2" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1368.8" y="82" font-size="13" font-style="italic" fill="#7a7a7a">Cabecera</text>
+<rect x="1014.2" y="219.25" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1020.2" y="233.25" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+<rect x="1014.2" y="364.75" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1020.2" y="378.75" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+<rect x="1014.2" y="617.25" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1020.2" y="631.25" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+<rect x="1014.2" y="847" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1020.2" y="861" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+</g></svg>

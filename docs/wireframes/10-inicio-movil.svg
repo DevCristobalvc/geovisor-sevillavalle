@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="3447" viewBox="0 0 390 3447" font-family="Arial, Helvetica, sans-serif">
+<rect width="390" height="3447" fill="#ffffff"/>
+<text x="12" y="24" font-size="15" font-weight="bold" fill="#222">Inicio (móvil)</text>
+<text x="12" y="44" font-size="10" fill="#777">Wireframe generado desde https://www.refiup.app · 390 px de ancho</text>
+<g transform="translate(0 56) scale(1)">
+<rect x="0" y="0" width="390" height="3391" fill="#fafafa" stroke="#999" stroke-width="2"/>
+<rect x="0" y="0" width="390" height="64" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="64" width="390" height="1332.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="750.5" width="350" height="590" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="1396.5" width="390" height="716" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="1539" width="169" height="172" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="201" y="1539" width="169" height="172" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="1723" width="169" height="172" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="201" y="1723" width="169" height="172" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="1907" width="169" height="149.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="201" y="1907" width="169" height="149.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="2112.5" width="390" height="839" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="2287" width="350" height="173.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="2476.5" width="350" height="173.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="20" y="2666" width="350" height="173.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="2951.5" width="390" height="823" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="812" width="390" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="52" y="115" width="50.234375" height="8" fill="#dddddd" rx="3"/>
+<rect x="76.90625" y="113" width="25.328125" height="8" fill="#dddddd" rx="3"/>
+<rect x="124.234375" y="113.75" width="168.765625" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="301.5" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="337.5" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="358.3" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="379.1" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="399.9" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="420.7" width="210" height="8" fill="#dddddd" rx="3"/>
+<rect x="34" y="639.5" width="94.65625" height="8" fill="#dddddd" rx="3"/>
+<rect x="34" y="605.5" width="94.65625" height="8" fill="#dddddd" rx="3"/>
+<rect x="154.65625" y="639.5" width="94.671875" height="8" fill="#dddddd" rx="3"/>
+<rect x="154.65625" y="605.5" width="94.671875" height="8" fill="#dddddd" rx="3"/>
+<rect x="275.328125" y="639.5" width="94.65625" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="693.5" width="315.984375" height="8" fill="#dddddd" rx="3"/>
+<rect x="236.359375" y="785" width="115.640625" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="861.5" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="880.5" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="914.5" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="929.625" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="952.75" width="69.203125" height="8" fill="#dddddd" rx="3"/>
+<rect x="264.71875" y="952.75" width="55.640625" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="975.75" width="59.140625" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="1009.875" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="1026.375" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="191.515625" y="1054.375" width="146.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="52" y="1073.5" width="30" height="8" fill="#dddddd" rx="3"/>
+<rect x="272" y="1073.5" width="66" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="1458.5" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="2174.5" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2315" width="30.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2333" width="18.16875" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2397" width="306" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2419.75" width="183.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2504.5" width="36.1875" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2522.5" width="21.7125" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2586.5" width="306" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2609.25" width="183.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2694" width="36.1875" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2712" width="21.7125" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2776" width="306" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="2798.75" width="183.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="2863.5" width="261.90625" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="2883.5" width="166.0625" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="3013.5" width="350" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3152" width="125.015625" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3172" width="125.015625" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3192" width="75.00937499999999" height="8" fill="#dddddd" rx="3"/>
+<rect x="114.375" y="3173" width="52.640625" height="8" fill="#dddddd" rx="3"/>
+<rect x="114.375" y="3191" width="31.584374999999998" height="8" fill="#dddddd" rx="3"/>
+<rect x="179.015625" y="3174" width="109.203125" height="8" fill="#dddddd" rx="3"/>
+<rect x="179.015625" y="3193" width="65.521875" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3224" width="228" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3245" width="228" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3308" width="286" height="8" fill="#dddddd" rx="3"/>
+<rect x="42" y="3355" width="45.5" height="8" fill="#dddddd" rx="3"/>
+<rect x="103.5" y="3355" width="39" height="8" fill="#dddddd" rx="3"/>
+<rect x="158.5" y="3355" width="91" height="8" fill="#dddddd" rx="3"/>
+<rect x="12" y="826.25" width="39.46875" height="8" fill="#dddddd" rx="3"/>
+<rect x="20" y="156" width="350" height="117.5" fill="#f0f0f0" rx="3"/>
+<text x="24" y="221.75" font-size="22" font-weight="bold" fill="#333">Geovisor Ecopedagógico de SEVILLA, VALLE DEL CAU</text>
+<rect x="20" y="1479" width="350" height="32" fill="#f0f0f0" rx="3"/>
+<text x="24" y="1502" font-size="22" font-weight="bold" fill="#333">Seis miradas al territorio</text>
+<rect x="20" y="2195" width="350" height="64" fill="#f0f0f0" rx="3"/>
+<text x="24" y="2234" font-size="22" font-weight="bold" fill="#333">Del mapa a la reflexión, en tres pasos</text>
+<rect x="42" y="2361" width="306" height="28" fill="#f0f0f0" rx="3"/>
+<text x="46" y="2382" font-size="19.599999999999998" font-weight="bold" fill="#333">Explora</text>
+<rect x="42" y="2550.5" width="306" height="28" fill="#f0f0f0" rx="3"/>
+<text x="46" y="2571.5" font-size="19.599999999999998" font-weight="bold" fill="#333">Pregunta</text>
+<rect x="42" y="2740" width="306" height="28" fill="#f0f0f0" rx="3"/>
+<text x="46" y="2761" font-size="19.599999999999998" font-weight="bold" fill="#333">Cuida</text>
+<rect x="20" y="3034" width="350" height="64" fill="#f0f0f0" rx="3"/>
+<text x="24" y="3073" font-size="22" font-weight="bold" fill="#333">Cada capa dice de dónde vienen sus datos</text>
+<rect x="304" y="18" width="34" height="26" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="346" y="15" width="32" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="38" y="1110.5" width="314" height="28" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="195" y="1129.5" font-size="14" fill="#222" text-anchor="middle">▸Área 538 km²</text>
+<rect x="38" y="1139.5" width="314" height="28" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="195" y="1158.5" font-size="14" fill="#222" text-anchor="middle">Corregimientos 16</text>
+<rect x="38" y="1168.5" width="314" height="28" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="195" y="1187.5" font-size="14" fill="#222" text-anchor="middle">Cuencas 4</text>
+<rect x="38" y="1197.5" width="314" height="28" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="195" y="1216.5" font-size="14" fill="#222" text-anchor="middle">Páramos 2 complejos</text>
+<rect x="38" y="1226.5" width="314" height="28" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="195" y="1245.5" font-size="14" fill="#222" text-anchor="middle">Paisaje Cafetero UNESCO 2011</text>
+<rect x="38" y="1266.5" width="28" height="56" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="66" y="1266.5" width="28" height="56" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="147" y="1275.75" width="56" height="37.5" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="175" y="1299.5" font-size="14" fill="#222" text-anchor="middle">PAUSA</text>
+<rect x="256" y="1278.5" width="44" height="44" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="278" y="1305.5" font-size="14" fill="#222" text-anchor="middle">B</text>
+<rect x="308" y="1266.5" width="44" height="44" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="330" y="1293.5" font-size="14" fill="#222" text-anchor="middle">A</text>
+<rect x="312.8" y="4" width="71.2" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="318.8" y="18" font-size="13" font-style="italic" fill="#7a7a7a">Cabecera</text>
+<rect x="320.2" y="68" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="326.2" y="82" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+<rect x="41.19999999999999" y="754.5" width="322.8" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="47.19999999999999" y="768.5" font-size="13" font-style="italic" fill="#7a7a7a">Ficha territorial del municipio de Sevilla</text>
+<rect x="320.2" y="1400.5" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="326.2" y="1414.5" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+<rect x="30.400000000000006" y="1543" width="152.6" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="36.400000000000006" y="1557" font-size="13" font-style="italic" fill="#7a7a7a">Actores Sociales: …</text>
+<rect x="211.4" y="1543" width="152.6" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="217.4" y="1557" font-size="13" font-style="italic" fill="#7a7a7a">Agua: 6 capas. Exp…</text>
+<rect x="30.400000000000006" y="1727" width="152.6" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="36.400000000000006" y="1741" font-size="13" font-style="italic" fill="#7a7a7a">Biodiversidad: 6 c…</text>
+<rect x="211.4" y="1727" width="152.6" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="217.4" y="1741" font-size="13" font-style="italic" fill="#7a7a7a">Cambio Climático: …</text>
+<rect x="30.400000000000006" y="1911" width="152.6" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="36.400000000000006" y="1925" font-size="13" font-style="italic" fill="#7a7a7a">Suelos: 1 capa. Ex…</text>
+<rect x="211.4" y="1911" width="152.6" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="217.4" y="1925" font-size="13" font-style="italic" fill="#7a7a7a">Territorio: 3 capa…</text>
+<rect x="320.2" y="2116.5" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="326.2" y="2130.5" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+<rect x="320.2" y="2955.5" width="63.800000000000004" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="326.2" y="2969.5" font-size="13" font-style="italic" fill="#7a7a7a">Sección</text>
+</g></svg>

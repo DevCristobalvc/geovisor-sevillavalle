@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="506" viewBox="0 0 720 506" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="506" fill="#ffffff"/>
+<text x="12" y="24" font-size="15" font-weight="bold" fill="#222">Glosario</text>
+<text x="12" y="44" font-size="10" fill="#777">Wireframe generado desde https://www.refiup.app · 1440 px de ancho</text>
+<g transform="translate(0 56) scale(0.5)">
+<rect x="0" y="0" width="1440" height="900" fill="#fafafa" stroke="#999" stroke-width="2"/>
+<rect x="0" y="0" width="1440" height="64" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="406.140625" y="15" width="379.09375" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="64" width="1440" height="151.25" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="303.25" width="728" height="116.75" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="432" width="728" height="116.75" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="560.75" width="728" height="162.25" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="735" width="728" height="139.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="356" y="886.5" width="728" height="162.25" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="868" width="1440" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="1269.828125" y="27.5" width="63.515625" height="8" fill="#dddddd" rx="3"/>
+<rect x="336" y="100" width="768" height="8" fill="#dddddd" rx="3"/>
+<rect x="336" y="172.5" width="576" height="8" fill="#dddddd" rx="3"/>
+<rect x="356" y="279.25" width="728" height="8" fill="#dddddd" rx="3"/>
+<rect x="1022.1875" y="325.25" width="43.8125" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="357.25" width="692" height="8" fill="#dddddd" rx="3"/>
+<rect x="1022.1875" y="454" width="43.8125" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="486" width="692" height="8" fill="#dddddd" rx="3"/>
+<rect x="971.25" y="582.75" width="94.75" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="614.75" width="692" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="637.5" width="692" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="660.25" width="415.2" height="8" fill="#dddddd" rx="3"/>
+<rect x="971.25" y="757" width="94.75" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="789" width="692" height="8" fill="#dddddd" rx="3"/>
+<rect x="374" y="811.75" width="415.2" height="8" fill="#dddddd" rx="3"/>
+<rect x="16" y="882.25" width="39.46875" height="8" fill="#dddddd" rx="3"/>
+<rect x="55.46875" y="881.25" width="144.09375" height="8" fill="#dddddd" rx="3"/>
+<rect x="629.9375" y="880.75" width="185.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="336" y="120.5" width="768" height="40" fill="#f0f0f0" rx="3"/>
+<text x="340" y="147.5" font-size="22" font-weight="bold" fill="#333">Glosario</text>
+<rect x="374" y="321.25" width="183.859375" height="28" fill="#f0f0f0" rx="3"/>
+<text x="378" y="342.25" font-size="19.599999999999998" font-weight="bold" fill="#333">Cuenca hidrográfica</text>
+<rect x="374" y="450" width="59.984375" height="28" fill="#f0f0f0" rx="3"/>
+<text x="378" y="471" font-size="19.599999999999998" font-weight="bold" fill="#333">Caudal</text>
+<rect x="374" y="578.75" width="70.25" height="28" fill="#f0f0f0" rx="3"/>
+<text x="378" y="599.75" font-size="19.599999999999998" font-weight="bold" fill="#333">Páramo</text>
+<rect x="374" y="753" width="125.84375" height="28" fill="#f0f0f0" rx="3"/>
+<text x="378" y="774" font-size="19.599999999999998" font-weight="bold" fill="#333">Bosque andino</text>
+<rect x="1037.828125" y="17" width="224" height="28" fill="#ffffff" stroke="#666" stroke-width="2" rx="4"/>
+<text x="1045.828125" y="36" font-size="14" fill="#999">Buscar lugar en el mapa</text>
+<rect x="356" y="215.25" width="728" height="40" fill="#ffffff" stroke="#666" stroke-width="2" rx="4"/>
+<text x="364" y="240.25" font-size="14" fill="#999">Buscar en el glosario</text>
+<rect x="406.140625" y="15" width="59.21875" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="435.75" y="36" font-size="14" fill="#222" text-anchor="middle">Inicio</text>
+<rect x="469.359375" y="15" width="58.109375" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="498.4140625" y="36" font-size="14" fill="#222" text-anchor="middle">Visor</text>
+<rect x="531.46875" y="15" width="96.015625" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="579.4765625" y="36" font-size="14" fill="#222" text-anchor="middle">Recorridos</text>
+<rect x="631.484375" y="15" width="95.765625" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="679.3671875" y="36" font-size="14" fill="#222" text-anchor="middle">▸ Glosario</text>
+<rect x="731.25" y="15" width="53.984375" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="758.2421875" y="36" font-size="14" fill="#222" text-anchor="middle">Guía</text>
+<rect x="1341.34375" y="16.75" width="82.65625" height="28.5" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="1382.671875" y="36" font-size="14" fill="#222" text-anchor="middle">NOCHE</text>
+<rect x="1362.8" y="4" width="71.2" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1368.8" y="18" font-size="13" font-style="italic" fill="#7a7a7a">Cabecera</text>
+<rect x="1362.8" y="68" width="71.2" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1368.8" y="82" font-size="13" font-style="italic" fill="#7a7a7a">Cabecera</text>
+</g></svg>

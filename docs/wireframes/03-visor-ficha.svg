@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="506" viewBox="0 0 720 506" font-family="Arial, Helvetica, sans-serif">
+<rect width="720" height="506" fill="#ffffff"/>
+<text x="12" y="24" font-size="15" font-weight="bold" fill="#222">Visor: ventana emergente y ficha pedagógica</text>
+<text x="12" y="44" font-size="10" fill="#777">Wireframe generado desde https://www.refiup.app · 1440 px de ancho</text>
+<g transform="translate(0 56) scale(0.5)">
+<rect x="0" y="0" width="1440" height="900" fill="#fafafa" stroke="#999" stroke-width="2"/>
+<rect x="12" y="76" width="1416" height="780" fill="#e6e6e6" stroke="#777" stroke-width="2"/>
+<path d="M12 76 L1428 856 M1428 76 L12 856" stroke="#cfcfcf" stroke-width="2"/>
+<text x="720" y="124" font-size="28" fill="#666" text-anchor="middle">Mapa (Leaflet)</text>
+<rect x="0" y="0" width="1440" height="64" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="406.15625" y="15" width="379.046875" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="12" y="76" width="320" height="780" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="1028" y="76" width="400" height="780" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="0" y="868" width="1440" height="32" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="653" y="425.5" width="255" height="170.5" fill="#fafafa" stroke="#9a9a9a" stroke-width="2" stroke-dasharray="8 5" rx="6"/>
+<rect x="1269.828125" y="27.5" width="63.515625" height="8" fill="#dddddd" rx="3"/>
+<rect x="243.0625" y="100" width="70.9375" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="256" width="18" height="8" fill="#dddddd" rx="3"/>
+<rect x="100" y="253" width="153.546875" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="273" width="214" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="289.5" width="128.4" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="310" width="76.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="331" width="56" height="8" fill="#dddddd" rx="3"/>
+<rect x="286" y="331" width="32" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="365" width="18" height="8" fill="#dddddd" rx="3"/>
+<rect x="100" y="362" width="77.328125" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="382" width="242" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="398.5" width="145.2" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="419" width="91.828125" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="453" width="18" height="8" fill="#dddddd" rx="3"/>
+<rect x="100" y="450" width="75.40625" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="470" width="242" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="486.5" width="145.2" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="507" width="76.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="541" width="18" height="8" fill="#dddddd" rx="3"/>
+<rect x="96" y="538" width="113.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="558" width="246" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="574.5" width="147.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="595" width="76.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="629" width="18" height="8" fill="#dddddd" rx="3"/>
+<rect x="96" y="626" width="154.796875" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="646" width="246" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="662.5" width="147.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="72" y="683" width="76.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="717" width="18" height="8" fill="#dddddd" rx="3"/>
+<rect x="100" y="714" width="171.671875" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="734" width="242" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="750.5" width="145.2" height="8" fill="#dddddd" rx="3"/>
+<rect x="76" y="771" width="76.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="12" y="825.5" width="318" height="8" fill="#dddddd" rx="3"/>
+<rect x="12" y="842.75" width="190.79999999999998" height="8" fill="#dddddd" rx="3"/>
+<rect x="672" y="444.5" width="217" height="8" fill="#dddddd" rx="3"/>
+<rect x="672" y="472.5" width="120.953125" height="8" fill="#dddddd" rx="3"/>
+<rect x="792.953125" y="472.5" width="96.046875" height="8" fill="#dddddd" rx="3"/>
+<rect x="672" y="491" width="120.953125" height="8" fill="#dddddd" rx="3"/>
+<rect x="792.953125" y="491" width="96.046875" height="8" fill="#dddddd" rx="3"/>
+<rect x="672" y="509.5" width="120.953125" height="8" fill="#dddddd" rx="3"/>
+<rect x="792.953125" y="509.5" width="96.046875" height="8" fill="#dddddd" rx="3"/>
+<rect x="672" y="534" width="217" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="92" width="322.28125" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="142" width="94.765625" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="241.25" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="278.21875" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="315.1875" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="352.15625" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="389.125" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="426.09375" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="463.0625" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="500.03125" width="219.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="589" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="614.59375" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="640.1875" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="665.78125" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="691.375" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="716.96875" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="742.5625" width="366" height="8" fill="#dddddd" rx="3"/>
+<rect x="1046" y="768.15625" width="219.6" height="8" fill="#dddddd" rx="3"/>
+<rect x="16" y="882.25" width="39.46875" height="8" fill="#dddddd" rx="3"/>
+<rect x="55.46875" y="881.25" width="144.09375" height="8" fill="#dddddd" rx="3"/>
+<rect x="629.9375" y="880.75" width="185.484375" height="8" fill="#dddddd" rx="3"/>
+<rect x="28" y="88" width="170.671875" height="28" fill="#f0f0f0" rx="3"/>
+<text x="32" y="109" font-size="19.599999999999998" font-weight="bold" fill="#333">Capas geográficas</text>
+<rect x="1046" y="105" width="322.28125" height="25" fill="#f0f0f0" rx="3"/>
+<text x="1050" y="124.5" font-size="17.5" font-weight="bold" fill="#333">Cuencas Hidrográficas de Sevilla</text>
+<rect x="1046" y="553" width="366" height="24" fill="#f0f0f0" rx="3"/>
+<text x="1050" y="572" font-size="16.799999999999997" font-weight="bold" fill="#333">¿Por qué es importante?</text>
+<rect x="1060" y="823.75" width="338" height="24" fill="#f0f0f0" rx="3"/>
+<text x="1064" y="842.75" font-size="16.799999999999997" font-weight="bold" fill="#333">Misión: preguntas para reflexionar</text>
+<rect x="1037.828125" y="17" width="224" height="28" fill="#ffffff" stroke="#666" stroke-width="2" rx="4"/>
+<text x="1045.828125" y="36" font-size="14" fill="#999">Buscar lugar en el mapa</text>
+<rect x="24" y="158" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="207" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="253" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="362" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="450" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="538" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="626" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="24" y="714" width="16" height="16" fill="#fff" stroke="#555" stroke-width="2" rx="2"/>
+<rect x="406.15625" y="15" width="59.21875" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="435.765625" y="36" font-size="14" fill="#222" text-anchor="middle">Inicio</text>
+<rect x="469.375" y="15" width="75.140625" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="506.9453125" y="36" font-size="14" fill="#222" text-anchor="middle">▸ Visor</text>
+<rect x="548.515625" y="15" width="96.015625" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="596.5234375" y="36" font-size="14" fill="#222" text-anchor="middle">Recorridos</text>
+<rect x="648.53125" y="15" width="78.6875" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="687.875" y="36" font-size="14" fill="#222" text-anchor="middle">Glosario</text>
+<rect x="731.21875" y="15" width="53.984375" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="758.2109375" y="36" font-size="14" fill="#222" text-anchor="middle">Guía</text>
+<rect x="1341.34375" y="16.75" width="82.65625" height="28.5" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="1382.671875" y="36" font-size="14" fill="#222" text-anchor="middle">NOCHE</text>
+<rect x="342" y="88" width="30" height="30" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="44" y="144" width="286" height="48" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="187" y="173" font-size="14" fill="#222" text-anchor="middle">Actores Sociales ▶</text>
+<rect x="44" y="193" width="286" height="48" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="187" y="222" font-size="14" fill="#222" text-anchor="middle">Agua 1 ▶</text>
+<rect x="300" y="251" width="18" height="18" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="44" y="897" width="286" height="48" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="187" y="926" font-size="14" fill="#222" text-anchor="middle">Suelos ▶</text>
+<rect x="1386" y="88" width="26" height="26" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<rect x="1042" y="189.25" width="73.46875" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="1078.734375" y="210.25" font-size="14" fill="#222" text-anchor="middle">▸ Ficha</text>
+<rect x="1119.46875" y="189.25" width="69" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="1153.96875" y="210.25" font-size="14" fill="#222" text-anchor="middle">Galería</text>
+<rect x="1192.46875" y="189.25" width="97.5" height="32" fill="#ffffff" stroke="#333" stroke-width="2" rx="6"/>
+<text x="1241.21875" y="210.25" font-size="14" fill="#222" text-anchor="middle">Vocabulario</text>
+<rect x="1362.8" y="4" width="71.2" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1368.8" y="18" font-size="13" font-style="italic" fill="#7a7a7a">Cabecera</text>
+<rect x="121.6" y="80" width="204.4" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="127.6" y="94" font-size="13" font-style="italic" fill="#7a7a7a">Panel de capas geográficas</text>
+<rect x="1291.6" y="80" width="130.4" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="1297.6" y="94" font-size="13" font-style="italic" fill="#7a7a7a">Ficha pedagógica</text>
+<rect x="764.2" y="429.5" width="137.8" height="20" fill="#ffffff" fill-opacity="0.9" rx="3"/>
+<text x="770.2" y="443.5" font-size="13" font-style="italic" fill="#7a7a7a">Ventana emergente</text>
+</g></svg>
