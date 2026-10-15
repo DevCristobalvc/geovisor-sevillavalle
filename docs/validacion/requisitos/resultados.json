@@ -1,0 +1,111 @@
+{
+  "fecha": "2026-10-15",
+  "base": "https://www.refiup.app",
+  "resultados": {
+    "RF-01": {
+      "estado": "Cumple",
+      "medicion": "primera tesela en 1156 ms · zoom responde en 6 ms · rango 10–18: sí",
+      "nota": "Medido con la conexión del equipo de prueba, no con un enlace de 10 Mbps controlado"
+    },
+    "RF-02": {
+      "estado": "Cumple",
+      "medicion": "6 categorías · aparece en 109 ms (incluye descargar el GeoJSON) · desaparece en 3 ms · categoría Agua activa 6/6 capas",
+      "nota": ""
+    },
+    "RF-03": {
+      "estado": "Cumple",
+      "medicion": "5 cambios de opacidad · peor caso 1.3 ms (un cuadro a 60 fps = 16,7 ms)",
+      "nota": ""
+    },
+    "RF-04": {
+      "estado": "Parcial",
+      "medicion": "GetLegendGraphic del IDEAM en 416 ms · leyenda visible al activar la capa: no",
+      "nota": "En las capas WMS la leyenda se abre con el botón \"Ver leyenda\"; las GeoJSON muestran su color junto al nombre"
+    },
+    "RF-05": {
+      "estado": "Parcial",
+      "medicion": "el mapa llega a la extensión en 11 ms · zoom 11 → 16",
+      "nota": "Llega a la extensión correcta, pero de un salto: Leaflet no anima cambios de más de 4 niveles de zoom (fitBounds)"
+    },
+    "RF-06": {
+      "estado": "Cumple",
+      "medicion": "mediana de 3 cambios: Satélite 29 ms · Topográfico 22 ms · Callejero 18 ms · capas activas conservadas: sí",
+      "nota": ""
+    },
+    "RF-07": {
+      "estado": "Parcial",
+      "medicion": "popup GeoJSON en 13 ms · 3 atributos · botón de ficha: sí · GetFeatureInfo WMS: no implementado",
+      "nota": "Las 7 capas WMS solo tienen leyenda; no consultan atributos al clic"
+    },
+    "RF-08": {
+      "estado": "Cumple",
+      "medicion": "sugerencias 829 ms después de la última tecla (escritura 372 ms) · vuelo al lugar: 1227 ms",
+      "nota": "Incluye la espera de 400 ms antes de consultar Nominatim (servicio externo)"
+    },
+    "RF-09": {
+      "estado": "Parcial",
+      "medicion": "filtra mientras se escribe: sí · vuela al elemento: sí · resalta el elemento: no",
+      "nota": ""
+    },
+    "RF-10": {
+      "estado": "Cumple",
+      "medicion": "28.56 km · 10148.1 ha · referencia haversine 28.55 km · diferencia 0.046 %",
+      "nota": "La referencia usa las coordenadas del cursor (4 decimales, ±6 m), así que la diferencia mide sobre todo ese redondeo; tolerancia 0,5 %"
+    },
+    "RF-11": {
+      "estado": "Cumple",
+      "medicion": "\"4.1828, -75.8970\" → \"4.1793, -75.8901\" al mover el cursor 20 px",
+      "nota": ""
+    },
+    "RF-12": {
+      "estado": "Cumple",
+      "medicion": "23 fichas revisadas · 0 fuera de criterio · se abre en panel lateral",
+      "nota": ""
+    },
+    "RF-13": {
+      "estado": "Parcial",
+      "medicion": "miniatura en popup: sí (lazy: no) · videos: 2 enlaces a YouTube en la ficha · autoplay: no",
+      "nota": "Los videos abren en YouTube en vez de un modal con react-player, y el popup no tiene botón de reproducción"
+    },
+    "RF-14": {
+      "estado": "Parcial",
+      "medicion": "Siguiente/Anterior: sí · vuelo a la parada en 1434 ms (SRS: 800 ms ± 200)",
+      "nota": "El uso sin conexión se verifica en RF-19"
+    },
+    "RF-15": {
+      "estado": "No cumple",
+      "medicion": "no hay control de línea de tiempo",
+      "nota": "No implementado (ver plan-geo2, bloque 4)"
+    },
+    "RF-16": {
+      "estado": "Parcial",
+      "medicion": "15 términos · búsqueda \"páramo\" → 2 · el enlace abre el visor en la categoría (?categoria=biodiversidad&lat=4.1600&lng=-75.8900&zoom=11&base=osm&layers=agua_cuencas%2Cterritorio_division)",
+      "nota": ""
+    },
+    "RF-17": {
+      "estado": "Parcial",
+      "medicion": "PNG descargado en 1461 ms · 1416 × 780 px (ventana de 1440 × 900)",
+      "nota": "La imagen tiene el tamaño del mapa en pantalla; no alcanza 1920 × 1080"
+    },
+    "RF-18": {
+      "estado": "Cumple",
+      "medicion": "en otra sesión: capas agua_cuencas,territorio_division, zoom 12, centro 4.0500, -75.8500, mapa satélite: sí",
+      "nota": ""
+    },
+    "RF-19": {
+      "estado": "Parcial",
+      "medicion": "571 teselas precargadas · sin conexión: inicio abre, enlace directo al visor no abre, visor desde el menú abre · en z13: 21 elementos GeoJSON, 4 teselas OSM cargadas y 41 sin cargar · aviso WMS: sí",
+      "nota": ""
+    },
+    "RF-20": {
+      "estado": "Cumple",
+      "medicion": "7 páginas (visor con popup y ficha abiertos) · 0 violaciones de texto alternativo",
+      "nota": ""
+    },
+    "RF-21": {
+      "estado": "No cumple",
+      "medicion": "7 páginas · 3 violaciones de teclado (axe) · 59 controles recorridos con Tab, 0 sin foco visible",
+      "nota": "/visor: region (1); /guia: scrollable-region-focusable (1); /privacidad: scrollable-region-focusable (1)"
+    }
+  }
+}

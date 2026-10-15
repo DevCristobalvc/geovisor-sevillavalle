@@ -154,6 +154,14 @@ BASE=https://www.refiup.app HEADLESS=1 npm run test:e2e -- --sin-cvc
 
 `--sin-cvc` skips the CVC WMS layers: the CVC firewall blocks an IP that sends bursts of requests.
 
+`tests/e2e/requisitos.mjs` measures each of the 21 functional requirements of the SRS against its acceptance criterion (timings, axe-core audits, offline mode) and regenerates [`docs/validacion/trazabilidad-rf.md`](./docs/validacion/trazabilidad-rf.md), the RF → test → result table with the share of RFs that meet their criterion. Unlike `validar.mjs`, it may report "Parcial" or "No cumple" without that being a regression.
+
+```bash
+BASE=https://www.refiup.app npm run test:rf
+```
+
+Validation evidence (Lighthouse reports, RF traceability, network check before usability sessions) lives in [`docs/validacion/`](./docs/validacion/README.md).
+
 ### Deployment
 
 Deployment is handled by **Vercel**, connected to this repository. Every push to `Master` triggers a build and publishes it automatically — no workflow files and no manual steps.
@@ -214,7 +222,8 @@ geovisor-sevillavalle/
 │       └── index.ts             # All domain TypeScript interfaces
 │
 ├── docs/                        # User and technical manuals (.docx + .pdf)
-│   └── generador/               # Scripts and Mermaid sources that build them
+│   ├── generador/               # Scripts and Mermaid sources that build them
+│   └── validacion/              # Lighthouse reports and RF traceability (Phase 3)
 │
 ├── scripts/
 │   └── datos/                   # build_capas_oficiales.py — rebuilds the 13 official GeoJSON from CVC
