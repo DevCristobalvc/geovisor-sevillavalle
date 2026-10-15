@@ -589,7 +589,23 @@ await correr('RF-19', async () => {
     resultado.visor = true
     resultado.paths = await p.locator('.leaflet-overlay-pane path').count()
     resultado.teselas = await p.locator('img.leaflet-tile-loaded[src*="tile.openstreetmap.org"]').count()
-    resultado.teselasFallidas = await p.evaluate(() => [...document.querySelectorAll('img.leaflet-tile')].filter(i => !i.classList.contains('leaflet-tile-loaded')).length)
+    // Solo cuentan las teselas dentro de la zona precargada (BBOX de src/sw.ts, z10–14)
+    const pendientes = await p.evaluate(() =>
+      [...document.querySelectorAll('img.leaflet-tile:not(.leaflet-tile-loaded)')].map(i => i.src)
+    )
+    const enZona = src => {
+      const m = src.match(/\/(\d+)\/(\d+)\/(\d+)\.png/)
+      if (!m) return false
+      const [z, x, y] = m.slice(1).map(Number)
+      const n = 2 ** z
+      const tx = lng => Math.floor(((lng + 180) / 360) * n)
+      const ty = lat => {
+        const r = (lat * Math.PI) / 180
+        return Math.floor(((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2) * n)
+      }
+      return z >= 10 && z <= 14 && x >= tx(-76.06) && x <= tx(-75.72) && y >= ty(4.43) && y <= ty(3.88)
+    }
+    resultado.teselasFallidas = pendientes.filter(enZona).length
     // c) Una capa WMS sin conexión debe mostrar un aviso
     await expandir(p, 'Biodiversidad')
     await p.getByRole('checkbox', { name: 'Activar capa Cobertura de la Tierra 2024' }).check()
@@ -603,7 +619,7 @@ await correr('RF-19', async () => {
   const ok = teselasCache >= 500 && resultado.inicio && resultado.enlace && resultado.visor && resultado.paths > 0 && resultado.teselas > 0 && resultado.teselasFallidas === 0 && resultado.avisoWms
   registrar('RF-19', ok ? 'Cumple' : resultado.inicio || resultado.visor ? 'Parcial' : 'No cumple',
     `${teselasCache} teselas precargadas · sin conexión: inicio ${resultado.inicio ? 'abre' : 'no abre'}, enlace directo al visor ${resultado.enlace ? 'abre' : 'no abre'}, visor desde el menú ${resultado.visor ? 'abre' : 'no abre'}` +
-      (resultado.visor ? ` · en z13: ${resultado.paths} elementos GeoJSON, ${resultado.teselas} teselas OSM cargadas y ${resultado.teselasFallidas} sin cargar · aviso WMS: ${resultado.avisoWms ? 'sí' : 'no'}` : ''),
+      (resultado.visor ? ` · en z13: ${resultado.paths} elementos GeoJSON, ${resultado.teselas} teselas OSM cargadas y ${resultado.teselasFallidas} sin cargar dentro de la zona precargada · aviso WMS: ${resultado.avisoWms ? 'sí' : 'no'}` : ''),
     resultado.error ?? '')
 })
 

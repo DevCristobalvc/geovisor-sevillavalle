@@ -1,6 +1,10 @@
 /// <reference lib="webworker" />
-import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching'
-import { registerRoute } from 'workbox-routing'
+import {
+  cleanupOutdatedCaches,
+  createHandlerBoundToURL,
+  precacheAndRoute,
+} from 'workbox-precaching'
+import { NavigationRoute, registerRoute } from 'workbox-routing'
 import { CacheFirst, NetworkFirst } from 'workbox-strategies'
 import { ExpirationPlugin } from 'workbox-expiration'
 
@@ -10,6 +14,14 @@ declare const self: ServiceWorkerGlobalScope & {
 
 precacheAndRoute(self.__WB_MANIFEST)
 cleanupOutdatedCaches()
+
+// SPA navigation: any route (e.g. a shared /visor?layers=… link) gets the precached
+// index.html, so deep links also open offline. Paths with a file extension are left alone.
+registerRoute(
+  new NavigationRoute(createHandlerBoundToURL('/index.html'), {
+    denylist: [/\/[^/?]+\.[^/?]+$/],
+  })
+)
 
 // ─── OSM tile pre-cache for Sevilla bbox zoom 10-14 ─────────────────────────
 // BBOX = official municipal boundary (CVC) plus a small margin; keep in sync with
@@ -76,13 +88,21 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
 
 // ─── Runtime caching strategies ─────────────────────────────────────────────
 
-// OSM tiles (covers pre-cached + any tiles outside bbox)
+// OSM tiles: the ones pre-cached on install live in their own cache, which CacheFirst
+// does not look into, so check it first; any other tile goes through the runtime cache.
+const osmTiles = new CacheFirst({
+  cacheName: 'osm-tiles',
+  plugins: [new ExpirationPlugin({ maxEntries: 3000, maxAgeSeconds: 7 * 24 * 60 * 60 })],
+})
 registerRoute(
   ({ url }) => /^https:\/\/[a-c]\.tile\.openstreetmap\.org\//.test(url.href),
-  new CacheFirst({
-    cacheName: 'osm-tiles',
-    plugins: [new ExpirationPlugin({ maxEntries: 3000, maxAgeSeconds: 7 * 24 * 60 * 60 })],
-  })
+  async options => {
+    const precached = await caches.match(options.request, {
+      cacheName: PRECACHE_TILE_CACHE,
+      ignoreVary: true,
+    })
+    return precached ?? osmTiles.handle(options)
+  }
 )
 
 // ESRI satellite tiles

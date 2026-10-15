@@ -313,6 +313,8 @@ After the first online visit, the PWA Service Worker (Workbox) caches:
 - All GeoJSON static layers
 - OSM map tiles for zoom levels 10–14 over Sevilla's official boundary plus a margin, bbox `[-76.06, 3.88, -75.72, 4.43]` (571 tiles, ~11 MB)
 
+Offline, every route (including shared links such as `/visor?layers=…`) is answered with the precached `index.html`, and map tiles are served first from the pre-cache and then from the runtime tile cache.
+
 WMS tiles already seen are kept for 24 h (network-first, 10 s timeout); new WMS views need a connection. When a WMS service does not answer, the layer panel shows a warning next to that layer.
 
 ---
