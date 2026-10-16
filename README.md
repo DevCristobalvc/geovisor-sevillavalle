@@ -25,9 +25,9 @@ The Geovisor Ecopedagógico is a 100% client-side SPA (JAMstack) — no backend,
 |---|---|
 | **What it is** | A didactic web GIS for the municipality of Sevilla, Valle del Cauca |
 | **Who it is for** | Secondary school students (10–15), teachers, general public |
-| **Content** | 23 geographic layers · 6 categories · 23 pedagogical sheets · 4 guided tours |
+| **Content** | 29 geographic layers in 6 categories and 23 visor groups · 23 pedagogical sheets · 4 guided tours |
 | **Architecture** | JAMstack SPA — no backend, no database, no personal data |
-| **Data** | 7 live WMS layers (CVC 4 · IDEAM 2 · IGAC 1) + 16 GeoJSON layers (13 official CVC extracts · 3 illustrative) |
+| **Data** | 7 live WMS layers (CVC 4 · IDEAM 2 · IGAC 1) + 22 GeoJSON layers (19 official CVC extracts · 3 illustrative) |
 | **Offline** | Service Worker pre-caches app, data and OSM tiles (zoom 10–14, 571 tiles, ~11 MB) |
 
 ---
@@ -51,7 +51,7 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["layers.config.ts<br/>23 capas declarativas"] --> B["MapContext<br/>useReducer"]
+    A["layers.config.ts<br/>29 capas declarativas"] --> B["MapContext<br/>useReducer"]
     B --> C["MapViewer<br/>Leaflet"]
     B --> D["LayerPanel<br/>selector de capas"]
     C --> E["InfoPanel<br/>ficha pedagógica"]
@@ -144,7 +144,7 @@ npm run preview      # → http://localhost:4173/
 
 ### End-to-end tests
 
-`tests/e2e/validar.mjs` drives the system Chrome with Playwright and checks ~70 points: home and credits content, the 16 GeoJSON layers (inside the municipality, no personal data, 13 with CVC provenance), shared-link view (RF-18), popups and pedagogical sheets, legends, the 7 WMS services, the day/night theme (an interface addition, not an SRS requirement), the 23 sheets (3–5 questions, images only from Wikimedia Commons) and a clean console.
+`tests/e2e/validar.mjs` drives the system Chrome with Playwright and checks ~70 points: home and credits content, the 22 GeoJSON layers (inside the municipality, no personal data, 19 with CVC provenance), shared-link view (RF-18), popups and pedagogical sheets, legends, the 7 WMS services, the day/night theme (an interface addition, not an SRS requirement), the 23 sheets (3–5 questions, images only from Wikimedia Commons) and a clean console.
 
 ```bash
 npm run build && npx vite preview --port 4173      # terminal 1
@@ -178,7 +178,7 @@ Deployment is handled by **Vercel**, connected to this repository. Every push to
 geovisor-sevillavalle/
 │
 ├── public/
-│   ├── data/                    # Static GeoJSON (13 official CVC extracts + 3 illustrative, ≤ 2 MB each)
+│   ├── data/                    # Static GeoJSON (19 official CVC extracts + 3 illustrative)
 │   │   ├── actores/             # Social actors per ecosystem
 │   │   ├── agua/                # River basins, wetlands, monitoring points
 │   │   ├── biodiversidad/       # Páramos, species records, protected areas
@@ -208,7 +208,7 @@ geovisor-sevillavalle/
 │   │   ├── Creditos.tsx         # Credits and data attributions
 │   │   └── Privacidad.tsx       # Privacy notice (Ley 1581 de 2012)
 │   ├── config/
-│   │   └── layers.config.ts     # Single source of truth for all 23 map layers
+│   │   └── layers.config.ts     # Single source of truth for all 29 map layers
 │   ├── context/
 │   │   └── MapContext.tsx       # Global map state (useReducer + Context API)
 │   ├── hooks/
@@ -227,7 +227,7 @@ geovisor-sevillavalle/
 │   └── wireframes/              # Wireframes of every screen, generated from the live UI
 │
 ├── scripts/
-│   └── datos/                   # build_capas_oficiales.py — rebuilds the 13 official GeoJSON from CVC
+│   └── datos/                   # build_capas_oficiales.py + build_capas_visores.py — rebuild the official GeoJSON from CVC
 │
 ├── vercel.json                  # SPA rewrites (all routes → index.html)
 ├── vite.config.ts               # Vite + PWA (Workbox) configuration
@@ -239,16 +239,18 @@ geovisor-sevillavalle/
 
 ## Geographic Layers
 
-All 23 layers are defined in [`src/config/layers.config.ts`](src/config/layers.config.ts). Adding or modifying a layer requires only editing that file — no component changes needed. Every layer declares its `fuente` (producing entity, dataset, link and an `ilustrativo` flag), which the UI shows in the layer panel, the popup and the pedagogical sheet.
+All 29 layers are defined in [`src/config/layers.config.ts`](src/config/layers.config.ts). Adding or modifying a layer requires only editing that file — no component changes needed. Every layer declares its `fuente` (producing entity, dataset, link and an `ilustrativo` flag), which the UI shows in the layer panel, the popup and the pedagogical sheet.
 
-| Category | Layers | Data type |
-|----------|--------|-----------|
-| Actores Sociales | Humedales\*, Páramo\*, Bosque Andino, Bosque Seco\* | GeoJSON |
-| Agua | Cuencas, Red Hídrica, Humedales, Calidad Agua, Monitoreo Subterráneo, Predios Art.111 | GeoJSON + WMS |
-| Biodiversidad | Cobertura de la Tierra 2024, Ecosistemas, Páramos, Especies, Áreas Protegidas, Zonificación Forestal | GeoJSON + WMS |
-| Cambio Climático | Isoyetas, Estaciones Hidroclimatológicas, Pisos Térmicos | GeoJSON + WMS |
-| Suelos | Conflictos de Uso del Suelo | WMS |
-| Territorio | División Político-Administrativa, Resguardos Indígenas, PCC UNESCO | GeoJSON |
+The panel has three levels — category → visor (`grupo`) → layer — with the names and order of the partner thesis document *Visores básicos*, which mirrors the visor tree of the CVC GeoCVC portal. GeoJSON layers can be colored by class (`estiloPorAtributo`), and their legend appears in the panel as soon as the layer is on.
+
+| Category | Visor → layers | Data type |
+|----------|----------------|-----------|
+| Actores sociales | Actores sociales humedales\* · páramo\* · bosque zona andina · bosque seco (BsT)\* | GeoJSON |
+| Agua | Calidad del agua (estaciones de muestreo, monitoreo de agua subterránea) · Cuencas hidrográficas (cuencas, áreas de drenaje, subzonas) · Humedales (huella de humedales, lagunas) · Red hídrica · Predios Art. 111 Ley 99 de 1993 | GeoJSON + WMS |
+| Biodiversidad | Reserva Forestal Ley 2.ª · Cobertura y uso del suelo (IDEAM 2024) · Ecosistemas · Páramos · Registro de especies · Sistema de áreas protegidas · Zonificación forestal | GeoJSON + WMS |
+| Cambio Climático | Precipitación (isoyetas) · Red hidroclimatológica · Temperatura (piso térmico CVC 1:100.000, IDEAM) | GeoJSON + WMS |
+| Suelos | Conflictos de uso del suelo (IGAC 2012) | WMS |
+| Territorial administrativo | Límite y división (límite municipal y perímetro urbano, división político-administrativa) · Grupos étnicos · Paisaje Cultural Cafetero | GeoJSON |
 
 \* Illustrative layers (see [Data provenance](#data-provenance)).
 
@@ -274,13 +276,22 @@ The previous endpoints (`geoservicios.igac.gov.co`, `geoservicios.cvc.gov.co`, `
 
 ### Data provenance
 
-- **13 GeoJSON layers are official CVC data**: cuencas, humedales, calidad del agua, monitoreo subterráneo, predios Art. 111, páramos, áreas protegidas, especies, estaciones, división político-administrativa, resguardos, PCC and bosque-andino actors. [`scripts/datos/build_capas_oficiales.py`](scripts/datos/build_capas_oficiales.py) queries the CVC FeatureServers (`portal-geo.cvc.gov.co/server/rest/services`) with Sevilla's official municipal boundary, clips what extends beyond it, simplifies the geometry (~5 m), drops fields with personal data (contact names, phones, e-mails, station observers, landowners, tax IDs) and writes a `metadata` block (source services, processing, download date) into each file.
+- **19 GeoJSON layers are official CVC data**: cuencas, humedales, calidad del agua, monitoreo subterráneo, predios Art. 111, páramos, áreas protegidas, Reserva Forestal Ley 2.ª, especies, estaciones, división político-administrativa, resguardos, PCC and bosque-andino actors (`build_capas_oficiales.py`), plus the layers that *Visores básicos* adds — áreas de drenaje, subzonas hidrográficas, lagunas, piso térmico 1:100.000 and límite municipal con perímetro urbano (`build_capas_visores.py`). The script also defines fragmentación, cobertura 1:100.000 and conflicto de uso 1:50.000; their download is pending (those services cut every response at a few hundred polygons and offset paging returns empty pages, so they need paging by `OBJECTID` ranges). [`scripts/datos/build_capas_oficiales.py`](scripts/datos/build_capas_oficiales.py) queries the CVC FeatureServers (`portal-geo.cvc.gov.co/server/rest/services`) with Sevilla's official municipal boundary, clips what extends beyond it, simplifies the geometry (~5 m), drops fields with personal data (contact names, phones, e-mails, station observers, landowners, tax IDs) and writes a `metadata` block (source services, processing, download date) into each file.
 - **3 GeoJSON layers are illustrative**: social actors of wetlands, páramo and dry forest. The CVC has no records of those actors for Sevilla, so the files contain generic actor *types* at approximate locations — no real people, organizations or contact data. The UI labels them **Ilustrativo**; they are meant to be replaced with the social cartography of the partner thesis.
 - The CVC portal sits behind a firewall that blocks an IP for ~40 minutes after bursts of requests. The script pauses 3 s between requests and supports a local response cache (`GEOVISOR_CACHE=<folder>`); never run it in parallel.
 
 ```bash
 pip install requests shapely
-python scripts/datos/build_capas_oficiales.py   # rewrites the 13 official files in public/data/
+python scripts/datos/build_capas_oficiales.py   # rewrites the 14 official files in public/data/
+```
+
+The CVC firewall rejects Python requests, so `build_capas_visores.py` never downloads: it reads only the cache, writes the missing queries to a list, and [`scripts/datos/descargar_pendientes.mjs`](scripts/datos/descargar_pendientes.mjs) fetches them from a Chrome tab on the portal (10 s between requests, batches of 10, stops at the first 403):
+
+```bash
+export GEOVISOR_CACHE=cache
+GEOVISOR_REGISTRAR=pendientes.json python scripts/datos/build_capas_visores.py   # list missing queries
+node scripts/datos/descargar_pendientes.mjs cache pendientes.json              # download them; repeat both until none are missing
+python scripts/datos/build_capas_visores.py                                     # build the layers whose queries are cached
 ```
 
 ---

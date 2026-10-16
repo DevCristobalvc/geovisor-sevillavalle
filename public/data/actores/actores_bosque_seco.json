@@ -2,14 +2,15 @@
   "type": "FeatureCollection",
   "metadata": {
     "origen": "Datos ilustrativos elaborados por el equipo del proyecto",
-    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora."
+    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora.",
+    "clasificacion": "Tipo y subtipo según el esquema de actores sociales del documento \"Visores básicos\" (tesis colaboradora de Jonathan Rodríguez Camacho, 2026)."
   },
   "features": [
     {
       "type": "Feature",
       "properties": {
         "nombre": "Autoridad ambiental regional",
-        "tipo_actor": "Ente gubernamental",
+        "tipo": "Ente gubernamental",
         "ecosistema": "Bosque seco"
       },
       "geometry": {
@@ -24,7 +25,8 @@
       "type": "Feature",
       "properties": {
         "nombre": "Asociación de productores avícolas",
-        "tipo_actor": "Sector productivo",
+        "tipo": "Producción",
+        "subtipo": "Avicultores",
         "ecosistema": "Bosque seco"
       },
       "geometry": {
@@ -39,7 +41,8 @@
       "type": "Feature",
       "properties": {
         "nombre": "Junta de Acción Comunal de la vereda",
-        "tipo_actor": "Comunidad",
+        "tipo": "Comunidades",
+        "subtipo": "Juntas de acción comunal",
         "ecosistema": "Bosque seco"
       },
       "geometry": {
@@ -54,7 +57,7 @@
       "type": "Feature",
       "properties": {
         "nombre": "Fundación ambiental local",
-        "tipo_actor": "ONG",
+        "tipo": "ONGs-Ambientalistas",
         "ecosistema": "Bosque seco"
       },
       "geometry": {

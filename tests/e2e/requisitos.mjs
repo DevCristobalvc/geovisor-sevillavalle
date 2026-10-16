@@ -46,7 +46,7 @@ const RF = {
 // Comprobaciones de tests/e2e/validar.mjs relacionadas con cada RF (cobertura de regresión)
 const VALIDAR = {
   'RF-01': ['Mapa: elementos vectoriales dibujados'],
-  'RF-02': ['GeoJSON: se pidieron las 16 capas', 'Panel: capas GeoJSON oficiales marcadas CVC', 'Panel: fuente de las WMS visible'],
+  'RF-02': ['GeoJSON: se pidieron las 22 capas', 'Panel: capas GeoJSON oficiales marcadas CVC', 'Panel: fuente de las WMS visible'],
   'RF-04': ['Leyenda propia de pisos térmicos', 'Leyenda propia de conflictos de uso', 'Leyenda GetLegendGraphic (IDEAM cobertura) carga'],
   'RF-07': ['Popup oficial: atributos legibles y fuente CVC', 'Popup ilustrativo: aviso visible y sin nombres de personas'],
   'RF-12': ['Ficha: muestra "Datos de la capa: CVC" y "Referencias"', 'Ficha <id> (23 fichas: 3–5 preguntas, imágenes de Wikimedia)'],
@@ -198,7 +198,7 @@ await correr('RF-02', async () => {
   await page.goto(VISOR(), { waitUntil: 'networkidle' })
   const categorias = await page.locator('aside[aria-label="Panel de capas geográficas"] button[aria-expanded]').count()
   await expandir(page, 'Agua')
-  const caja = page.getByRole('checkbox', { name: 'Activar capa Predios Art. 111 Ley 99/93' })
+  const caja = page.getByRole('checkbox', { name: 'Activar capa Predios Artículo 111 Ley 99 de 1993' })
   const medirCambio = async () => {
     await page.evaluate(() => {
       window.__cambio = null
@@ -236,12 +236,12 @@ await correr('RF-02', async () => {
 await correr('RF-03', async () => {
   await page.goto(VISOR('&layers=agua_predios_art111'), { waitUntil: 'networkidle' })
   await expandir(page, 'Agua')
-  const slider = page.getByRole('slider', { name: 'Opacidad de Predios Art. 111 Ley 99/93' })
+  const slider = page.getByRole('slider', { name: 'Opacidad de Predios Artículo 111 Ley 99 de 1993' })
   const tiempos = []
   for (const v of ['0.3', '0.6', '0.9', '0.45', '0.75']) {
     await page.evaluate(() => {
       window.__op = null
-      const s = document.querySelector('input[aria-label="Opacidad de Predios Art. 111 Ley 99/93"]')
+      const s = document.querySelector('input[aria-label="Opacidad de Predios Artículo 111 Ley 99 de 1993"]')
       s.addEventListener('input', () => (window.__t0 = performance.now()), { capture: true, once: true })
       const mo = new MutationObserver(() => {
         window.__op ??= performance.now() - window.__t0
@@ -284,7 +284,7 @@ await correr('RF-05', async () => {
   await expandir(page, 'Agua')
   await marcarInicio(page)
   await vigilarFinMovimiento(page)
-  await page.getByRole('button', { name: 'Zoom a extensión de Humedales' }).click()
+  await page.getByRole('button', { name: 'Zoom a extensión de Huella de humedales' }).click()
   const dur = await duracionMovimiento(page)
   const zoom = Number(new URL(page.url()).searchParams.get('zoom'))
   const salto = dur !== null && dur < 100
@@ -608,7 +608,7 @@ await correr('RF-19', async () => {
     resultado.teselasFallidas = pendientes.filter(enZona).length
     // c) Una capa WMS sin conexión debe mostrar un aviso
     await expandir(p, 'Biodiversidad')
-    await p.getByRole('checkbox', { name: 'Activar capa Cobertura de la Tierra 2024' }).check()
+    await p.getByRole('checkbox', { name: 'Activar capa Cobertura de la tierra 2024 (IDEAM)' }).check()
     await p.waitForTimeout(14000)
     resultado.avisoWms = (await p.getByText(/no respondió/).count()) > 0
   } catch (e) {

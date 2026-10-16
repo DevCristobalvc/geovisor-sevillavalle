@@ -2,13 +2,14 @@
   "id": "agua_humedales",
   "titulo": "Humedales del Municipio",
   "categoria": "agua",
-  "descripcion": "Los humedales son ecosistemas donde el agua cubre o satura el suelo de forma permanente o temporal: lagunas, ciénagas, pantanos, madreviejas y zonas inundables. En las montañas de Sevilla son escasos y pequeños; el inventario de la CVC registra uno, el humedal Siracusa: un cuerpo de agua de tipo lacustre de 1,11 hectáreas, inventariado en 2015, que se alimenta de un afluente de la quebrada San José, en la cabecera municipal. A pesar de su tamaño cumple funciones valiosas: retiene agua lluvia, atrapa sedimentos y ofrece refugio y alimento a la fauna. En sus alrededores, observadores de aves han reportado en eBird especies como la garcita rayada (Butorides striata), el martín pescador verde (Chloroceryle americana) y la reinita acuática (Parkesia noveboracensis), un ave migratoria que llega desde Norteamérica.",
-  "importancia": "Los humedales funcionan como esponjas: absorben agua en las lluvias, la liberan lentamente y filtran contaminantes antes de que lleguen a los ríos. Un humedal urbano como Siracusa también es un aula al aire libre para aprender sobre aves, plantas acuáticas y el ciclo del agua. Sus amenazas más comunes son el relleno para construir, las basuras, los vertimientos y las especies invasoras. En el Valle del Cauca, la laguna de Sonso (Guadalajara de Buga) muestra la importancia de estos ecosistemas: en 2017 fue reconocida como humedal de importancia internacional en el marco de la Convención Ramsar.",
+  "descripcion": "Los humedales son ecosistemas donde el agua cubre o satura el suelo de forma permanente o temporal: lagunas, ciénagas, pantanos, madreviejas y zonas inundables. En las montañas de Sevilla son escasos y pequeños. El inventario de humedales de la CVC registra uno, el humedal Siracusa, y el de cuerpos de agua registra 51 lagunas, casi todas pequeñas y sin nombre; las mayores están en el páramo de Chilí-Barragán: Montiver (15,6 ha), La Rivera (3,3 ha) y Chupaderos (1,0 ha). El humedal Siracusa, en la cabecera municipal, se formó por el represamiento de una quebrada tras la construcción de una vía urbana y está en la microcuenca de la quebrada San José (Rodríguez Camacho, 2026). La CVC lo inventarió en 2015 como un cuerpo de agua lacustre de 1,11 hectáreas; la tesis colaboradora lo describe como un ecosistema de 7,8 hectáreas, con un sendero ecológico de 1,6 km y más de 106 especies de aves. A pesar de su tamaño cumple funciones valiosas: retiene agua lluvia, atrapa sedimentos y ofrece refugio y alimento a la fauna. En sus alrededores, observadores de aves han reportado en eBird especies como la garcita rayada (Butorides striata), el martín pescador verde (Chloroceryle americana) y la reinita acuática (Parkesia noveboracensis), un ave migratoria que llega desde Norteamérica.",
+  "importancia": "Los humedales funcionan como esponjas: absorben agua en las lluvias, la liberan lentamente y filtran contaminantes antes de que lleguen a los ríos. Un humedal urbano como Siracusa también es un aula al aire libre para aprender sobre aves, plantas acuáticas y el ciclo del agua. Sus amenazas más comunes son el relleno para construir, las basuras, los vertimientos y las especies invasoras. En el Valle del Cauca, la laguna de Sonso (Guadalajara de Buga) muestra la importancia de estos ecosistemas: en 2017 fue reconocida como humedal de importancia internacional en el marco de la Convención Ramsar. La conservación de Siracusa ha sido posible por el trabajo de la comunidad y de los propietarios de los predios vecinos, y hoy es un espacio de educación ambiental e investigación para colegios y universidades; aun así enfrenta vertimientos de aguas residuales, agroquímicos de predios cercanos y falta de recursos para su sostenimiento (Rodríguez Camacho, 2026). Las lagunas del páramo, por su parte, almacenan agua y alimentan las quebradas que nacen en la alta montaña.",
   "preguntas_reflexivas": [
     "¿Por qué se dice que los humedales funcionan como esponjas y cómo protege eso a las personas?",
     "¿Qué amenazas puede enfrentar un humedal urbano como Siracusa y cuál crees que es la más urgente?",
     "¿Por qué los humedales son importantes para las aves migratorias que llegan desde Norteamérica?",
-    "¿Cómo podría tu colegio contribuir a conocer y cuidar el humedal Siracusa?"
+    "¿Cómo podría tu colegio contribuir a conocer y cuidar el humedal Siracusa?",
+    "¿Por qué crees que las lagunas Montiver y La Rivera están en el páramo y no en las partes bajas del municipio?"
   ],
   "vocabulario": [
     {
@@ -30,6 +31,10 @@
     {
       "termino": "Convención Ramsar",
       "definicion": "Tratado internacional firmado en Ramsar (Irán) en 1971 para la conservación y el uso racional de los humedales; Colombia lo aprobó con la Ley 357 de 1997."
+    },
+    {
+      "termino": "Laguna",
+      "definicion": "Cuerpo de agua dulce de poca extensión y profundidad, rodeado de tierra. En el páramo, las lagunas almacenan agua y alimentan quebradas y ríos."
     }
   ],
   "galeria": [
@@ -54,6 +59,6 @@
       "titulo": "Humedales: Los Guardianes del Agua y la Biodiversidad en Colombia - TvAgro por Juan Gonzalo Angel — TvAgro"
     }
   ],
-  "fuente_datos": "CVC – Huella de humedales (Portal GeoCVC); GBIF.org y eBird – registros de aves en el humedal Siracusa (consulta de octubre de 2026); Ramsar – Sitio 2403 (Decreto 251 de 2017); Ley 357 de 1997",
+  "fuente_datos": "CVC – Huella de humedales (Portal GeoCVC); GBIF.org y eBird – registros de aves en el humedal Siracusa (consulta de octubre de 2026); Ramsar – Sitio 2403 (Decreto 251 de 2017); Ley 357 de 1997; CVC – Cuerpos de agua: lagunas (Portal GeoCVC, recorte a Sevilla, 2026); Rodríguez Camacho, J. (2026). Observaciones al documento «Visores básicos» del geovisor (tesis colaboradora)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

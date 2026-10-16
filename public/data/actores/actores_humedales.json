@@ -2,14 +2,15 @@
   "type": "FeatureCollection",
   "metadata": {
     "origen": "Datos ilustrativos elaborados por el equipo del proyecto",
-    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora."
+    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora.",
+    "clasificacion": "Tipo y subtipo según el esquema de actores sociales del documento \"Visores básicos\" (tesis colaboradora de Jonathan Rodríguez Camacho, 2026)."
   },
   "features": [
     {
       "type": "Feature",
       "properties": {
         "nombre": "Organización ambiental dedicada a humedales",
-        "tipo_actor": "ONG",
+        "tipo": "ONGs-Ambientalistas",
         "ecosistema": "Humedal"
       },
       "geometry": {
@@ -23,23 +24,9 @@
     {
       "type": "Feature",
       "properties": {
-        "nombre": "Junta de Acción Comunal de la vereda",
-        "tipo_actor": "Comunidad",
-        "ecosistema": "Humedal"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.91781,
-          4.26729
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "nombre": "Liderazgo comunitario del humedal",
-        "tipo_actor": "Líder comunitario",
+        "tipo": "Comunidades",
+        "subtipo": "Líderes comunitarios",
         "ecosistema": "Humedal"
       },
       "geometry": {
@@ -54,7 +41,7 @@
       "type": "Feature",
       "properties": {
         "nombre": "Asociación de productores acuícolas",
-        "tipo_actor": "Sector productivo",
+        "tipo": "Producción",
         "ecosistema": "Humedal"
       },
       "geometry": {
@@ -62,21 +49,6 @@
         "coordinates": [
           -75.92739,
           4.25769
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "nombre": "Fundación ambiental local",
-        "tipo_actor": "ONG",
-        "ecosistema": "Humedal"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.93517,
-          4.27989
         ]
       }
     }

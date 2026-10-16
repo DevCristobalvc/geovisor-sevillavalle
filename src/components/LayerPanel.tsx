@@ -1,6 +1,6 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import { useMapLayers } from '../hooks/useMapLayers'
-import { LAYERS, wmsLegendUrl } from '../config/layers.config'
+import { LAYERS, NOTAS_GRUPO, wmsLegendUrl } from '../config/layers.config'
 import { PixelIcon } from './Dex'
 import type { Categoria, LayerConfig, WmsStatus } from '../types'
 
@@ -19,10 +19,21 @@ const CATEGORIA_ORDER: Categoria[] = [
   'territorio',
 ]
 
-/** Número de dex de cada capa (#01–#23), según su orden en layers.config.ts */
+/** Número de dex de cada capa (#01, #02…), según su orden en layers.config.ts */
 const NUMERO = Object.fromEntries(
   LAYERS.map((l, i) => [l.id, `#${String(i + 1).padStart(2, '0')}`])
 )
+
+/** Visores (grupos) de una categoría, en el orden de layers.config.ts */
+function porGrupo(layers: LayerConfig[]): { grupo: string; capas: LayerConfig[] }[] {
+  const grupos: { grupo: string; capas: LayerConfig[] }[] = []
+  for (const l of layers) {
+    const ultimo = grupos[grupos.length - 1]
+    if (ultimo?.grupo === l.grupo) ultimo.capas.push(l)
+    else grupos.push({ grupo: l.grupo, capas: [l] })
+  }
+  return grupos
+}
 
 export default function LayerPanel({
   collapsed,
@@ -70,7 +81,7 @@ export default function LayerPanel({
   }
 
   const activas = activeLayers.length
-  const segmentos = 23
+  const segmentos = LAYERS.length
 
   return (
     <>
@@ -190,17 +201,33 @@ export default function LayerPanel({
 
                 {open && (
                   <div className="pb-2">
-                    {layers.map(layer => (
-                      <LayerItem
-                        key={layer.id}
-                        layer={layer}
-                        active={isLayerActive(layer.id)}
-                        onToggle={() => toggleLayer(layer.id)}
-                        color={info.color}
-                        opacity={getLayerOpacity(layer.id)}
-                        onOpacityChange={v => setLayerOpacity(layer.id, v)}
-                        status={wmsStatus[layer.id]}
-                      />
+                    {porGrupo(layers).map(({ grupo, capas }) => (
+                      // Tercer nivel del panel: el visor agrupa sus capas. Si el visor tiene
+                      // una sola capa con su mismo nombre, no hace falta el encabezado.
+                      <div key={grupo} role="group" aria-label={grupo}>
+                        {(capas.length > 1 || capas[0].nombre !== grupo) && (
+                          <h3 className="px-3 pt-2 pb-0.5 font-ui text-[11px] font-bold uppercase tracking-wide text-muted">
+                            {grupo}
+                          </h3>
+                        )}
+                        {capas.map(layer => (
+                          <LayerItem
+                            key={layer.id}
+                            layer={layer}
+                            active={isLayerActive(layer.id)}
+                            onToggle={() => toggleLayer(layer.id)}
+                            color={info.color}
+                            opacity={getLayerOpacity(layer.id)}
+                            onOpacityChange={v => setLayerOpacity(layer.id, v)}
+                            status={wmsStatus[layer.id]}
+                          />
+                        ))}
+                        {NOTAS_GRUPO[grupo] && (
+                          <p className="px-3 pb-1.5 pl-[3.25rem] font-ui text-[11px] italic leading-snug text-muted">
+                            {NOTAS_GRUPO[grupo]}
+                          </p>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
@@ -339,6 +366,8 @@ function LayerItem({
         </div>
       )}
 
+      {active && layer.estiloPorAtributo && <LeyendaClases layer={layer} punto={isPoint} />}
+
       {active && isWMS && status === 'error' && (
         <p className="mt-1.5 pl-[3.25rem] font-ui text-xs text-danger leading-snug" role="status">
           El servicio de {layer.fuente.entidad} no respondió. Revisa la conexión o intenta más
@@ -359,6 +388,25 @@ function LayerItem({
         </div>
       )}
     </div>
+  )
+}
+
+/** Leyenda de una capa GeoJSON coloreada por clase: aparece con la capa activa */
+function LeyendaClases({ layer, punto }: { layer: LayerConfig; punto: boolean }) {
+  const { valores, etiquetas } = layer.estiloPorAtributo!
+  return (
+    <ul className="mt-1.5 space-y-1 pl-[3.25rem]" aria-label={`Leyenda de ${layer.nombre}`}>
+      {Object.entries(valores).map(([valor, color]) => (
+        <li key={valor} className="flex items-center gap-2 font-ui text-xs text-ink">
+          <span
+            className={`h-3 flex-shrink-0 border border-line/50 ${punto ? 'w-3 rounded-full' : 'w-3.5 rounded-sm'}`}
+            style={{ backgroundColor: color }}
+            aria-hidden="true"
+          />
+          {etiquetas?.[valor] ?? valor}
+        </li>
+      ))}
+    </ul>
   )
 }
 

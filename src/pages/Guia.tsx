@@ -22,9 +22,10 @@ export default function Guia() {
 
           <GuiaSection titulo="El dex de capas" numero={2}>
             <p>
-              A la izquierda está el <strong>dex de capas</strong>: seis tipos (agua, biodiversidad,
-              clima, suelos, territorio y actores sociales) con 23 capas numeradas. Abre un tipo y
-              marca las capas que quieras ver; puedes combinar varias.
+              A la izquierda está el <strong>dex de capas</strong>: seis tipos (actores sociales,
+              agua, biodiversidad, cambio climático, suelos y territorial administrativo). Cada tipo
+              se organiza en visores, y cada visor reúne capas numeradas. Abre un tipo y marca las
+              capas que quieras ver; puedes combinar varias.
             </p>
             <p className="mt-2">
               Debajo de cada capa verás de qué entidad vienen sus datos (CVC, IDEAM o IGAC). Las

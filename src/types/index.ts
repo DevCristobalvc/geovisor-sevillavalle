@@ -34,10 +34,23 @@ export interface FuenteCapa {
   ilustrativo?: boolean
 }
 
+/**
+ * Color de cada elemento según el valor de una de sus propiedades (capas GeoJSON).
+ * El orden de `valores` es el de la leyenda.
+ */
+export interface EstiloPorAtributo {
+  campo: string
+  valores: Record<string, string>
+  /** Texto de la leyenda para un valor, cuando no basta con el valor tal cual */
+  etiquetas?: Record<string, string>
+}
+
 export interface LayerConfig {
   id: string
   nombre: string
   categoria: Categoria
+  /** Visor dentro de la categoría (segundo nivel del panel, según "Visores básicos") */
+  grupo: string
   tipo: LayerType
   url: string
   wmsLayers?: string
@@ -47,6 +60,7 @@ export interface LayerConfig {
   atributosPopup?: string[]
   miniatura?: string
   estilo?: LayerStyle
+  estiloPorAtributo?: EstiloPorAtributo
   descripcionBreve?: string
   fuente: FuenteCapa
   /** Leyenda propia (WMS). Si falta, se usa GetLegendGraphic del servicio. */

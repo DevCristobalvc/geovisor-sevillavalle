@@ -2,14 +2,15 @@
   "type": "FeatureCollection",
   "metadata": {
     "origen": "Datos ilustrativos elaborados por el equipo del proyecto",
-    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora."
+    "nota": "No hay registros oficiales de estos actores para Sevilla en la CVC. Los puntos representan tipos de actor en ubicaciones aproximadas y no identifican personas ni organizaciones reales; se reemplazarán con la cartografía social de la tesis colaboradora.",
+    "clasificacion": "Tipo y subtipo según el esquema de actores sociales del documento \"Visores básicos\" (tesis colaboradora de Jonathan Rodríguez Camacho, 2026)."
   },
   "features": [
     {
       "type": "Feature",
       "properties": {
         "nombre": "Comunidad campesina de alta montaña",
-        "tipo_actor": "Comunidad",
+        "tipo": "Comunidades",
         "ecosistema": "Páramo"
       },
       "geometry": {
@@ -24,7 +25,8 @@
       "type": "Feature",
       "properties": {
         "nombre": "Liderazgo comunitario del páramo",
-        "tipo_actor": "Líder comunitario",
+        "tipo": "Comunidades",
+        "subtipo": "Líderes comunitarios",
         "ecosistema": "Páramo"
       },
       "geometry": {
@@ -39,7 +41,8 @@
       "type": "Feature",
       "properties": {
         "nombre": "Asociación de productores ganaderos",
-        "tipo_actor": "Sector productivo",
+        "tipo": "Producción",
+        "subtipo": "Ganaderos",
         "ecosistema": "Páramo"
       },
       "geometry": {
@@ -47,21 +50,6 @@
         "coordinates": [
           -75.81823,
           3.91876
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "nombre": "Colectivo juvenil de guardianes del páramo",
-        "tipo_actor": "Comunidad",
-        "ecosistema": "Páramo"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.74108,
-          4.0539
         ]
       }
     }

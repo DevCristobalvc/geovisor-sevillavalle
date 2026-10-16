@@ -249,7 +249,7 @@ def construir(ruta, fuentes, campos, limite, recortar=False, area_min_ha=0.0, di
     escribir(ruta, feats, metadata)
 
 
-# ─── Definición de las 13 capas oficiales ────────────────────────────────────
+# ─── Definición de las 14 capas oficiales (la Reserva Ley 2.ª tiene su propio archivo) ────────────────────────────────────
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
@@ -365,7 +365,6 @@ def main():
         [
             ("Biodiversidad/Sistema_Areas_Protegidas", 2, "1=1", True),
             ("Biodiversidad/Sistema_Areas_Protegidas", 3, "1=1", True),
-            ("Biodiversidad/Areas_Reserva_Forestal_Ley_2_de_1959", 1, "1=1", True),
         ],
         {
             "nombre": lambda p, g: p.get("NOM_AREA_P") or p.get("AP_NOMBRE")
@@ -379,6 +378,21 @@ def main():
             "fecha_declaracion": lambda p, g: fecha(p.get("FECHA_CREA")) or p.get("FECHA_REGISTRO"),
             "autoridad": lambda p, g: p.get("AUTORIDAD") or p.get("ORGANIZACION")
             or ("Ministerio de Ambiente" if p.get("NOM_LEY2") else None),
+            "area_en_sevilla_ha": area_sevilla,
+        },
+        limite,
+        recortar=True,
+        area_min_ha=1,
+    )
+    # Visor propio en "Visores básicos": Áreas de Reserva Forestal Ley Segunda de 1959
+    construir(
+        "biodiversidad/reserva_ley2.json",
+        [("Biodiversidad/Areas_Reserva_Forestal_Ley_2_de_1959", 1, "1=1", True)],
+        {
+            "nombre": lambda p, g: f"Reserva Forestal {p['NOM_LEY2']}" if p.get("NOM_LEY2") else None,
+            "categoria": lambda p, g: "Reserva Forestal Nacional Ley 2.ª de 1959",
+            "acto_administrativo": "RES_ZONI",
+            "autoridad": lambda p, g: "Ministerio de Ambiente",
             "area_en_sevilla_ha": area_sevilla,
         },
         limite,

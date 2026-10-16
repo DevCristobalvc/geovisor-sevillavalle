@@ -2,13 +2,14 @@
   "id": "agua_cuencas",
   "titulo": "Cuencas Hidrográficas de Sevilla",
   "categoria": "agua",
-  "descripcion": "Una cuenca hidrográfica es el territorio cuyas aguas de lluvia escurren hacia un mismo río; la delimitan las partes más altas del relieve, llamadas divisorias de aguas. Según la cartografía oficial de la CVC, el territorio de Sevilla se reparte entre cuatro cuencas, todas tributarias del río Cauca: la del río Bugalagrande, la más extensa (unas 22.450 ha, cerca del 42 % del municipio), que ocupa el sur y el suroriente e incluye los páramos; la del río La Paila (unas 15.210 ha, 28 %), en el occidente, donde está la cabecera municipal; la del río La Vieja (unas 14.220 ha, 26 %), en el oriente; y la de los ríos Las Cañas, Los Micos y Obando (unas 1.910 ha, 4 %), en el norte. Las cuatro suman cerca de 538 km², el área del municipio.",
-  "importancia": "Todo lo que ocurre en una cuenca llega a su río: si se tala el bosque en la parte alta o se vierten aguas residuales en la parte media, las consecuencias se sienten aguas abajo, incluso en otros municipios. Por eso el agua se planifica por cuencas, mediante los Planes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA) que elaboran las corporaciones autónomas regionales. Saber en qué cuenca está tu vereda o tu colegio es el primer paso para entender de dónde viene tu agua y hacia dónde va.",
+  "descripcion": "Una cuenca hidrográfica es el territorio cuyas aguas de lluvia escurren hacia un mismo río; la delimitan las partes más altas del relieve, llamadas divisorias de aguas. Según la cartografía oficial de la CVC, el territorio de Sevilla se reparte entre cuatro cuencas, todas tributarias del río Cauca: la del río Bugalagrande, la más extensa (unas 22.450 ha, cerca del 42 % del municipio), que ocupa el sur y el suroriente e incluye los páramos; la del río La Paila (unas 15.210 ha, 28 %), en el occidente, donde está la cabecera municipal; la del río La Vieja (unas 14.220 ha, 26 %), en el oriente; y la de los ríos Las Cañas, Los Micos y Obando (unas 1.910 ha, 4 %), en el norte. Las cuatro suman cerca de 538 km², el área del municipio. Cada cuenca se divide en áreas de drenaje, que recogen el agua de un río o quebrada afluente (capa «Áreas de drenaje»). En Sevilla, la cuenca del río La Vieja comprende las áreas de drenaje del río Pijao y de la quebrada La Honda; la del Bugalagrande, las del río Tibí y las zonas alta y media alta del Bugalagrande; la de La Paila, las de los ríos Totoró y San Marcos y la quebrada San Pablo; y la de Las Cañas, su zona alta y la quebrada Minas. Por eso algunos documentos hablan de la cuenca del río Pijao: es una parte de la cuenca del río La Vieja.",
+  "importancia": "Todo lo que ocurre en una cuenca llega a su río: si se tala el bosque en la parte alta o se vierten aguas residuales en la parte media, las consecuencias se sienten aguas abajo, incluso en otros municipios. Por eso el agua se planifica por cuencas, mediante los Planes de Ordenación y Manejo de Cuencas Hidrográficas (POMCA) que elaboran las corporaciones autónomas regionales. Saber en qué cuenca está tu vereda o tu colegio es el primer paso para entender de dónde viene tu agua y hacia dónde va. Cada cuenca de Sevilla tiene un carácter propio (Rodríguez Camacho, 2026, con base en CVC, 2018). La del Bugalagrande tiene bosques y vegetación de páramo en cerca del 60 % de su área en el municipio, es el sector mejor conservado de toda esa cuenca, y de sus quebradas Canadá, Cimitarra y La Sara depende el acueducto de Sevilla. En la de La Paila, donde está el casco urbano, predominan los pastos (43 %) y el café (27 %), y allí están las quebradas San José y Saldaña (El Popal), que abastecen la cabecera. La de La Vieja, sobre todo el área del río Pijao, es la principal despensa agrícola del municipio, con café, plátano y banano. La de Las Cañas, en el bosque seco del noroccidente, se dedica principalmente a la ganadería.",
   "preguntas_reflexivas": [
     "¿En cuál de las cuatro cuencas está tu vereda o tu colegio? Búscalo en el mapa.",
     "¿Por qué la tala de bosque en la parte alta de una cuenca afecta a quienes viven aguas abajo?",
     "¿Qué relación hay entre los páramos del suroriente de Sevilla y la cuenca del río Bugalagrande?",
-    "¿Qué actividades humanas afectan la cantidad y la calidad del agua en tu cuenca?"
+    "¿Qué actividades humanas afectan la cantidad y la calidad del agua en tu cuenca?",
+    "Activa la capa «Áreas de drenaje»: ¿de qué río o quebrada recibe el agua la zona donde vives?"
   ],
   "vocabulario": [
     {
@@ -30,6 +31,10 @@
     {
       "termino": "POMCA",
       "definicion": "Plan de Ordenación y Manejo de Cuencas Hidrográficas: instrumento con el que las corporaciones autónomas regionales planifican el uso del suelo, el agua y los demás recursos de una cuenca."
+    },
+    {
+      "termino": "Área de drenaje",
+      "definicion": "Parte de una cuenca hidrográfica que recoge el agua de un río o quebrada afluente. La CVC divide cada cuenca en áreas de drenaje para planificar el agua con más detalle."
     }
   ],
   "galeria": [
@@ -54,6 +59,6 @@
       "titulo": "Hidrografía de Colombia — Geografía Didáctica"
     }
   ],
-  "fuente_datos": "CVC – Cuencas hidrográficas (Portal GeoCVC, recorte a Sevilla, 2026); IDEAM (2013) – Zonificación y codificación de unidades hidrográficas e hidrogeológicas de Colombia; Decreto 1640 de 2012 (POMCA)",
+  "fuente_datos": "CVC – Cuencas hidrográficas (Portal GeoCVC, recorte a Sevilla, 2026); IDEAM (2013) – Zonificación y codificación de unidades hidrográficas e hidrogeológicas de Colombia; Decreto 1640 de 2012 (POMCA); CVC – Cuencas hidrográficas: áreas de drenaje y subzonas hidrográficas (Portal GeoCVC, recorte a Sevilla, 2026); Rodríguez Camacho, J. (2026). Observaciones al documento «Visores básicos» del geovisor (tesis colaboradora), con base en CVC (2018)",
   "nivel_educativo": "Básica secundaria (grados 6–9)"
 }

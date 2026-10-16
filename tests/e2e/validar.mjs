@@ -24,6 +24,9 @@ const GEOJSON = [
   'agua_predios_art111', 'biodiversidad_paramos', 'biodiversidad_especies',
   'biodiversidad_areas_protegidas', 'clima_estaciones', 'territorio_division',
   'territorio_resguardos', 'territorio_pcc',
+  // Capas de la CVC agregadas con "Visores básicos" (scripts/datos/build_capas_visores.py)
+  'agua_areas_drenaje', 'agua_subzonas_hidrograficas', 'agua_lagunas', 'biodiversidad_reserva_ley2',
+  'clima_pisos_termicos_cvc', 'territorio_limite',
 ]
 const WMS = [
   ['agua_red_hidrica', 'portal-geo.cvc.gov.co'],
@@ -46,7 +49,7 @@ async function clickFeature(page) {
 }
 
 async function expandirCategorias(page) {
-  for (const cat of ['Actores Sociales', 'Agua', 'Biodiversidad', 'Cambio Climático', 'Suelos', 'Territorio']) {
+  for (const cat of ['Actores sociales', 'Agua', 'Biodiversidad', 'Cambio Climático', 'Suelos', 'Territorial administrativo']) {
     const btn = page.locator('aside button[aria-expanded]', { hasText: cat }).first()
     if ((await btn.getAttribute('aria-expanded')) !== 'true') await btn.click()
   }
@@ -98,7 +101,7 @@ const cred = await page.locator('main').innerText()
 ok('Créditos: sin RUNAP/GBIF/INFORMA', !/runap|gbif|informa/i.test(cred))
 ok('Créditos: declara datos ilustrativos', /Datos ilustrativos/.test(cred))
 
-// ── 3. GeoJSON: las 16 capas cargan, tienen elementos y caen en Sevilla ──────
+// ── 3. GeoJSON: las 22 capas cargan, tienen elementos y caen en Sevilla ──────
 const respuestas = new Map()
 const onResp = async r => {
   const u = r.url()
@@ -132,8 +135,8 @@ for (const [archivo, { status, json }] of respuestas) {
     `${n} elementos · ${oficial ? 'oficial CVC' : 'ilustrativo'} · ${dentro ? 'dentro de Sevilla' : 'FUERA del municipio'}${personales ? ' · DATOS PERSONALES' : ' · sin datos personales'}`)
   if (oficial) oficiales++
 }
-ok('GeoJSON: se pidieron las 16 capas', respuestas.size === 16, `${respuestas.size} respuestas`)
-ok('GeoJSON: 13 capas con metadata oficial de la CVC', oficiales === 13, `${oficiales}`)
+ok('GeoJSON: se pidieron las 22 capas', respuestas.size === GEOJSON.length, `${respuestas.size} respuestas`)
+ok('GeoJSON: 19 capas con metadata oficial de la CVC', oficiales === GEOJSON.length - 3, `${oficiales}`)
 const paths = await page.locator('.leaflet-overlay-pane path').count()
 ok('Mapa: elementos vectoriales dibujados', paths >= totalFeatures * 0.9, `${paths} paths / ${totalFeatures} elementos`)
 await page.screenshot({ path: SHOTS + '02-geojson-todas.png' })

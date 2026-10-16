@@ -20,6 +20,7 @@ import {
   SEVILLA_DEFAULT_ZOOM,
   SEVILLA_MIN_ZOOM,
   SEVILLA_MAX_ZOOM,
+  colorDeClase,
 } from '../config/layers.config'
 import type { LayerConfig, LayerStyle, WmsStatus } from '../types'
 
@@ -234,13 +235,17 @@ function GeoJSONLayer({
     dashArray: style.dashArray,
     opacity,
   }
+  const estiloDe = (feature?: GeoJSON.Feature) => {
+    const color = colorDeClase(layer, feature)
+    return color ? { ...baseStyle, fillColor: color } : baseStyle
+  }
 
   return (
     <LeafletGeoJSON
       data={data}
-      style={() => baseStyle}
-      pointToLayer={(_feature, latlng) =>
-        L.circleMarker(latlng, { ...baseStyle, radius: style.radius ?? 8 })
+      style={estiloDe}
+      pointToLayer={(feature, latlng) =>
+        L.circleMarker(latlng, { ...estiloDe(feature), radius: style.radius ?? 8 })
       }
       onEachFeature={(feature, leafletLayer) => {
         const path = leafletLayer as unknown as L.Path
@@ -301,6 +306,16 @@ const ETIQUETAS: Record<string, string> = {
   rio_principal: 'Río principal',
   altitud_rango: 'Rango altitudinal',
   tipo_actor: 'Tipo de actor',
+  subtipo: 'Subtipo',
+  grado_conflicto: 'Grado de conflicto',
+  uso_actual: 'Uso actual',
+  uso_potencial: 'Uso potencial',
+  tipo_superficie: 'Tipo de superficie',
+  fragmentacion: 'Fragmentación',
+  piso_termico: 'Piso térmico',
+  anno_estudio: 'Año del estudio',
+  zona_hidrografica: 'Zona hidrográfica',
+  area_hidrografica: 'Área hidrográfica',
 }
 
 function etiqueta(clave: string): string {
@@ -372,7 +387,7 @@ function buildPopupContent(features: GeoJSON.Feature[], layer: LayerConfig): str
   return `
     <div>
       ${thumbnail}
-      <div class="popup-titulo"><span style="display:inline-block;width:9px;height:9px;margin-right:6px;border:1px solid currentColor;background:${layer.estilo?.fillColor ?? layer.estilo?.color ?? '#2F6B1F'}"></span>${escapeHtml(layer.nombre)}</div>
+      <div class="popup-titulo"><span style="display:inline-block;width:9px;height:9px;margin-right:6px;border:1px solid currentColor;background:${colorDeClase(layer, features[0]) ?? layer.estilo?.fillColor ?? layer.estilo?.color ?? '#2F6B1F'}"></span>${escapeHtml(layer.nombre)}</div>
       ${ilustrativo}
       ${varios}
       ${tablas}
