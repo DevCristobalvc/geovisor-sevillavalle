@@ -283,6 +283,44 @@ for (const f of fichas) {
     `${f.preguntas} preguntas · ${f.imagenes.length} imágenes${imagenesOk ? '' : ' · IMAGEN FUERA DE WIKIMEDIA'}`)
 }
 
+// ── 6d. Móvil: los paneles laterales se cierran al tocar fuera ──────────────
+const abrirFicha = (p, id) => p.evaluate(f => window.dispatchEvent(new CustomEvent('openFicha', { detail: f })), id)
+{
+  const movil = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, serviceWorkers: 'block' })
+  const m = await movil.newPage()
+  m.on('pageerror', e => consola.push('pageerror (móvil): ' + e.message))
+  await m.goto(`${BASE}/visor?layers=territorio_division&lat=4.16&lng=-75.89&zoom=11`, { waitUntil: 'networkidle' })
+  const panel = m.locator('aside[aria-label="Panel de capas geográficas"]')
+  const panelAbierto = async () => ((await panel.boundingBox())?.x ?? -1) >= 0
+  await m.getByRole('button', { name: 'Expandir panel de capas' }).tap()
+  await m.waitForTimeout(500)
+  const abre = await panelAbierto()
+  await panel.locator('button[aria-expanded]').first().tap()   // toque dentro: acordeón
+  await m.waitForTimeout(500)
+  const sigue = await panelAbierto()
+  await m.touchscreen.tap(375, 500)                             // toque fuera: franja derecha
+  await m.waitForTimeout(500)
+  const cierra = !(await panelAbierto())
+  const sinPopup = (await m.locator('.leaflet-popup').count()) === 0
+  ok('Móvil: el panel de capas se cierra al tocar fuera', abre && sigue && cierra && sinPopup,
+    `abre: ${abre} · toque dentro lo mantiene: ${sigue} · toque fuera lo cierra: ${cierra} · sin popup: ${sinPopup}`)
+
+  await m.setViewportSize({ width: 600, height: 900 })            // móvil ancho: la ficha deja franja libre
+  await abrirFicha(m, 'agua_cuencas')
+  await m.waitForSelector('.ficha-panel.open', { timeout: 5000 })
+  await m.waitForTimeout(500)
+  await m.touchscreen.tap(100, 500)
+  await m.waitForTimeout(500)
+  const fichaCerrada = (await m.locator('.ficha-panel.open').count()) === 0
+  ok('Móvil: la ficha se cierra al tocar fuera', fichaCerrada)
+  await movil.close()
+}
+await page.goto(`${BASE}/visor`, { waitUntil: 'networkidle' })
+await abrirFicha(page, 'agua_cuencas')
+await page.waitForSelector('.ficha-panel.open', { timeout: 5000 })
+const velosEscritorio = await page.locator('.panel-velo').count()
+ok('Escritorio: sin velo, paneles igual que antes', velosEscritorio === 0, `${velosEscritorio} velos`)
+
 // ── 7. Consola ──────────────────────────────────────────────────────────────
 const relevantes = consola.filter(t => !/Failed to load resource|ERR_|net::/.test(t))
 ok('Consola sin errores de la aplicación', relevantes.length === 0, relevantes.slice(0, 3).join(' | '))

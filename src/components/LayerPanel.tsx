@@ -1,5 +1,6 @@
 import { useEffect, useState, type CSSProperties } from 'react'
 import { useMapLayers } from '../hooks/useMapLayers'
+import { useIsMobile } from '../hooks/useMediaQuery'
 import { LAYERS, NOTAS_GRUPO, wmsLegendUrl } from '../config/layers.config'
 import { PixelIcon } from './Dex'
 import type { Categoria, LayerConfig, WmsStatus } from '../types'
@@ -53,6 +54,7 @@ export default function LayerPanel({
     getLayerOpacity,
     activeLayers,
   } = useMapLayers()
+  const isMobile = useIsMobile()
 
   const defaultExpanded = new Set<Categoria>(['agua', 'territorio'])
   if (highlightCategoria && CATEGORIA_ORDER.includes(highlightCategoria as Categoria)) {
@@ -85,6 +87,16 @@ export default function LayerPanel({
 
   return (
     <>
+      {/* En móvil el panel tapa casi todo el mapa: tocar fuera de él lo cierra.
+          El velo (z-[5]) queda sobre el mapa y la barra de herramientas (z-[2]) y bajo
+          el panel y su botón (z-10), así el toque no llega al mapa ni abre popups. */}
+      {isMobile && !collapsed && (
+        <div
+          className="panel-velo absolute inset-0 z-[5] bg-black/30"
+          onClick={onToggleCollapse}
+          aria-hidden="true"
+        />
+      )}
       <button
         onClick={onToggleCollapse}
         aria-label={collapsed ? 'Expandir panel de capas' : 'Colapsar panel de capas'}
