@@ -1,6 +1,7 @@
 # Validación — Fase 3 (octubre y noviembre de 2026)
 
-Evidencia técnica de la validación del geovisor publicado en https://www.refiup.app.
+Evidencia técnica de la validación del geovisor publicado en https://ecodex.devcristobalvc.com.
+Las mediciones de octubre de 2026 se hicieron contra el dominio anterior, https://www.refiup.app.
 
 | Evidencia | Archivo | Qué responde |
 |---|---|---|
@@ -15,7 +16,7 @@ Evidencia técnica de la validación del geovisor publicado en https://www.refiu
 | `tests/e2e/validar.mjs` | `npm run test:e2e` | Regresión: datos, capas, popups, fichas, leyendas y tema. Debe pasar siempre. |
 | `tests/e2e/requisitos.mjs` | `npm run test:rf` | Mide cada RF contra su criterio del SRS y regenera `trazabilidad-rf.md`. |
 
-Ambos aceptan `BASE=https://www.refiup.app` para correr contra producción y `HEADLESS=1`
+Ambos aceptan `BASE=https://ecodex.devcristobalvc.com` para correr contra producción y `HEADLESS=1`
 para no abrir ventana. Usan el Chrome instalado en el equipo (`channel: 'chrome'`).
 
 ## Prueba de red antes de las pruebas con usuarios
@@ -25,7 +26,7 @@ de peticiones. Antes de cada sesión de usabilidad hay que comprobar, **desde la
 de la prueba**, que las 4 capas WMS de la CVC cargan:
 
 ```bash
-BASE=https://www.refiup.app npm run test:e2e
+BASE=https://ecodex.devcristobalvc.com npm run test:e2e
 ```
 
 Deben pasar las validaciones `WMS agua_red_hidrica`, `WMS biodiversidad_ecosistemas`,

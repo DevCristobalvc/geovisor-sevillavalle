@@ -9,6 +9,8 @@ Cristóbal Valencia Cerón · José David Molina Delgado
 Advisors: Diego Fernando Loaiza · Silvia Andrea Quijano Pérez · Research Group COMBA I+D  
 Partner thesis (ecopedagogical content): *Cartografiar las huellas del café*, Jonathan Rodríguez Camacho
 
+**Live:** [ecodex.devcristobalvc.com](https://ecodex.devcristobalvc.com)
+
 ---
 
 ## Overview
@@ -149,7 +151,7 @@ npm run preview      # → http://localhost:4173/
 ```bash
 npm run build && npx vite preview --port 4173      # terminal 1
 npm run test:e2e                                    # terminal 2 — visible browser
-BASE=https://www.refiup.app HEADLESS=1 npm run test:e2e -- --sin-cvc
+BASE=https://ecodex.devcristobalvc.com HEADLESS=1 npm run test:e2e -- --sin-cvc
 ```
 
 `--sin-cvc` skips the CVC WMS layers: the CVC firewall blocks an IP that sends bursts of requests.
@@ -157,7 +159,7 @@ BASE=https://www.refiup.app HEADLESS=1 npm run test:e2e -- --sin-cvc
 `tests/e2e/requisitos.mjs` measures each of the 21 functional requirements of the SRS against its acceptance criterion (timings, axe-core audits, offline mode) and regenerates [`docs/validacion/trazabilidad-rf.md`](./docs/validacion/trazabilidad-rf.md), the RF → test → result table with the share of RFs that meet their criterion. Unlike `validar.mjs`, it may report "Parcial" or "No cumple" without that being a regression.
 
 ```bash
-BASE=https://www.refiup.app npm run test:rf
+BASE=https://ecodex.devcristobalvc.com npm run test:rf
 ```
 
 Validation evidence (Lighthouse reports, RF traceability, network check before usability sessions) lives in [`docs/validacion/`](./docs/validacion/README.md).
@@ -165,6 +167,8 @@ Validation evidence (Lighthouse reports, RF traceability, network check before u
 ### Deployment
 
 Deployment is handled by **Vercel**, connected to this repository. Every push to `Master` triggers a build and publishes it automatically — no workflow files and no manual steps.
+
+Production lives at **https://ecodex.devcristobalvc.com** (Vercel project `geovisor-sevillavalle`, team `devcristobalvc`). The former domain, `refiup.app`, expires on 2026-11-21; validation reports dated before that were run against it.
 
 `vercel.json` rewrites every route to `index.html`, which is what a client-side router needs so that deep links such as `/visor?recorrido=huellas_cafe` resolve correctly.
 
